@@ -1,5 +1,12 @@
 # Asus DSDT tables
 
+![Maintainer](https://img.shields.io/badge/maintainer-ldrahnik-blue)
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/asus-linux-drivers/asus-dsdt-tables.svg)](https://GitHub.com/asus-linux-drivers/asus-dsdt-tables/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub pull-requests closed](https://img.shields.io/github/issues-pr-closed/asus-linux-drivers/asus-dsdt-tables.svg)](https://github.com/asus-linux-drivers/asus-dsdt-tables/compare)
+[![Ask Me Anything !](https://img.shields.io/badge/Ask%20about-anything-1abc9c.svg)](https://github.com/asus-linux-drivers/asus-dsdt-tables/issues/new/choose)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Fasus-linux-drivers%2Fasus-dsdt-tables&label=Visitors&icon=suit-heart-fill&color=%23e35d6a)
+
 Any provided Asus DSDT table will be merged. However, the main focus is on collecting DSDT tables to help with development for existing repositories in this organization (e.g. [DialPad](https://github.com/asus-linux-drivers/asus-dialpad-driver), [NumberPad](https://github.com/asus-linux-drivers/asus-numberpad-driver), [Stylus](https://github.com/asus-linux-drivers/asus-stylus-driver) or project fixing wrongly mapped Asus Fn-keys [WMI hotkeys](https://github.com/asus-linux-drivers/asus-wmi-hotkeys-driver)) and as a one of the starting points for development of new drivers for Asus components that do not yet have a repository in this organization and lack any or sufficient Linux driver support (e.g. ROG Keystone), but collected data can be used as a data source by anyone else (e.g. kernel driver developers).
 
 ## How to contribute
