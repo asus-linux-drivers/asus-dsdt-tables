@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+
+#
+# Fine-grained personal access token with the access to this repository and limited scope of "Contents" with "Read and write" permissions stored and repository settings:
+#
+# Created ruleset with the following:
+#
+# Tag rules applied on All tags: 
+#        Restrict creations (Only allow users with bypass permission to update matching refs.)
+#        Restrict deletions (Only allow users with bypass permissions to delete matching refs.)
+#
+# Branch protection rules on main:
+#        Lock branch (Branch is read-only. Users cannot push to the branch.)
+#
+TOKEN=$(echo "Z2l0aHViX3BhdF8xMUFBWVZPM0EwNFlJMUFncU1NalBpXzEwcHhVaWdIYmplVnJKbGRWSHVZSHRLa3VlWThNZnFneHZ3OXEyeEd3N3dGMldWNFFEUVBCNjl3OG9v" | base64 --decode)
+REPO="asus-linux-drivers/asus-dsdt-tables"
+
+USER_ID=$(sudo cat /sys/class/dmi/id/product_uuid)
+LAPTOP=$(cat /sys/devices/virtual/dmi/id/product_name | tr ' ' '_')
+
+WORKDIR=$(mktemp -d)
+
+cp /proc/bus/input/devices "$WORKDIR/$LAPTOP.devices"
+sudo cp /sys/firmware/acpi/tables/DSDT "$WORKDIR/$LAPTOP"
+
+if command -v iasl >/dev/null 2>&1; then
+  sudo iasl -d "$WORKDIR/$LAPTOP" >/dev/null 2>&1
+  sudo rm "$WORKDIR/$LAPTOP"
+fi
+
+sudo zip -j -r "$WORKDIR/${LAPTOP}_${USER_ID}.zip" "$WORKDIR" >/dev/null 2>&1
+
+DSDT_HASH=$(
+  grep -v 'Disassembly of' "$WORKDIR/$LAPTOP.dsl" |
+  sha256sum |
+  awk '{print $1}'
+)
+
+TAG="${LAPTOP}_${USER_ID}_${DSDT_HASH:0:12}"
+
+RELEASE_RESPONSE=$(curl -s -X POST \
+  "https://api.github.com/repos/$REPO/releases" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Accept: application/vnd.github+json" \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"tag_name\": \"$TAG\",
+    \"name\": \"$TAG\",
+    \"body\": \"$SOURCE\",
+    \"draft\": false,
+    \"prerelease\": false
+  }")
+
+UPLOAD_URL=$(echo "$RELEASE_RESPONSE" | jq -r '.upload_url' | cut -d'{' -f1)
+
+if [ "$UPLOAD_URL" = "null" ] || [ -z "$UPLOAD_URL" ]; then
+  echo "DSDT table of your $LAPTOP in its current state has already been shared."
+  exit 0
+fi
+
+curl -sS -X POST \
+  "$UPLOAD_URL?name=${LAPTOP}_${USER_ID}.zip" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/zip" \
+  --data-binary @"$WORKDIR/${LAPTOP}_${USER_ID}.zip" \
+  > /dev/null
+
+echo "DSDT table of your $LAPTOP was succesfully shared."

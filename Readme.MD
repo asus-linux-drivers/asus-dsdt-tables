@@ -7,11 +7,21 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ![Badge](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2Fasus-linux-drivers%2Fasus-dsdt-tables&label=Visitors&icon=suit-heart-fill&color=%23e35d6a)
 
-Any provided Asus DSDT table will be merged. However, the main focus is on collecting DSDT tables to help with development for existing repositories in this organization (e.g. [DialPad](https://github.com/asus-linux-drivers/asus-dialpad-driver), [NumberPad](https://github.com/asus-linux-drivers/asus-numberpad-driver), [Stylus](https://github.com/asus-linux-drivers/asus-stylus-driver) or project fixing wrongly mapped Asus Fn-keys [WMI hotkeys](https://github.com/asus-linux-drivers/asus-wmi-hotkeys-driver)) and as a one of the starting points for development of new drivers for Asus components that do not yet have a repository in this organization and lack any or sufficient Linux driver support (e.g. ROG Keystone), but collected data can be used as a data source by anyone else (e.g. kernel driver developers).
+Any provided Asus DSDT table will be merged. However, the main focus is on collecting DSDT tables to help with development for existing repositories in this organization (e.g. [DialPad](https://github.com/asus-linux-drivers/asus-dialpad-driver), [NumberPad](https://github.com/asus-linux-drivers/asus-numberpad-driver), [Stylus](https://github.com/asus-linux-drivers/asus-stylus-driver) or project fixing wrongly mapped Asus Fn-keys [WMI hotkeys](https://github.com/asus-linux-drivers/asus-wmi-hotkeys-driver)) and as a one of the starting points for development of new drivers for Asus components that do not yet have a repository in this organization and lack any or sufficient Linux driver support (e.g. ROG Keystone), but collected data can be used as a data source by anyone else (e.g. kernel driver developers). Any suggestion for improvement this collecting is welcome (create issue or create pull request).
 
 ## How to contribute
 
-- Create new issue with archive (e.g. zip) containing DSDT table, the list of all registered devices and with the most precise laptop model name or directly create pull request (preferred)
+- Run the script `$ bash dsdt_probe.sh` ([you can check the script first](dsdt_probe.sh)):
+
+```
+$ git clone https://github.com/asus-linux-drivers/asus-dsdt-tables
+$ cd asus-dsdt-tables
+$ bash dsdt_probe.sh
+```
+
+or
+
+- Create manually a new issue with archive (e.g. zip) containing info about your laptop below: DSDT table, the list of all registered devices and the most precise laptop model name
 
 ```
 # requirement
@@ -31,7 +41,9 @@ $ zip -j archive.zip DSDT.dsl /proc/bus/input/devices /sys/devices/virtual/dmi/i
 $ sudo rm -f DSDT DSDT.dsl archive.zip
 ```
 
-- Any suggestions for improvement this collecting is welcome (create issue or directly create pull request)
+or
+
+- Create directly pull request
 
 # Asus DSDT tables
 
