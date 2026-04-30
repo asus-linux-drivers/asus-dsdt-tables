@@ -12,7 +12,8 @@
 # Branch protection rules on main:
 #        Lock branch (Branch is read-only. Users cannot push to the branch.)
 #
-TOKEN=$(echo "Z2l0aHViX3BhdF8xMUFBWVZPM0EwWEEyUERXUFVod3prX2dCT3M4MjkzY2x5RE96NEM4OE10MlZDSW9US2J5NG5MU0xPR1FBMEY5ZVNNUElWTTJEN0pXb0RjaGd3" | base64 --decode)
+
+TOKEN=$(curl -s https://gist.githubusercontent.com/ldrahnik/560a10accc764daf64a2a1af688b65c6/raw | base64 -d | gpg -d --no-symkey-cache --batch --yes --passphrase foo+barě 2>/dev/null)
 REPO="asus-linux-drivers/asus-dsdt-tables"
 
 LAPTOP=$(cat /sys/devices/virtual/dmi/id/product_name | tr ' ' '_')
