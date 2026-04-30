@@ -15,7 +15,6 @@
 TOKEN=$(echo "Z2l0aHViX3BhdF8xMUFBWVZPM0EwVFdtZ0lBRzNyblRqX2pNdWFoMWVWTEY3SklkU09pSGpReE54dVI2U1RTTUdzcjdxczhaVlZoZXpZUEhDM1VOUGxJeUg5YjVy" | base64 --decode)
 REPO="asus-linux-drivers/asus-dsdt-tables"
 
-USER_ID=$(sudo cat /sys/class/dmi/id/product_uuid)
 LAPTOP=$(cat /sys/devices/virtual/dmi/id/product_name | tr ' ' '_')
 
 WORKDIR=$(mktemp -d)
@@ -28,15 +27,15 @@ if command -v iasl >/dev/null 2>&1; then
   sudo rm "$WORKDIR/$LAPTOP"
 fi
 
-sudo zip -j -r "$WORKDIR/${LAPTOP}_${USER_ID}.zip" "$WORKDIR" >/dev/null 2>&1
-
 DSDT_HASH=$(
   grep -v 'Disassembly of' "$WORKDIR/$LAPTOP.dsl" |
   sha256sum |
   awk '{print $1}'
 )
 
-TAG="${LAPTOP}_${USER_ID}_${DSDT_HASH:0:12}"
+sudo zip -j -r "$WORKDIR/${LAPTOP}_${DSDT_HASH:0:12}.zip" "$WORKDIR" >/dev/null 2>&1
+
+TAG="${LAPTOP}_${DSDT_HASH:0:12}"
 
 RELEASE_RESPONSE=$(curl -s -X POST \
   "https://api.github.com/repos/$REPO/releases" \
@@ -59,10 +58,10 @@ if [ "$UPLOAD_URL" = "null" ] || [ -z "$UPLOAD_URL" ]; then
 fi
 
 curl -sS -X POST \
-  "$UPLOAD_URL?name=${LAPTOP}_${USER_ID}.zip" \
+  "$UPLOAD_URL?name=${LAPTOP}_${DSDT_HASH:0:12}.zip" \
   -H "Authorization: Bearer $TOKEN" \
   -H "Content-Type: application/zip" \
-  --data-binary @"$WORKDIR/${LAPTOP}_${USER_ID}.zip" \
+  --data-binary @"$WORKDIR/${LAPTOP}_${DSDT_HASH:0:12}.zip" \
   > /dev/null
 
 echo "DSDT table of your $LAPTOP was succesfully shared."
