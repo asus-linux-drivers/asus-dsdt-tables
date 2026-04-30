@@ -47,6 +47,8 @@ or
 
 # Asus DSDT tables
 
+*a star means .devices file contains touchpad block only
+
 | Serie | DSL file | DEVICES file | Source | DialPad | NumberPad | Dial
 |----------------------|-------------------------|----------------------|----------------------|----------------------|----------------------|----------------------|
 ProArt | [ASUS ProArt P16 H7606WP.dsl](data/ASUS_ProArt_P16_H7606WP.dsl) | | [g-helper/issues/38#issuecomment](https://github.com/seerge/g-helper/issues/38#issuecomment-3263807485) | Yes | | |
@@ -57,12 +59,10 @@ ProArt | [ASUS ProArt P16 H7606WP.dsl](data/ASUS_ProArt_P16_H7606WP.dsl) | | [g-
 | | [ASUS ROG Strix G16 G614JVR G614JVR.dsl](data/ASUS_ROG_Strix_G16_G614JVR_G614JVR.dsl) | [ASUS ROG Strix G16 G614JVR G614JVR.devices](data/ASUS_ROG_Strix_G16_G614JVR_G614JVR.devices) | [asus-numberpad-driver/issues/161#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/161#issuecomment-1900457098) | | Yes | |
 | | [ASUS ROG Zephyrus Duo 16 GX650PY GX650PY.dsl](data/ASUS_ROG_Zephyrus_Duo_16_GX650PY_GX650PY.dsl) | [ASUS ROG Zephyrus Duo 16 GX650PY GX650PY.devices](data/ASUS_ROG_Zephyrus_Duo_16_GX650PY_GX650PY.devices) | [asus-numberpad-driver/issues/198#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/198#issuecomment-2348832686) | | Yes | |
 | | [ASUS ROG Strix G16 G614JVR G614JVR.dsl](data/ASUS_ROG_Strix_G16_G614JVR_G614JVR.dsl) | [ASUS ROG Strix G16 G614JVR G614JVR.devices](data/ASUS_ROG_Strix_G16_G614JVR_G614JVR.devices) | [asus-numberpad-driver/issues/198#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/198#issuecomment-2348832686) | | Yes | |
-| Zenbook | [ASUS Zenbook UP5401EA.dsl](data/ASUS_Zenbook_UP5401EA.dsl) | [ASUS Zenbook UP5401EA.devices](data/ASUS_Zenbook_UP5401EA.devices) | [ldrahnik](https://github.com/ldrahnik) | | Yes | |
-| | [ASUS Zenbook UM3402YA.dsl](data/ASUS_Zenbook_UM3402YA.dsl) | | [asus-numberpad-driver/issues/224#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/224#issuecomment-2524212401) | | Yes | |
+| Zenbook | [ASUS Zenbook UM3402YA.dsl](data/ASUS_Zenbook_UM3402YA.dsl) | | [asus-numberpad-driver/issues/224#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/224#issuecomment-2524212401) | | Yes | |
+| | [ASUS_Zenbook_UP5401EA_UP5401EA.dsl](data/ASUS_Zenbook_UP5401EA_UP5401EA.dsl) | [ASUS_Zenbook_UP5401EA_UP5401EA.devices](data/ASUS_Zenbook_UP5401EA_UP5401EA.devices) | [asus-dsdt-tables/releases/tag/Zenbook_UP5401EA_UP5401EA_afbc9174-e204-d949-99c7-d809b1a3d391_6dff8e115286](https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/Zenbook_UP5401EA_UP5401EA_afbc9174-e204-d949-99c7-d809b1a3d391_6dff8e115286) |  |  |  |
 | | [ASUS Zenbook Pro UX6404.dsl](data/ASUS_Zenbook_Pro_UX6404.dsl) | [ASUS Zenbook Pro UX6404.devices](data/ASUS_Zenbook_Pro_UX6404.devices) | [asus-numberpad-driver/issues/223#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/223#issuecomment-2504935283) | Yes | | |
 | | [ASUS Zenbook Pro UX7602VI.dsl](data/ASUS_Zenbook_Pro_UX7602VI.dsl) | | [/asus-wmi-hotkeys-driver/issues/13#issuecomment](https://github.com/asus-linux-drivers/asus-wmi-hotkeys-driver/issues/13#issuecomment-2023100667) | | Yes | Yes
 | Vivobook | [ASUS Vivobook 14 M1405YA.dsl](data/ASUS_Vivobook_14_M1405YA.dsl) | [ASUS Vivobook 14 M1405YA.devices *](data/ASUS_Vivobook_14_M1405YA.devices) | [asus-numberpad-driver/issues/289#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/289#issuecomment-4242323385) | | Yes | |
 | | [ASUS Vivobook K3402Z.dsl](data/ASUS_Vivobook_K3402Z.dsl) | | [asus-numberpad-driver/issues/189#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/189#issuecomment-2261102443) | | Yes | |
 | | [ASUS Vivobook Go E1404FA E1404FA.dsl](data/ASUS_Vivobook_Go_E1404FA_E1404FA.dsl) | | [asus-numberpad-driver/issues/192#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/192#issue-2454821982) | | Yes | |
-
-*a star means .devices file contains touchpad block only
