@@ -86,22 +86,41 @@ for TAG in $TAGS; do
 
             shopt -s nocasematch
             if [[ ! "$BASENAME" =~ asus ]]; then
-                BASENAME="ASUS_$BASENAME"
+                BASENAME="asus_$BASENAME"
             fi
+
+            FIRST4="${BASENAME:0:4}"
+            REST="${BASENAME:4}"
+
+            BASENAME="${FIRST4^^}${REST}"
+
             shopt -u nocasematch
 
-            update_readme "$BASENAME" "$TAG"
+            PLAIN_NAME="$BASENAME"
+            DSL_HASH="${TAG##*_}"
+            HASHED_NAME="${BASENAME%.*}_$DSL_HASH.${BASENAME##*.}"
 
-            if [[ -f "$OUTDIR/$BASENAME" ]]; then
-                if cmp -s "$FILE" "$OUTDIR/$BASENAME"; then
-                    continue
-                else
-                    HASH=$(sha256sum "$FILE" | cut -c1-8)
-                    BASENAME="${BASENAME%.*}_$HASH.${BASENAME##*.}"
+            FINAL_NAME="$PLAIN_NAME"
+
+            if [[ -f "$OUTDIR/$PLAIN_NAME" ]]; then
+
+                EXISTING_DSL_FILE="$OUTDIR/${BASENAME%.*}.dsl"
+
+                EXISTING_DSL_FILE_HASH=$(
+                    grep -v 'Disassembly of' "$EXISTING_DSL_FILE" |
+                    sha256sum | awk '{print $1}'
+                )
+
+                if [[ "${EXISTING_DSL_FILE_HASH:0:12}" != "$DSL_HASH" ]]; then
+                    FINAL_NAME="$HASHED_NAME"
                 fi
             fi
 
-            cp "$FILE" "$OUTDIR/$BASENAME"
+            update_readme "$FINAL_NAME" "$TAG"
+
+            if [[ ! -f "$OUTDIR/$FINAL_NAME" ]]; then
+                cp "$FILE" "$OUTDIR/$FINAL_NAME"
+            fi
         done
     done
 done
