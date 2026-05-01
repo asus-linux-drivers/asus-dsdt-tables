@@ -20,7 +20,7 @@ LAPTOP=$(cat /sys/devices/virtual/dmi/id/product_name | tr ' ' '_')
 
 WORKDIR=$(mktemp -d)
 
-cp /proc/bus/input/devices "$WORKDIR/$LAPTOP.devices"
+sudo cp /proc/bus/input/devices "$WORKDIR/$LAPTOP.devices"
 sudo cp /sys/firmware/acpi/tables/DSDT "$WORKDIR/$LAPTOP"
 
 if command -v iasl >/dev/null 2>&1; then
@@ -34,7 +34,7 @@ DSDT_HASH=$(
   awk '{print $1}'
 )
 
-sudo zip -j -r "$WORKDIR/${LAPTOP}_${DSDT_HASH:0:12}.zip" "$WORKDIR" >/dev/null 2>&1
+tar -czf "$WORKDIR/${LAPTOP}_${DSDT_HASH:0:12}.tar.gz" --mode='u=rwX,go=rX' -C "$WORKDIR" . >/dev/null 2>&1
 
 TAG="${LAPTOP}_${DSDT_HASH:0:12}"
 
@@ -59,10 +59,10 @@ if [ "$UPLOAD_URL" = "null" ] || [ -z "$UPLOAD_URL" ]; then
 fi
 
 curl -sS -X POST \
-  "$UPLOAD_URL?name=${LAPTOP}_${DSDT_HASH:0:12}.zip" \
+  "$UPLOAD_URL?name=${LAPTOP}_${DSDT_HASH:0:12}.tar.gz" \
   -H "Authorization: Bearer $TOKEN" \
-  -H "Content-Type: application/zip" \
-  --data-binary @"$WORKDIR/${LAPTOP}_${DSDT_HASH:0:12}.zip" \
+  -H "Content-Type: application/gzip" \
+  --data-binary @"$WORKDIR/${LAPTOP}_${DSDT_HASH:0:12}.tar.gz" \
   > /dev/null
 
 echo "DSDT table of your $LAPTOP was succesfully shared."
