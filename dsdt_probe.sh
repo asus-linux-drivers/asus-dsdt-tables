@@ -6,7 +6,7 @@
 # Created ruleset with the following:
 #
 # Tag rules applied on All tags: 
-#        Restrict creations (Only allow users with bypass permission to update matching refs.)
+#        Restrict updates (Only allow users with bypass permission to update matching refs.)
 #        Restrict deletions (Only allow users with bypass permissions to delete matching refs.)
 #
 # Branch protection rules on main:
