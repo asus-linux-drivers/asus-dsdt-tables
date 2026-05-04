@@ -23,16 +23,24 @@ WORKDIR=$(mktemp -d)
 sudo cp /proc/bus/input/devices "$WORKDIR/$LAPTOP.devices"
 sudo cp /sys/firmware/acpi/tables/DSDT "$WORKDIR/$LAPTOP"
 
+sudo chown -R "$USER:$USER" "$WORKDIR"
+
 if command -v iasl >/dev/null 2>&1; then
   sudo iasl -d "$WORKDIR/$LAPTOP" >/dev/null 2>&1
-  sudo rm "$WORKDIR/$LAPTOP"
-fi
 
-DSDT_HASH=$(
-  grep -v 'Disassembly of' "$WORKDIR/$LAPTOP.dsl" |
-  sha256sum |
-  awk '{print $1}'
-)
+  # was generated .dsl file and is a non-empty
+  if [ -s "$WORKDIR/$LAPTOP.dsl" ]; then
+    sudo rm "$WORKDIR/$LAPTOP"
+    DSDT_HASH=$(
+      grep -v 'Disassembly of' "$WORKDIR/$LAPTOP.dsl" |
+      sha256sum |
+      awk '{print $1}'
+    )
+  else
+    echo "Warning: .dsl was not generated, keeping raw DSDT"
+    DSDT_HASH=$(sha256sum "$WORKDIR/$LAPTOP" | awk '{print $1}')
+  fi
+fi
 
 tar -czf "$WORKDIR/${LAPTOP}_${DSDT_HASH:0:12}.tar.gz" --mode='u=rwX,go=rX' -C "$WORKDIR" . >/dev/null 2>&1
 
