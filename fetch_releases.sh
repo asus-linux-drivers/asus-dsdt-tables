@@ -65,20 +65,25 @@ for TAG in $TAGS; do
     ASSETS=$(gh release view "$TAG" -R "$REPO" --json assets -q '.assets[].name')
 
     for ASSET in $ASSETS; do
-        if [[ "$ASSET" != *.zip ]]; then
+
+        if [[ "$ASSET" != *.tar.gz ]]; then
+            continue
+        fi
+
+        if [[ "$ASSET" == Source* ]]; then
             continue
         fi
 
         echo "  Downloading: $ASSET"
 
-        ZIP_PATH="$WORKDIR/$ASSET"
+        TAR_PATH="$WORKDIR/$ASSET"
         EXTRACT_DIR="$WORKDIR/extracted_$TAG"
 
         mkdir -p "$EXTRACT_DIR"
 
         gh release download "$TAG" -R "$REPO" -p "$ASSET" -D "$WORKDIR" >/dev/null
 
-        unzip -o -q "$ZIP_PATH" -d "$EXTRACT_DIR"
+        tar -xzf "$TAR_PATH" -C "$EXTRACT_DIR"
 
         find "$EXTRACT_DIR" -type f \( -name "*.dsl" -o -name "*.devices" \) | while read -r FILE; do
 
