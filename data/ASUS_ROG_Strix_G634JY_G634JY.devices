@@ -1,0 +1,282 @@
+I: Bus=0019 Vendor=0000 Product=0005 Version=0000
+N: Name="Lid Switch"
+P: Phys=PNP0C0D/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:09/PNP0C0D:01/input/input0
+U: Uniq=
+H: Handlers=event0 
+B: PROP=0
+B: EV=21
+B: SW=1
+
+I: Bus=0019 Vendor=0000 Product=0003 Version=0000
+N: Name="Sleep Button"
+P: Phys=PNP0C0E/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00/input/input1
+U: Uniq=
+H: Handlers=kbd event1 
+B: PROP=0
+B: EV=3
+B: KEY=4000 0 0
+
+I: Bus=0019 Vendor=0000 Product=0001 Version=0000
+N: Name="Power Button"
+P: Phys=PNP0C0C/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input2
+U: Uniq=
+H: Handlers=kbd event2 
+B: PROP=0
+B: EV=3
+B: KEY=8000 10000000000000 0
+
+I: Bus=0011 Vendor=0001 Product=0001 Version=ab83
+N: Name="AT Translated Set 2 keyboard"
+P: Phys=isa0060/serio0/input0
+S: Sysfs=/devices/platform/i8042/serio0/input/input3
+U: Uniq=
+H: Handlers=sysrq kbd event3 leds 
+B: PROP=0
+B: EV=120013
+B: KEY=402000002 3803078f800d001 feffffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=7
+
+I: Bus=0019 Vendor=0000 Product=0006 Version=0000
+N: Name="Video Bus"
+P: Phys=LNXVIDEO/video/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:00/LNXVIDEO:00/input/input4
+U: Uniq=
+H: Handlers=kbd event4 
+B: PROP=0
+B: EV=3
+B: KEY=3e000b00000000 0 0 0
+
+I: Bus=0019 Vendor=0000 Product=0006 Version=0000
+N: Name="Video Bus"
+P: Phys=LNXVIDEO/video/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:01/input/input5
+U: Uniq=
+H: Handlers=kbd event5 
+B: PROP=0
+B: EV=3
+B: KEY=3e000b00000000 0 0 0
+
+I: Bus=0018 Vendor=2808 Product=0108 Version=0100
+N: Name="ASUF1416:00 2808:0108 Mouse"
+P: Phys=i2c-ASUF1416:00
+S: Sysfs=/devices/pci0000:00/0000:00:15.0/i2c_designware.1/i2c-0/i2c-ASUF1416:00/0018:2808:0108.0001/input/input11
+U: Uniq=
+H: Handlers=mouse0 event6 
+B: PROP=0
+B: EV=17
+B: KEY=30000 0 0 0 0
+B: REL=903
+B: MSC=10
+
+I: Bus=0018 Vendor=2808 Product=0108 Version=0100
+N: Name="ASUF1416:00 2808:0108 Touchpad"
+P: Phys=i2c-ASUF1416:00
+S: Sysfs=/devices/pci0000:00/0000:00:15.0/i2c_designware.1/i2c-0/i2c-ASUF1416:00/0018:2808:0108.0001/input/input12
+U: Uniq=
+H: Handlers=mouse1 event7 
+B: PROP=5
+B: EV=1b
+B: KEY=e520 10000 0 0 0 0
+B: ABS=2e0800000000003
+B: MSC=20
+
+I: Bus=0018 Vendor=2808 Product=0108 Version=0100
+N: Name="ASUF1416:00 2808:0108 Keyboard"
+P: Phys=i2c-ASUF1416:00
+S: Sysfs=/devices/pci0000:00/0000:00:15.0/i2c_designware.1/i2c-0/i2c-ASUF1416:00/0018:2808:0108.0001/input/input14
+U: Uniq=
+H: Handlers=sysrq kbd event8 leds 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff800000000007ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=0b05 Product=19b6 Version=0110
+N: Name="Asus Keyboard"
+P: Phys=usb-0000:00:14.0-3/input0
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.0/0003:0B05:19B6.0002/input/input26
+U: Uniq=
+H: Handlers=sysrq rfkill kbd mouse2 event10 leds 
+B: PROP=0
+B: EV=12001f
+B: KEY=33eff 0 20000 483ffff17aff32d bfd4444600000000 1f0001 1b30c730b17cc07 ffbf7bfad971dfff febeffdfffefffff fffffffffffffffe
+B: REL=1943
+B: ABS=10100000000
+B: MSC=10
+B: LED=1f
+
+I: Bus=0019 Vendor=0000 Product=0000 Version=0000
+N: Name="Asus WMI hotkeys"
+P: Phys=asus-nb-wmi/input0
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input27
+U: Uniq=
+H: Handlers=rfkill kbd event11 
+B: PROP=0
+B: EV=100013
+B: KEY=400000000000000 1000000080000 400000 0 0 0 81606f00900c00 c280027801701000 e000000000000 0
+B: MSC=10
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=3"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card0/input28
+U: Uniq=
+H: Handlers=event12 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=7"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card0/input29
+U: Uniq=
+H: Handlers=event13 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=8"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card0/input30
+U: Uniq=
+H: Handlers=event14 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=9"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.0/0000:01:00.1/sound/card0/input31
+U: Uniq=
+H: Handlers=event15 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA Intel PCH Mic"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card1/input32
+U: Uniq=
+H: Handlers=event17 
+B: PROP=0
+B: EV=21
+B: SW=10
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA Intel PCH Mic"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card1/input33
+U: Uniq=
+H: Handlers=event18 
+B: PROP=0
+B: EV=21
+B: SW=10
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA Intel PCH Headphone"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card1/input34
+U: Uniq=
+H: Handlers=event19 
+B: PROP=0
+B: EV=21
+B: SW=4
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA Intel PCH HDMI/DP,pcm=3"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card1/input35
+U: Uniq=
+H: Handlers=event20 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA Intel PCH HDMI/DP,pcm=7"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card1/input36
+U: Uniq=
+H: Handlers=event21 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA Intel PCH HDMI/DP,pcm=8"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card1/input37
+U: Uniq=
+H: Handlers=event22 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA Intel PCH HDMI/DP,pcm=9"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:1f.3/sound/card1/input38
+U: Uniq=
+H: Handlers=event23 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0003 Vendor=046d Product=c08a Version=0111
+N: Name="Logitech MX Vertical Advanced Ergonomic Mouse"
+P: Phys=usb-0000:00:14.0-5.2/input0
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5.2/1-5.2:1.0/0003:046D:C08A.0005/input/input39
+U: Uniq=2E028BC27711A67C
+H: Handlers=mouse3 event9 
+B: PROP=0
+B: EV=17
+B: KEY=ffff0000 0 0 0 0
+B: REL=1943
+B: MSC=10
+
+I: Bus=0003 Vendor=046d Product=c08a Version=0111
+N: Name="Logitech MX Vertical Advanced Ergonomic Mouse Keyboard"
+P: Phys=usb-0000:00:14.0-5.2/input1
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5.2/1-5.2:1.1/0003:046D:C08A.0006/input/input40
+U: Uniq=2E028BC27711A67C
+H: Handlers=sysrq kbd event16 leds 
+B: PROP=0
+B: EV=12001f
+B: KEY=3f00033fff 0 0 483ffff17aff32d bfd4444600000000 1 130ff38b17d007 ffff7bfad941dfff ffbeffdfffefffff fffffffffffffffe
+B: REL=1040
+B: ABS=100000000
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=05ac Product=026c Version=0110
+N: Name="Apple Inc. Magic Keyboard with Numeric Keypad"
+P: Phys=usb-0000:00:14.0-5.3/input0
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5.3/1-5.3:1.0/0003:05AC:026C.0009/input/input41
+U: Uniq=F0T941700AVJKPGAA
+H: Handlers=event24 
+B: PROP=0
+B: EV=13
+B: KEY=1 0 0 0 0
+B: MSC=10
+
+I: Bus=0003 Vendor=05ac Product=026c Version=0110
+N: Name="Apple Inc. Magic Keyboard with Numeric Keypad"
+P: Phys=usb-0000:00:14.0-5.3/input1
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-5/1-5.3/1-5.3:1.1/0003:05AC:026C.000A/input/input42
+U: Uniq=F0T941700AVJKPGAA
+H: Handlers=sysrq kbd event25 leds 
+B: PROP=0
+B: EV=120013
+B: KEY=10000 0 0 0 101007b02011007 ff9f217ac14057ff ffbeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
