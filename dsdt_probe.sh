@@ -30,12 +30,10 @@ DSDT_HASH=$(sha256sum "$WORKDIR/$LAPTOP" | awk '{print $1}')
 if command -v iasl >/dev/null 2>&1; then
   sudo iasl -d "$WORKDIR/$LAPTOP" >/dev/null 2>&1
 
-  # was generated .dsl file and is non-empty
-  if [ -s "$WORKDIR/$LAPTOP.dsl" ]; then
-    ;
-  else
-    sudo rm "$WORKDIR/$LAPTOP.dsl"
+  # was generated .dsl file but is empty
+  if [ ! -s "$WORKDIR/$LAPTOP.dsl" ]; then
     echo "Warning: .dsl was not generated (sharing only a raw DSDT)"
+    sudo rm -f "$WORKDIR/$LAPTOP.dsl"
   fi
 fi
 
