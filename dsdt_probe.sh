@@ -32,10 +32,10 @@ if command -v iasl >/dev/null 2>&1; then
 
   # was generated .dsl file and is non-empty
   if [ -s "$WORKDIR/$LAPTOP.dsl" ]; then
-    sudo rm "$WORKDIR/$LAPTOP"
+    ;
   else
     sudo rm "$WORKDIR/$LAPTOP.dsl"
-    echo "Warning: .dsl was not generated, keeping raw DSDT"
+    echo "Warning: .dsl was not generated (sharing only a raw DSDT)"
   fi
 fi
 
