@@ -25,20 +25,17 @@ sudo cp /sys/firmware/acpi/tables/DSDT "$WORKDIR/$LAPTOP"
 
 sudo chown -R "$USER:$USER" "$WORKDIR"
 
+DSDT_HASH=$(sha256sum "$WORKDIR/$LAPTOP" | awk '{print $1}')
+
 if command -v iasl >/dev/null 2>&1; then
   sudo iasl -d "$WORKDIR/$LAPTOP" >/dev/null 2>&1
 
-  # was generated .dsl file and is a non-empty
+  # was generated .dsl file and is non-empty
   if [ -s "$WORKDIR/$LAPTOP.dsl" ]; then
     sudo rm "$WORKDIR/$LAPTOP"
-    DSDT_HASH=$(
-      grep -v 'Disassembly of' "$WORKDIR/$LAPTOP.dsl" |
-      sha256sum |
-      awk '{print $1}'
-    )
   else
+    sudo rm "$WORKDIR/$LAPTOP.dsl"
     echo "Warning: .dsl was not generated, keeping raw DSDT"
-    DSDT_HASH=$(sha256sum "$WORKDIR/$LAPTOP" | awk '{print $1}')
   fi
 fi
 
