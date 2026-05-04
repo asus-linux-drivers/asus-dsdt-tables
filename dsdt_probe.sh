@@ -54,7 +54,7 @@ RELEASE_RESPONSE=$(curl -s -X POST \
 UPLOAD_URL=$(echo "$RELEASE_RESPONSE" | jq -r '.upload_url' | cut -d'{' -f1)
 
 if [ "$UPLOAD_URL" = "null" ] || [ -z "$UPLOAD_URL" ]; then
-  echo "DSDT table of your $LAPTOP in its current state has already been shared."
+  echo "DSDT table of your $LAPTOP in its current state has already been shared (you can verify the uploaded archive here: https://github.com/$REPO/releases/tag/$TAG)."
   exit 0
 fi
 
@@ -65,4 +65,4 @@ curl -sS -X POST \
   --data-binary @"$WORKDIR/${LAPTOP}_${DSDT_HASH:0:12}.tar.gz" \
   > /dev/null
 
-echo "DSDT table of your $LAPTOP was succesfully shared."
+echo "DSDT table of your $LAPTOP was succesfully shared (you can verify the uploaded archive here: https://github.com/$REPO/releases/tag/$TAG)."
