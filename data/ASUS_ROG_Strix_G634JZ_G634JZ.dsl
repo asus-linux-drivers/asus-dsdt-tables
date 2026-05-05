@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /tmp/tmp.Byb9Ru1Gr6/Zenbook_UP5401EA_UP5401EA, Wed May  6 00:06:56 2026
+ * Disassembly of /tmp/tmp.tLl2LQtmHa/Vivobook_ASUSLaptop_X3400PH_K3400PH_c4bb73285cf9/Vivobook_ASUSLaptop_X3400PH_K3400PH, Wed May  6 00:07:53 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x00061BFF (400383)
+ *     Length           0x0005F9CD (391629)
  *     Revision         0x02
- *     Checksum         0x36
+ *     Checksum         0xA4
  *     OEM ID           "_ASUS_"
  *     OEM Table ID     "Notebook"
  *     OEM Revision     0x01072009 (17244169)
@@ -42,8 +42,17 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (_SB_.ELNG, UnknownObj)
     External (_SB_.EMNA, UnknownObj)
     External (_SB_.EPCS, UnknownObj)
-    External (_SB_.GGOV, MethodObj)    // 1 Arguments
     External (_SB_.IETM, DeviceObj)
+    External (_SB_.NPCF, UnknownObj)
+    External (_SB_.NPCF.ACBT, UnknownObj)
+    External (_SB_.NPCF.AMAT, UnknownObj)
+    External (_SB_.NPCF.AMIT, UnknownObj)
+    External (_SB_.NPCF.ATPP, UnknownObj)
+    External (_SB_.NPCF.DBAC, UnknownObj)
+    External (_SB_.NPCF.DBDC, UnknownObj)
+    External (_SB_.NPCF.DCBT, UnknownObj)
+    External (_SB_.NPCF.DTPP, UnknownObj)
+    External (_SB_.NPCF.RCHV, MethodObj)    // 0 Arguments
     External (_SB_.NVDR._DSM, MethodObj)    // 4 Arguments
     External (_SB_.NVDR.NVD1._DSM, MethodObj)    // 4 Arguments
     External (_SB_.NVDR.NVD1._LSI, MethodObj)    // 0 Arguments
@@ -54,6 +63,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (_SB_.PC00.D3C_, PowerResObj)
     External (_SB_.PC00.D3C_._ON_, MethodObj)    // 0 Arguments
     External (_SB_.PC00.D3C_._STA, MethodObj)    // 0 Arguments
+    External (_SB_.PC00.DPFC, MethodObj)    // 0 Arguments
     External (_SB_.PC00.DPOF, UnknownObj)
     External (_SB_.PC00.GFX0.ALSI, UnknownObj)
     External (_SB_.PC00.GFX0.CBLV, UnknownObj)
@@ -87,8 +97,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (_SB_.PC00.PEG0, DeviceObj)
     External (_SB_.PC00.PEG0.HPEV, MethodObj)    // 0 Arguments
     External (_SB_.PC00.PEG0.HPME, MethodObj)    // 0 Arguments
+    External (_SB_.PC00.PEG0.PEGP, DeviceObj)
     External (_SB_.PC00.PEG0.PEGP.PAHC, MethodObj)    // 0 Arguments
     External (_SB_.PC00.PEG0.PEGP.PNVM, MethodObj)    // 0 Arguments
+    External (_SB_.PC00.PEG0.PG00._STA, IntObj)
     External (_SB_.PC00.PEG0.POFF, MethodObj)    // 0 Arguments
     External (_SB_.PC00.PEG0.PON_, MethodObj)    // 0 Arguments
     External (_SB_.PC00.PEG1, DeviceObj)
@@ -177,6 +189,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (_SB_.PC00.SAT0.PRT6.SPON, MethodObj)    // 0 Arguments
     External (_SB_.PC00.SAT0.PRT7.SPOF, MethodObj)    // 0 Arguments
     External (_SB_.PC00.SAT0.PRT7.SPON, MethodObj)    // 0 Arguments
+    External (_SB_.PC00.SAT0.SATC, MethodObj)    // 1 Arguments
+    External (_SB_.PC00.SAT0.SATD, MethodObj)    // 4 Arguments
     External (_SB_.PC00.TBT0, PowerResObj)
     External (_SB_.PC00.TBT0._OFF, MethodObj)    // 0 Arguments
     External (_SB_.PC00.TBT0._ON_, MethodObj)    // 0 Arguments
@@ -313,8 +327,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (_SB_.PR00.TPSS, PkgObj)
     External (_SB_.PTHH.THEN, MethodObj)    // 0 Arguments
     External (_SB_.PWRB, DeviceObj)
-    External (_SB_.SGOV, MethodObj)    // 2 Arguments
-    External (_SB_.TCWK, MethodObj)    // 1 Arguments
     External (_SB_.TPM_.PTS_, MethodObj)    // 1 Arguments
     External (_SB_.TRPD, UnknownObj)
     External (_SB_.TRPF, UnknownObj)
@@ -391,7 +403,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (M64B, IntObj)
     External (M64L, IntObj)
     External (MDBG, MethodObj)    // 1 Arguments
-    External (MSUB, UnknownObj)
     External (P0WK, UnknownObj)
     External (P1GP, UnknownObj)
     External (P1WK, UnknownObj)
@@ -399,6 +410,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (P2WK, UnknownObj)
     External (P3GP, UnknownObj)
     External (P3WK, UnknownObj)
+    External (PDIW, UnknownObj)
     External (PF00, IntObj)
     External (PF01, UnknownObj)
     External (PF02, UnknownObj)
@@ -491,14 +503,14 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (TPCS, 0x1000)
     Name (TPMM, 0xFED40000)
     Name (FTPM, 0xFED40040)
-    Name (PPIM, 0x59E51F98)
+    Name (PPIM, 0x65E73F98)
     Name (PPIL, 0x1C)
     Name (AMDT, Zero)
     Name (TPMF, One)
     Name (PPIV, One)
     Name (DTP1, One)
     Name (IOBS, 0xFD60)
-    Name (SANB, 0x59E52D18)
+    Name (SANB, 0x65E73D18)
     Name (SANL, 0x01BC)
     OperationRegion (SANV, SystemMemory, SANB, SANL)
     Field (SANV, AnyAcc, Lock, Preserve)
@@ -707,7 +719,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         PDI1,   16
     }
 
-    OperationRegion (GNVS, SystemMemory, 0x59E18000, 0x0ABD)
+    OperationRegion (GNVS, SystemMemory, 0x65E39000, 0x0AAA)
     Field (GNVS, AnyAcc, Lock, Preserve)
     {
         OSYS,   16, 
@@ -2003,7 +2015,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         NCTI,   8, 
         NCTH,   8, 
         HSIO,   8, 
-        HUAR,   8, 
         ZPOD,   8, 
         RGBC,   8, 
         DPTC,   8, 
@@ -2245,12 +2256,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         TFDI,   16, 
         TBTG,   16, 
         TBTP,   16, 
-        D2BA,   64, 
-        D2OP,   32, 
-        TR2B,   16, 
-        WSID,   16, 
-        WSTO,   16, 
-        MSUB,   8, 
         E3EN,   8
     }
 
@@ -2262,7 +2267,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (TOPM, 0x00000000)
     Name (ROMS, 0xFFE00000)
     Name (VGAF, One)
-    Name (CNVB, 0x59D0C000)
+    Name (CNVB, 0x65CF0000)
     Name (CNVL, 0x0020)
     OperationRegion (CPNV, SystemMemory, CNVB, CNVL)
     Field (CPNV, AnyAcc, Lock, Preserve)
@@ -2284,7 +2289,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Alias (PRSA, PRSF)
         Alias (PRSA, PRSG)
         Alias (PRSA, PRSH)
-        Name (PD00, Package (0x48)
+        Name (PD00, Package (0x44)
         {
             Package (0x04)
             {
@@ -2371,38 +2376,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0x0005FFFF, 
                 Zero, 
                 LNKA, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                Zero, 
-                LNKA, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                One, 
-                LNKB, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                0x02, 
-                LNKC, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                0x03, 
-                LNKD, 
                 Zero
             }, 
 
@@ -2862,7 +2835,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Zero
             }
         })
-        Name (AR00, Package (0x48)
+        Name (AR00, Package (0x44)
         {
             Package (0x04)
             {
@@ -2950,38 +2923,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Zero, 
                 Zero, 
                 0x10
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                Zero, 
-                Zero, 
-                0x10
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                One, 
-                Zero, 
-                0x11
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                0x02, 
-                Zero, 
-                0x12
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                0x03, 
-                Zero, 
-                0x13
             }, 
 
             Package (0x04)
@@ -3514,14 +3455,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 0xFFFF, 
                 Zero, 
-                LNKA, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0xFFFF, 
-                One, 
                 LNKB, 
                 Zero
             }, 
@@ -3529,7 +3462,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Package (0x04)
             {
                 0xFFFF, 
-                0x02, 
+                One, 
                 LNKC, 
                 Zero
             }, 
@@ -3537,8 +3470,16 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Package (0x04)
             {
                 0xFFFF, 
-                0x03, 
+                0x02, 
                 LNKD, 
+                Zero
+            }, 
+
+            Package (0x04)
+            {
+                0xFFFF, 
+                0x03, 
+                LNKA, 
                 Zero
             }
         })
@@ -3549,7 +3490,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 Zero, 
                 Zero, 
-                0x10
+                0x11
             }, 
 
             Package (0x04)
@@ -3557,7 +3498,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 One, 
                 Zero, 
-                0x11
+                0x12
             }, 
 
             Package (0x04)
@@ -3565,7 +3506,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 0x02, 
                 Zero, 
-                0x12
+                0x13
             }, 
 
             Package (0x04)
@@ -3573,7 +3514,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 0x03, 
                 Zero, 
-                0x13
+                0x10
             }
         })
         Name (PD03, Package (0x04)
@@ -3582,14 +3523,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 0xFFFF, 
                 Zero, 
-                LNKB, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0xFFFF, 
-                One, 
                 LNKC, 
                 Zero
             }, 
@@ -3597,7 +3530,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Package (0x04)
             {
                 0xFFFF, 
-                0x02, 
+                One, 
                 LNKD, 
                 Zero
             }, 
@@ -3605,8 +3538,16 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Package (0x04)
             {
                 0xFFFF, 
-                0x03, 
+                0x02, 
                 LNKA, 
+                Zero
+            }, 
+
+            Package (0x04)
+            {
+                0xFFFF, 
+                0x03, 
+                LNKB, 
                 Zero
             }
         })
@@ -3617,7 +3558,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 Zero, 
                 Zero, 
-                0x11
+                0x12
             }, 
 
             Package (0x04)
@@ -3625,7 +3566,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 One, 
                 Zero, 
-                0x12
+                0x13
             }, 
 
             Package (0x04)
@@ -3633,7 +3574,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 0x02, 
                 Zero, 
-                0x13
+                0x10
             }, 
 
             Package (0x04)
@@ -3641,7 +3582,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 0x03, 
                 Zero, 
-                0x10
+                0x11
             }
         })
         Name (PD1C, Package (0x04)
@@ -3712,8 +3653,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0x13
             }
         })
-        Name (PXX0, Package (0x00) {})
-        Name (AXX0, Package (0x00) {})
         Name (PXX1, Package (0x00) {})
         Name (AXX1, Package (0x00) {})
         Name (PXX2, Package (0x00) {})
@@ -5352,82 +5291,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0x12
             }
         })
-        Name (PG6F, Package (0x04)
-        {
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                Zero, 
-                LNKA, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                One, 
-                LNKB, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                0x02, 
-                LNKC, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                0x03, 
-                LNKD, 
-                Zero
-            }
-        })
-        Name (AG6F, Package (0x04)
-        {
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                Zero, 
-                Zero, 
-                0x10
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                One, 
-                Zero, 
-                0x11
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                0x02, 
-                Zero, 
-                0x12
-            }, 
-
-            Package (0x04)
-            {
-                0x0007FFFF, 
-                0x03, 
-                Zero, 
-                0x13
-            }
-        })
-        Name (PG70, Package (0x00) {})
-        Name (AG70, Package (0x00) {})
-        Name (PG72, Package (0x00) {})
-        Name (AG72, Package (0x00) {})
-        Name (PG74, Package (0x00) {})
-        Name (AG74, Package (0x00) {})
-        Name (PG76, Package (0x00) {})
-        Name (AG76, Package (0x00) {})
+        Name (NUL1, Package (0x00) {})
+        Name (NUL2, Package (0x00) {})
     }
 
     Scope (_SB)
@@ -5995,7 +5860,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             D1F2,   1, 
             D1F1,   1, 
             D1F0,   1, 
-                ,   9, 
+            Offset (0x56), 
             D6F0,   1, 
             Offset (0x60), 
             PXEN,   1, 
@@ -6268,20 +6133,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             PBMX = ((Local0 >> 0x14) - 0x02)
             CreateWordField (BUF0, \_SB.PC00._Y00._LEN, PBLN)  // _LEN: Length
             PBLN = ((Local0 >> 0x14) - One)
-            If (CondRefOf (\MSUB))
+            If (CondRefOf (\VMDE))
             {
-                If ((PBMX != MSUB))
+                If (((VMDE == One) && (PBMX > 0xE0)))
                 {
-                    PBMX = MSUB /* \MSUB */
-                    PBLN = (MSUB + One)
-                }
-                ElseIf (CondRefOf (\VMDE))
-                {
-                    If (((VMDE == One) && (PBMX > 0xE0)))
-                    {
-                        PBMX = 0xE0
-                        PBLN = 0xE1
-                    }
+                    PBMX = 0xE0
+                    PBLN = 0xE1
                 }
             }
 
@@ -6839,6 +6696,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
+    If ((((PSW2 != Zero) && (RPN2 == 0x08)) || (
+        (WLWK != Zero) && (WLRP == 0x08))))
+    {
+        Scope (_SB.PC00.RP08)
+        {
+            Method (PPRW, 0, NotSerialized)
+            {
+                If (((PSW2 != Zero) && (RPN2 == 0x08)))
+                {
+                    Return (GPRW (GGPE (PSW2), 0x04))
+                }
+
+                If (((WLWK != Zero) && (WLRP == 0x08)))
+                {
+                    Return (GPRW (GGPE (WLWK), 0x04))
+                }
+            }
+        }
+    }
+
     If (((WWKP != Zero) && (WWRP == 0x09)))
     {
         Scope (_SB.PC00.RP09)
@@ -6850,29 +6727,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    If (((PSW2 != Zero) && (RPN2 == One)))
-    {
-        Scope (_SB.PC00.RP01)
-        {
-            Method (PPRW, 0, NotSerialized)
-            {
-                Return (GPRW (GGPE (PSW2), 0x04))
-            }
-        }
-    }
-
-    If (((PSWP != Zero) && (RPNB == 0x15)))
-    {
-        Scope (_SB.PC00.RP21)
-        {
-            Method (PPRW, 0, NotSerialized)
-            {
-                Return (GPRW (GGPE (PSWP), 0x04))
-            }
-        }
-    }
-
-    Name (SNVB, 0x59E1F000)
+    Name (SNVB, 0x65E41000)
     Name (SNVL, 0x0008)
     OperationRegion (SBNV, SystemMemory, SNVB, SNVL)
     Field (SBNV, AnyAcc, Lock, Preserve)
@@ -7735,7 +7590,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (PCHH, One)
     Name (PCHN, 0x03)
     Name (PCHL, 0x02)
-    Name (PNVB, 0x59E52918)
+    Name (PNVB, 0x65E74918)
     Name (PNVL, 0x02D8)
     OperationRegion (PNVA, SystemMemory, PNVB, PNVL)
     Field (PNVA, AnyAcc, Lock, Preserve)
@@ -9130,7 +8985,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Method (PSD3, 1, Serialized)
         {
-            Local0 = Zero
             If (((SIME == One) || !IMPS ()))
             {
                 Return (Zero)
@@ -9141,195 +8995,169 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Case (Zero)
                 {
                     RAA0 = One
-                    While (((APA0 == Zero) && (Local0 < 0x2710)))
+                    While ((APA0 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (One)
                 {
                     RAA1 = One
-                    While (((APA1 == Zero) && (Local0 < 0x2710)))
+                    While ((APA1 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x02)
                 {
                     RAA2 = One
-                    While (((APA2 == Zero) && (Local0 < 0x2710)))
+                    While ((APA2 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x03)
                 {
                     RAA3 = One
-                    While (((APA3 == Zero) && (Local0 < 0x2710)))
+                    While ((APA3 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x04)
                 {
                     RPB0 = One
-                    While (((APB0 == Zero) && (Local0 < 0x2710)))
+                    While ((APB0 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x05)
                 {
                     RPB1 = One
-                    While (((APB1 == Zero) && (Local0 < 0x2710)))
+                    While ((APB1 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x06)
                 {
                     RPB2 = One
-                    While (((APB2 == Zero) && (Local0 < 0x2710)))
+                    While ((APB2 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x07)
                 {
                     RPB3 = One
-                    While (((APB3 == Zero) && (Local0 < 0x2710)))
+                    While ((APB3 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x08)
                 {
                     RPC0 = One
-                    While (((APC0 == Zero) && (Local0 < 0x2710)))
+                    While ((APC0 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x09)
                 {
                     RPC1 = One
-                    While (((APC1 == Zero) && (Local0 < 0x2710)))
+                    While ((APC1 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0A)
                 {
                     RPC2 = One
-                    While (((APC2 == Zero) && (Local0 < 0x2710)))
+                    While ((APC2 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0B)
                 {
                     RPC3 = One
-                    While (((APC3 == Zero) && (Local0 < 0x2710)))
+                    While ((APC3 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0C)
                 {
                     RPD0 = One
-                    While (((APD0 == Zero) && (Local0 < 0x2710)))
+                    While ((APD0 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0D)
                 {
                     RPD1 = One
-                    While (((APD1 == Zero) && (Local0 < 0x2710)))
+                    While ((APD1 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0E)
                 {
                     RPD2 = One
-                    While (((APD2 == Zero) && (Local0 < 0x2710)))
+                    While ((APD2 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0F)
                 {
                     RPD3 = One
-                    While (((APD3 == Zero) && (Local0 < 0x2710)))
+                    While ((APD3 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x10)
                 {
                     RPE0 = One
-                    While (((APE0 == Zero) && (Local0 < 0x2710)))
+                    While ((APE0 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x11)
                 {
                     RPE1 = One
-                    While (((APE1 == Zero) && (Local0 < 0x2710)))
+                    While ((APE1 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x12)
                 {
                     RPE2 = One
-                    While (((APE2 == Zero) && (Local0 < 0x2710)))
+                    While ((APE2 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x13)
                 {
                     RPE3 = One
-                    While (((APE3 == Zero) && (Local0 < 0x2710)))
+                    While ((APE3 == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
 
-            }
-
-            If ((Local0 >= 0x2710))
-            {
-                ADBG ("Error: Timeout occurred")
             }
         }
 
         Method (PSD0, 1, Serialized)
         {
-            Local0 = Zero
             If (((SIME == One) || !IMPS ()))
             {
                 Return (Zero)
@@ -9340,195 +9168,169 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Case (Zero)
                 {
                     RAA0 = Zero
-                    While (((APA0 == One) && (Local0 < 0x2710)))
+                    While ((APA0 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (One)
                 {
                     RAA1 = Zero
-                    While (((APA1 == One) && (Local0 < 0x2710)))
+                    While ((APA1 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x02)
                 {
                     RAA2 = Zero
-                    While (((APA2 == One) && (Local0 < 0x2710)))
+                    While ((APA2 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x03)
                 {
                     RAA3 = Zero
-                    While (((APA3 == One) && (Local0 < 0x2710)))
+                    While ((APA3 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x04)
                 {
                     RPB0 = Zero
-                    While (((APB0 == One) && (Local0 < 0x2710)))
+                    While ((APB0 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x05)
                 {
                     RPB1 = Zero
-                    While (((APB1 == One) && (Local0 < 0x2710)))
+                    While ((APB1 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x06)
                 {
                     RPB2 = Zero
-                    While (((APB2 == One) && (Local0 < 0x2710)))
+                    While ((APB2 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x07)
                 {
                     RPB3 = Zero
-                    While (((APB3 == One) && (Local0 < 0x2710)))
+                    While ((APB3 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x08)
                 {
                     RPC0 = Zero
-                    While (((APC0 == One) && (Local0 < 0x2710)))
+                    While ((APC0 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x09)
                 {
                     RPC1 = Zero
-                    While (((APC1 == One) && (Local0 < 0x2710)))
+                    While ((APC1 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0A)
                 {
                     RPC2 = Zero
-                    While (((APC2 == One) && (Local0 < 0x2710)))
+                    While ((APC2 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0B)
                 {
                     RPC3 = Zero
-                    While (((APC3 == One) && (Local0 < 0x2710)))
+                    While ((APC3 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0C)
                 {
                     RPD0 = Zero
-                    While (((APD0 == One) && (Local0 < 0x2710)))
+                    While ((APD0 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0D)
                 {
                     RPD1 = Zero
-                    While (((APD1 == One) && (Local0 < 0x2710)))
+                    While ((APD1 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0E)
                 {
                     RPD2 = Zero
-                    While (((APD2 == One) && (Local0 < 0x2710)))
+                    While ((APD2 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x0F)
                 {
                     RPD3 = Zero
-                    While (((APD3 == One) && (Local0 < 0x2710)))
+                    While ((APD3 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x10)
                 {
                     RPE0 = Zero
-                    While (((APE0 == One) && (Local0 < 0x2710)))
+                    While ((APE0 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x11)
                 {
                     RPE1 = Zero
-                    While (((APE1 == One) && (Local0 < 0x2710)))
+                    While ((APE1 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x12)
                 {
                     RPE2 = Zero
-                    While (((APE2 == One) && (Local0 < 0x2710)))
+                    While ((APE2 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x13)
                 {
                     RPE3 = Zero
-                    While (((APE3 == One) && (Local0 < 0x2710)))
+                    While ((APE3 == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
 
-            }
-
-            If ((Local0 >= 0x2710))
-            {
-                ADBG ("Error: Timeout occurred")
             }
         }
 
         Method (CSD3, 1, Serialized)
         {
-            Local0 = Zero
             If (((SIME == One) || !IMPS ()))
             {
                 Return (Zero)
@@ -9539,60 +9341,49 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Case (0x14)
                 {
                     RSAT = One
-                    While (((ASAT == Zero) && (Local0 < 0x2710)))
+                    While ((ASAT == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x15)
                 {
                     RGBE = One
-                    While (((AGBE == Zero) && (Local0 < 0x2710)))
+                    While ((AGBE == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x16)
                 {
                     RXHC = One
-                    While (((AXHC == Zero) && (Local0 < 0x2710)))
+                    While ((AXHC == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x17)
                 {
                     RXDC = One
-                    While (((AXDC == Zero) && (Local0 < 0x2710)))
+                    While ((AXDC == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x18)
                 {
                     RUFS = One
-                    While (((AUFS == Zero) && (Local0 < 0x2710)))
+                    While ((AUFS == Zero))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
 
-            }
-
-            If ((Local0 >= 0x2710))
-            {
-                ADBG ("Error: Timeout occurred")
             }
         }
 
         Method (CSD0, 1, Serialized)
         {
-            Local0 = Zero
             If (((SIME == One) || !IMPS ()))
             {
                 Return (Zero)
@@ -9603,54 +9394,44 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Case (0x14)
                 {
                     RSAT = Zero
-                    While (((ASAT == One) && (Local0 < 0x2710)))
+                    While ((ASAT == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x15)
                 {
                     RGBE = Zero
-                    While (((AGBE == One) && (Local0 < 0x2710)))
+                    While ((AGBE == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x16)
                 {
                     RXHC = Zero
-                    While (((AXHC == One) && (Local0 < 0x2710)))
+                    While ((AXHC == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x17)
                 {
                     RXDC = Zero
-                    While (((AXDC == One) && (Local0 < 0x2710)))
+                    While ((AXDC == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
                 Case (0x18)
                 {
                     RUFS = Zero
-                    While (((AUFS == One) && (Local0 < 0x2710)))
+                    While ((AUFS == One))
                     {
-                        Local0++
-                        Sleep (One)
+                        Stall (0x0A)
                     }
                 }
 
-            }
-
-            If ((Local0 >= 0x2710))
-            {
-                ADBG ("Error: Timeout occurred")
             }
         }
     }
@@ -10522,9 +10303,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Offset (0x18E8), 
                 ,   31, 
             CECE,   1, 
-            Offset (0x1B0C), 
-                ,   2, 
-            ISAT,   1, 
             Offset (0x1B1C), 
                 ,   22, 
             XSQD,   1, 
@@ -10589,7 +10367,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         Method (IMPS, 0, NotSerialized)
         {
-            If (((PCHS == PCHH) || (PCHS == 0x04)))
+            If ((PCHS == 0x04))
             {
                 Return (Zero)
             }
@@ -18311,42 +18089,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     }
                 }
             })
-            Method (SATC, 1, Serialized)
-            {
-                If ((Arg0 == ToUUID ("e4db149b-fcfe-425b-a6d8-92357d78fc7f") /* SATA Controller */))
-                {
-                    Return (One)
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
-
-            Method (SATD, 4, Serialized)
-            {
-                Switch (ToInteger (Arg2))
-                {
-                    Case (Zero)
-                    {
-                        Return (Buffer (One)
-                        {
-                             0x03                                             // .
-                        })
-                    }
-                    Default
-                    {
-                        Return (Zero)
-                    }
-
-                }
-
-                Return (Buffer (One)
-                {
-                     0x00                                             // .
-                })
-            }
-
             Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
             {
                 If (PCIC (Arg0))
@@ -18382,13 +18124,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         CSD0 (0x14)
                     }
                 }
-
-                ISAT = Zero
             }
 
             Method (_PS3, 0, Serialized)  // _PS3: Power State 3
             {
-                ISAT = One
                 If ((PCHS == PCHL))
                 {
                     CSD3 (0x14)
@@ -23063,11 +22802,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 Notify (\_SB.PC00.RP24, Zero) // Bus Check
             }
-
-            If (CondRefOf (\_SB.PC00.TXHC))
-            {
-                \_SB.TCWK (Arg0)
-            }
         }
 
         If ((Arg0 == 0x03))
@@ -23075,6 +22809,20 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (CondRefOf (\_SB.NVDR.RSTP))
             {
                 \_SB.NVDR.RSTP ()
+            }
+
+            If (((PDIW && One) && CondRefOf (PDIW)))
+            {
+                Name (OPTS, Buffer (0x04)
+                {
+                     0x00, 0x00, 0x00, 0x00                           // ....
+                })
+                CreateByteField (OPTS, Zero, CMST)
+                CreateByteField (OPTS, One, RTB1)
+                OPTS = \_SB.PC00.DPFC ()
+            }
+            Else
+            {
             }
         }
 
@@ -23350,6 +23098,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     GLCK = Zero
                     P8XH (Zero, 0xE1)
                     P8XH (One, 0xAB)
+                    If (CondRefOf (\_SB.NPCF.RCHV))
+                    {
+                        \_SB.NPCF.RCHV ()
+                    }
+
                     If (PSCP)
                     {
                         If (CondRefOf (\_SB.PR00._PPC))
@@ -23826,40 +23579,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Device (PA01)
         {
             Name (_HID, "MCHP1930")  // _HID: Hardware ID
-            Name (_UID, 0x04)  // _UID: Unique ID
+            Name (_UID, One)  // _UID: Unique ID
             Name (_S0W, 0x03)  // _S0W: S0 Device Wake State
-            Method (_STA, 0, Serialized)  // _STA: Status
+            Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 If (POME)
                 {
-                    Switch (ToInteger (PLID))
-                    {
-                        Case (Package (0x10)
-                            {
-                                One, 
-                                0x02, 
-                                0x03, 
-                                0x04, 
-                                0x17, 
-                                0x05, 
-                                0x06, 
-                                0x07, 
-                                0x07, 
-                                0x08, 
-                                0x0C, 
-                                0x0A, 
-                                0x0E, 
-                                0x0D, 
-                                0x10, 
-                                0x0F
-                            }
-
-)
-                        {
-                            Return (0x0F)
-                        }
-
-                    }
+                    Return (0x0F)
                 }
 
                 Return (Zero)
@@ -24071,40 +23797,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Device (PA02)
         {
             Name (_HID, "MCHP1930")  // _HID: Hardware ID
-            Name (_UID, 0x05)  // _UID: Unique ID
+            Name (_UID, 0x02)  // _UID: Unique ID
             Name (_S0W, 0x03)  // _S0W: S0 Device Wake State
-            Method (_STA, 0, Serialized)  // _STA: Status
+            Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 If (POME)
                 {
-                    Switch (ToInteger (PLID))
-                    {
-                        Case (Package (0x10)
-                            {
-                                One, 
-                                0x02, 
-                                0x03, 
-                                0x04, 
-                                0x17, 
-                                0x05, 
-                                0x06, 
-                                0x07, 
-                                0x07, 
-                                0x08, 
-                                0x0C, 
-                                0x0A, 
-                                0x0E, 
-                                0x0D, 
-                                0x10, 
-                                0x0F
-                            }
-
-)
-                        {
-                            Return (0x0F)
-                        }
-
-                    }
+                    Return (0x0F)
                 }
 
                 Return (Zero)
@@ -24316,40 +24015,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Device (PA03)
         {
             Name (_HID, "MCHP1930")  // _HID: Hardware ID
-            Name (_UID, 0x06)  // _UID: Unique ID
+            Name (_UID, 0x03)  // _UID: Unique ID
             Name (_S0W, 0x03)  // _S0W: S0 Device Wake State
-            Method (_STA, 0, Serialized)  // _STA: Status
+            Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 If (POME)
                 {
-                    Switch (ToInteger (PLID))
-                    {
-                        Case (Package (0x10)
-                            {
-                                One, 
-                                0x02, 
-                                0x03, 
-                                0x04, 
-                                0x17, 
-                                0x05, 
-                                0x06, 
-                                0x07, 
-                                0x07, 
-                                0x08, 
-                                0x0C, 
-                                0x0A, 
-                                0x0E, 
-                                0x0D, 
-                                0x10, 
-                                0x0F
-                            }
-
-)
-                        {
-                            Return (0x0F)
-                        }
-
-                    }
+                    Return (0x0F)
                 }
 
                 Return (Zero)
@@ -24561,7 +24233,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Device (PA04)
         {
             Name (_HID, "MCHP1930")  // _HID: Hardware ID
-            Name (_UID, 0x07)  // _UID: Unique ID
+            Name (_UID, 0x04)  // _UID: Unique ID
             Name (_S0W, 0x03)  // _S0W: S0 Device Wake State
             Method (_STA, 0, Serialized)  // _STA: Status
             {
@@ -24784,537 +24456,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    Scope (_SB.PC00.I2C0)
-    {
-        Device (PA01)
-        {
-            Name (_HID, "MCHP1930")  // _HID: Hardware ID
-            Name (_UID, One)  // _UID: Unique ID
-            Name (_S0W, 0x03)  // _S0W: S0 Device Wake State
-            Method (_STA, 0, Serialized)  // _STA: Status
-            {
-                If (POME)
-                {
-                    Switch (ToInteger (PLID))
-                    {
-                        Case (Package (0x01)
-                            {
-                                0x21
-                            }
-
-)
-                        {
-                            Return (0x0F)
-                        }
-
-                    }
-                }
-
-                Return (Zero)
-            }
-
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (RBUF, ResourceTemplate ()
-                {
-                    I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
-                        AddressingMode7Bit, "\\_SB.PC00.I2C0",
-                        0x00, ResourceConsumer, _Y3A, Exclusive,
-                        )
-                })
-                CreateWordField (RBUF, \_SB.PC00.I2C0.PA01._CRS._Y3A._ADR, BADR)  // _ADR: Address
-                BADR = 0x1F
-                Return (RBUF) /* \_SB_.PC00.I2C0.PA01._CRS.RBUF */
-            }
-
-            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
-            {
-                If ((Arg0 != ToUUID ("033771e0-1705-47b4-9535-d1bbe14d9a09") /* Unknown UUID */))
-                {
-                    Return (Buffer (One)
-                    {
-                         0x00                                             // .
-                    })
-                }
-
-                Switch (ToInteger (Arg2))
-                {
-                    Case (Zero)
-                    {
-                        Switch (ToInteger (Arg1))
-                        {
-                            Case (Zero)
-                            {
-                                Return (Buffer (One)
-                                {
-                                     0x03                                             // .
-                                })
-                            }
-                            Case (One)
-                            {
-                                Return (Buffer (One)
-                                {
-                                     0x7F                                             // .
-                                })
-                            }
-
-                        }
-
-                        Break
-                    }
-                    Case (One)
-                    {
-                        Name (PKG1, Package (0x01)
-                        {
-                            Package (0x08)
-                            {
-                                "VBATA", 
-                                0x02, 
-                                "VDDQ_MEM", 
-                                0x02, 
-                                "VCCIN_PH1", 
-                                One, 
-                                "VCCIN_PH2", 
-                                One
-                            }
-                        })
-                        Return (DerefOf (PKG1 [Zero]))
-                    }
-                    Case (0x02)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (PKG2, Package (0x01)
-                        {
-                            Package (0x04)
-                            {
-                                0x07D0, 
-                                0x07D0, 
-                                0x03E8, 
-                                0x03E8
-                            }
-                        })
-                        Return (DerefOf (PKG2 [Zero]))
-                    }
-                    Case (0x03)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF3, Package (0x01)
-                        {
-                            0x0F
-                        })
-                        Return (BUF3) /* \_SB_.PC00.I2C0.PA01._DSM.BUF3 */
-                    }
-                    Case (0x04)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF4, Package (0x01)
-                        {
-                            Zero
-                        })
-                        Return (BUF4) /* \_SB_.PC00.I2C0.PA01._DSM.BUF4 */
-                    }
-                    Case (0x05)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF5, Package (0x02)
-                        {
-                            0x0400, 
-                            0x08
-                        })
-                        Return (BUF5) /* \_SB_.PC00.I2C0.PA01._DSM.BUF5 */
-                    }
-                    Case (0x06)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF6, Package (0x01)
-                        {
-                            0x0384
-                        })
-                        Return (BUF6) /* \_SB_.PC00.I2C0.PA01._DSM.BUF6 */
-                    }
-
-                }
-
-                Return (Buffer (One)
-                {
-                     0x00                                             // .
-                })
-            }
-        }
-
-        Device (PA02)
-        {
-            Name (_HID, "MCHP1930")  // _HID: Hardware ID
-            Name (_UID, 0x02)  // _UID: Unique ID
-            Name (_S0W, 0x03)  // _S0W: S0 Device Wake State
-            Method (_STA, 0, Serialized)  // _STA: Status
-            {
-                If (POME)
-                {
-                    Switch (ToInteger (PLID))
-                    {
-                        Case (Package (0x01)
-                            {
-                                0x21
-                            }
-
-)
-                        {
-                            Return (0x0F)
-                        }
-
-                    }
-                }
-
-                Return (Zero)
-            }
-
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (RBUF, ResourceTemplate ()
-                {
-                    I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
-                        AddressingMode7Bit, "\\_SB.PC00.I2C0",
-                        0x00, ResourceConsumer, _Y3B, Exclusive,
-                        )
-                })
-                CreateWordField (RBUF, \_SB.PC00.I2C0.PA02._CRS._Y3B._ADR, BADR)  // _ADR: Address
-                BADR = 0x10
-                Return (RBUF) /* \_SB_.PC00.I2C0.PA02._CRS.RBUF */
-            }
-
-            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
-            {
-                If ((Arg0 != ToUUID ("033771e0-1705-47b4-9535-d1bbe14d9a09") /* Unknown UUID */))
-                {
-                    Return (Buffer (One)
-                    {
-                         0x00                                             // .
-                    })
-                }
-
-                Switch (ToInteger (Arg2))
-                {
-                    Case (Zero)
-                    {
-                        Switch (ToInteger (Arg1))
-                        {
-                            Case (Zero)
-                            {
-                                Return (Buffer (One)
-                                {
-                                     0x03                                             // .
-                                })
-                            }
-                            Case (One)
-                            {
-                                Return (Buffer (One)
-                                {
-                                     0x7F                                             // .
-                                })
-                            }
-
-                        }
-
-                        Break
-                    }
-                    Case (One)
-                    {
-                        Name (PKG1, Package (0x01)
-                        {
-                            Package (0x08)
-                            {
-                                "VCCIN_PH3", 
-                                One, 
-                                "VCCIN_PH4", 
-                                One, 
-                                "VCCIN_PH5", 
-                                One, 
-                                "VCCIN_PH6", 
-                                One
-                            }
-                        })
-                        Return (DerefOf (PKG1 [Zero]))
-                    }
-                    Case (0x02)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (PKG2, Package (0x01)
-                        {
-                            Package (0x04)
-                            {
-                                0x03E8, 
-                                0x03E8, 
-                                0x03E8, 
-                                0x03E8
-                            }
-                        })
-                        Return (DerefOf (PKG2 [Zero]))
-                    }
-                    Case (0x03)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF3, Package (0x01)
-                        {
-                            0x0F
-                        })
-                        Return (BUF3) /* \_SB_.PC00.I2C0.PA02._DSM.BUF3 */
-                    }
-                    Case (0x04)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF4, Package (0x01)
-                        {
-                            Zero
-                        })
-                        Return (BUF4) /* \_SB_.PC00.I2C0.PA02._DSM.BUF4 */
-                    }
-                    Case (0x05)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF5, Package (0x02)
-                        {
-                            0x0400, 
-                            0x08
-                        })
-                        Return (BUF5) /* \_SB_.PC00.I2C0.PA02._DSM.BUF5 */
-                    }
-                    Case (0x06)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF6, Package (0x01)
-                        {
-                            0x0384
-                        })
-                        Return (BUF6) /* \_SB_.PC00.I2C0.PA02._DSM.BUF6 */
-                    }
-
-                }
-
-                Return (Buffer (One)
-                {
-                     0x00                                             // .
-                })
-            }
-        }
-
-        Device (PA03)
-        {
-            Name (_HID, "MCHP1930")  // _HID: Hardware ID
-            Name (_UID, 0x03)  // _UID: Unique ID
-            Name (_S0W, 0x03)  // _S0W: S0 Device Wake State
-            Method (_STA, 0, Serialized)  // _STA: Status
-            {
-                If (POME)
-                {
-                    Switch (ToInteger (PLID))
-                    {
-                        Case (Package (0x01)
-                            {
-                                0x21
-                            }
-
-)
-                        {
-                            Return (0x0F)
-                        }
-
-                    }
-                }
-
-                Return (Zero)
-            }
-
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (RBUF, ResourceTemplate ()
-                {
-                    I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
-                        AddressingMode7Bit, "\\_SB.PC00.I2C0",
-                        0x00, ResourceConsumer, _Y3C, Exclusive,
-                        )
-                })
-                CreateWordField (RBUF, \_SB.PC00.I2C0.PA03._CRS._Y3C._ADR, BADR)  // _ADR: Address
-                BADR = 0x11
-                Return (RBUF) /* \_SB_.PC00.I2C0.PA03._CRS.RBUF */
-            }
-
-            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
-            {
-                If ((Arg0 != ToUUID ("033771e0-1705-47b4-9535-d1bbe14d9a09") /* Unknown UUID */))
-                {
-                    Return (Buffer (One)
-                    {
-                         0x00                                             // .
-                    })
-                }
-
-                Switch (ToInteger (Arg2))
-                {
-                    Case (Zero)
-                    {
-                        Switch (ToInteger (Arg1))
-                        {
-                            Case (Zero)
-                            {
-                                Return (Buffer (One)
-                                {
-                                     0x03                                             // .
-                                })
-                            }
-                            Case (One)
-                            {
-                                Return (Buffer (One)
-                                {
-                                     0x7F                                             // .
-                                })
-                            }
-
-                        }
-
-                        Break
-                    }
-                    Case (One)
-                    {
-                        Name (PKG1, Package (0x01)
-                        {
-                            Package (0x08)
-                            {
-                                "VCCIN_PH7", 
-                                One, 
-                                "VCCIN_PH8", 
-                                One, 
-                                "VCCIN_AUX_PH1", 
-                                0x02, 
-                                "VCCIN_AUX_PH2", 
-                                0x02
-                            }
-                        })
-                        Return (DerefOf (PKG1 [Zero]))
-                    }
-                    Case (0x02)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (PKG2, Package (0x01)
-                        {
-                            Package (0x04)
-                            {
-                                0x03E8, 
-                                0x03E8, 
-                                0x07D0, 
-                                0x07D0
-                            }
-                        })
-                        Return (DerefOf (PKG2 [Zero]))
-                    }
-                    Case (0x03)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF3, Package (0x01)
-                        {
-                            0x0F
-                        })
-                        Return (BUF3) /* \_SB_.PC00.I2C0.PA03._DSM.BUF3 */
-                    }
-                    Case (0x04)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF4, Package (0x01)
-                        {
-                            Zero
-                        })
-                        Return (BUF4) /* \_SB_.PC00.I2C0.PA03._DSM.BUF4 */
-                    }
-                    Case (0x05)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF5, Package (0x02)
-                        {
-                            0x0400, 
-                            0x08
-                        })
-                        Return (BUF5) /* \_SB_.PC00.I2C0.PA03._DSM.BUF5 */
-                    }
-                    Case (0x06)
-                    {
-                        If ((Arg1 < One))
-                        {
-                            Break
-                        }
-
-                        Name (BUF6, Package (0x01)
-                        {
-                            0x0384
-                        })
-                        Return (BUF6) /* \_SB_.PC00.I2C0.PA03._DSM.BUF6 */
-                    }
-
-                }
-
-                Return (Buffer (One)
-                {
-                     0x00                                             // .
-                })
-            }
-        }
-    }
-
     Scope (_SB)
     {
         Device (COEX)
@@ -25371,12 +24512,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             0x02, 
             ResourceTemplate ()
             {
-                Register (FFixedHW, 
+                Register (SystemIO, 
                     0x08,               // Bit Width
                     0x00,               // Bit Offset
-                    0x0000000000000771, // Address
-                    0x04,               // Access Size
-                    )
+                    0x000000000000FD60, // Address
+                    ,)
             }, 
 
             ResourceTemplate ()
@@ -25577,19 +24717,19 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Memory32Fixed (ReadWrite,
                     0x00000000,         // Address Base
                     0x00008000,         // Address Length
-                    _Y3D)
+                    _Y3A)
                 Memory32Fixed (ReadWrite,
                     0x00000000,         // Address Base
                     0x00001000,         // Address Length
-                    _Y3E)
+                    _Y3B)
                 Memory32Fixed (ReadWrite,
                     0x00000000,         // Address Base
                     0x00001000,         // Address Length
-                    _Y3F)
+                    _Y3C)
                 Memory32Fixed (ReadWrite,
                     0x00000000,         // Address Base
                     0x00000000,         // Address Length
-                    _Y40)
+                    _Y3D)
                 Memory32Fixed (ReadWrite,
                     0xFED20000,         // Address Base
                     0x00060000,         // Address Length
@@ -25613,24 +24753,24 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Memory32Fixed (ReadWrite,
                     0x00000000,         // Address Base
                     0x00000000,         // Address Length
-                    _Y41)
+                    _Y3E)
             })
             Method (_CRS, 0, Serialized)  // _CRS: Current Resource Settings
             {
-                CreateDWordField (BUF0, \_SB.PC00.PDRC._Y3D._BAS, MBR0)  // _BAS: Base Address
+                CreateDWordField (BUF0, \_SB.PC00.PDRC._Y3A._BAS, MBR0)  // _BAS: Base Address
                 MBR0 = GMHB ()
-                CreateDWordField (BUF0, \_SB.PC00.PDRC._Y3E._BAS, DBR0)  // _BAS: Base Address
+                CreateDWordField (BUF0, \_SB.PC00.PDRC._Y3B._BAS, DBR0)  // _BAS: Base Address
                 DBR0 = GDMB ()
-                CreateDWordField (BUF0, \_SB.PC00.PDRC._Y3F._BAS, EBR0)  // _BAS: Base Address
+                CreateDWordField (BUF0, \_SB.PC00.PDRC._Y3C._BAS, EBR0)  // _BAS: Base Address
                 EBR0 = GEPB ()
-                CreateDWordField (BUF0, \_SB.PC00.PDRC._Y40._BAS, XBR0)  // _BAS: Base Address
+                CreateDWordField (BUF0, \_SB.PC00.PDRC._Y3D._BAS, XBR0)  // _BAS: Base Address
                 XBR0 = GPCB ()
-                CreateDWordField (BUF0, \_SB.PC00.PDRC._Y40._LEN, XSZ0)  // _LEN: Length
+                CreateDWordField (BUF0, \_SB.PC00.PDRC._Y3D._LEN, XSZ0)  // _LEN: Length
                 XSZ0 = GPCL ()
                 If (!HPTE)
                 {
-                    CreateDWordField (BUF0, \_SB.PC00.PDRC._Y41._BAS, HBAS)  // _BAS: Base Address
-                    CreateDWordField (BUF0, \_SB.PC00.PDRC._Y41._LEN, HLEN)  // _LEN: Length
+                    CreateDWordField (BUF0, \_SB.PC00.PDRC._Y3E._BAS, HBAS)  // _BAS: Base Address
+                    CreateDWordField (BUF0, \_SB.PC00.PDRC._Y3E._LEN, HLEN)  // _LEN: Length
                     HBAS = HPTB /* \HPTB */
                     HLEN = 0x0400
                 }
@@ -25653,6 +24793,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
+    If (CondRefOf (\_SB.PC00.PEG0.PEGP.CAFL)) {}
+    If (CondRefOf (\_SB.PC00.RP01.PXSX.CAFL)) {}
     Scope (_GPE)
     {
         Method (_L73, 0, Serialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
@@ -26753,951 +25895,914 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Return (Local0)
     }
 
-    If (CondRefOf (\_SB.PC00.RP01.PXSX))
+    Scope (_SB.PC00.RP01.PXSX)
     {
-        Scope (_SB.PC00.RP01.PXSX)
+        OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
+        Field (RPXX, AnyAcc, NoLock, Preserve)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
-            Field (RPXX, AnyAcc, NoLock, Preserve)
-            {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
-            }
+            VDID,   32
+        }
 
-            Method (MTKT, 0, Serialized)
+        Method (MTKT, 0, Serialized)
+        {
+            If (CondRefOf (VDID))
             {
-                If (CondRefOf (VDID))
+                Switch (ToInteger (VDID))
                 {
-                    Switch (ToInteger (VDID))
+                    Case (0x766314C3)
                     {
-                        Case (0x766314C3)
-                        {
-                            Return (0x84)
-                        }
-                        Case (0x796114C3)
-                        {
-                            Return (0x84)
-                        }
-                        Default
-                        {
-                            Return (0x44)
-                        }
-
+                        Return (0x84)
                     }
-                }
-                Else
-                {
-                    Return (0x44)
-                }
-            }
-
-            OperationRegion (FLDR, PCI_Config, MTKT (), 0x06)
-            Field (FLDR, ByteAcc, NoLock, Preserve)
-            {
-                DCAP,   32, 
-                DCTR,   16
-            }
-
-            Method (WIST, 0, Serialized)
-            {
-                If (CondRefOf (VDID))
-                {
-                    Switch (ToInteger (VDID))
+                    Case (0x796114C3)
                     {
-                        Case (0x095A8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x095B8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x31658086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x31668086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B18086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B28086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B38086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B48086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F38086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F48086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F58086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F68086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24FD8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24FB8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x25268086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x271B8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x27238086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x0042168C)
-                        {
-                            Return (One)
-                        }
-                        Case (0x003E168C)
-                        {
-                            Return (One)
-                        }
-                        Case (0xC82110EC)
-                        {
-                            Return (One)
-                        }
-                        Case (0xB82210EC)
-                        {
-                            Return (One)
-                        }
-                        Case (0xC82210EC)
-                        {
-                            Return (One)
-                        }
-                        Case (0x766314C3)
-                        {
-                            Return (One)
-                        }
-                        Case (0x796114C3)
-                        {
-                            Return (One)
-                        }
-                        Case (0x27258086)
-                        {
-                            Return (One)
-                        }
-                        Default
-                        {
-                            Return (Zero)
-                        }
-
+                        Return (0x84)
                     }
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
-
-            Method (WWST, 0, Serialized)
-            {
-                If (CondRefOf (VDID))
-                {
-                    Switch (ToInteger (VDID))
+                    Default
                     {
-                        Case (0x73608086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x75608086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x4D7514C3)
-                        {
-                            Return (One)
-                        }
-                        Default
-                        {
-                            Return (Zero)
-                        }
-
+                        Return (0x44)
                     }
-                }
-                Else
-                {
-                    Return (Zero)
+
                 }
             }
-
-            If (WIST ())
+            Else
             {
-                PowerResource (WRST, 0x05, 0x0000)
+                Return (0x44)
+            }
+        }
+
+        OperationRegion (FLDR, PCI_Config, MTKT (), 0x06)
+        Field (FLDR, ByteAcc, NoLock, Preserve)
+        {
+            DCAP,   32, 
+            DCTR,   16
+        }
+
+        Method (WIST, 0, Serialized)
+        {
+            If (CondRefOf (VDID))
+            {
+                Switch (ToInteger (VDID))
                 {
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    Case (0x095A8086)
                     {
                         Return (One)
                     }
-
-                    Method (_ON, 0, NotSerialized)  // _ON_: Power On
+                    Case (0x095B8086)
                     {
+                        Return (One)
+                    }
+                    Case (0x31658086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x31668086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B18086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B28086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B38086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B48086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F38086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F48086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F58086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F68086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24FD8086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24FB8086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x25268086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x271B8086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x27238086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x0042168C)
+                    {
+                        Return (One)
+                    }
+                    Case (0x003E168C)
+                    {
+                        Return (One)
+                    }
+                    Case (0xC82110EC)
+                    {
+                        Return (One)
+                    }
+                    Case (0xB82210EC)
+                    {
+                        Return (One)
+                    }
+                    Case (0xC82210EC)
+                    {
+                        Return (One)
+                    }
+                    Case (0x766314C3)
+                    {
+                        Return (One)
+                    }
+                    Case (0x796114C3)
+                    {
+                        Return (One)
+                    }
+                    Case (0x27258086)
+                    {
+                        Return (One)
+                    }
+                    Default
+                    {
+                        Return (Zero)
                     }
 
-                    Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
+                }
+            }
+            Else
+            {
+                Return (Zero)
+            }
+        }
+
+        Method (WWST, 0, Serialized)
+        {
+            If (CondRefOf (VDID))
+            {
+                Switch (ToInteger (VDID))
+                {
+                    Case (0x73608086)
                     {
+                        Return (One)
+                    }
+                    Case (0x75608086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x4D7514C3)
+                    {
+                        Return (One)
+                    }
+                    Default
+                    {
+                        Return (Zero)
                     }
 
-                    Method (_RST, 0, NotSerialized)  // _RST: Device Reset
-                    {
-                        If ((DCAP & 0x10000000))
-                        {
-                            Local0 = DCTR /* \_SB_.PC00.RP01.PXSX.DCTR */
-                            Local0 |= 0x8000
-                            DCTR = Local0
-                        }
-                    }
+                }
+            }
+            Else
+            {
+                Return (Zero)
+            }
+        }
+
+        If (WIST ())
+        {
+            PowerResource (WRST, 0x05, 0x0000)
+            {
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    Return (One)
                 }
 
-                Name (SPLX, Package (0x02)
+                Method (_ON, 0, NotSerialized)  // _ON_: Power On
                 {
-                    Zero, 
-                    Package (0x03)
-                    {
-                        0x80000000, 
-                        0x80000000, 
-                        0x80000000
-                    }
-                })
-                Method (SPLC, 0, Serialized)
-                {
-                    DerefOf (SPLX [One]) [Zero] = DOM1 /* \DOM1 */
-                    DerefOf (SPLX [One]) [One] = LIM1 /* \LIM1 */
-                    DerefOf (SPLX [One]) [0x02] = TIM1 /* \TIM1 */
-                    Return (SPLX) /* \_SB_.PC00.RP01.PXSX.SPLX */
                 }
 
-                Name (WANX, Package (0x03)
+                Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
                 {
-                    Zero, 
-                    Package (0x03)
-                    {
-                        0x80000000, 
-                        0x80000000, 
-                        0x80000000
-                    }, 
-
-                    Package (0x03)
-                    {
-                        0x80000000, 
-                        0x80000000, 
-                        0x80000000
-                    }
-                })
-                Method (WAND, 0, Serialized)
-                {
-                    DerefOf (WANX [One]) [Zero] = Zero
-                    DerefOf (WANX [One]) [One] = TRD0 /* \TRD0 */
-                    DerefOf (WANX [One]) [0x02] = TRL0 /* \TRL0 */
-                    DerefOf (WANX [0x02]) [Zero] = One
-                    DerefOf (WANX [0x02]) [One] = TRD1 /* \TRD1 */
-                    DerefOf (WANX [0x02]) [0x02] = TRL1 /* \TRL1 */
-                    Return (WANX) /* \_SB_.PC00.RP01.PXSX.WANX */
                 }
 
-                Name (WRDX, Package (0x02)
+                Method (_RST, 0, NotSerialized)  // _RST: Device Reset
                 {
-                    Zero, 
-                    Package (0x02)
+                    If ((DCAP & 0x10000000))
                     {
-                        0x80000000, 
-                        0x8000
+                        Local0 = DCTR /* \_SB_.PC00.RP01.PXSX.DCTR */
+                        Local0 |= 0x8000
+                        DCTR = Local0
                     }
-                })
-                Method (WRDD, 0, Serialized)
-                {
-                    DerefOf (WRDX [One]) [Zero] = WDM1 /* \WDM1 */
-                    DerefOf (WRDX [One]) [One] = CID1 /* \CID1 */
-                    Return (WRDX) /* \_SB_.PC00.RP01.PXSX.WRDX */
-                }
-
-                Name (WRDY, Package (0x02)
-                {
-                    One, 
-                    Package (0x18)
-                    {
-                        0x07, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80
-                    }
-                })
-                Method (WRDS, 0, Serialized)
-                {
-                    DerefOf (WRDY [One]) [One] = STXE /* \STXE */
-                    DerefOf (WRDY [One]) [0x02] = ST10 /* \ST10 */
-                    DerefOf (WRDY [One]) [0x03] = ST11 /* \ST11 */
-                    DerefOf (WRDY [One]) [0x04] = ST12 /* \ST12 */
-                    DerefOf (WRDY [One]) [0x05] = ST13 /* \ST13 */
-                    DerefOf (WRDY [One]) [0x06] = ST14 /* \ST14 */
-                    DerefOf (WRDY [One]) [0x07] = ST15 /* \ST15 */
-                    DerefOf (WRDY [One]) [0x08] = ST16 /* \ST16 */
-                    DerefOf (WRDY [One]) [0x09] = ST17 /* \ST17 */
-                    DerefOf (WRDY [One]) [0x0A] = ST18 /* \ST18 */
-                    DerefOf (WRDY [One]) [0x0B] = ST19 /* \ST19 */
-                    DerefOf (WRDY [One]) [0x0C] = ST50 /* \ST50 */
-                    DerefOf (WRDY [One]) [0x0D] = ST51 /* \ST51 */
-                    DerefOf (WRDY [One]) [0x0E] = ST52 /* \ST52 */
-                    DerefOf (WRDY [One]) [0x0F] = ST53 /* \ST53 */
-                    DerefOf (WRDY [One]) [0x10] = ST54 /* \ST54 */
-                    DerefOf (WRDY [One]) [0x11] = ST55 /* \ST55 */
-                    DerefOf (WRDY [One]) [0x12] = ST56 /* \ST56 */
-                    DerefOf (WRDY [One]) [0x13] = ST57 /* \ST57 */
-                    DerefOf (WRDY [One]) [0x14] = ST58 /* \ST58 */
-                    DerefOf (WRDY [One]) [0x15] = ST59 /* \ST59 */
-                    DerefOf (WRDY [One]) [0x16] = ST5A /* \ST5A */
-                    DerefOf (WRDY [One]) [0x17] = ST5B /* \ST5B */
-                    Return (WRDY) /* \_SB_.PC00.RP01.PXSX.WRDY */
-                }
-
-                Name (EWRY, Package (0x02)
-                {
-                    One, 
-                    Package (0x45)
-                    {
-                        0x07, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80
-                    }
-                })
-                Method (EWRD, 0, Serialized)
-                {
-                    DerefOf (EWRY [One]) [One] = STDE /* \STDE */
-                    DerefOf (EWRY [One]) [0x02] = STRS /* \STRS */
-                    DerefOf (EWRY [One]) [0x03] = ST20 /* \ST20 */
-                    DerefOf (EWRY [One]) [0x04] = ST21 /* \ST21 */
-                    DerefOf (EWRY [One]) [0x05] = ST22 /* \ST22 */
-                    DerefOf (EWRY [One]) [0x06] = ST23 /* \ST23 */
-                    DerefOf (EWRY [One]) [0x07] = ST24 /* \ST24 */
-                    DerefOf (EWRY [One]) [0x08] = ST25 /* \ST25 */
-                    DerefOf (EWRY [One]) [0x09] = ST26 /* \ST26 */
-                    DerefOf (EWRY [One]) [0x0A] = ST27 /* \ST27 */
-                    DerefOf (EWRY [One]) [0x0B] = ST28 /* \ST28 */
-                    DerefOf (EWRY [One]) [0x0C] = ST29 /* \ST29 */
-                    DerefOf (EWRY [One]) [0x0D] = ST60 /* \ST60 */
-                    DerefOf (EWRY [One]) [0x0E] = ST61 /* \ST61 */
-                    DerefOf (EWRY [One]) [0x0F] = ST62 /* \ST62 */
-                    DerefOf (EWRY [One]) [0x10] = ST63 /* \ST63 */
-                    DerefOf (EWRY [One]) [0x11] = ST64 /* \ST64 */
-                    DerefOf (EWRY [One]) [0x12] = ST65 /* \ST65 */
-                    DerefOf (EWRY [One]) [0x13] = ST66 /* \ST66 */
-                    DerefOf (EWRY [One]) [0x14] = ST67 /* \ST67 */
-                    DerefOf (EWRY [One]) [0x15] = ST68 /* \ST68 */
-                    DerefOf (EWRY [One]) [0x16] = ST69 /* \ST69 */
-                    DerefOf (EWRY [One]) [0x17] = ST6A /* \ST6A */
-                    DerefOf (EWRY [One]) [0x18] = ST6B /* \ST6B */
-                    DerefOf (EWRY [One]) [0x19] = ST30 /* \ST30 */
-                    DerefOf (EWRY [One]) [0x1A] = ST31 /* \ST31 */
-                    DerefOf (EWRY [One]) [0x1B] = ST32 /* \ST32 */
-                    DerefOf (EWRY [One]) [0x1C] = ST33 /* \ST33 */
-                    DerefOf (EWRY [One]) [0x1D] = ST34 /* \ST34 */
-                    DerefOf (EWRY [One]) [0x1E] = ST35 /* \ST35 */
-                    DerefOf (EWRY [One]) [0x1F] = ST36 /* \ST36 */
-                    DerefOf (EWRY [One]) [0x20] = ST37 /* \ST37 */
-                    DerefOf (EWRY [One]) [0x21] = ST38 /* \ST38 */
-                    DerefOf (EWRY [One]) [0x22] = ST39 /* \ST39 */
-                    DerefOf (EWRY [One]) [0x23] = ST70 /* \ST70 */
-                    DerefOf (EWRY [One]) [0x24] = ST71 /* \ST71 */
-                    DerefOf (EWRY [One]) [0x25] = ST72 /* \ST72 */
-                    DerefOf (EWRY [One]) [0x26] = ST73 /* \ST73 */
-                    DerefOf (EWRY [One]) [0x27] = ST74 /* \ST74 */
-                    DerefOf (EWRY [One]) [0x28] = ST75 /* \ST75 */
-                    DerefOf (EWRY [One]) [0x29] = ST76 /* \ST76 */
-                    DerefOf (EWRY [One]) [0x2A] = ST77 /* \ST77 */
-                    DerefOf (EWRY [One]) [0x2B] = ST78 /* \ST78 */
-                    DerefOf (EWRY [One]) [0x2C] = ST79 /* \ST79 */
-                    DerefOf (EWRY [One]) [0x2D] = ST7A /* \ST7A */
-                    DerefOf (EWRY [One]) [0x2E] = ST7B /* \ST7B */
-                    DerefOf (EWRY [One]) [0x2F] = ST40 /* \ST40 */
-                    DerefOf (EWRY [One]) [0x30] = ST41 /* \ST41 */
-                    DerefOf (EWRY [One]) [0x31] = ST42 /* \ST42 */
-                    DerefOf (EWRY [One]) [0x32] = ST43 /* \ST43 */
-                    DerefOf (EWRY [One]) [0x33] = ST44 /* \ST44 */
-                    DerefOf (EWRY [One]) [0x34] = ST45 /* \ST45 */
-                    DerefOf (EWRY [One]) [0x35] = ST46 /* \ST46 */
-                    DerefOf (EWRY [One]) [0x36] = ST47 /* \ST47 */
-                    DerefOf (EWRY [One]) [0x37] = ST48 /* \ST48 */
-                    DerefOf (EWRY [One]) [0x38] = ST49 /* \ST49 */
-                    DerefOf (EWRY [One]) [0x39] = ST80 /* \ST80 */
-                    DerefOf (EWRY [One]) [0x3A] = ST81 /* \ST81 */
-                    DerefOf (EWRY [One]) [0x3B] = ST82 /* \ST82 */
-                    DerefOf (EWRY [One]) [0x3C] = ST83 /* \ST83 */
-                    DerefOf (EWRY [One]) [0x3D] = ST84 /* \ST84 */
-                    DerefOf (EWRY [One]) [0x3E] = ST85 /* \ST85 */
-                    DerefOf (EWRY [One]) [0x3F] = ST86 /* \ST86 */
-                    DerefOf (EWRY [One]) [0x40] = ST87 /* \ST87 */
-                    DerefOf (EWRY [One]) [0x41] = ST88 /* \ST88 */
-                    DerefOf (EWRY [One]) [0x42] = ST89 /* \ST89 */
-                    DerefOf (EWRY [One]) [0x43] = ST8A /* \ST8A */
-                    DerefOf (EWRY [One]) [0x44] = ST8B /* \ST8B */
-                    Return (EWRY) /* \_SB_.PC00.RP01.PXSX.EWRY */
-                }
-
-                Name (WGDY, Package (0x02)
-                {
-                    0x02, 
-                    Package (0x1C)
-                    {
-                        0x07, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80
-                    }
-                })
-                Method (WGDS, 0, Serialized)
-                {
-                    DerefOf (WGDY [One]) [One] = SD11 /* \SD11 */
-                    DerefOf (WGDY [One]) [0x02] = SD12 /* \SD12 */
-                    DerefOf (WGDY [One]) [0x03] = SD13 /* \SD13 */
-                    DerefOf (WGDY [One]) [0x04] = SD14 /* \SD14 */
-                    DerefOf (WGDY [One]) [0x05] = SD15 /* \SD15 */
-                    DerefOf (WGDY [One]) [0x06] = SD16 /* \SD16 */
-                    DerefOf (WGDY [One]) [0x07] = SD17 /* \SD17 */
-                    DerefOf (WGDY [One]) [0x08] = SD18 /* \SD18 */
-                    DerefOf (WGDY [One]) [0x09] = SD19 /* \SD19 */
-                    DerefOf (WGDY [One]) [0x0A] = SD21 /* \SD21 */
-                    DerefOf (WGDY [One]) [0x0B] = SD22 /* \SD22 */
-                    DerefOf (WGDY [One]) [0x0C] = SD23 /* \SD23 */
-                    DerefOf (WGDY [One]) [0x0D] = SD24 /* \SD24 */
-                    DerefOf (WGDY [One]) [0x0E] = SD25 /* \SD25 */
-                    DerefOf (WGDY [One]) [0x0F] = SD26 /* \SD26 */
-                    DerefOf (WGDY [One]) [0x10] = SD27 /* \SD27 */
-                    DerefOf (WGDY [One]) [0x11] = SD28 /* \SD28 */
-                    DerefOf (WGDY [One]) [0x12] = SD29 /* \SD29 */
-                    DerefOf (WGDY [One]) [0x13] = SD31 /* \SD31 */
-                    DerefOf (WGDY [One]) [0x14] = SD32 /* \SD32 */
-                    DerefOf (WGDY [One]) [0x15] = SD33 /* \SD33 */
-                    DerefOf (WGDY [One]) [0x16] = SD34 /* \SD34 */
-                    DerefOf (WGDY [One]) [0x17] = SD35 /* \SD35 */
-                    DerefOf (WGDY [One]) [0x18] = SD36 /* \SD36 */
-                    DerefOf (WGDY [One]) [0x19] = SD37 /* \SD37 */
-                    DerefOf (WGDY [One]) [0x1A] = SD38 /* \SD38 */
-                    DerefOf (WGDY [One]) [0x1B] = SD39 /* \SD39 */
-                    Return (WGDY) /* \_SB_.PC00.RP01.PXSX.WGDY */
-                }
-
-                Name (ECKY, Package (0x02)
-                {
-                    Zero, 
-                    Package (0x02)
-                    {
-                        0x07, 
-                        Zero
-                    }
-                })
-                Method (ECKV, 0, Serialized)
-                {
-                    DerefOf (ECKY [One]) [One] = CECV /* \CECV */
-                    Return (ECKY) /* \_SB_.PC00.RP01.PXSX.ECKY */
-                }
-
-                Name (PPAY, Package (0x02)
-                {
-                    One, 
-                    Package (0x18)
-                    {
-                        0x07, 
-                        Zero, 
-                        0x18, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x18, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28
-                    }
-                })
-                Method (PPAG, 0, Serialized)
-                {
-                    DerefOf (PPAY [One]) [One] = WAGE /* \WAGE */
-                    DerefOf (PPAY [One]) [0x02] = AGA1 /* \AGA1 */
-                    DerefOf (PPAY [One]) [0x03] = AGA2 /* \AGA2 */
-                    DerefOf (PPAY [One]) [0x04] = AGA3 /* \AGA3 */
-                    DerefOf (PPAY [One]) [0x05] = AGA4 /* \AGA4 */
-                    DerefOf (PPAY [One]) [0x06] = AGA5 /* \AGA5 */
-                    DerefOf (PPAY [One]) [0x07] = AGA6 /* \AGA6 */
-                    DerefOf (PPAY [One]) [0x08] = AGA7 /* \AGA7 */
-                    DerefOf (PPAY [One]) [0x09] = AGA8 /* \AGA8 */
-                    DerefOf (PPAY [One]) [0x0A] = AGA9 /* \AGA9 */
-                    DerefOf (PPAY [One]) [0x0B] = AGAA /* \AGAA */
-                    DerefOf (PPAY [One]) [0x0C] = AGAB /* \AGAB */
-                    DerefOf (PPAY [One]) [0x0D] = AGB1 /* \AGB1 */
-                    DerefOf (PPAY [One]) [0x0E] = AGB2 /* \AGB2 */
-                    DerefOf (PPAY [One]) [0x0F] = AGB3 /* \AGB3 */
-                    DerefOf (PPAY [One]) [0x10] = AGB4 /* \AGB4 */
-                    DerefOf (PPAY [One]) [0x11] = AGB5 /* \AGB5 */
-                    DerefOf (PPAY [One]) [0x12] = AGB6 /* \AGB6 */
-                    DerefOf (PPAY [One]) [0x13] = AGB7 /* \AGB7 */
-                    DerefOf (PPAY [One]) [0x14] = AGB8 /* \AGB8 */
-                    DerefOf (PPAY [One]) [0x15] = AGB9 /* \AGB9 */
-                    DerefOf (PPAY [One]) [0x16] = AGBA /* \AGBA */
-                    DerefOf (PPAY [One]) [0x17] = AGBB /* \AGBB */
-                    Return (PPAY) /* \_SB_.PC00.RP01.PXSX.PPAY */
-                }
-
-                Name (SADX, Package (0x03)
-                {
-                    Zero, 
-                    Package (0x02)
-                    {
-                        0x07, 
-                        0x80000000
-                    }, 
-
-                    Package (0x02)
-                    {
-                        0x12, 
-                        0x80000000
-                    }
-                })
-                Method (SADS, 0, Serialized)
-                {
-                    DerefOf (SADX [One]) [One] = ATDV /* \ATDV */
-                    DerefOf (SADX [0x02]) [One] = ATDV /* \ATDV */
-                    Return (SADX) /* \_SB_.PC00.RP01.PXSX.SADX */
-                }
-
-                Name (GPCX, Package (0x03)
-                {
-                    Zero, 
-                    Package (0x02)
-                    {
-                        0x07, 
-                        Package (0x03)
-                        {
-                            Zero, 
-                            Zero, 
-                            Zero
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        0x12, 
-                        Package (0x03)
-                        {
-                            Zero, 
-                            Zero, 
-                            Zero
-                        }
-                    }
-                })
-                Method (GPC, 0, Serialized)
-                {
-                    Return (GPCX) /* \_SB_.PC00.RP01.PXSX.GPCX */
                 }
             }
 
-            If (((WWEN != Zero) && (WWRP == SLOT)))
+            Name (SPLX, Package (0x02)
             {
-                Method (SHRF, 0, NotSerialized)
+                Zero, 
+                Package (0x03)
                 {
-                    PSD0 (SLOT)
-                    SPCO (WCLK, One)
-                    SGOV (WFCP, PFCP)
-                    Sleep (TN2B)
-                    SGOV (WBRS, (~PBRS & One))
-                    Sleep (TB2R)
+                    0x80000000, 
+                    0x80000000, 
+                    0x80000000
+                }
+            })
+            Method (SPLC, 0, Serialized)
+            {
+                DerefOf (SPLX [One]) [Zero] = DOM1 /* \DOM1 */
+                DerefOf (SPLX [One]) [One] = LIM1 /* \LIM1 */
+                DerefOf (SPLX [One]) [0x02] = TIM1 /* \TIM1 */
+                Return (SPLX) /* \_SB_.PC00.RP01.PXSX.SPLX */
+            }
+
+            Name (WANX, Package (0x03)
+            {
+                Zero, 
+                Package (0x03)
+                {
+                    0x80000000, 
+                    0x80000000, 
+                    0x80000000
+                }, 
+
+                Package (0x03)
+                {
+                    0x80000000, 
+                    0x80000000, 
+                    0x80000000
+                }
+            })
+            Method (WAND, 0, Serialized)
+            {
+                DerefOf (WANX [One]) [Zero] = Zero
+                DerefOf (WANX [One]) [One] = TRD0 /* \TRD0 */
+                DerefOf (WANX [One]) [0x02] = TRL0 /* \TRL0 */
+                DerefOf (WANX [0x02]) [Zero] = One
+                DerefOf (WANX [0x02]) [One] = TRD1 /* \TRD1 */
+                DerefOf (WANX [0x02]) [0x02] = TRL1 /* \TRL1 */
+                Return (WANX) /* \_SB_.PC00.RP01.PXSX.WANX */
+            }
+
+            Name (WRDX, Package (0x02)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x80000000, 
+                    0x8000
+                }
+            })
+            Method (WRDD, 0, Serialized)
+            {
+                DerefOf (WRDX [One]) [Zero] = WDM1 /* \WDM1 */
+                DerefOf (WRDX [One]) [One] = CID1 /* \CID1 */
+                Return (WRDX) /* \_SB_.PC00.RP01.PXSX.WRDX */
+            }
+
+            Name (WRDY, Package (0x02)
+            {
+                One, 
+                Package (0x18)
+                {
+                    0x07, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80
+                }
+            })
+            Method (WRDS, 0, Serialized)
+            {
+                DerefOf (WRDY [One]) [One] = STXE /* \STXE */
+                DerefOf (WRDY [One]) [0x02] = ST10 /* \ST10 */
+                DerefOf (WRDY [One]) [0x03] = ST11 /* \ST11 */
+                DerefOf (WRDY [One]) [0x04] = ST12 /* \ST12 */
+                DerefOf (WRDY [One]) [0x05] = ST13 /* \ST13 */
+                DerefOf (WRDY [One]) [0x06] = ST14 /* \ST14 */
+                DerefOf (WRDY [One]) [0x07] = ST15 /* \ST15 */
+                DerefOf (WRDY [One]) [0x08] = ST16 /* \ST16 */
+                DerefOf (WRDY [One]) [0x09] = ST17 /* \ST17 */
+                DerefOf (WRDY [One]) [0x0A] = ST18 /* \ST18 */
+                DerefOf (WRDY [One]) [0x0B] = ST19 /* \ST19 */
+                DerefOf (WRDY [One]) [0x0C] = ST50 /* \ST50 */
+                DerefOf (WRDY [One]) [0x0D] = ST51 /* \ST51 */
+                DerefOf (WRDY [One]) [0x0E] = ST52 /* \ST52 */
+                DerefOf (WRDY [One]) [0x0F] = ST53 /* \ST53 */
+                DerefOf (WRDY [One]) [0x10] = ST54 /* \ST54 */
+                DerefOf (WRDY [One]) [0x11] = ST55 /* \ST55 */
+                DerefOf (WRDY [One]) [0x12] = ST56 /* \ST56 */
+                DerefOf (WRDY [One]) [0x13] = ST57 /* \ST57 */
+                DerefOf (WRDY [One]) [0x14] = ST58 /* \ST58 */
+                DerefOf (WRDY [One]) [0x15] = ST59 /* \ST59 */
+                DerefOf (WRDY [One]) [0x16] = ST5A /* \ST5A */
+                DerefOf (WRDY [One]) [0x17] = ST5B /* \ST5B */
+                Return (WRDY) /* \_SB_.PC00.RP01.PXSX.WRDY */
+            }
+
+            Name (EWRY, Package (0x02)
+            {
+                One, 
+                Package (0x45)
+                {
+                    0x07, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80
+                }
+            })
+            Method (EWRD, 0, Serialized)
+            {
+                DerefOf (EWRY [One]) [One] = STDE /* \STDE */
+                DerefOf (EWRY [One]) [0x02] = STRS /* \STRS */
+                DerefOf (EWRY [One]) [0x03] = ST20 /* \ST20 */
+                DerefOf (EWRY [One]) [0x04] = ST21 /* \ST21 */
+                DerefOf (EWRY [One]) [0x05] = ST22 /* \ST22 */
+                DerefOf (EWRY [One]) [0x06] = ST23 /* \ST23 */
+                DerefOf (EWRY [One]) [0x07] = ST24 /* \ST24 */
+                DerefOf (EWRY [One]) [0x08] = ST25 /* \ST25 */
+                DerefOf (EWRY [One]) [0x09] = ST26 /* \ST26 */
+                DerefOf (EWRY [One]) [0x0A] = ST27 /* \ST27 */
+                DerefOf (EWRY [One]) [0x0B] = ST28 /* \ST28 */
+                DerefOf (EWRY [One]) [0x0C] = ST29 /* \ST29 */
+                DerefOf (EWRY [One]) [0x0D] = ST60 /* \ST60 */
+                DerefOf (EWRY [One]) [0x0E] = ST61 /* \ST61 */
+                DerefOf (EWRY [One]) [0x0F] = ST62 /* \ST62 */
+                DerefOf (EWRY [One]) [0x10] = ST63 /* \ST63 */
+                DerefOf (EWRY [One]) [0x11] = ST64 /* \ST64 */
+                DerefOf (EWRY [One]) [0x12] = ST65 /* \ST65 */
+                DerefOf (EWRY [One]) [0x13] = ST66 /* \ST66 */
+                DerefOf (EWRY [One]) [0x14] = ST67 /* \ST67 */
+                DerefOf (EWRY [One]) [0x15] = ST68 /* \ST68 */
+                DerefOf (EWRY [One]) [0x16] = ST69 /* \ST69 */
+                DerefOf (EWRY [One]) [0x17] = ST6A /* \ST6A */
+                DerefOf (EWRY [One]) [0x18] = ST6B /* \ST6B */
+                DerefOf (EWRY [One]) [0x19] = ST30 /* \ST30 */
+                DerefOf (EWRY [One]) [0x1A] = ST31 /* \ST31 */
+                DerefOf (EWRY [One]) [0x1B] = ST32 /* \ST32 */
+                DerefOf (EWRY [One]) [0x1C] = ST33 /* \ST33 */
+                DerefOf (EWRY [One]) [0x1D] = ST34 /* \ST34 */
+                DerefOf (EWRY [One]) [0x1E] = ST35 /* \ST35 */
+                DerefOf (EWRY [One]) [0x1F] = ST36 /* \ST36 */
+                DerefOf (EWRY [One]) [0x20] = ST37 /* \ST37 */
+                DerefOf (EWRY [One]) [0x21] = ST38 /* \ST38 */
+                DerefOf (EWRY [One]) [0x22] = ST39 /* \ST39 */
+                DerefOf (EWRY [One]) [0x23] = ST70 /* \ST70 */
+                DerefOf (EWRY [One]) [0x24] = ST71 /* \ST71 */
+                DerefOf (EWRY [One]) [0x25] = ST72 /* \ST72 */
+                DerefOf (EWRY [One]) [0x26] = ST73 /* \ST73 */
+                DerefOf (EWRY [One]) [0x27] = ST74 /* \ST74 */
+                DerefOf (EWRY [One]) [0x28] = ST75 /* \ST75 */
+                DerefOf (EWRY [One]) [0x29] = ST76 /* \ST76 */
+                DerefOf (EWRY [One]) [0x2A] = ST77 /* \ST77 */
+                DerefOf (EWRY [One]) [0x2B] = ST78 /* \ST78 */
+                DerefOf (EWRY [One]) [0x2C] = ST79 /* \ST79 */
+                DerefOf (EWRY [One]) [0x2D] = ST7A /* \ST7A */
+                DerefOf (EWRY [One]) [0x2E] = ST7B /* \ST7B */
+                DerefOf (EWRY [One]) [0x2F] = ST40 /* \ST40 */
+                DerefOf (EWRY [One]) [0x30] = ST41 /* \ST41 */
+                DerefOf (EWRY [One]) [0x31] = ST42 /* \ST42 */
+                DerefOf (EWRY [One]) [0x32] = ST43 /* \ST43 */
+                DerefOf (EWRY [One]) [0x33] = ST44 /* \ST44 */
+                DerefOf (EWRY [One]) [0x34] = ST45 /* \ST45 */
+                DerefOf (EWRY [One]) [0x35] = ST46 /* \ST46 */
+                DerefOf (EWRY [One]) [0x36] = ST47 /* \ST47 */
+                DerefOf (EWRY [One]) [0x37] = ST48 /* \ST48 */
+                DerefOf (EWRY [One]) [0x38] = ST49 /* \ST49 */
+                DerefOf (EWRY [One]) [0x39] = ST80 /* \ST80 */
+                DerefOf (EWRY [One]) [0x3A] = ST81 /* \ST81 */
+                DerefOf (EWRY [One]) [0x3B] = ST82 /* \ST82 */
+                DerefOf (EWRY [One]) [0x3C] = ST83 /* \ST83 */
+                DerefOf (EWRY [One]) [0x3D] = ST84 /* \ST84 */
+                DerefOf (EWRY [One]) [0x3E] = ST85 /* \ST85 */
+                DerefOf (EWRY [One]) [0x3F] = ST86 /* \ST86 */
+                DerefOf (EWRY [One]) [0x40] = ST87 /* \ST87 */
+                DerefOf (EWRY [One]) [0x41] = ST88 /* \ST88 */
+                DerefOf (EWRY [One]) [0x42] = ST89 /* \ST89 */
+                DerefOf (EWRY [One]) [0x43] = ST8A /* \ST8A */
+                DerefOf (EWRY [One]) [0x44] = ST8B /* \ST8B */
+                Return (EWRY) /* \_SB_.PC00.RP01.PXSX.EWRY */
+            }
+
+            Name (WGDY, Package (0x02)
+            {
+                0x02, 
+                Package (0x1C)
+                {
+                    0x07, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80
+                }
+            })
+            Method (WGDS, 0, Serialized)
+            {
+                DerefOf (WGDY [One]) [One] = SD11 /* \SD11 */
+                DerefOf (WGDY [One]) [0x02] = SD12 /* \SD12 */
+                DerefOf (WGDY [One]) [0x03] = SD13 /* \SD13 */
+                DerefOf (WGDY [One]) [0x04] = SD14 /* \SD14 */
+                DerefOf (WGDY [One]) [0x05] = SD15 /* \SD15 */
+                DerefOf (WGDY [One]) [0x06] = SD16 /* \SD16 */
+                DerefOf (WGDY [One]) [0x07] = SD17 /* \SD17 */
+                DerefOf (WGDY [One]) [0x08] = SD18 /* \SD18 */
+                DerefOf (WGDY [One]) [0x09] = SD19 /* \SD19 */
+                DerefOf (WGDY [One]) [0x0A] = SD21 /* \SD21 */
+                DerefOf (WGDY [One]) [0x0B] = SD22 /* \SD22 */
+                DerefOf (WGDY [One]) [0x0C] = SD23 /* \SD23 */
+                DerefOf (WGDY [One]) [0x0D] = SD24 /* \SD24 */
+                DerefOf (WGDY [One]) [0x0E] = SD25 /* \SD25 */
+                DerefOf (WGDY [One]) [0x0F] = SD26 /* \SD26 */
+                DerefOf (WGDY [One]) [0x10] = SD27 /* \SD27 */
+                DerefOf (WGDY [One]) [0x11] = SD28 /* \SD28 */
+                DerefOf (WGDY [One]) [0x12] = SD29 /* \SD29 */
+                DerefOf (WGDY [One]) [0x13] = SD31 /* \SD31 */
+                DerefOf (WGDY [One]) [0x14] = SD32 /* \SD32 */
+                DerefOf (WGDY [One]) [0x15] = SD33 /* \SD33 */
+                DerefOf (WGDY [One]) [0x16] = SD34 /* \SD34 */
+                DerefOf (WGDY [One]) [0x17] = SD35 /* \SD35 */
+                DerefOf (WGDY [One]) [0x18] = SD36 /* \SD36 */
+                DerefOf (WGDY [One]) [0x19] = SD37 /* \SD37 */
+                DerefOf (WGDY [One]) [0x1A] = SD38 /* \SD38 */
+                DerefOf (WGDY [One]) [0x1B] = SD39 /* \SD39 */
+                Return (WGDY) /* \_SB_.PC00.RP01.PXSX.WGDY */
+            }
+
+            Name (ECKY, Package (0x02)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x07, 
+                    Zero
+                }
+            })
+            Method (ECKV, 0, Serialized)
+            {
+                DerefOf (ECKY [One]) [One] = CECV /* \CECV */
+                Return (ECKY) /* \_SB_.PC00.RP01.PXSX.ECKY */
+            }
+
+            Name (PPAY, Package (0x02)
+            {
+                One, 
+                Package (0x18)
+                {
+                    0x07, 
+                    Zero, 
+                    0x18, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x18, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28
+                }
+            })
+            Method (PPAG, 0, Serialized)
+            {
+                DerefOf (PPAY [One]) [One] = WAGE /* \WAGE */
+                DerefOf (PPAY [One]) [0x02] = AGA1 /* \AGA1 */
+                DerefOf (PPAY [One]) [0x03] = AGA2 /* \AGA2 */
+                DerefOf (PPAY [One]) [0x04] = AGA3 /* \AGA3 */
+                DerefOf (PPAY [One]) [0x05] = AGA4 /* \AGA4 */
+                DerefOf (PPAY [One]) [0x06] = AGA5 /* \AGA5 */
+                DerefOf (PPAY [One]) [0x07] = AGA6 /* \AGA6 */
+                DerefOf (PPAY [One]) [0x08] = AGA7 /* \AGA7 */
+                DerefOf (PPAY [One]) [0x09] = AGA8 /* \AGA8 */
+                DerefOf (PPAY [One]) [0x0A] = AGA9 /* \AGA9 */
+                DerefOf (PPAY [One]) [0x0B] = AGAA /* \AGAA */
+                DerefOf (PPAY [One]) [0x0C] = AGAB /* \AGAB */
+                DerefOf (PPAY [One]) [0x0D] = AGB1 /* \AGB1 */
+                DerefOf (PPAY [One]) [0x0E] = AGB2 /* \AGB2 */
+                DerefOf (PPAY [One]) [0x0F] = AGB3 /* \AGB3 */
+                DerefOf (PPAY [One]) [0x10] = AGB4 /* \AGB4 */
+                DerefOf (PPAY [One]) [0x11] = AGB5 /* \AGB5 */
+                DerefOf (PPAY [One]) [0x12] = AGB6 /* \AGB6 */
+                DerefOf (PPAY [One]) [0x13] = AGB7 /* \AGB7 */
+                DerefOf (PPAY [One]) [0x14] = AGB8 /* \AGB8 */
+                DerefOf (PPAY [One]) [0x15] = AGB9 /* \AGB9 */
+                DerefOf (PPAY [One]) [0x16] = AGBA /* \AGBA */
+                DerefOf (PPAY [One]) [0x17] = AGBB /* \AGBB */
+                Return (PPAY) /* \_SB_.PC00.RP01.PXSX.PPAY */
+            }
+
+            Name (SADX, Package (0x03)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x07, 
+                    0x80000000
+                }, 
+
+                Package (0x02)
+                {
+                    0x12, 
+                    0x80000000
+                }
+            })
+            Method (SADS, 0, Serialized)
+            {
+                DerefOf (SADX [One]) [One] = ATDV /* \ATDV */
+                DerefOf (SADX [0x02]) [One] = ATDV /* \ATDV */
+                Return (SADX) /* \_SB_.PC00.RP01.PXSX.SADX */
+            }
+
+            Name (GPCX, Package (0x03)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x07, 
+                    Package (0x03)
+                    {
+                        Zero, 
+                        Zero, 
+                        Zero
+                    }
+                }, 
+
+                Package (0x02)
+                {
+                    0x12, 
+                    Package (0x03)
+                    {
+                        Zero, 
+                        Zero, 
+                        Zero
+                    }
+                }
+            })
+            Method (GPC, 0, Serialized)
+            {
+                Return (GPCX) /* \_SB_.PC00.RP01.PXSX.GPCX */
+            }
+        }
+
+        If (((WWEN != Zero) && (WWRP == SLOT)))
+        {
+            Method (SHRF, 0, NotSerialized)
+            {
+                PSD0 (SLOT)
+                SPCO (WCLK, One)
+                SGOV (WFCP, PFCP)
+                Sleep (TN2B)
+                SGOV (WBRS, (~PBRS & One))
+                Sleep (TB2R)
+                SGOV (PRST, (~WPRP & One))
+                L23D ()
+            }
+
+            If ((WWEN == One))
+            {
+                Method (_RST, 0, Serialized)  // _RST: Device Reset
+                {
+                    SGOV (WBRS, PBRS)
+                    Sleep (0xC8)
+                    Notify (PXSX, One) // Device Check
                     SGOV (PRST, (~WPRP & One))
-                    L23D ()
+                    SGOV (WBRS, (~PBRS & One))
+                    Sleep (0xC8)
+                    Local0 = Zero
+                    While ((LASX == Zero))
+                    {
+                        If ((Local0 > 0x14))
+                        {
+                            Break
+                        }
+
+                        Sleep (0x10)
+                        Local0++
+                    }
+
+                    Sleep (0x0A)
+                    Notify (PXSX, One) // Device Check
+                }
+            }
+
+            PowerResource (MRST, 0x05, 0x0000)
+            {
+                Method (_STA, 0, Serialized)  // _STA: Status
+                {
+                    Return (One)
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                Method (_ON, 0, Serialized)  // _ON_: Power On
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
+                }
+
+                Method (_OFF, 0, Serialized)  // _OFF: Power Off
+                {
                 }
 
                 Method (_RST, 0, Serialized)  // _RST: Device Reset
                 {
-                    If ((WWEN == 0x02))
+                    Local0 = Acquire (WWMT, 0x03E8)
+                    If ((Local0 == Zero))
                     {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
-                    {
+                        ADBG ("Start WWAN PR _RST")
+                        DL23 ()
                         SGOV (WBRS, PBRS)
-                        Sleep (0xC8)
-                        Notify (PXSX, One) // Device Check
-                        SGOV (PRST, (~WPRP & One))
-                        SGOV (WBRS, (~PBRS & One))
-                        Sleep (0xC8)
-                        Local0 = Zero
-                        While ((LASX == Zero))
-                        {
-                            If ((Local0 > 0x14))
-                            {
-                                Break
-                            }
-
-                            Sleep (0x10)
-                            Local0++
-                        }
-
-                        Sleep (0x0A)
-                        Notify (PXSX, One) // Device Check
+                        SPCO (WCLK, Zero)
+                        Sleep (TB2F)
+                        SGOV (WFCP, (~PFCP & One))
+                        Sleep (TFDI)
+                        SHRF ()
+                        Release (WWMT)
                     }
                 }
+            }
+        }
 
-                PowerResource (MRST, 0x05, 0x0000)
+        If ((WIST () || ((WWEN != Zero) && (WWRP == SLOT))))
+        {
+            PowerResource (DRST, 0x05, 0x0000)
+            {
+                Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
-                    Method (_STA, 0, Serialized)  // _STA: Status
-                    {
-                        Return (One)
-                    }
+                    Return (One)
+                }
 
-                    Method (_ON, 0, Serialized)  // _ON_: Power On
-                    {
-                    }
+                Method (_ON, 0, NotSerialized)  // _ON_: Power On
+                {
+                }
 
-                    Method (_OFF, 0, Serialized)  // _OFF: Power Off
-                    {
-                    }
+                Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
+                {
+                }
 
-                    Method (_RST, 0, Serialized)  // _RST: Device Reset
+                Method (_RST, 0, NotSerialized)  // _RST: Device Reset
+                {
+                    If ((DCAP & 0x10000000))
                     {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            SPCO (WCLK, Zero)
-                            Sleep (TB2F)
-                            SGOV (WFCP, (~PFCP & One))
-                            Sleep (TFDI)
-                            SHRF ()
-                            Release (WWMT)
-                            DOSV ()
-                        }
+                        Local0 = DCTR /* \_SB_.PC00.RP01.PXSX.DCTR */
+                        Local0 |= 0x8000
+                        DCTR = Local0
                     }
                 }
             }
 
-            If ((WIST () || ((WWEN != Zero) && (WWRP == SLOT))))
+            Method (_PRR, 0, NotSerialized)  // _PRR: Power Resource for Reset
             {
-                PowerResource (DRST, 0x05, 0x0000)
+                If (WIST ())
                 {
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    If (CondRefOf (WRST))
                     {
-                        Return (One)
-                    }
-
-                    Method (_ON, 0, NotSerialized)  // _ON_: Power On
-                    {
-                    }
-
-                    Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
-                    {
-                    }
-
-                    Method (_RST, 0, NotSerialized)  // _RST: Device Reset
-                    {
-                        If ((DCAP & 0x10000000))
+                        Return (Package (0x01)
                         {
-                            Local0 = DCTR /* \_SB_.PC00.RP01.PXSX.DCTR */
-                            Local0 |= 0x8000
-                            DCTR = Local0
-                        }
+                            WRST
+                        })
                     }
                 }
 
-                Method (_PRR, 0, NotSerialized)  // _PRR: Power Resource for Reset
+                If (((WWEN != Zero) && (WWRP == SLOT)))
                 {
-                    If (WIST ())
+                    If (CondRefOf (MRST))
                     {
-                        If (CondRefOf (WRST))
+                        Return (Package (0x01)
                         {
-                            Return (Package (0x01)
-                            {
-                                WRST
-                            })
-                        }
+                            MRST
+                        })
                     }
-
-                    If (((WWEN != Zero) && (WWRP == SLOT)))
-                    {
-                        If (CondRefOf (MRST))
-                        {
-                            Return (Package (0x01)
-                            {
-                                MRST
-                            })
-                        }
-                    }
-
-                    Return (Package (0x01)
-                    {
-                        DRST
-                    })
                 }
 
-                Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                Return (Package (0x01)
                 {
-                    If (WIST ())
+                    DRST
+                })
+            }
+
+            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+            {
+                If (WIST ())
+                {
+                    If ((Arg0 == ToUUID ("f21202bf-8f78-4dc6-a5b3-1f738e285ade") /* Unknown UUID */))
                     {
-                        If ((Arg0 == ToUUID ("f21202bf-8f78-4dc6-a5b3-1f738e285ade") /* Unknown UUID */))
+                        If ((Arg2 == Zero))
                         {
-                            If ((Arg2 == Zero))
-                            {
-                                If ((Arg1 == Zero))
-                                {
-                                    Return (Buffer (One)
-                                    {
-                                         0x0F                                             // .
-                                    })
-                                }
-                                Else
-                                {
-                                    Return (Buffer (One)
-                                    {
-                                         0x00                                             // .
-                                    })
-                                }
-                            }
-
-                            If ((Arg2 == One))
-                            {
-                                Local0 = ACSD /* \ACSD */
-                                Return (Local0)
-                            }
-
-                            If ((Arg2 == 0x02))
-                            {
-                                Local0 = I5BS /* \I5BS */
-                                Return (Local0)
-                            }
-
-                            If ((Arg2 == 0x03))
-                            {
-                                Local0 = UHBS /* \UHBS */
-                                Return (Local0)
-                            }
-
-                            Return (Zero)
-                        }
-                    }
-
-                    If (((WWEN != Zero) && (WWRP == SLOT)))
-                    {
-                        If ((Arg0 == ToUUID ("bad01b75-22a8-4f48-8792-bdde9467747d") /* Unknown UUID */))
-                        {
-                            If ((Arg2 == Zero))
+                            If ((Arg1 == Zero))
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0F                                             // .
                                 })
                             }
-
-                            If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
-                            If ((Arg2 == 0x03))
+                            Else
                             {
-                                If ((WRTO == One)) {}
-                                ElseIf ((WRTO == 0x03)) {}
-                                Else
+                                Return (Buffer (One)
                                 {
-                                }
-
-                                Return (WRTO) /* \WRTO */
+                                     0x00                                             // .
+                                })
                             }
                         }
-                    }
 
-                    Return (Buffer (One)
-                    {
-                         0x00                                             // .
-                    })
+                        If ((Arg2 == One))
+                        {
+                            Local0 = ACSD /* \ACSD */
+                            Return (Local0)
+                        }
+
+                        If ((Arg2 == 0x02))
+                        {
+                            Local0 = I5BS /* \I5BS */
+                            Return (Local0)
+                        }
+
+                        If ((Arg2 == 0x03))
+                        {
+                            Local0 = UHBS /* \UHBS */
+                            Return (Local0)
+                        }
+
+                        Return (Zero)
+                    }
                 }
+
+                If (((WWEN != Zero) && (WWRP == SLOT)))
+                {
+                    If ((Arg0 == ToUUID ("bad01b75-22a8-4f48-8792-bdde9467747d") /* Unknown UUID */))
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x0D                                             // .
+                            })
+                        }
+
+                        If ((Arg2 == One)) {}
+                        If ((Arg2 == 0x02))
+                        {
+                            Local0 = Acquire (WWMT, 0x03E8)
+                            If ((Local0 == Zero))
+                            {
+                                ADBG ("Start WWAN DSM FLDR")
+                                DL23 ()
+                                SGOV (WBRS, PBRS)
+                                Sleep (TBTG)
+                                SHRF ()
+                                ADBG ("End WWAN DSM FLDR")
+                                Release (WWMT)
+                            }
+                        }
+
+                        If ((Arg2 == 0x03))
+                        {
+                            If ((WRTO == One)) {}
+                            ElseIf ((WRTO == 0x03)) {}
+                            Else
+                            {
+                            }
+
+                            Return (WRTO) /* \WRTO */
+                        }
+                    }
+                }
+
+                Return (Buffer (One)
+                {
+                     0x00                                             // .
+                })
             }
         }
     }
@@ -27706,12 +26811,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP02.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -28404,44 +27507,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -28487,17 +27555,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -28505,7 +27563,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -28623,12 +27680,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -28655,12 +27726,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP03.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -29353,44 +28422,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -29436,17 +28470,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -29454,7 +28478,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -29572,12 +28595,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -29604,12 +28641,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP04.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -30302,44 +29337,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -30385,17 +29385,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -30403,7 +29393,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -30521,12 +29510,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -30549,951 +29552,914 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    If (CondRefOf (\_SB.PC00.RP05.PXSX))
+    Scope (_SB.PC00.RP05.PXSX)
     {
-        Scope (_SB.PC00.RP05.PXSX)
+        OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
+        Field (RPXX, AnyAcc, NoLock, Preserve)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
-            Field (RPXX, AnyAcc, NoLock, Preserve)
-            {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
-            }
+            VDID,   32
+        }
 
-            Method (MTKT, 0, Serialized)
+        Method (MTKT, 0, Serialized)
+        {
+            If (CondRefOf (VDID))
             {
-                If (CondRefOf (VDID))
+                Switch (ToInteger (VDID))
                 {
-                    Switch (ToInteger (VDID))
+                    Case (0x766314C3)
                     {
-                        Case (0x766314C3)
-                        {
-                            Return (0x84)
-                        }
-                        Case (0x796114C3)
-                        {
-                            Return (0x84)
-                        }
-                        Default
-                        {
-                            Return (0x44)
-                        }
-
+                        Return (0x84)
                     }
-                }
-                Else
-                {
-                    Return (0x44)
-                }
-            }
-
-            OperationRegion (FLDR, PCI_Config, MTKT (), 0x06)
-            Field (FLDR, ByteAcc, NoLock, Preserve)
-            {
-                DCAP,   32, 
-                DCTR,   16
-            }
-
-            Method (WIST, 0, Serialized)
-            {
-                If (CondRefOf (VDID))
-                {
-                    Switch (ToInteger (VDID))
+                    Case (0x796114C3)
                     {
-                        Case (0x095A8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x095B8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x31658086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x31668086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B18086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B28086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B38086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B48086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F38086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F48086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F58086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F68086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24FD8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24FB8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x25268086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x271B8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x27238086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x0042168C)
-                        {
-                            Return (One)
-                        }
-                        Case (0x003E168C)
-                        {
-                            Return (One)
-                        }
-                        Case (0xC82110EC)
-                        {
-                            Return (One)
-                        }
-                        Case (0xB82210EC)
-                        {
-                            Return (One)
-                        }
-                        Case (0xC82210EC)
-                        {
-                            Return (One)
-                        }
-                        Case (0x766314C3)
-                        {
-                            Return (One)
-                        }
-                        Case (0x796114C3)
-                        {
-                            Return (One)
-                        }
-                        Case (0x27258086)
-                        {
-                            Return (One)
-                        }
-                        Default
-                        {
-                            Return (Zero)
-                        }
-
+                        Return (0x84)
                     }
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
-
-            Method (WWST, 0, Serialized)
-            {
-                If (CondRefOf (VDID))
-                {
-                    Switch (ToInteger (VDID))
+                    Default
                     {
-                        Case (0x73608086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x75608086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x4D7514C3)
-                        {
-                            Return (One)
-                        }
-                        Default
-                        {
-                            Return (Zero)
-                        }
-
+                        Return (0x44)
                     }
-                }
-                Else
-                {
-                    Return (Zero)
+
                 }
             }
-
-            If (WIST ())
+            Else
             {
-                PowerResource (WRST, 0x05, 0x0000)
+                Return (0x44)
+            }
+        }
+
+        OperationRegion (FLDR, PCI_Config, MTKT (), 0x06)
+        Field (FLDR, ByteAcc, NoLock, Preserve)
+        {
+            DCAP,   32, 
+            DCTR,   16
+        }
+
+        Method (WIST, 0, Serialized)
+        {
+            If (CondRefOf (VDID))
+            {
+                Switch (ToInteger (VDID))
                 {
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    Case (0x095A8086)
                     {
                         Return (One)
                     }
-
-                    Method (_ON, 0, NotSerialized)  // _ON_: Power On
+                    Case (0x095B8086)
                     {
+                        Return (One)
+                    }
+                    Case (0x31658086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x31668086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B18086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B28086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B38086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B48086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F38086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F48086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F58086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F68086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24FD8086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24FB8086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x25268086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x271B8086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x27238086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x0042168C)
+                    {
+                        Return (One)
+                    }
+                    Case (0x003E168C)
+                    {
+                        Return (One)
+                    }
+                    Case (0xC82110EC)
+                    {
+                        Return (One)
+                    }
+                    Case (0xB82210EC)
+                    {
+                        Return (One)
+                    }
+                    Case (0xC82210EC)
+                    {
+                        Return (One)
+                    }
+                    Case (0x766314C3)
+                    {
+                        Return (One)
+                    }
+                    Case (0x796114C3)
+                    {
+                        Return (One)
+                    }
+                    Case (0x27258086)
+                    {
+                        Return (One)
+                    }
+                    Default
+                    {
+                        Return (Zero)
                     }
 
-                    Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
+                }
+            }
+            Else
+            {
+                Return (Zero)
+            }
+        }
+
+        Method (WWST, 0, Serialized)
+        {
+            If (CondRefOf (VDID))
+            {
+                Switch (ToInteger (VDID))
+                {
+                    Case (0x73608086)
                     {
+                        Return (One)
+                    }
+                    Case (0x75608086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x4D7514C3)
+                    {
+                        Return (One)
+                    }
+                    Default
+                    {
+                        Return (Zero)
                     }
 
-                    Method (_RST, 0, NotSerialized)  // _RST: Device Reset
-                    {
-                        If ((DCAP & 0x10000000))
-                        {
-                            Local0 = DCTR /* \_SB_.PC00.RP05.PXSX.DCTR */
-                            Local0 |= 0x8000
-                            DCTR = Local0
-                        }
-                    }
+                }
+            }
+            Else
+            {
+                Return (Zero)
+            }
+        }
+
+        If (WIST ())
+        {
+            PowerResource (WRST, 0x05, 0x0000)
+            {
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    Return (One)
                 }
 
-                Name (SPLX, Package (0x02)
+                Method (_ON, 0, NotSerialized)  // _ON_: Power On
                 {
-                    Zero, 
-                    Package (0x03)
-                    {
-                        0x80000000, 
-                        0x80000000, 
-                        0x80000000
-                    }
-                })
-                Method (SPLC, 0, Serialized)
-                {
-                    DerefOf (SPLX [One]) [Zero] = DOM1 /* \DOM1 */
-                    DerefOf (SPLX [One]) [One] = LIM1 /* \LIM1 */
-                    DerefOf (SPLX [One]) [0x02] = TIM1 /* \TIM1 */
-                    Return (SPLX) /* \_SB_.PC00.RP05.PXSX.SPLX */
                 }
 
-                Name (WANX, Package (0x03)
+                Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
                 {
-                    Zero, 
-                    Package (0x03)
-                    {
-                        0x80000000, 
-                        0x80000000, 
-                        0x80000000
-                    }, 
-
-                    Package (0x03)
-                    {
-                        0x80000000, 
-                        0x80000000, 
-                        0x80000000
-                    }
-                })
-                Method (WAND, 0, Serialized)
-                {
-                    DerefOf (WANX [One]) [Zero] = Zero
-                    DerefOf (WANX [One]) [One] = TRD0 /* \TRD0 */
-                    DerefOf (WANX [One]) [0x02] = TRL0 /* \TRL0 */
-                    DerefOf (WANX [0x02]) [Zero] = One
-                    DerefOf (WANX [0x02]) [One] = TRD1 /* \TRD1 */
-                    DerefOf (WANX [0x02]) [0x02] = TRL1 /* \TRL1 */
-                    Return (WANX) /* \_SB_.PC00.RP05.PXSX.WANX */
                 }
 
-                Name (WRDX, Package (0x02)
+                Method (_RST, 0, NotSerialized)  // _RST: Device Reset
                 {
-                    Zero, 
-                    Package (0x02)
+                    If ((DCAP & 0x10000000))
                     {
-                        0x80000000, 
-                        0x8000
+                        Local0 = DCTR /* \_SB_.PC00.RP05.PXSX.DCTR */
+                        Local0 |= 0x8000
+                        DCTR = Local0
                     }
-                })
-                Method (WRDD, 0, Serialized)
-                {
-                    DerefOf (WRDX [One]) [Zero] = WDM1 /* \WDM1 */
-                    DerefOf (WRDX [One]) [One] = CID1 /* \CID1 */
-                    Return (WRDX) /* \_SB_.PC00.RP05.PXSX.WRDX */
-                }
-
-                Name (WRDY, Package (0x02)
-                {
-                    One, 
-                    Package (0x18)
-                    {
-                        0x07, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80
-                    }
-                })
-                Method (WRDS, 0, Serialized)
-                {
-                    DerefOf (WRDY [One]) [One] = STXE /* \STXE */
-                    DerefOf (WRDY [One]) [0x02] = ST10 /* \ST10 */
-                    DerefOf (WRDY [One]) [0x03] = ST11 /* \ST11 */
-                    DerefOf (WRDY [One]) [0x04] = ST12 /* \ST12 */
-                    DerefOf (WRDY [One]) [0x05] = ST13 /* \ST13 */
-                    DerefOf (WRDY [One]) [0x06] = ST14 /* \ST14 */
-                    DerefOf (WRDY [One]) [0x07] = ST15 /* \ST15 */
-                    DerefOf (WRDY [One]) [0x08] = ST16 /* \ST16 */
-                    DerefOf (WRDY [One]) [0x09] = ST17 /* \ST17 */
-                    DerefOf (WRDY [One]) [0x0A] = ST18 /* \ST18 */
-                    DerefOf (WRDY [One]) [0x0B] = ST19 /* \ST19 */
-                    DerefOf (WRDY [One]) [0x0C] = ST50 /* \ST50 */
-                    DerefOf (WRDY [One]) [0x0D] = ST51 /* \ST51 */
-                    DerefOf (WRDY [One]) [0x0E] = ST52 /* \ST52 */
-                    DerefOf (WRDY [One]) [0x0F] = ST53 /* \ST53 */
-                    DerefOf (WRDY [One]) [0x10] = ST54 /* \ST54 */
-                    DerefOf (WRDY [One]) [0x11] = ST55 /* \ST55 */
-                    DerefOf (WRDY [One]) [0x12] = ST56 /* \ST56 */
-                    DerefOf (WRDY [One]) [0x13] = ST57 /* \ST57 */
-                    DerefOf (WRDY [One]) [0x14] = ST58 /* \ST58 */
-                    DerefOf (WRDY [One]) [0x15] = ST59 /* \ST59 */
-                    DerefOf (WRDY [One]) [0x16] = ST5A /* \ST5A */
-                    DerefOf (WRDY [One]) [0x17] = ST5B /* \ST5B */
-                    Return (WRDY) /* \_SB_.PC00.RP05.PXSX.WRDY */
-                }
-
-                Name (EWRY, Package (0x02)
-                {
-                    One, 
-                    Package (0x45)
-                    {
-                        0x07, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80
-                    }
-                })
-                Method (EWRD, 0, Serialized)
-                {
-                    DerefOf (EWRY [One]) [One] = STDE /* \STDE */
-                    DerefOf (EWRY [One]) [0x02] = STRS /* \STRS */
-                    DerefOf (EWRY [One]) [0x03] = ST20 /* \ST20 */
-                    DerefOf (EWRY [One]) [0x04] = ST21 /* \ST21 */
-                    DerefOf (EWRY [One]) [0x05] = ST22 /* \ST22 */
-                    DerefOf (EWRY [One]) [0x06] = ST23 /* \ST23 */
-                    DerefOf (EWRY [One]) [0x07] = ST24 /* \ST24 */
-                    DerefOf (EWRY [One]) [0x08] = ST25 /* \ST25 */
-                    DerefOf (EWRY [One]) [0x09] = ST26 /* \ST26 */
-                    DerefOf (EWRY [One]) [0x0A] = ST27 /* \ST27 */
-                    DerefOf (EWRY [One]) [0x0B] = ST28 /* \ST28 */
-                    DerefOf (EWRY [One]) [0x0C] = ST29 /* \ST29 */
-                    DerefOf (EWRY [One]) [0x0D] = ST60 /* \ST60 */
-                    DerefOf (EWRY [One]) [0x0E] = ST61 /* \ST61 */
-                    DerefOf (EWRY [One]) [0x0F] = ST62 /* \ST62 */
-                    DerefOf (EWRY [One]) [0x10] = ST63 /* \ST63 */
-                    DerefOf (EWRY [One]) [0x11] = ST64 /* \ST64 */
-                    DerefOf (EWRY [One]) [0x12] = ST65 /* \ST65 */
-                    DerefOf (EWRY [One]) [0x13] = ST66 /* \ST66 */
-                    DerefOf (EWRY [One]) [0x14] = ST67 /* \ST67 */
-                    DerefOf (EWRY [One]) [0x15] = ST68 /* \ST68 */
-                    DerefOf (EWRY [One]) [0x16] = ST69 /* \ST69 */
-                    DerefOf (EWRY [One]) [0x17] = ST6A /* \ST6A */
-                    DerefOf (EWRY [One]) [0x18] = ST6B /* \ST6B */
-                    DerefOf (EWRY [One]) [0x19] = ST30 /* \ST30 */
-                    DerefOf (EWRY [One]) [0x1A] = ST31 /* \ST31 */
-                    DerefOf (EWRY [One]) [0x1B] = ST32 /* \ST32 */
-                    DerefOf (EWRY [One]) [0x1C] = ST33 /* \ST33 */
-                    DerefOf (EWRY [One]) [0x1D] = ST34 /* \ST34 */
-                    DerefOf (EWRY [One]) [0x1E] = ST35 /* \ST35 */
-                    DerefOf (EWRY [One]) [0x1F] = ST36 /* \ST36 */
-                    DerefOf (EWRY [One]) [0x20] = ST37 /* \ST37 */
-                    DerefOf (EWRY [One]) [0x21] = ST38 /* \ST38 */
-                    DerefOf (EWRY [One]) [0x22] = ST39 /* \ST39 */
-                    DerefOf (EWRY [One]) [0x23] = ST70 /* \ST70 */
-                    DerefOf (EWRY [One]) [0x24] = ST71 /* \ST71 */
-                    DerefOf (EWRY [One]) [0x25] = ST72 /* \ST72 */
-                    DerefOf (EWRY [One]) [0x26] = ST73 /* \ST73 */
-                    DerefOf (EWRY [One]) [0x27] = ST74 /* \ST74 */
-                    DerefOf (EWRY [One]) [0x28] = ST75 /* \ST75 */
-                    DerefOf (EWRY [One]) [0x29] = ST76 /* \ST76 */
-                    DerefOf (EWRY [One]) [0x2A] = ST77 /* \ST77 */
-                    DerefOf (EWRY [One]) [0x2B] = ST78 /* \ST78 */
-                    DerefOf (EWRY [One]) [0x2C] = ST79 /* \ST79 */
-                    DerefOf (EWRY [One]) [0x2D] = ST7A /* \ST7A */
-                    DerefOf (EWRY [One]) [0x2E] = ST7B /* \ST7B */
-                    DerefOf (EWRY [One]) [0x2F] = ST40 /* \ST40 */
-                    DerefOf (EWRY [One]) [0x30] = ST41 /* \ST41 */
-                    DerefOf (EWRY [One]) [0x31] = ST42 /* \ST42 */
-                    DerefOf (EWRY [One]) [0x32] = ST43 /* \ST43 */
-                    DerefOf (EWRY [One]) [0x33] = ST44 /* \ST44 */
-                    DerefOf (EWRY [One]) [0x34] = ST45 /* \ST45 */
-                    DerefOf (EWRY [One]) [0x35] = ST46 /* \ST46 */
-                    DerefOf (EWRY [One]) [0x36] = ST47 /* \ST47 */
-                    DerefOf (EWRY [One]) [0x37] = ST48 /* \ST48 */
-                    DerefOf (EWRY [One]) [0x38] = ST49 /* \ST49 */
-                    DerefOf (EWRY [One]) [0x39] = ST80 /* \ST80 */
-                    DerefOf (EWRY [One]) [0x3A] = ST81 /* \ST81 */
-                    DerefOf (EWRY [One]) [0x3B] = ST82 /* \ST82 */
-                    DerefOf (EWRY [One]) [0x3C] = ST83 /* \ST83 */
-                    DerefOf (EWRY [One]) [0x3D] = ST84 /* \ST84 */
-                    DerefOf (EWRY [One]) [0x3E] = ST85 /* \ST85 */
-                    DerefOf (EWRY [One]) [0x3F] = ST86 /* \ST86 */
-                    DerefOf (EWRY [One]) [0x40] = ST87 /* \ST87 */
-                    DerefOf (EWRY [One]) [0x41] = ST88 /* \ST88 */
-                    DerefOf (EWRY [One]) [0x42] = ST89 /* \ST89 */
-                    DerefOf (EWRY [One]) [0x43] = ST8A /* \ST8A */
-                    DerefOf (EWRY [One]) [0x44] = ST8B /* \ST8B */
-                    Return (EWRY) /* \_SB_.PC00.RP05.PXSX.EWRY */
-                }
-
-                Name (WGDY, Package (0x02)
-                {
-                    0x02, 
-                    Package (0x1C)
-                    {
-                        0x07, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80
-                    }
-                })
-                Method (WGDS, 0, Serialized)
-                {
-                    DerefOf (WGDY [One]) [One] = SD11 /* \SD11 */
-                    DerefOf (WGDY [One]) [0x02] = SD12 /* \SD12 */
-                    DerefOf (WGDY [One]) [0x03] = SD13 /* \SD13 */
-                    DerefOf (WGDY [One]) [0x04] = SD14 /* \SD14 */
-                    DerefOf (WGDY [One]) [0x05] = SD15 /* \SD15 */
-                    DerefOf (WGDY [One]) [0x06] = SD16 /* \SD16 */
-                    DerefOf (WGDY [One]) [0x07] = SD17 /* \SD17 */
-                    DerefOf (WGDY [One]) [0x08] = SD18 /* \SD18 */
-                    DerefOf (WGDY [One]) [0x09] = SD19 /* \SD19 */
-                    DerefOf (WGDY [One]) [0x0A] = SD21 /* \SD21 */
-                    DerefOf (WGDY [One]) [0x0B] = SD22 /* \SD22 */
-                    DerefOf (WGDY [One]) [0x0C] = SD23 /* \SD23 */
-                    DerefOf (WGDY [One]) [0x0D] = SD24 /* \SD24 */
-                    DerefOf (WGDY [One]) [0x0E] = SD25 /* \SD25 */
-                    DerefOf (WGDY [One]) [0x0F] = SD26 /* \SD26 */
-                    DerefOf (WGDY [One]) [0x10] = SD27 /* \SD27 */
-                    DerefOf (WGDY [One]) [0x11] = SD28 /* \SD28 */
-                    DerefOf (WGDY [One]) [0x12] = SD29 /* \SD29 */
-                    DerefOf (WGDY [One]) [0x13] = SD31 /* \SD31 */
-                    DerefOf (WGDY [One]) [0x14] = SD32 /* \SD32 */
-                    DerefOf (WGDY [One]) [0x15] = SD33 /* \SD33 */
-                    DerefOf (WGDY [One]) [0x16] = SD34 /* \SD34 */
-                    DerefOf (WGDY [One]) [0x17] = SD35 /* \SD35 */
-                    DerefOf (WGDY [One]) [0x18] = SD36 /* \SD36 */
-                    DerefOf (WGDY [One]) [0x19] = SD37 /* \SD37 */
-                    DerefOf (WGDY [One]) [0x1A] = SD38 /* \SD38 */
-                    DerefOf (WGDY [One]) [0x1B] = SD39 /* \SD39 */
-                    Return (WGDY) /* \_SB_.PC00.RP05.PXSX.WGDY */
-                }
-
-                Name (ECKY, Package (0x02)
-                {
-                    Zero, 
-                    Package (0x02)
-                    {
-                        0x07, 
-                        Zero
-                    }
-                })
-                Method (ECKV, 0, Serialized)
-                {
-                    DerefOf (ECKY [One]) [One] = CECV /* \CECV */
-                    Return (ECKY) /* \_SB_.PC00.RP05.PXSX.ECKY */
-                }
-
-                Name (PPAY, Package (0x02)
-                {
-                    One, 
-                    Package (0x18)
-                    {
-                        0x07, 
-                        Zero, 
-                        0x18, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x18, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28
-                    }
-                })
-                Method (PPAG, 0, Serialized)
-                {
-                    DerefOf (PPAY [One]) [One] = WAGE /* \WAGE */
-                    DerefOf (PPAY [One]) [0x02] = AGA1 /* \AGA1 */
-                    DerefOf (PPAY [One]) [0x03] = AGA2 /* \AGA2 */
-                    DerefOf (PPAY [One]) [0x04] = AGA3 /* \AGA3 */
-                    DerefOf (PPAY [One]) [0x05] = AGA4 /* \AGA4 */
-                    DerefOf (PPAY [One]) [0x06] = AGA5 /* \AGA5 */
-                    DerefOf (PPAY [One]) [0x07] = AGA6 /* \AGA6 */
-                    DerefOf (PPAY [One]) [0x08] = AGA7 /* \AGA7 */
-                    DerefOf (PPAY [One]) [0x09] = AGA8 /* \AGA8 */
-                    DerefOf (PPAY [One]) [0x0A] = AGA9 /* \AGA9 */
-                    DerefOf (PPAY [One]) [0x0B] = AGAA /* \AGAA */
-                    DerefOf (PPAY [One]) [0x0C] = AGAB /* \AGAB */
-                    DerefOf (PPAY [One]) [0x0D] = AGB1 /* \AGB1 */
-                    DerefOf (PPAY [One]) [0x0E] = AGB2 /* \AGB2 */
-                    DerefOf (PPAY [One]) [0x0F] = AGB3 /* \AGB3 */
-                    DerefOf (PPAY [One]) [0x10] = AGB4 /* \AGB4 */
-                    DerefOf (PPAY [One]) [0x11] = AGB5 /* \AGB5 */
-                    DerefOf (PPAY [One]) [0x12] = AGB6 /* \AGB6 */
-                    DerefOf (PPAY [One]) [0x13] = AGB7 /* \AGB7 */
-                    DerefOf (PPAY [One]) [0x14] = AGB8 /* \AGB8 */
-                    DerefOf (PPAY [One]) [0x15] = AGB9 /* \AGB9 */
-                    DerefOf (PPAY [One]) [0x16] = AGBA /* \AGBA */
-                    DerefOf (PPAY [One]) [0x17] = AGBB /* \AGBB */
-                    Return (PPAY) /* \_SB_.PC00.RP05.PXSX.PPAY */
-                }
-
-                Name (SADX, Package (0x03)
-                {
-                    Zero, 
-                    Package (0x02)
-                    {
-                        0x07, 
-                        0x80000000
-                    }, 
-
-                    Package (0x02)
-                    {
-                        0x12, 
-                        0x80000000
-                    }
-                })
-                Method (SADS, 0, Serialized)
-                {
-                    DerefOf (SADX [One]) [One] = ATDV /* \ATDV */
-                    DerefOf (SADX [0x02]) [One] = ATDV /* \ATDV */
-                    Return (SADX) /* \_SB_.PC00.RP05.PXSX.SADX */
-                }
-
-                Name (GPCX, Package (0x03)
-                {
-                    Zero, 
-                    Package (0x02)
-                    {
-                        0x07, 
-                        Package (0x03)
-                        {
-                            Zero, 
-                            Zero, 
-                            Zero
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        0x12, 
-                        Package (0x03)
-                        {
-                            Zero, 
-                            Zero, 
-                            Zero
-                        }
-                    }
-                })
-                Method (GPC, 0, Serialized)
-                {
-                    Return (GPCX) /* \_SB_.PC00.RP05.PXSX.GPCX */
                 }
             }
 
-            If (((WWEN != Zero) && (WWRP == SLOT)))
+            Name (SPLX, Package (0x02)
             {
-                Method (SHRF, 0, NotSerialized)
+                Zero, 
+                Package (0x03)
                 {
-                    PSD0 (SLOT)
-                    SPCO (WCLK, One)
-                    SGOV (WFCP, PFCP)
-                    Sleep (TN2B)
-                    SGOV (WBRS, (~PBRS & One))
-                    Sleep (TB2R)
+                    0x80000000, 
+                    0x80000000, 
+                    0x80000000
+                }
+            })
+            Method (SPLC, 0, Serialized)
+            {
+                DerefOf (SPLX [One]) [Zero] = DOM1 /* \DOM1 */
+                DerefOf (SPLX [One]) [One] = LIM1 /* \LIM1 */
+                DerefOf (SPLX [One]) [0x02] = TIM1 /* \TIM1 */
+                Return (SPLX) /* \_SB_.PC00.RP05.PXSX.SPLX */
+            }
+
+            Name (WANX, Package (0x03)
+            {
+                Zero, 
+                Package (0x03)
+                {
+                    0x80000000, 
+                    0x80000000, 
+                    0x80000000
+                }, 
+
+                Package (0x03)
+                {
+                    0x80000000, 
+                    0x80000000, 
+                    0x80000000
+                }
+            })
+            Method (WAND, 0, Serialized)
+            {
+                DerefOf (WANX [One]) [Zero] = Zero
+                DerefOf (WANX [One]) [One] = TRD0 /* \TRD0 */
+                DerefOf (WANX [One]) [0x02] = TRL0 /* \TRL0 */
+                DerefOf (WANX [0x02]) [Zero] = One
+                DerefOf (WANX [0x02]) [One] = TRD1 /* \TRD1 */
+                DerefOf (WANX [0x02]) [0x02] = TRL1 /* \TRL1 */
+                Return (WANX) /* \_SB_.PC00.RP05.PXSX.WANX */
+            }
+
+            Name (WRDX, Package (0x02)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x80000000, 
+                    0x8000
+                }
+            })
+            Method (WRDD, 0, Serialized)
+            {
+                DerefOf (WRDX [One]) [Zero] = WDM1 /* \WDM1 */
+                DerefOf (WRDX [One]) [One] = CID1 /* \CID1 */
+                Return (WRDX) /* \_SB_.PC00.RP05.PXSX.WRDX */
+            }
+
+            Name (WRDY, Package (0x02)
+            {
+                One, 
+                Package (0x18)
+                {
+                    0x07, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80
+                }
+            })
+            Method (WRDS, 0, Serialized)
+            {
+                DerefOf (WRDY [One]) [One] = STXE /* \STXE */
+                DerefOf (WRDY [One]) [0x02] = ST10 /* \ST10 */
+                DerefOf (WRDY [One]) [0x03] = ST11 /* \ST11 */
+                DerefOf (WRDY [One]) [0x04] = ST12 /* \ST12 */
+                DerefOf (WRDY [One]) [0x05] = ST13 /* \ST13 */
+                DerefOf (WRDY [One]) [0x06] = ST14 /* \ST14 */
+                DerefOf (WRDY [One]) [0x07] = ST15 /* \ST15 */
+                DerefOf (WRDY [One]) [0x08] = ST16 /* \ST16 */
+                DerefOf (WRDY [One]) [0x09] = ST17 /* \ST17 */
+                DerefOf (WRDY [One]) [0x0A] = ST18 /* \ST18 */
+                DerefOf (WRDY [One]) [0x0B] = ST19 /* \ST19 */
+                DerefOf (WRDY [One]) [0x0C] = ST50 /* \ST50 */
+                DerefOf (WRDY [One]) [0x0D] = ST51 /* \ST51 */
+                DerefOf (WRDY [One]) [0x0E] = ST52 /* \ST52 */
+                DerefOf (WRDY [One]) [0x0F] = ST53 /* \ST53 */
+                DerefOf (WRDY [One]) [0x10] = ST54 /* \ST54 */
+                DerefOf (WRDY [One]) [0x11] = ST55 /* \ST55 */
+                DerefOf (WRDY [One]) [0x12] = ST56 /* \ST56 */
+                DerefOf (WRDY [One]) [0x13] = ST57 /* \ST57 */
+                DerefOf (WRDY [One]) [0x14] = ST58 /* \ST58 */
+                DerefOf (WRDY [One]) [0x15] = ST59 /* \ST59 */
+                DerefOf (WRDY [One]) [0x16] = ST5A /* \ST5A */
+                DerefOf (WRDY [One]) [0x17] = ST5B /* \ST5B */
+                Return (WRDY) /* \_SB_.PC00.RP05.PXSX.WRDY */
+            }
+
+            Name (EWRY, Package (0x02)
+            {
+                One, 
+                Package (0x45)
+                {
+                    0x07, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80
+                }
+            })
+            Method (EWRD, 0, Serialized)
+            {
+                DerefOf (EWRY [One]) [One] = STDE /* \STDE */
+                DerefOf (EWRY [One]) [0x02] = STRS /* \STRS */
+                DerefOf (EWRY [One]) [0x03] = ST20 /* \ST20 */
+                DerefOf (EWRY [One]) [0x04] = ST21 /* \ST21 */
+                DerefOf (EWRY [One]) [0x05] = ST22 /* \ST22 */
+                DerefOf (EWRY [One]) [0x06] = ST23 /* \ST23 */
+                DerefOf (EWRY [One]) [0x07] = ST24 /* \ST24 */
+                DerefOf (EWRY [One]) [0x08] = ST25 /* \ST25 */
+                DerefOf (EWRY [One]) [0x09] = ST26 /* \ST26 */
+                DerefOf (EWRY [One]) [0x0A] = ST27 /* \ST27 */
+                DerefOf (EWRY [One]) [0x0B] = ST28 /* \ST28 */
+                DerefOf (EWRY [One]) [0x0C] = ST29 /* \ST29 */
+                DerefOf (EWRY [One]) [0x0D] = ST60 /* \ST60 */
+                DerefOf (EWRY [One]) [0x0E] = ST61 /* \ST61 */
+                DerefOf (EWRY [One]) [0x0F] = ST62 /* \ST62 */
+                DerefOf (EWRY [One]) [0x10] = ST63 /* \ST63 */
+                DerefOf (EWRY [One]) [0x11] = ST64 /* \ST64 */
+                DerefOf (EWRY [One]) [0x12] = ST65 /* \ST65 */
+                DerefOf (EWRY [One]) [0x13] = ST66 /* \ST66 */
+                DerefOf (EWRY [One]) [0x14] = ST67 /* \ST67 */
+                DerefOf (EWRY [One]) [0x15] = ST68 /* \ST68 */
+                DerefOf (EWRY [One]) [0x16] = ST69 /* \ST69 */
+                DerefOf (EWRY [One]) [0x17] = ST6A /* \ST6A */
+                DerefOf (EWRY [One]) [0x18] = ST6B /* \ST6B */
+                DerefOf (EWRY [One]) [0x19] = ST30 /* \ST30 */
+                DerefOf (EWRY [One]) [0x1A] = ST31 /* \ST31 */
+                DerefOf (EWRY [One]) [0x1B] = ST32 /* \ST32 */
+                DerefOf (EWRY [One]) [0x1C] = ST33 /* \ST33 */
+                DerefOf (EWRY [One]) [0x1D] = ST34 /* \ST34 */
+                DerefOf (EWRY [One]) [0x1E] = ST35 /* \ST35 */
+                DerefOf (EWRY [One]) [0x1F] = ST36 /* \ST36 */
+                DerefOf (EWRY [One]) [0x20] = ST37 /* \ST37 */
+                DerefOf (EWRY [One]) [0x21] = ST38 /* \ST38 */
+                DerefOf (EWRY [One]) [0x22] = ST39 /* \ST39 */
+                DerefOf (EWRY [One]) [0x23] = ST70 /* \ST70 */
+                DerefOf (EWRY [One]) [0x24] = ST71 /* \ST71 */
+                DerefOf (EWRY [One]) [0x25] = ST72 /* \ST72 */
+                DerefOf (EWRY [One]) [0x26] = ST73 /* \ST73 */
+                DerefOf (EWRY [One]) [0x27] = ST74 /* \ST74 */
+                DerefOf (EWRY [One]) [0x28] = ST75 /* \ST75 */
+                DerefOf (EWRY [One]) [0x29] = ST76 /* \ST76 */
+                DerefOf (EWRY [One]) [0x2A] = ST77 /* \ST77 */
+                DerefOf (EWRY [One]) [0x2B] = ST78 /* \ST78 */
+                DerefOf (EWRY [One]) [0x2C] = ST79 /* \ST79 */
+                DerefOf (EWRY [One]) [0x2D] = ST7A /* \ST7A */
+                DerefOf (EWRY [One]) [0x2E] = ST7B /* \ST7B */
+                DerefOf (EWRY [One]) [0x2F] = ST40 /* \ST40 */
+                DerefOf (EWRY [One]) [0x30] = ST41 /* \ST41 */
+                DerefOf (EWRY [One]) [0x31] = ST42 /* \ST42 */
+                DerefOf (EWRY [One]) [0x32] = ST43 /* \ST43 */
+                DerefOf (EWRY [One]) [0x33] = ST44 /* \ST44 */
+                DerefOf (EWRY [One]) [0x34] = ST45 /* \ST45 */
+                DerefOf (EWRY [One]) [0x35] = ST46 /* \ST46 */
+                DerefOf (EWRY [One]) [0x36] = ST47 /* \ST47 */
+                DerefOf (EWRY [One]) [0x37] = ST48 /* \ST48 */
+                DerefOf (EWRY [One]) [0x38] = ST49 /* \ST49 */
+                DerefOf (EWRY [One]) [0x39] = ST80 /* \ST80 */
+                DerefOf (EWRY [One]) [0x3A] = ST81 /* \ST81 */
+                DerefOf (EWRY [One]) [0x3B] = ST82 /* \ST82 */
+                DerefOf (EWRY [One]) [0x3C] = ST83 /* \ST83 */
+                DerefOf (EWRY [One]) [0x3D] = ST84 /* \ST84 */
+                DerefOf (EWRY [One]) [0x3E] = ST85 /* \ST85 */
+                DerefOf (EWRY [One]) [0x3F] = ST86 /* \ST86 */
+                DerefOf (EWRY [One]) [0x40] = ST87 /* \ST87 */
+                DerefOf (EWRY [One]) [0x41] = ST88 /* \ST88 */
+                DerefOf (EWRY [One]) [0x42] = ST89 /* \ST89 */
+                DerefOf (EWRY [One]) [0x43] = ST8A /* \ST8A */
+                DerefOf (EWRY [One]) [0x44] = ST8B /* \ST8B */
+                Return (EWRY) /* \_SB_.PC00.RP05.PXSX.EWRY */
+            }
+
+            Name (WGDY, Package (0x02)
+            {
+                0x02, 
+                Package (0x1C)
+                {
+                    0x07, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80
+                }
+            })
+            Method (WGDS, 0, Serialized)
+            {
+                DerefOf (WGDY [One]) [One] = SD11 /* \SD11 */
+                DerefOf (WGDY [One]) [0x02] = SD12 /* \SD12 */
+                DerefOf (WGDY [One]) [0x03] = SD13 /* \SD13 */
+                DerefOf (WGDY [One]) [0x04] = SD14 /* \SD14 */
+                DerefOf (WGDY [One]) [0x05] = SD15 /* \SD15 */
+                DerefOf (WGDY [One]) [0x06] = SD16 /* \SD16 */
+                DerefOf (WGDY [One]) [0x07] = SD17 /* \SD17 */
+                DerefOf (WGDY [One]) [0x08] = SD18 /* \SD18 */
+                DerefOf (WGDY [One]) [0x09] = SD19 /* \SD19 */
+                DerefOf (WGDY [One]) [0x0A] = SD21 /* \SD21 */
+                DerefOf (WGDY [One]) [0x0B] = SD22 /* \SD22 */
+                DerefOf (WGDY [One]) [0x0C] = SD23 /* \SD23 */
+                DerefOf (WGDY [One]) [0x0D] = SD24 /* \SD24 */
+                DerefOf (WGDY [One]) [0x0E] = SD25 /* \SD25 */
+                DerefOf (WGDY [One]) [0x0F] = SD26 /* \SD26 */
+                DerefOf (WGDY [One]) [0x10] = SD27 /* \SD27 */
+                DerefOf (WGDY [One]) [0x11] = SD28 /* \SD28 */
+                DerefOf (WGDY [One]) [0x12] = SD29 /* \SD29 */
+                DerefOf (WGDY [One]) [0x13] = SD31 /* \SD31 */
+                DerefOf (WGDY [One]) [0x14] = SD32 /* \SD32 */
+                DerefOf (WGDY [One]) [0x15] = SD33 /* \SD33 */
+                DerefOf (WGDY [One]) [0x16] = SD34 /* \SD34 */
+                DerefOf (WGDY [One]) [0x17] = SD35 /* \SD35 */
+                DerefOf (WGDY [One]) [0x18] = SD36 /* \SD36 */
+                DerefOf (WGDY [One]) [0x19] = SD37 /* \SD37 */
+                DerefOf (WGDY [One]) [0x1A] = SD38 /* \SD38 */
+                DerefOf (WGDY [One]) [0x1B] = SD39 /* \SD39 */
+                Return (WGDY) /* \_SB_.PC00.RP05.PXSX.WGDY */
+            }
+
+            Name (ECKY, Package (0x02)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x07, 
+                    Zero
+                }
+            })
+            Method (ECKV, 0, Serialized)
+            {
+                DerefOf (ECKY [One]) [One] = CECV /* \CECV */
+                Return (ECKY) /* \_SB_.PC00.RP05.PXSX.ECKY */
+            }
+
+            Name (PPAY, Package (0x02)
+            {
+                One, 
+                Package (0x18)
+                {
+                    0x07, 
+                    Zero, 
+                    0x18, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x18, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28
+                }
+            })
+            Method (PPAG, 0, Serialized)
+            {
+                DerefOf (PPAY [One]) [One] = WAGE /* \WAGE */
+                DerefOf (PPAY [One]) [0x02] = AGA1 /* \AGA1 */
+                DerefOf (PPAY [One]) [0x03] = AGA2 /* \AGA2 */
+                DerefOf (PPAY [One]) [0x04] = AGA3 /* \AGA3 */
+                DerefOf (PPAY [One]) [0x05] = AGA4 /* \AGA4 */
+                DerefOf (PPAY [One]) [0x06] = AGA5 /* \AGA5 */
+                DerefOf (PPAY [One]) [0x07] = AGA6 /* \AGA6 */
+                DerefOf (PPAY [One]) [0x08] = AGA7 /* \AGA7 */
+                DerefOf (PPAY [One]) [0x09] = AGA8 /* \AGA8 */
+                DerefOf (PPAY [One]) [0x0A] = AGA9 /* \AGA9 */
+                DerefOf (PPAY [One]) [0x0B] = AGAA /* \AGAA */
+                DerefOf (PPAY [One]) [0x0C] = AGAB /* \AGAB */
+                DerefOf (PPAY [One]) [0x0D] = AGB1 /* \AGB1 */
+                DerefOf (PPAY [One]) [0x0E] = AGB2 /* \AGB2 */
+                DerefOf (PPAY [One]) [0x0F] = AGB3 /* \AGB3 */
+                DerefOf (PPAY [One]) [0x10] = AGB4 /* \AGB4 */
+                DerefOf (PPAY [One]) [0x11] = AGB5 /* \AGB5 */
+                DerefOf (PPAY [One]) [0x12] = AGB6 /* \AGB6 */
+                DerefOf (PPAY [One]) [0x13] = AGB7 /* \AGB7 */
+                DerefOf (PPAY [One]) [0x14] = AGB8 /* \AGB8 */
+                DerefOf (PPAY [One]) [0x15] = AGB9 /* \AGB9 */
+                DerefOf (PPAY [One]) [0x16] = AGBA /* \AGBA */
+                DerefOf (PPAY [One]) [0x17] = AGBB /* \AGBB */
+                Return (PPAY) /* \_SB_.PC00.RP05.PXSX.PPAY */
+            }
+
+            Name (SADX, Package (0x03)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x07, 
+                    0x80000000
+                }, 
+
+                Package (0x02)
+                {
+                    0x12, 
+                    0x80000000
+                }
+            })
+            Method (SADS, 0, Serialized)
+            {
+                DerefOf (SADX [One]) [One] = ATDV /* \ATDV */
+                DerefOf (SADX [0x02]) [One] = ATDV /* \ATDV */
+                Return (SADX) /* \_SB_.PC00.RP05.PXSX.SADX */
+            }
+
+            Name (GPCX, Package (0x03)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x07, 
+                    Package (0x03)
+                    {
+                        Zero, 
+                        Zero, 
+                        Zero
+                    }
+                }, 
+
+                Package (0x02)
+                {
+                    0x12, 
+                    Package (0x03)
+                    {
+                        Zero, 
+                        Zero, 
+                        Zero
+                    }
+                }
+            })
+            Method (GPC, 0, Serialized)
+            {
+                Return (GPCX) /* \_SB_.PC00.RP05.PXSX.GPCX */
+            }
+        }
+
+        If (((WWEN != Zero) && (WWRP == SLOT)))
+        {
+            Method (SHRF, 0, NotSerialized)
+            {
+                PSD0 (SLOT)
+                SPCO (WCLK, One)
+                SGOV (WFCP, PFCP)
+                Sleep (TN2B)
+                SGOV (WBRS, (~PBRS & One))
+                Sleep (TB2R)
+                SGOV (PRST, (~WPRP & One))
+                L23D ()
+            }
+
+            If ((WWEN == One))
+            {
+                Method (_RST, 0, Serialized)  // _RST: Device Reset
+                {
+                    SGOV (WBRS, PBRS)
+                    Sleep (0xC8)
+                    Notify (PXSX, One) // Device Check
                     SGOV (PRST, (~WPRP & One))
-                    L23D ()
+                    SGOV (WBRS, (~PBRS & One))
+                    Sleep (0xC8)
+                    Local0 = Zero
+                    While ((LASX == Zero))
+                    {
+                        If ((Local0 > 0x14))
+                        {
+                            Break
+                        }
+
+                        Sleep (0x10)
+                        Local0++
+                    }
+
+                    Sleep (0x0A)
+                    Notify (PXSX, One) // Device Check
+                }
+            }
+
+            PowerResource (MRST, 0x05, 0x0000)
+            {
+                Method (_STA, 0, Serialized)  // _STA: Status
+                {
+                    Return (One)
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                Method (_ON, 0, Serialized)  // _ON_: Power On
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
+                }
+
+                Method (_OFF, 0, Serialized)  // _OFF: Power Off
+                {
                 }
 
                 Method (_RST, 0, Serialized)  // _RST: Device Reset
                 {
-                    If ((WWEN == 0x02))
+                    Local0 = Acquire (WWMT, 0x03E8)
+                    If ((Local0 == Zero))
                     {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
-                    {
+                        ADBG ("Start WWAN PR _RST")
+                        DL23 ()
                         SGOV (WBRS, PBRS)
-                        Sleep (0xC8)
-                        Notify (PXSX, One) // Device Check
-                        SGOV (PRST, (~WPRP & One))
-                        SGOV (WBRS, (~PBRS & One))
-                        Sleep (0xC8)
-                        Local0 = Zero
-                        While ((LASX == Zero))
-                        {
-                            If ((Local0 > 0x14))
-                            {
-                                Break
-                            }
-
-                            Sleep (0x10)
-                            Local0++
-                        }
-
-                        Sleep (0x0A)
-                        Notify (PXSX, One) // Device Check
+                        SPCO (WCLK, Zero)
+                        Sleep (TB2F)
+                        SGOV (WFCP, (~PFCP & One))
+                        Sleep (TFDI)
+                        SHRF ()
+                        Release (WWMT)
                     }
                 }
+            }
+        }
 
-                PowerResource (MRST, 0x05, 0x0000)
+        If ((WIST () || ((WWEN != Zero) && (WWRP == SLOT))))
+        {
+            PowerResource (DRST, 0x05, 0x0000)
+            {
+                Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
-                    Method (_STA, 0, Serialized)  // _STA: Status
-                    {
-                        Return (One)
-                    }
+                    Return (One)
+                }
 
-                    Method (_ON, 0, Serialized)  // _ON_: Power On
-                    {
-                    }
+                Method (_ON, 0, NotSerialized)  // _ON_: Power On
+                {
+                }
 
-                    Method (_OFF, 0, Serialized)  // _OFF: Power Off
-                    {
-                    }
+                Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
+                {
+                }
 
-                    Method (_RST, 0, Serialized)  // _RST: Device Reset
+                Method (_RST, 0, NotSerialized)  // _RST: Device Reset
+                {
+                    If ((DCAP & 0x10000000))
                     {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            SPCO (WCLK, Zero)
-                            Sleep (TB2F)
-                            SGOV (WFCP, (~PFCP & One))
-                            Sleep (TFDI)
-                            SHRF ()
-                            Release (WWMT)
-                            DOSV ()
-                        }
+                        Local0 = DCTR /* \_SB_.PC00.RP05.PXSX.DCTR */
+                        Local0 |= 0x8000
+                        DCTR = Local0
                     }
                 }
             }
 
-            If ((WIST () || ((WWEN != Zero) && (WWRP == SLOT))))
+            Method (_PRR, 0, NotSerialized)  // _PRR: Power Resource for Reset
             {
-                PowerResource (DRST, 0x05, 0x0000)
+                If (WIST ())
                 {
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    If (CondRefOf (WRST))
                     {
-                        Return (One)
-                    }
-
-                    Method (_ON, 0, NotSerialized)  // _ON_: Power On
-                    {
-                    }
-
-                    Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
-                    {
-                    }
-
-                    Method (_RST, 0, NotSerialized)  // _RST: Device Reset
-                    {
-                        If ((DCAP & 0x10000000))
+                        Return (Package (0x01)
                         {
-                            Local0 = DCTR /* \_SB_.PC00.RP05.PXSX.DCTR */
-                            Local0 |= 0x8000
-                            DCTR = Local0
-                        }
+                            WRST
+                        })
                     }
                 }
 
-                Method (_PRR, 0, NotSerialized)  // _PRR: Power Resource for Reset
+                If (((WWEN != Zero) && (WWRP == SLOT)))
                 {
-                    If (WIST ())
+                    If (CondRefOf (MRST))
                     {
-                        If (CondRefOf (WRST))
+                        Return (Package (0x01)
                         {
-                            Return (Package (0x01)
-                            {
-                                WRST
-                            })
-                        }
+                            MRST
+                        })
                     }
-
-                    If (((WWEN != Zero) && (WWRP == SLOT)))
-                    {
-                        If (CondRefOf (MRST))
-                        {
-                            Return (Package (0x01)
-                            {
-                                MRST
-                            })
-                        }
-                    }
-
-                    Return (Package (0x01)
-                    {
-                        DRST
-                    })
                 }
 
-                Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                Return (Package (0x01)
                 {
-                    If (WIST ())
+                    DRST
+                })
+            }
+
+            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+            {
+                If (WIST ())
+                {
+                    If ((Arg0 == ToUUID ("f21202bf-8f78-4dc6-a5b3-1f738e285ade") /* Unknown UUID */))
                     {
-                        If ((Arg0 == ToUUID ("f21202bf-8f78-4dc6-a5b3-1f738e285ade") /* Unknown UUID */))
+                        If ((Arg2 == Zero))
                         {
-                            If ((Arg2 == Zero))
-                            {
-                                If ((Arg1 == Zero))
-                                {
-                                    Return (Buffer (One)
-                                    {
-                                         0x0F                                             // .
-                                    })
-                                }
-                                Else
-                                {
-                                    Return (Buffer (One)
-                                    {
-                                         0x00                                             // .
-                                    })
-                                }
-                            }
-
-                            If ((Arg2 == One))
-                            {
-                                Local0 = ACSD /* \ACSD */
-                                Return (Local0)
-                            }
-
-                            If ((Arg2 == 0x02))
-                            {
-                                Local0 = I5BS /* \I5BS */
-                                Return (Local0)
-                            }
-
-                            If ((Arg2 == 0x03))
-                            {
-                                Local0 = UHBS /* \UHBS */
-                                Return (Local0)
-                            }
-
-                            Return (Zero)
-                        }
-                    }
-
-                    If (((WWEN != Zero) && (WWRP == SLOT)))
-                    {
-                        If ((Arg0 == ToUUID ("bad01b75-22a8-4f48-8792-bdde9467747d") /* Unknown UUID */))
-                        {
-                            If ((Arg2 == Zero))
+                            If ((Arg1 == Zero))
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0F                                             // .
                                 })
                             }
-
-                            If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
-                            If ((Arg2 == 0x03))
+                            Else
                             {
-                                If ((WRTO == One)) {}
-                                ElseIf ((WRTO == 0x03)) {}
-                                Else
+                                Return (Buffer (One)
                                 {
-                                }
-
-                                Return (WRTO) /* \WRTO */
+                                     0x00                                             // .
+                                })
                             }
                         }
-                    }
 
-                    Return (Buffer (One)
-                    {
-                         0x00                                             // .
-                    })
+                        If ((Arg2 == One))
+                        {
+                            Local0 = ACSD /* \ACSD */
+                            Return (Local0)
+                        }
+
+                        If ((Arg2 == 0x02))
+                        {
+                            Local0 = I5BS /* \I5BS */
+                            Return (Local0)
+                        }
+
+                        If ((Arg2 == 0x03))
+                        {
+                            Local0 = UHBS /* \UHBS */
+                            Return (Local0)
+                        }
+
+                        Return (Zero)
+                    }
                 }
+
+                If (((WWEN != Zero) && (WWRP == SLOT)))
+                {
+                    If ((Arg0 == ToUUID ("bad01b75-22a8-4f48-8792-bdde9467747d") /* Unknown UUID */))
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x0D                                             // .
+                            })
+                        }
+
+                        If ((Arg2 == One)) {}
+                        If ((Arg2 == 0x02))
+                        {
+                            Local0 = Acquire (WWMT, 0x03E8)
+                            If ((Local0 == Zero))
+                            {
+                                ADBG ("Start WWAN DSM FLDR")
+                                DL23 ()
+                                SGOV (WBRS, PBRS)
+                                Sleep (TBTG)
+                                SHRF ()
+                                ADBG ("End WWAN DSM FLDR")
+                                Release (WWMT)
+                            }
+                        }
+
+                        If ((Arg2 == 0x03))
+                        {
+                            If ((WRTO == One)) {}
+                            ElseIf ((WRTO == 0x03)) {}
+                            Else
+                            {
+                            }
+
+                            Return (WRTO) /* \WRTO */
+                        }
+                    }
+                }
+
+                Return (Buffer (One)
+                {
+                     0x00                                             // .
+                })
             }
         }
     }
@@ -31502,12 +30468,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP06.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -32200,44 +31164,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -32283,17 +31212,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -32301,7 +31220,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -32419,12 +31337,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -32451,12 +31383,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP07.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -33149,44 +32079,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -33232,17 +32127,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -33250,7 +32135,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -33368,12 +32252,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -33400,12 +32298,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP08.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -34098,44 +32994,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -34181,17 +33042,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -34199,7 +33050,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -34317,12 +33167,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -34345,951 +33209,914 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    If (CondRefOf (\_SB.PC00.RP09.PXSX))
+    Scope (_SB.PC00.RP09.PXSX)
     {
-        Scope (_SB.PC00.RP09.PXSX)
+        OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
+        Field (RPXX, AnyAcc, NoLock, Preserve)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
-            Field (RPXX, AnyAcc, NoLock, Preserve)
-            {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
-            }
+            VDID,   32
+        }
 
-            Method (MTKT, 0, Serialized)
+        Method (MTKT, 0, Serialized)
+        {
+            If (CondRefOf (VDID))
             {
-                If (CondRefOf (VDID))
+                Switch (ToInteger (VDID))
                 {
-                    Switch (ToInteger (VDID))
+                    Case (0x766314C3)
                     {
-                        Case (0x766314C3)
-                        {
-                            Return (0x84)
-                        }
-                        Case (0x796114C3)
-                        {
-                            Return (0x84)
-                        }
-                        Default
-                        {
-                            Return (0x44)
-                        }
-
+                        Return (0x84)
                     }
-                }
-                Else
-                {
-                    Return (0x44)
-                }
-            }
-
-            OperationRegion (FLDR, PCI_Config, MTKT (), 0x06)
-            Field (FLDR, ByteAcc, NoLock, Preserve)
-            {
-                DCAP,   32, 
-                DCTR,   16
-            }
-
-            Method (WIST, 0, Serialized)
-            {
-                If (CondRefOf (VDID))
-                {
-                    Switch (ToInteger (VDID))
+                    Case (0x796114C3)
                     {
-                        Case (0x095A8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x095B8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x31658086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x31668086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B18086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B28086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B38086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x08B48086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F38086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F48086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F58086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24F68086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24FD8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x24FB8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x25268086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x271B8086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x27238086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x0042168C)
-                        {
-                            Return (One)
-                        }
-                        Case (0x003E168C)
-                        {
-                            Return (One)
-                        }
-                        Case (0xC82110EC)
-                        {
-                            Return (One)
-                        }
-                        Case (0xB82210EC)
-                        {
-                            Return (One)
-                        }
-                        Case (0xC82210EC)
-                        {
-                            Return (One)
-                        }
-                        Case (0x766314C3)
-                        {
-                            Return (One)
-                        }
-                        Case (0x796114C3)
-                        {
-                            Return (One)
-                        }
-                        Case (0x27258086)
-                        {
-                            Return (One)
-                        }
-                        Default
-                        {
-                            Return (Zero)
-                        }
-
+                        Return (0x84)
                     }
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
-
-            Method (WWST, 0, Serialized)
-            {
-                If (CondRefOf (VDID))
-                {
-                    Switch (ToInteger (VDID))
+                    Default
                     {
-                        Case (0x73608086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x75608086)
-                        {
-                            Return (One)
-                        }
-                        Case (0x4D7514C3)
-                        {
-                            Return (One)
-                        }
-                        Default
-                        {
-                            Return (Zero)
-                        }
-
+                        Return (0x44)
                     }
-                }
-                Else
-                {
-                    Return (Zero)
+
                 }
             }
-
-            If (WIST ())
+            Else
             {
-                PowerResource (WRST, 0x05, 0x0000)
+                Return (0x44)
+            }
+        }
+
+        OperationRegion (FLDR, PCI_Config, MTKT (), 0x06)
+        Field (FLDR, ByteAcc, NoLock, Preserve)
+        {
+            DCAP,   32, 
+            DCTR,   16
+        }
+
+        Method (WIST, 0, Serialized)
+        {
+            If (CondRefOf (VDID))
+            {
+                Switch (ToInteger (VDID))
                 {
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    Case (0x095A8086)
                     {
                         Return (One)
                     }
-
-                    Method (_ON, 0, NotSerialized)  // _ON_: Power On
+                    Case (0x095B8086)
                     {
+                        Return (One)
+                    }
+                    Case (0x31658086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x31668086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B18086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B28086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B38086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x08B48086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F38086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F48086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F58086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24F68086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24FD8086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x24FB8086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x25268086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x271B8086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x27238086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x0042168C)
+                    {
+                        Return (One)
+                    }
+                    Case (0x003E168C)
+                    {
+                        Return (One)
+                    }
+                    Case (0xC82110EC)
+                    {
+                        Return (One)
+                    }
+                    Case (0xB82210EC)
+                    {
+                        Return (One)
+                    }
+                    Case (0xC82210EC)
+                    {
+                        Return (One)
+                    }
+                    Case (0x766314C3)
+                    {
+                        Return (One)
+                    }
+                    Case (0x796114C3)
+                    {
+                        Return (One)
+                    }
+                    Case (0x27258086)
+                    {
+                        Return (One)
+                    }
+                    Default
+                    {
+                        Return (Zero)
                     }
 
-                    Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
+                }
+            }
+            Else
+            {
+                Return (Zero)
+            }
+        }
+
+        Method (WWST, 0, Serialized)
+        {
+            If (CondRefOf (VDID))
+            {
+                Switch (ToInteger (VDID))
+                {
+                    Case (0x73608086)
                     {
+                        Return (One)
+                    }
+                    Case (0x75608086)
+                    {
+                        Return (One)
+                    }
+                    Case (0x4D7514C3)
+                    {
+                        Return (One)
+                    }
+                    Default
+                    {
+                        Return (Zero)
                     }
 
-                    Method (_RST, 0, NotSerialized)  // _RST: Device Reset
-                    {
-                        If ((DCAP & 0x10000000))
-                        {
-                            Local0 = DCTR /* \_SB_.PC00.RP09.PXSX.DCTR */
-                            Local0 |= 0x8000
-                            DCTR = Local0
-                        }
-                    }
+                }
+            }
+            Else
+            {
+                Return (Zero)
+            }
+        }
+
+        If (WIST ())
+        {
+            PowerResource (WRST, 0x05, 0x0000)
+            {
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    Return (One)
                 }
 
-                Name (SPLX, Package (0x02)
+                Method (_ON, 0, NotSerialized)  // _ON_: Power On
                 {
-                    Zero, 
-                    Package (0x03)
-                    {
-                        0x80000000, 
-                        0x80000000, 
-                        0x80000000
-                    }
-                })
-                Method (SPLC, 0, Serialized)
-                {
-                    DerefOf (SPLX [One]) [Zero] = DOM1 /* \DOM1 */
-                    DerefOf (SPLX [One]) [One] = LIM1 /* \LIM1 */
-                    DerefOf (SPLX [One]) [0x02] = TIM1 /* \TIM1 */
-                    Return (SPLX) /* \_SB_.PC00.RP09.PXSX.SPLX */
                 }
 
-                Name (WANX, Package (0x03)
+                Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
                 {
-                    Zero, 
-                    Package (0x03)
-                    {
-                        0x80000000, 
-                        0x80000000, 
-                        0x80000000
-                    }, 
-
-                    Package (0x03)
-                    {
-                        0x80000000, 
-                        0x80000000, 
-                        0x80000000
-                    }
-                })
-                Method (WAND, 0, Serialized)
-                {
-                    DerefOf (WANX [One]) [Zero] = Zero
-                    DerefOf (WANX [One]) [One] = TRD0 /* \TRD0 */
-                    DerefOf (WANX [One]) [0x02] = TRL0 /* \TRL0 */
-                    DerefOf (WANX [0x02]) [Zero] = One
-                    DerefOf (WANX [0x02]) [One] = TRD1 /* \TRD1 */
-                    DerefOf (WANX [0x02]) [0x02] = TRL1 /* \TRL1 */
-                    Return (WANX) /* \_SB_.PC00.RP09.PXSX.WANX */
                 }
 
-                Name (WRDX, Package (0x02)
+                Method (_RST, 0, NotSerialized)  // _RST: Device Reset
                 {
-                    Zero, 
-                    Package (0x02)
+                    If ((DCAP & 0x10000000))
                     {
-                        0x80000000, 
-                        0x8000
+                        Local0 = DCTR /* \_SB_.PC00.RP09.PXSX.DCTR */
+                        Local0 |= 0x8000
+                        DCTR = Local0
                     }
-                })
-                Method (WRDD, 0, Serialized)
-                {
-                    DerefOf (WRDX [One]) [Zero] = WDM1 /* \WDM1 */
-                    DerefOf (WRDX [One]) [One] = CID1 /* \CID1 */
-                    Return (WRDX) /* \_SB_.PC00.RP09.PXSX.WRDX */
-                }
-
-                Name (WRDY, Package (0x02)
-                {
-                    One, 
-                    Package (0x18)
-                    {
-                        0x07, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80
-                    }
-                })
-                Method (WRDS, 0, Serialized)
-                {
-                    DerefOf (WRDY [One]) [One] = STXE /* \STXE */
-                    DerefOf (WRDY [One]) [0x02] = ST10 /* \ST10 */
-                    DerefOf (WRDY [One]) [0x03] = ST11 /* \ST11 */
-                    DerefOf (WRDY [One]) [0x04] = ST12 /* \ST12 */
-                    DerefOf (WRDY [One]) [0x05] = ST13 /* \ST13 */
-                    DerefOf (WRDY [One]) [0x06] = ST14 /* \ST14 */
-                    DerefOf (WRDY [One]) [0x07] = ST15 /* \ST15 */
-                    DerefOf (WRDY [One]) [0x08] = ST16 /* \ST16 */
-                    DerefOf (WRDY [One]) [0x09] = ST17 /* \ST17 */
-                    DerefOf (WRDY [One]) [0x0A] = ST18 /* \ST18 */
-                    DerefOf (WRDY [One]) [0x0B] = ST19 /* \ST19 */
-                    DerefOf (WRDY [One]) [0x0C] = ST50 /* \ST50 */
-                    DerefOf (WRDY [One]) [0x0D] = ST51 /* \ST51 */
-                    DerefOf (WRDY [One]) [0x0E] = ST52 /* \ST52 */
-                    DerefOf (WRDY [One]) [0x0F] = ST53 /* \ST53 */
-                    DerefOf (WRDY [One]) [0x10] = ST54 /* \ST54 */
-                    DerefOf (WRDY [One]) [0x11] = ST55 /* \ST55 */
-                    DerefOf (WRDY [One]) [0x12] = ST56 /* \ST56 */
-                    DerefOf (WRDY [One]) [0x13] = ST57 /* \ST57 */
-                    DerefOf (WRDY [One]) [0x14] = ST58 /* \ST58 */
-                    DerefOf (WRDY [One]) [0x15] = ST59 /* \ST59 */
-                    DerefOf (WRDY [One]) [0x16] = ST5A /* \ST5A */
-                    DerefOf (WRDY [One]) [0x17] = ST5B /* \ST5B */
-                    Return (WRDY) /* \_SB_.PC00.RP09.PXSX.WRDY */
-                }
-
-                Name (EWRY, Package (0x02)
-                {
-                    One, 
-                    Package (0x45)
-                    {
-                        0x07, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80
-                    }
-                })
-                Method (EWRD, 0, Serialized)
-                {
-                    DerefOf (EWRY [One]) [One] = STDE /* \STDE */
-                    DerefOf (EWRY [One]) [0x02] = STRS /* \STRS */
-                    DerefOf (EWRY [One]) [0x03] = ST20 /* \ST20 */
-                    DerefOf (EWRY [One]) [0x04] = ST21 /* \ST21 */
-                    DerefOf (EWRY [One]) [0x05] = ST22 /* \ST22 */
-                    DerefOf (EWRY [One]) [0x06] = ST23 /* \ST23 */
-                    DerefOf (EWRY [One]) [0x07] = ST24 /* \ST24 */
-                    DerefOf (EWRY [One]) [0x08] = ST25 /* \ST25 */
-                    DerefOf (EWRY [One]) [0x09] = ST26 /* \ST26 */
-                    DerefOf (EWRY [One]) [0x0A] = ST27 /* \ST27 */
-                    DerefOf (EWRY [One]) [0x0B] = ST28 /* \ST28 */
-                    DerefOf (EWRY [One]) [0x0C] = ST29 /* \ST29 */
-                    DerefOf (EWRY [One]) [0x0D] = ST60 /* \ST60 */
-                    DerefOf (EWRY [One]) [0x0E] = ST61 /* \ST61 */
-                    DerefOf (EWRY [One]) [0x0F] = ST62 /* \ST62 */
-                    DerefOf (EWRY [One]) [0x10] = ST63 /* \ST63 */
-                    DerefOf (EWRY [One]) [0x11] = ST64 /* \ST64 */
-                    DerefOf (EWRY [One]) [0x12] = ST65 /* \ST65 */
-                    DerefOf (EWRY [One]) [0x13] = ST66 /* \ST66 */
-                    DerefOf (EWRY [One]) [0x14] = ST67 /* \ST67 */
-                    DerefOf (EWRY [One]) [0x15] = ST68 /* \ST68 */
-                    DerefOf (EWRY [One]) [0x16] = ST69 /* \ST69 */
-                    DerefOf (EWRY [One]) [0x17] = ST6A /* \ST6A */
-                    DerefOf (EWRY [One]) [0x18] = ST6B /* \ST6B */
-                    DerefOf (EWRY [One]) [0x19] = ST30 /* \ST30 */
-                    DerefOf (EWRY [One]) [0x1A] = ST31 /* \ST31 */
-                    DerefOf (EWRY [One]) [0x1B] = ST32 /* \ST32 */
-                    DerefOf (EWRY [One]) [0x1C] = ST33 /* \ST33 */
-                    DerefOf (EWRY [One]) [0x1D] = ST34 /* \ST34 */
-                    DerefOf (EWRY [One]) [0x1E] = ST35 /* \ST35 */
-                    DerefOf (EWRY [One]) [0x1F] = ST36 /* \ST36 */
-                    DerefOf (EWRY [One]) [0x20] = ST37 /* \ST37 */
-                    DerefOf (EWRY [One]) [0x21] = ST38 /* \ST38 */
-                    DerefOf (EWRY [One]) [0x22] = ST39 /* \ST39 */
-                    DerefOf (EWRY [One]) [0x23] = ST70 /* \ST70 */
-                    DerefOf (EWRY [One]) [0x24] = ST71 /* \ST71 */
-                    DerefOf (EWRY [One]) [0x25] = ST72 /* \ST72 */
-                    DerefOf (EWRY [One]) [0x26] = ST73 /* \ST73 */
-                    DerefOf (EWRY [One]) [0x27] = ST74 /* \ST74 */
-                    DerefOf (EWRY [One]) [0x28] = ST75 /* \ST75 */
-                    DerefOf (EWRY [One]) [0x29] = ST76 /* \ST76 */
-                    DerefOf (EWRY [One]) [0x2A] = ST77 /* \ST77 */
-                    DerefOf (EWRY [One]) [0x2B] = ST78 /* \ST78 */
-                    DerefOf (EWRY [One]) [0x2C] = ST79 /* \ST79 */
-                    DerefOf (EWRY [One]) [0x2D] = ST7A /* \ST7A */
-                    DerefOf (EWRY [One]) [0x2E] = ST7B /* \ST7B */
-                    DerefOf (EWRY [One]) [0x2F] = ST40 /* \ST40 */
-                    DerefOf (EWRY [One]) [0x30] = ST41 /* \ST41 */
-                    DerefOf (EWRY [One]) [0x31] = ST42 /* \ST42 */
-                    DerefOf (EWRY [One]) [0x32] = ST43 /* \ST43 */
-                    DerefOf (EWRY [One]) [0x33] = ST44 /* \ST44 */
-                    DerefOf (EWRY [One]) [0x34] = ST45 /* \ST45 */
-                    DerefOf (EWRY [One]) [0x35] = ST46 /* \ST46 */
-                    DerefOf (EWRY [One]) [0x36] = ST47 /* \ST47 */
-                    DerefOf (EWRY [One]) [0x37] = ST48 /* \ST48 */
-                    DerefOf (EWRY [One]) [0x38] = ST49 /* \ST49 */
-                    DerefOf (EWRY [One]) [0x39] = ST80 /* \ST80 */
-                    DerefOf (EWRY [One]) [0x3A] = ST81 /* \ST81 */
-                    DerefOf (EWRY [One]) [0x3B] = ST82 /* \ST82 */
-                    DerefOf (EWRY [One]) [0x3C] = ST83 /* \ST83 */
-                    DerefOf (EWRY [One]) [0x3D] = ST84 /* \ST84 */
-                    DerefOf (EWRY [One]) [0x3E] = ST85 /* \ST85 */
-                    DerefOf (EWRY [One]) [0x3F] = ST86 /* \ST86 */
-                    DerefOf (EWRY [One]) [0x40] = ST87 /* \ST87 */
-                    DerefOf (EWRY [One]) [0x41] = ST88 /* \ST88 */
-                    DerefOf (EWRY [One]) [0x42] = ST89 /* \ST89 */
-                    DerefOf (EWRY [One]) [0x43] = ST8A /* \ST8A */
-                    DerefOf (EWRY [One]) [0x44] = ST8B /* \ST8B */
-                    Return (EWRY) /* \_SB_.PC00.RP09.PXSX.EWRY */
-                }
-
-                Name (WGDY, Package (0x02)
-                {
-                    0x02, 
-                    Package (0x1C)
-                    {
-                        0x07, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80, 
-                        0x80
-                    }
-                })
-                Method (WGDS, 0, Serialized)
-                {
-                    DerefOf (WGDY [One]) [One] = SD11 /* \SD11 */
-                    DerefOf (WGDY [One]) [0x02] = SD12 /* \SD12 */
-                    DerefOf (WGDY [One]) [0x03] = SD13 /* \SD13 */
-                    DerefOf (WGDY [One]) [0x04] = SD14 /* \SD14 */
-                    DerefOf (WGDY [One]) [0x05] = SD15 /* \SD15 */
-                    DerefOf (WGDY [One]) [0x06] = SD16 /* \SD16 */
-                    DerefOf (WGDY [One]) [0x07] = SD17 /* \SD17 */
-                    DerefOf (WGDY [One]) [0x08] = SD18 /* \SD18 */
-                    DerefOf (WGDY [One]) [0x09] = SD19 /* \SD19 */
-                    DerefOf (WGDY [One]) [0x0A] = SD21 /* \SD21 */
-                    DerefOf (WGDY [One]) [0x0B] = SD22 /* \SD22 */
-                    DerefOf (WGDY [One]) [0x0C] = SD23 /* \SD23 */
-                    DerefOf (WGDY [One]) [0x0D] = SD24 /* \SD24 */
-                    DerefOf (WGDY [One]) [0x0E] = SD25 /* \SD25 */
-                    DerefOf (WGDY [One]) [0x0F] = SD26 /* \SD26 */
-                    DerefOf (WGDY [One]) [0x10] = SD27 /* \SD27 */
-                    DerefOf (WGDY [One]) [0x11] = SD28 /* \SD28 */
-                    DerefOf (WGDY [One]) [0x12] = SD29 /* \SD29 */
-                    DerefOf (WGDY [One]) [0x13] = SD31 /* \SD31 */
-                    DerefOf (WGDY [One]) [0x14] = SD32 /* \SD32 */
-                    DerefOf (WGDY [One]) [0x15] = SD33 /* \SD33 */
-                    DerefOf (WGDY [One]) [0x16] = SD34 /* \SD34 */
-                    DerefOf (WGDY [One]) [0x17] = SD35 /* \SD35 */
-                    DerefOf (WGDY [One]) [0x18] = SD36 /* \SD36 */
-                    DerefOf (WGDY [One]) [0x19] = SD37 /* \SD37 */
-                    DerefOf (WGDY [One]) [0x1A] = SD38 /* \SD38 */
-                    DerefOf (WGDY [One]) [0x1B] = SD39 /* \SD39 */
-                    Return (WGDY) /* \_SB_.PC00.RP09.PXSX.WGDY */
-                }
-
-                Name (ECKY, Package (0x02)
-                {
-                    Zero, 
-                    Package (0x02)
-                    {
-                        0x07, 
-                        Zero
-                    }
-                })
-                Method (ECKV, 0, Serialized)
-                {
-                    DerefOf (ECKY [One]) [One] = CECV /* \CECV */
-                    Return (ECKY) /* \_SB_.PC00.RP09.PXSX.ECKY */
-                }
-
-                Name (PPAY, Package (0x02)
-                {
-                    One, 
-                    Package (0x18)
-                    {
-                        0x07, 
-                        Zero, 
-                        0x18, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x18, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28, 
-                        0x28
-                    }
-                })
-                Method (PPAG, 0, Serialized)
-                {
-                    DerefOf (PPAY [One]) [One] = WAGE /* \WAGE */
-                    DerefOf (PPAY [One]) [0x02] = AGA1 /* \AGA1 */
-                    DerefOf (PPAY [One]) [0x03] = AGA2 /* \AGA2 */
-                    DerefOf (PPAY [One]) [0x04] = AGA3 /* \AGA3 */
-                    DerefOf (PPAY [One]) [0x05] = AGA4 /* \AGA4 */
-                    DerefOf (PPAY [One]) [0x06] = AGA5 /* \AGA5 */
-                    DerefOf (PPAY [One]) [0x07] = AGA6 /* \AGA6 */
-                    DerefOf (PPAY [One]) [0x08] = AGA7 /* \AGA7 */
-                    DerefOf (PPAY [One]) [0x09] = AGA8 /* \AGA8 */
-                    DerefOf (PPAY [One]) [0x0A] = AGA9 /* \AGA9 */
-                    DerefOf (PPAY [One]) [0x0B] = AGAA /* \AGAA */
-                    DerefOf (PPAY [One]) [0x0C] = AGAB /* \AGAB */
-                    DerefOf (PPAY [One]) [0x0D] = AGB1 /* \AGB1 */
-                    DerefOf (PPAY [One]) [0x0E] = AGB2 /* \AGB2 */
-                    DerefOf (PPAY [One]) [0x0F] = AGB3 /* \AGB3 */
-                    DerefOf (PPAY [One]) [0x10] = AGB4 /* \AGB4 */
-                    DerefOf (PPAY [One]) [0x11] = AGB5 /* \AGB5 */
-                    DerefOf (PPAY [One]) [0x12] = AGB6 /* \AGB6 */
-                    DerefOf (PPAY [One]) [0x13] = AGB7 /* \AGB7 */
-                    DerefOf (PPAY [One]) [0x14] = AGB8 /* \AGB8 */
-                    DerefOf (PPAY [One]) [0x15] = AGB9 /* \AGB9 */
-                    DerefOf (PPAY [One]) [0x16] = AGBA /* \AGBA */
-                    DerefOf (PPAY [One]) [0x17] = AGBB /* \AGBB */
-                    Return (PPAY) /* \_SB_.PC00.RP09.PXSX.PPAY */
-                }
-
-                Name (SADX, Package (0x03)
-                {
-                    Zero, 
-                    Package (0x02)
-                    {
-                        0x07, 
-                        0x80000000
-                    }, 
-
-                    Package (0x02)
-                    {
-                        0x12, 
-                        0x80000000
-                    }
-                })
-                Method (SADS, 0, Serialized)
-                {
-                    DerefOf (SADX [One]) [One] = ATDV /* \ATDV */
-                    DerefOf (SADX [0x02]) [One] = ATDV /* \ATDV */
-                    Return (SADX) /* \_SB_.PC00.RP09.PXSX.SADX */
-                }
-
-                Name (GPCX, Package (0x03)
-                {
-                    Zero, 
-                    Package (0x02)
-                    {
-                        0x07, 
-                        Package (0x03)
-                        {
-                            Zero, 
-                            Zero, 
-                            Zero
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        0x12, 
-                        Package (0x03)
-                        {
-                            Zero, 
-                            Zero, 
-                            Zero
-                        }
-                    }
-                })
-                Method (GPC, 0, Serialized)
-                {
-                    Return (GPCX) /* \_SB_.PC00.RP09.PXSX.GPCX */
                 }
             }
 
-            If (((WWEN != Zero) && (WWRP == SLOT)))
+            Name (SPLX, Package (0x02)
             {
-                Method (SHRF, 0, NotSerialized)
+                Zero, 
+                Package (0x03)
                 {
-                    PSD0 (SLOT)
-                    SPCO (WCLK, One)
-                    SGOV (WFCP, PFCP)
-                    Sleep (TN2B)
-                    SGOV (WBRS, (~PBRS & One))
-                    Sleep (TB2R)
+                    0x80000000, 
+                    0x80000000, 
+                    0x80000000
+                }
+            })
+            Method (SPLC, 0, Serialized)
+            {
+                DerefOf (SPLX [One]) [Zero] = DOM1 /* \DOM1 */
+                DerefOf (SPLX [One]) [One] = LIM1 /* \LIM1 */
+                DerefOf (SPLX [One]) [0x02] = TIM1 /* \TIM1 */
+                Return (SPLX) /* \_SB_.PC00.RP09.PXSX.SPLX */
+            }
+
+            Name (WANX, Package (0x03)
+            {
+                Zero, 
+                Package (0x03)
+                {
+                    0x80000000, 
+                    0x80000000, 
+                    0x80000000
+                }, 
+
+                Package (0x03)
+                {
+                    0x80000000, 
+                    0x80000000, 
+                    0x80000000
+                }
+            })
+            Method (WAND, 0, Serialized)
+            {
+                DerefOf (WANX [One]) [Zero] = Zero
+                DerefOf (WANX [One]) [One] = TRD0 /* \TRD0 */
+                DerefOf (WANX [One]) [0x02] = TRL0 /* \TRL0 */
+                DerefOf (WANX [0x02]) [Zero] = One
+                DerefOf (WANX [0x02]) [One] = TRD1 /* \TRD1 */
+                DerefOf (WANX [0x02]) [0x02] = TRL1 /* \TRL1 */
+                Return (WANX) /* \_SB_.PC00.RP09.PXSX.WANX */
+            }
+
+            Name (WRDX, Package (0x02)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x80000000, 
+                    0x8000
+                }
+            })
+            Method (WRDD, 0, Serialized)
+            {
+                DerefOf (WRDX [One]) [Zero] = WDM1 /* \WDM1 */
+                DerefOf (WRDX [One]) [One] = CID1 /* \CID1 */
+                Return (WRDX) /* \_SB_.PC00.RP09.PXSX.WRDX */
+            }
+
+            Name (WRDY, Package (0x02)
+            {
+                One, 
+                Package (0x18)
+                {
+                    0x07, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80
+                }
+            })
+            Method (WRDS, 0, Serialized)
+            {
+                DerefOf (WRDY [One]) [One] = STXE /* \STXE */
+                DerefOf (WRDY [One]) [0x02] = ST10 /* \ST10 */
+                DerefOf (WRDY [One]) [0x03] = ST11 /* \ST11 */
+                DerefOf (WRDY [One]) [0x04] = ST12 /* \ST12 */
+                DerefOf (WRDY [One]) [0x05] = ST13 /* \ST13 */
+                DerefOf (WRDY [One]) [0x06] = ST14 /* \ST14 */
+                DerefOf (WRDY [One]) [0x07] = ST15 /* \ST15 */
+                DerefOf (WRDY [One]) [0x08] = ST16 /* \ST16 */
+                DerefOf (WRDY [One]) [0x09] = ST17 /* \ST17 */
+                DerefOf (WRDY [One]) [0x0A] = ST18 /* \ST18 */
+                DerefOf (WRDY [One]) [0x0B] = ST19 /* \ST19 */
+                DerefOf (WRDY [One]) [0x0C] = ST50 /* \ST50 */
+                DerefOf (WRDY [One]) [0x0D] = ST51 /* \ST51 */
+                DerefOf (WRDY [One]) [0x0E] = ST52 /* \ST52 */
+                DerefOf (WRDY [One]) [0x0F] = ST53 /* \ST53 */
+                DerefOf (WRDY [One]) [0x10] = ST54 /* \ST54 */
+                DerefOf (WRDY [One]) [0x11] = ST55 /* \ST55 */
+                DerefOf (WRDY [One]) [0x12] = ST56 /* \ST56 */
+                DerefOf (WRDY [One]) [0x13] = ST57 /* \ST57 */
+                DerefOf (WRDY [One]) [0x14] = ST58 /* \ST58 */
+                DerefOf (WRDY [One]) [0x15] = ST59 /* \ST59 */
+                DerefOf (WRDY [One]) [0x16] = ST5A /* \ST5A */
+                DerefOf (WRDY [One]) [0x17] = ST5B /* \ST5B */
+                Return (WRDY) /* \_SB_.PC00.RP09.PXSX.WRDY */
+            }
+
+            Name (EWRY, Package (0x02)
+            {
+                One, 
+                Package (0x45)
+                {
+                    0x07, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80
+                }
+            })
+            Method (EWRD, 0, Serialized)
+            {
+                DerefOf (EWRY [One]) [One] = STDE /* \STDE */
+                DerefOf (EWRY [One]) [0x02] = STRS /* \STRS */
+                DerefOf (EWRY [One]) [0x03] = ST20 /* \ST20 */
+                DerefOf (EWRY [One]) [0x04] = ST21 /* \ST21 */
+                DerefOf (EWRY [One]) [0x05] = ST22 /* \ST22 */
+                DerefOf (EWRY [One]) [0x06] = ST23 /* \ST23 */
+                DerefOf (EWRY [One]) [0x07] = ST24 /* \ST24 */
+                DerefOf (EWRY [One]) [0x08] = ST25 /* \ST25 */
+                DerefOf (EWRY [One]) [0x09] = ST26 /* \ST26 */
+                DerefOf (EWRY [One]) [0x0A] = ST27 /* \ST27 */
+                DerefOf (EWRY [One]) [0x0B] = ST28 /* \ST28 */
+                DerefOf (EWRY [One]) [0x0C] = ST29 /* \ST29 */
+                DerefOf (EWRY [One]) [0x0D] = ST60 /* \ST60 */
+                DerefOf (EWRY [One]) [0x0E] = ST61 /* \ST61 */
+                DerefOf (EWRY [One]) [0x0F] = ST62 /* \ST62 */
+                DerefOf (EWRY [One]) [0x10] = ST63 /* \ST63 */
+                DerefOf (EWRY [One]) [0x11] = ST64 /* \ST64 */
+                DerefOf (EWRY [One]) [0x12] = ST65 /* \ST65 */
+                DerefOf (EWRY [One]) [0x13] = ST66 /* \ST66 */
+                DerefOf (EWRY [One]) [0x14] = ST67 /* \ST67 */
+                DerefOf (EWRY [One]) [0x15] = ST68 /* \ST68 */
+                DerefOf (EWRY [One]) [0x16] = ST69 /* \ST69 */
+                DerefOf (EWRY [One]) [0x17] = ST6A /* \ST6A */
+                DerefOf (EWRY [One]) [0x18] = ST6B /* \ST6B */
+                DerefOf (EWRY [One]) [0x19] = ST30 /* \ST30 */
+                DerefOf (EWRY [One]) [0x1A] = ST31 /* \ST31 */
+                DerefOf (EWRY [One]) [0x1B] = ST32 /* \ST32 */
+                DerefOf (EWRY [One]) [0x1C] = ST33 /* \ST33 */
+                DerefOf (EWRY [One]) [0x1D] = ST34 /* \ST34 */
+                DerefOf (EWRY [One]) [0x1E] = ST35 /* \ST35 */
+                DerefOf (EWRY [One]) [0x1F] = ST36 /* \ST36 */
+                DerefOf (EWRY [One]) [0x20] = ST37 /* \ST37 */
+                DerefOf (EWRY [One]) [0x21] = ST38 /* \ST38 */
+                DerefOf (EWRY [One]) [0x22] = ST39 /* \ST39 */
+                DerefOf (EWRY [One]) [0x23] = ST70 /* \ST70 */
+                DerefOf (EWRY [One]) [0x24] = ST71 /* \ST71 */
+                DerefOf (EWRY [One]) [0x25] = ST72 /* \ST72 */
+                DerefOf (EWRY [One]) [0x26] = ST73 /* \ST73 */
+                DerefOf (EWRY [One]) [0x27] = ST74 /* \ST74 */
+                DerefOf (EWRY [One]) [0x28] = ST75 /* \ST75 */
+                DerefOf (EWRY [One]) [0x29] = ST76 /* \ST76 */
+                DerefOf (EWRY [One]) [0x2A] = ST77 /* \ST77 */
+                DerefOf (EWRY [One]) [0x2B] = ST78 /* \ST78 */
+                DerefOf (EWRY [One]) [0x2C] = ST79 /* \ST79 */
+                DerefOf (EWRY [One]) [0x2D] = ST7A /* \ST7A */
+                DerefOf (EWRY [One]) [0x2E] = ST7B /* \ST7B */
+                DerefOf (EWRY [One]) [0x2F] = ST40 /* \ST40 */
+                DerefOf (EWRY [One]) [0x30] = ST41 /* \ST41 */
+                DerefOf (EWRY [One]) [0x31] = ST42 /* \ST42 */
+                DerefOf (EWRY [One]) [0x32] = ST43 /* \ST43 */
+                DerefOf (EWRY [One]) [0x33] = ST44 /* \ST44 */
+                DerefOf (EWRY [One]) [0x34] = ST45 /* \ST45 */
+                DerefOf (EWRY [One]) [0x35] = ST46 /* \ST46 */
+                DerefOf (EWRY [One]) [0x36] = ST47 /* \ST47 */
+                DerefOf (EWRY [One]) [0x37] = ST48 /* \ST48 */
+                DerefOf (EWRY [One]) [0x38] = ST49 /* \ST49 */
+                DerefOf (EWRY [One]) [0x39] = ST80 /* \ST80 */
+                DerefOf (EWRY [One]) [0x3A] = ST81 /* \ST81 */
+                DerefOf (EWRY [One]) [0x3B] = ST82 /* \ST82 */
+                DerefOf (EWRY [One]) [0x3C] = ST83 /* \ST83 */
+                DerefOf (EWRY [One]) [0x3D] = ST84 /* \ST84 */
+                DerefOf (EWRY [One]) [0x3E] = ST85 /* \ST85 */
+                DerefOf (EWRY [One]) [0x3F] = ST86 /* \ST86 */
+                DerefOf (EWRY [One]) [0x40] = ST87 /* \ST87 */
+                DerefOf (EWRY [One]) [0x41] = ST88 /* \ST88 */
+                DerefOf (EWRY [One]) [0x42] = ST89 /* \ST89 */
+                DerefOf (EWRY [One]) [0x43] = ST8A /* \ST8A */
+                DerefOf (EWRY [One]) [0x44] = ST8B /* \ST8B */
+                Return (EWRY) /* \_SB_.PC00.RP09.PXSX.EWRY */
+            }
+
+            Name (WGDY, Package (0x02)
+            {
+                0x02, 
+                Package (0x1C)
+                {
+                    0x07, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80, 
+                    0x80
+                }
+            })
+            Method (WGDS, 0, Serialized)
+            {
+                DerefOf (WGDY [One]) [One] = SD11 /* \SD11 */
+                DerefOf (WGDY [One]) [0x02] = SD12 /* \SD12 */
+                DerefOf (WGDY [One]) [0x03] = SD13 /* \SD13 */
+                DerefOf (WGDY [One]) [0x04] = SD14 /* \SD14 */
+                DerefOf (WGDY [One]) [0x05] = SD15 /* \SD15 */
+                DerefOf (WGDY [One]) [0x06] = SD16 /* \SD16 */
+                DerefOf (WGDY [One]) [0x07] = SD17 /* \SD17 */
+                DerefOf (WGDY [One]) [0x08] = SD18 /* \SD18 */
+                DerefOf (WGDY [One]) [0x09] = SD19 /* \SD19 */
+                DerefOf (WGDY [One]) [0x0A] = SD21 /* \SD21 */
+                DerefOf (WGDY [One]) [0x0B] = SD22 /* \SD22 */
+                DerefOf (WGDY [One]) [0x0C] = SD23 /* \SD23 */
+                DerefOf (WGDY [One]) [0x0D] = SD24 /* \SD24 */
+                DerefOf (WGDY [One]) [0x0E] = SD25 /* \SD25 */
+                DerefOf (WGDY [One]) [0x0F] = SD26 /* \SD26 */
+                DerefOf (WGDY [One]) [0x10] = SD27 /* \SD27 */
+                DerefOf (WGDY [One]) [0x11] = SD28 /* \SD28 */
+                DerefOf (WGDY [One]) [0x12] = SD29 /* \SD29 */
+                DerefOf (WGDY [One]) [0x13] = SD31 /* \SD31 */
+                DerefOf (WGDY [One]) [0x14] = SD32 /* \SD32 */
+                DerefOf (WGDY [One]) [0x15] = SD33 /* \SD33 */
+                DerefOf (WGDY [One]) [0x16] = SD34 /* \SD34 */
+                DerefOf (WGDY [One]) [0x17] = SD35 /* \SD35 */
+                DerefOf (WGDY [One]) [0x18] = SD36 /* \SD36 */
+                DerefOf (WGDY [One]) [0x19] = SD37 /* \SD37 */
+                DerefOf (WGDY [One]) [0x1A] = SD38 /* \SD38 */
+                DerefOf (WGDY [One]) [0x1B] = SD39 /* \SD39 */
+                Return (WGDY) /* \_SB_.PC00.RP09.PXSX.WGDY */
+            }
+
+            Name (ECKY, Package (0x02)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x07, 
+                    Zero
+                }
+            })
+            Method (ECKV, 0, Serialized)
+            {
+                DerefOf (ECKY [One]) [One] = CECV /* \CECV */
+                Return (ECKY) /* \_SB_.PC00.RP09.PXSX.ECKY */
+            }
+
+            Name (PPAY, Package (0x02)
+            {
+                One, 
+                Package (0x18)
+                {
+                    0x07, 
+                    Zero, 
+                    0x18, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x18, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28, 
+                    0x28
+                }
+            })
+            Method (PPAG, 0, Serialized)
+            {
+                DerefOf (PPAY [One]) [One] = WAGE /* \WAGE */
+                DerefOf (PPAY [One]) [0x02] = AGA1 /* \AGA1 */
+                DerefOf (PPAY [One]) [0x03] = AGA2 /* \AGA2 */
+                DerefOf (PPAY [One]) [0x04] = AGA3 /* \AGA3 */
+                DerefOf (PPAY [One]) [0x05] = AGA4 /* \AGA4 */
+                DerefOf (PPAY [One]) [0x06] = AGA5 /* \AGA5 */
+                DerefOf (PPAY [One]) [0x07] = AGA6 /* \AGA6 */
+                DerefOf (PPAY [One]) [0x08] = AGA7 /* \AGA7 */
+                DerefOf (PPAY [One]) [0x09] = AGA8 /* \AGA8 */
+                DerefOf (PPAY [One]) [0x0A] = AGA9 /* \AGA9 */
+                DerefOf (PPAY [One]) [0x0B] = AGAA /* \AGAA */
+                DerefOf (PPAY [One]) [0x0C] = AGAB /* \AGAB */
+                DerefOf (PPAY [One]) [0x0D] = AGB1 /* \AGB1 */
+                DerefOf (PPAY [One]) [0x0E] = AGB2 /* \AGB2 */
+                DerefOf (PPAY [One]) [0x0F] = AGB3 /* \AGB3 */
+                DerefOf (PPAY [One]) [0x10] = AGB4 /* \AGB4 */
+                DerefOf (PPAY [One]) [0x11] = AGB5 /* \AGB5 */
+                DerefOf (PPAY [One]) [0x12] = AGB6 /* \AGB6 */
+                DerefOf (PPAY [One]) [0x13] = AGB7 /* \AGB7 */
+                DerefOf (PPAY [One]) [0x14] = AGB8 /* \AGB8 */
+                DerefOf (PPAY [One]) [0x15] = AGB9 /* \AGB9 */
+                DerefOf (PPAY [One]) [0x16] = AGBA /* \AGBA */
+                DerefOf (PPAY [One]) [0x17] = AGBB /* \AGBB */
+                Return (PPAY) /* \_SB_.PC00.RP09.PXSX.PPAY */
+            }
+
+            Name (SADX, Package (0x03)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x07, 
+                    0x80000000
+                }, 
+
+                Package (0x02)
+                {
+                    0x12, 
+                    0x80000000
+                }
+            })
+            Method (SADS, 0, Serialized)
+            {
+                DerefOf (SADX [One]) [One] = ATDV /* \ATDV */
+                DerefOf (SADX [0x02]) [One] = ATDV /* \ATDV */
+                Return (SADX) /* \_SB_.PC00.RP09.PXSX.SADX */
+            }
+
+            Name (GPCX, Package (0x03)
+            {
+                Zero, 
+                Package (0x02)
+                {
+                    0x07, 
+                    Package (0x03)
+                    {
+                        Zero, 
+                        Zero, 
+                        Zero
+                    }
+                }, 
+
+                Package (0x02)
+                {
+                    0x12, 
+                    Package (0x03)
+                    {
+                        Zero, 
+                        Zero, 
+                        Zero
+                    }
+                }
+            })
+            Method (GPC, 0, Serialized)
+            {
+                Return (GPCX) /* \_SB_.PC00.RP09.PXSX.GPCX */
+            }
+        }
+
+        If (((WWEN != Zero) && (WWRP == SLOT)))
+        {
+            Method (SHRF, 0, NotSerialized)
+            {
+                PSD0 (SLOT)
+                SPCO (WCLK, One)
+                SGOV (WFCP, PFCP)
+                Sleep (TN2B)
+                SGOV (WBRS, (~PBRS & One))
+                Sleep (TB2R)
+                SGOV (PRST, (~WPRP & One))
+                L23D ()
+            }
+
+            If ((WWEN == One))
+            {
+                Method (_RST, 0, Serialized)  // _RST: Device Reset
+                {
+                    SGOV (WBRS, PBRS)
+                    Sleep (0xC8)
+                    Notify (PXSX, One) // Device Check
                     SGOV (PRST, (~WPRP & One))
-                    L23D ()
+                    SGOV (WBRS, (~PBRS & One))
+                    Sleep (0xC8)
+                    Local0 = Zero
+                    While ((LASX == Zero))
+                    {
+                        If ((Local0 > 0x14))
+                        {
+                            Break
+                        }
+
+                        Sleep (0x10)
+                        Local0++
+                    }
+
+                    Sleep (0x0A)
+                    Notify (PXSX, One) // Device Check
+                }
+            }
+
+            PowerResource (MRST, 0x05, 0x0000)
+            {
+                Method (_STA, 0, Serialized)  // _STA: Status
+                {
+                    Return (One)
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                Method (_ON, 0, Serialized)  // _ON_: Power On
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
+                }
+
+                Method (_OFF, 0, Serialized)  // _OFF: Power Off
+                {
                 }
 
                 Method (_RST, 0, Serialized)  // _RST: Device Reset
                 {
-                    If ((WWEN == 0x02))
+                    Local0 = Acquire (WWMT, 0x03E8)
+                    If ((Local0 == Zero))
                     {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
-                    {
+                        ADBG ("Start WWAN PR _RST")
+                        DL23 ()
                         SGOV (WBRS, PBRS)
-                        Sleep (0xC8)
-                        Notify (PXSX, One) // Device Check
-                        SGOV (PRST, (~WPRP & One))
-                        SGOV (WBRS, (~PBRS & One))
-                        Sleep (0xC8)
-                        Local0 = Zero
-                        While ((LASX == Zero))
-                        {
-                            If ((Local0 > 0x14))
-                            {
-                                Break
-                            }
-
-                            Sleep (0x10)
-                            Local0++
-                        }
-
-                        Sleep (0x0A)
-                        Notify (PXSX, One) // Device Check
+                        SPCO (WCLK, Zero)
+                        Sleep (TB2F)
+                        SGOV (WFCP, (~PFCP & One))
+                        Sleep (TFDI)
+                        SHRF ()
+                        Release (WWMT)
                     }
                 }
+            }
+        }
 
-                PowerResource (MRST, 0x05, 0x0000)
+        If ((WIST () || ((WWEN != Zero) && (WWRP == SLOT))))
+        {
+            PowerResource (DRST, 0x05, 0x0000)
+            {
+                Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
-                    Method (_STA, 0, Serialized)  // _STA: Status
-                    {
-                        Return (One)
-                    }
+                    Return (One)
+                }
 
-                    Method (_ON, 0, Serialized)  // _ON_: Power On
-                    {
-                    }
+                Method (_ON, 0, NotSerialized)  // _ON_: Power On
+                {
+                }
 
-                    Method (_OFF, 0, Serialized)  // _OFF: Power Off
-                    {
-                    }
+                Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
+                {
+                }
 
-                    Method (_RST, 0, Serialized)  // _RST: Device Reset
+                Method (_RST, 0, NotSerialized)  // _RST: Device Reset
+                {
+                    If ((DCAP & 0x10000000))
                     {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            SPCO (WCLK, Zero)
-                            Sleep (TB2F)
-                            SGOV (WFCP, (~PFCP & One))
-                            Sleep (TFDI)
-                            SHRF ()
-                            Release (WWMT)
-                            DOSV ()
-                        }
+                        Local0 = DCTR /* \_SB_.PC00.RP09.PXSX.DCTR */
+                        Local0 |= 0x8000
+                        DCTR = Local0
                     }
                 }
             }
 
-            If ((WIST () || ((WWEN != Zero) && (WWRP == SLOT))))
+            Method (_PRR, 0, NotSerialized)  // _PRR: Power Resource for Reset
             {
-                PowerResource (DRST, 0x05, 0x0000)
+                If (WIST ())
                 {
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    If (CondRefOf (WRST))
                     {
-                        Return (One)
-                    }
-
-                    Method (_ON, 0, NotSerialized)  // _ON_: Power On
-                    {
-                    }
-
-                    Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
-                    {
-                    }
-
-                    Method (_RST, 0, NotSerialized)  // _RST: Device Reset
-                    {
-                        If ((DCAP & 0x10000000))
+                        Return (Package (0x01)
                         {
-                            Local0 = DCTR /* \_SB_.PC00.RP09.PXSX.DCTR */
-                            Local0 |= 0x8000
-                            DCTR = Local0
-                        }
+                            WRST
+                        })
                     }
                 }
 
-                Method (_PRR, 0, NotSerialized)  // _PRR: Power Resource for Reset
+                If (((WWEN != Zero) && (WWRP == SLOT)))
                 {
-                    If (WIST ())
+                    If (CondRefOf (MRST))
                     {
-                        If (CondRefOf (WRST))
+                        Return (Package (0x01)
                         {
-                            Return (Package (0x01)
-                            {
-                                WRST
-                            })
-                        }
+                            MRST
+                        })
                     }
-
-                    If (((WWEN != Zero) && (WWRP == SLOT)))
-                    {
-                        If (CondRefOf (MRST))
-                        {
-                            Return (Package (0x01)
-                            {
-                                MRST
-                            })
-                        }
-                    }
-
-                    Return (Package (0x01)
-                    {
-                        DRST
-                    })
                 }
 
-                Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                Return (Package (0x01)
                 {
-                    If (WIST ())
+                    DRST
+                })
+            }
+
+            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+            {
+                If (WIST ())
+                {
+                    If ((Arg0 == ToUUID ("f21202bf-8f78-4dc6-a5b3-1f738e285ade") /* Unknown UUID */))
                     {
-                        If ((Arg0 == ToUUID ("f21202bf-8f78-4dc6-a5b3-1f738e285ade") /* Unknown UUID */))
+                        If ((Arg2 == Zero))
                         {
-                            If ((Arg2 == Zero))
-                            {
-                                If ((Arg1 == Zero))
-                                {
-                                    Return (Buffer (One)
-                                    {
-                                         0x0F                                             // .
-                                    })
-                                }
-                                Else
-                                {
-                                    Return (Buffer (One)
-                                    {
-                                         0x00                                             // .
-                                    })
-                                }
-                            }
-
-                            If ((Arg2 == One))
-                            {
-                                Local0 = ACSD /* \ACSD */
-                                Return (Local0)
-                            }
-
-                            If ((Arg2 == 0x02))
-                            {
-                                Local0 = I5BS /* \I5BS */
-                                Return (Local0)
-                            }
-
-                            If ((Arg2 == 0x03))
-                            {
-                                Local0 = UHBS /* \UHBS */
-                                Return (Local0)
-                            }
-
-                            Return (Zero)
-                        }
-                    }
-
-                    If (((WWEN != Zero) && (WWRP == SLOT)))
-                    {
-                        If ((Arg0 == ToUUID ("bad01b75-22a8-4f48-8792-bdde9467747d") /* Unknown UUID */))
-                        {
-                            If ((Arg2 == Zero))
+                            If ((Arg1 == Zero))
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0F                                             // .
                                 })
                             }
-
-                            If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
-                            If ((Arg2 == 0x03))
+                            Else
                             {
-                                If ((WRTO == One)) {}
-                                ElseIf ((WRTO == 0x03)) {}
-                                Else
+                                Return (Buffer (One)
                                 {
-                                }
-
-                                Return (WRTO) /* \WRTO */
+                                     0x00                                             // .
+                                })
                             }
                         }
-                    }
 
-                    Return (Buffer (One)
-                    {
-                         0x00                                             // .
-                    })
+                        If ((Arg2 == One))
+                        {
+                            Local0 = ACSD /* \ACSD */
+                            Return (Local0)
+                        }
+
+                        If ((Arg2 == 0x02))
+                        {
+                            Local0 = I5BS /* \I5BS */
+                            Return (Local0)
+                        }
+
+                        If ((Arg2 == 0x03))
+                        {
+                            Local0 = UHBS /* \UHBS */
+                            Return (Local0)
+                        }
+
+                        Return (Zero)
+                    }
                 }
+
+                If (((WWEN != Zero) && (WWRP == SLOT)))
+                {
+                    If ((Arg0 == ToUUID ("bad01b75-22a8-4f48-8792-bdde9467747d") /* Unknown UUID */))
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x0D                                             // .
+                            })
+                        }
+
+                        If ((Arg2 == One)) {}
+                        If ((Arg2 == 0x02))
+                        {
+                            Local0 = Acquire (WWMT, 0x03E8)
+                            If ((Local0 == Zero))
+                            {
+                                ADBG ("Start WWAN DSM FLDR")
+                                DL23 ()
+                                SGOV (WBRS, PBRS)
+                                Sleep (TBTG)
+                                SHRF ()
+                                ADBG ("End WWAN DSM FLDR")
+                                Release (WWMT)
+                            }
+                        }
+
+                        If ((Arg2 == 0x03))
+                        {
+                            If ((WRTO == One)) {}
+                            ElseIf ((WRTO == 0x03)) {}
+                            Else
+                            {
+                            }
+
+                            Return (WRTO) /* \WRTO */
+                        }
+                    }
+                }
+
+                Return (Buffer (One)
+                {
+                     0x00                                             // .
+                })
             }
         }
     }
@@ -35298,12 +34125,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP10.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -35996,44 +34821,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -36079,17 +34869,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -36097,7 +34877,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -36215,12 +34994,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -36247,12 +35040,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP11.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -36945,44 +35736,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -37028,17 +35784,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -37046,7 +35792,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -37164,12 +35909,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -37196,12 +35955,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP12.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -37894,44 +36651,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -37977,17 +36699,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -37995,7 +36707,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -38113,12 +36824,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -38145,12 +36870,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP13.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -38843,44 +37566,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -38926,17 +37614,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -38944,7 +37622,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -39062,12 +37739,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -39094,12 +37785,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP14.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -39792,44 +38481,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -39875,17 +38529,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -39893,7 +38537,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -40011,12 +38654,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -40043,12 +38700,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP15.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -40741,44 +39396,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -40824,17 +39444,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -40842,7 +39452,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -40960,12 +39569,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -40992,12 +39615,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP16.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -41690,44 +40311,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -41773,17 +40359,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -41791,7 +40367,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -41909,12 +40484,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -41941,12 +40530,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP17.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -42639,44 +41226,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -42722,17 +41274,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -42740,7 +41282,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -42858,12 +41399,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -42890,12 +41445,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP18.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -43588,44 +42141,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -43671,17 +42189,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -43689,7 +42197,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -43807,12 +42314,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -43839,12 +42360,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP19.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -44537,44 +43056,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -44620,17 +43104,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -44638,7 +43112,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -44756,12 +43229,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -44788,12 +43275,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP20.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -45486,44 +43971,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -45569,17 +44019,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -45587,7 +44027,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -45705,12 +44144,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -45737,12 +44190,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP21.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -46435,44 +44886,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -46518,17 +44934,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -46536,7 +44942,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -46654,12 +45059,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -46686,12 +45105,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP22.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -47384,44 +45801,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -47467,17 +45849,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -47485,7 +45857,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -47603,12 +45974,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -47635,12 +46020,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP23.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -48333,44 +46716,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -48416,17 +46764,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -48434,7 +46772,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -48552,12 +46889,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -48584,12 +46935,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Scope (_SB.PC00.RP24.PXSX)
         {
-            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x30)
+            OperationRegion (RPXX, SystemMemory, GMIO (^_ADR, _ADR), 0x10)
             Field (RPXX, AnyAcc, NoLock, Preserve)
             {
-                VDID,   32, 
-                Offset (0x2C), 
-                SVID,   16
+                VDID,   32
             }
 
             Method (MTKT, 0, Serialized)
@@ -49282,44 +47631,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     L23D ()
                 }
 
-                Method (DOSV, 0, NotSerialized)
+                If ((WWEN == One))
                 {
-                    Local0 = Zero
-                    While (((SVID != WSID) && (Local0 < WSTO)))
-                    {
-                        Local0++
-                        Sleep (One)
-                    }
-                }
-
-                Method (_RST, 0, Serialized)  // _RST: Device Reset
-                {
-                    If ((WWEN == 0x02))
-                    {
-                        Local0 = Acquire (WWMT, 0x03E8)
-                        If ((Local0 == Zero))
-                        {
-                            ADBG ("Start WWAN FLDR")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
-                            SGOV (WBRS, PBRS)
-                            Sleep (TBTG)
-                            SHRF ()
-                            ADBG ("End WWAN FLDR")
-                            Release (WWMT)
-                            DOSV ()
-                        }
-                    }
-                    Else
+                    Method (_RST, 0, Serialized)  // _RST: Device Reset
                     {
                         SGOV (WBRS, PBRS)
                         Sleep (0xC8)
@@ -49365,17 +47679,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Local0 == Zero))
                         {
                             ADBG ("Start WWAN PR _RST")
-                            If ((GGOV (PRST) != WPRP))
-                            {
-                                DL23 ()
-                                SGOV (PRST, WPRP)
-                            }
-                            Else
-                            {
-                                ADBG ("Assume WWAN DL23() is already done")
-                            }
-
-                            Sleep (TR2B)
+                            DL23 ()
                             SGOV (WBRS, PBRS)
                             SPCO (WCLK, Zero)
                             Sleep (TB2F)
@@ -49383,7 +47687,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Sleep (TFDI)
                             SHRF ()
                             Release (WWMT)
-                            DOSV ()
                         }
                     }
                 }
@@ -49501,12 +47804,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Return (Buffer (One)
                                 {
-                                     0x09                                             // .
+                                     0x0D                                             // .
                                 })
                             }
 
                             If ((Arg2 == One)) {}
-                            If ((Arg2 == 0x02)) {}
+                            If ((Arg2 == 0x02))
+                            {
+                                Local0 = Acquire (WWMT, 0x03E8)
+                                If ((Local0 == Zero))
+                                {
+                                    ADBG ("Start WWAN DSM FLDR")
+                                    DL23 ()
+                                    SGOV (WBRS, PBRS)
+                                    Sleep (TBTG)
+                                    SHRF ()
+                                    ADBG ("End WWAN DSM FLDR")
+                                    Release (WWMT)
+                                }
+                            }
+
                             If ((Arg2 == 0x03))
                             {
                                 If ((WRTO == One)) {}
@@ -49532,8 +47849,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Scope (_SB)
     {
         Name (PDAT, Zero)
-        Name (DSSI, One)
-        Name (DSSS, Zero)
+        Name (DSSI, Zero)
         Method (DSSV, 0, Serialized)
         {
             PDAT = SDAB /* \SDAB */
@@ -49565,23 +47881,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                 If ((Arg1 == 0x02))
                 {
-                    DSSS = Zero
-                    If ((STXE == One))
-                    {
-                        DSSS = 0x00010001
-                    }
-
-                    If ((DSSI == One))
-                    {
-                        PDAT = DSSS /* \_SB_.DSSS */
-                    }
-                    ElseIf ((STDE == One))
+                    If ((DSSI == Zero))
                     {
                         DSSV ()
-                    }
-                    Else
-                    {
-                        PDAT = DSSS /* \_SB_.DSSS */
+                        DSSI = One
                     }
 
                     Return (One)
@@ -49754,11 +48057,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 /* 0000 */  0x7F, 0xAB, 0x13, 0x1F, 0x20, 0x62, 0x10, 0x42,  // .... b.B
                 /* 0008 */  0x8F, 0x8E, 0x8B, 0xB5, 0xE7, 0x1E, 0xE9, 0x69,  // .......i
-                /* 0010 */  0x54, 0x45, 0x01, 0x02, 0x21, 0x12, 0x90, 0x05,  // TE..!...
+                /* 0010 */  0x44, 0x45, 0x01, 0x02, 0x21, 0x12, 0x90, 0x05,  // DE..!...
                 /* 0018 */  0x66, 0xD5, 0xD1, 0x11, 0xB2, 0xF0, 0x00, 0xA0,  // f.......
                 /* 0020 */  0xC9, 0x06, 0x29, 0x10, 0x43, 0x43, 0x01, 0x00   // ..).CC..
             })
-            Method (WMTE, 3, NotSerialized)
+            Method (WMDE, 3, NotSerialized)
             {
                 If ((Arg1 == One))
                 {
@@ -51174,7 +49477,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     }
                 }
             })
-            Name (DEVY, Package (0x5B)
+            Name (DEVY, Package (0x5A)
             {
                 Package (0x03)
                 {
@@ -52553,21 +50856,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             0x81
                         }
                     }
-                }, 
-
-                Package (0x03)
-                {
-                    "\\_SB.PC00.PEG1", 
-                    Zero, 
-                    Package (0x02)
-                    {
-                        Zero, 
-                        Package (0x02)
-                        {
-                            0xFF, 
-                            0x03
-                        }
-                    }
                 }
             })
             Name (BCCD, Package (0x1D)
@@ -53939,11 +52227,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             DerefOf (DEVY [0x59]) [One] = Zero
                         }
 
-                        If (((PEPC & 0x0000000800000000) != Zero))
-                        {
-                            DerefOf (DEVY [0x5A]) [One] = One
-                        }
-
                         If ((OSYS >= 0x07DF))
                         {
                             If (^^PC00.RP01.PXSX.WIST ())
@@ -54188,13 +52471,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             D8XH (One, Zero)
                             ^^PC00.LPCB.EC0.CSEE (0xB7)
                             MLED = GGOV (0x0900000F)
-                            If ((MLED == Zero))
+                            If ((MLED == One))
                             {
-                                SGOV (0x0900000F, One)
+                                SGOV (0x0900000F, Zero)
                             }
 
-                            CLE2 = GGOV (0x09000011)
-                            If ((CLE2 == Zero))
+                            CLED = GGOV (0x09000011)
+                            If ((CLED == Zero))
                             {
                                 SGOV (0x09000011, One)
                             }
@@ -54210,12 +52493,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         }
 
                         ^^PC00.LPCB.EC0.CSEE (0xB8)
-                        If ((MLED == Zero))
+                        If ((MLED == One))
                         {
-                            SGOV (0x0900000F, Zero)
+                            SGOV (0x0900000F, One)
                         }
 
-                        If ((CLE2 == Zero))
+                        If ((CLED == Zero))
                         {
                             SGOV (0x09000011, Zero)
                         }
@@ -55205,12 +53488,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         {   // Pin list
                             0x0000
                         }
-                    Interrupt (ResourceConsumer, Edge, ActiveLow, ExclusiveAndWake, ,, _Y42)
+                    Interrupt (ResourceConsumer, Edge, ActiveLow, ExclusiveAndWake, ,, _Y3F)
                     {
                         0x00000000,
                     }
                 })
-                CreateDWordField (SBFI, \_SB.PC00.UA00.BTH0._CRS._Y42._INT, INT4)  // _INT: Interrupts
+                CreateDWordField (SBFI, \_SB.PC00.UA00.BTH0._CRS._Y3F._INT, INT4)  // _INT: Interrupts
                 CreateWordField (SBFI, 0x3C, KIL4)
                 INT4 = INUM (GBTI)
                 KIL4 = GNUM (GBTK)
@@ -56192,7 +54475,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_ADR, Zero)  // _ADR: Address
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -56353,7 +54636,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_ADR, Zero)  // _ADR: Address
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
             Name (_UID, One)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -56508,7 +54791,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_ADR, Zero)  // _ADR: Address
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
             Name (_UID, 0x02)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -56664,7 +54947,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_ADR, Zero)  // _ADR: Address
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
             Name (_UID, 0x03)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -56820,7 +55103,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_ADR, Zero)  // _ADR: Address
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
             Name (_UID, 0x04)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -56979,7 +55262,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_ADR, Zero)  // _ADR: Address
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
             Name (_UID, 0x05)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -57164,9 +55447,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 })
             }
 
-            Name (_UID, 0x06)  // _UID: Unique ID
+            Name (_UID, Zero)  // _UID: Unique ID
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
@@ -57333,9 +55616,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
 
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
-            Name (_UID, 0x07)  // _UID: Unique ID
+            Name (_UID, One)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Local0 = Buffer (0x02)
@@ -57501,9 +55784,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
 
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
-            Name (_UID, 0x08)  // _UID: Unique ID
+            Name (_UID, 0x02)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Local0 = Buffer (0x02)
@@ -57669,9 +55952,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
 
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
-            Name (_UID, 0x09)  // _UID: Unique ID
+            Name (_UID, 0x03)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Local0 = Buffer (0x02)
@@ -57837,9 +56120,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
 
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
-            Name (_UID, 0x0A)  // _UID: Unique ID
+            Name (_UID, 0x04)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Local0 = Buffer (0x02)
@@ -58005,9 +56288,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
 
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG")  // _DDN: DOS Device Name
-            Name (_UID, 0x0B)  // _UID: Unique ID
+            Name (_UID, 0x05)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Local0 = Buffer (0x02)
@@ -58174,6 +56457,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
+            {
+                Return (HCID (Zero))
+            }
+
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
             {
                 Return (HCID (Zero))
             }
@@ -58628,15 +56916,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Device (LNK1)
         {
             Name (_ADR, Zero)  // _ADR: Address
-            Name (PNIO, Package (0x01)
-            {
-                "\\_SB.PC00.SPI1.SPFD.CVFD"
-            })
-            Name (PUSB, Package (0x02)
-            {
-                "\\_SB.PC00.SPI1.SPFD.CVFD", 
-                "\\_SB.PC00.XHCI.RHUB.HS04.VI2C"
-            })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 If (L1EN)
@@ -58657,11 +56936,18 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     {
                         Case (0x02)
                         {
-                            Return (PUSB) /* \_SB_.PC00.LNK1.PUSB */
+                            Return (Package (0x02)
+                            {
+                                ^^SPI1.SPFD.CVFD, 
+                                ^^XHCI.RHUB.HS04.VI2C
+                            })
                         }
                         Case (One)
                         {
-                            Return (PNIO) /* \_SB_.PC00.LNK1.PNIO */
+                            Return (Package (0x01)
+                            {
+                                ^^SPI1.SPFD.CVFD
+                            })
                         }
                         Default
                         {
@@ -58681,6 +56967,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
             Name (_UID, One)  // _UID: Unique ID
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
+            {
+                Return (HCID (One))
+            }
+
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
             {
                 Return (HCID (One))
             }
@@ -59173,6 +57464,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Return (HCID (0x02))
             }
 
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
+            {
+                Return (HCID (0x02))
+            }
+
             Method (_DDN, 0, NotSerialized)  // _DDN: DOS Device Name
             {
                 Name (BUF, Buffer (0x10) {})
@@ -59652,6 +57948,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
             Name (_UID, 0x03)  // _UID: Unique ID
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
+            {
+                Return (HCID (0x03))
+            }
+
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
             {
                 Return (HCID (0x03))
             }
@@ -60139,6 +58440,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Return (HCID (0x04))
             }
 
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
+            {
+                Return (HCID (0x04))
+            }
+
             Method (_DDN, 0, NotSerialized)  // _DDN: DOS Device Name
             {
                 Name (BUF, Buffer (0x10) {})
@@ -60618,6 +58924,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
             Name (_UID, 0x05)  // _UID: Unique ID
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
+            {
+                Return (HCID (0x05))
+            }
+
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
             {
                 Return (HCID (0x05))
             }
@@ -61105,6 +59416,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Return (FHCI (Zero))
             }
 
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
+            {
+                Return (FHCI (Zero))
+            }
+
             Method (_DDN, 0, NotSerialized)  // _DDN: DOS Device Name
             {
                 Name (BUF, Buffer (0x10) {})
@@ -61219,10 +59535,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Device (FLM1)
         {
             Name (_ADR, Zero)  // _ADR: Address
-            Name (PKG1, Package (0x01)
-            {
-                "\\_SB.PC00.XHCI.RHUB.HS04.VI2C"
-            })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 If (L1FD)
@@ -61241,7 +59553,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 {
                     If ((CVFS == 0x02))
                     {
-                        Return (PKG1) /* \_SB_.PC00.FLM1.PKG1 */
+                        Return (Package (0x01)
+                        {
+                            ^^XHCI.RHUB.HS04.VI2C
+                        })
                     }
                     Else
                     {
@@ -61257,8 +59572,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 }
             }
 
-            Name (_UID, One)  // _UID: Unique ID
+            Name (_UID, Zero)  // _UID: Unique ID
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
+            {
+                Return (FHCI (One))
+            }
+
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
             {
                 Return (FHCI (One))
             }
@@ -61420,8 +59740,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 }
             }
 
-            Name (_UID, 0x02)  // _UID: Unique ID
+            Name (_UID, Zero)  // _UID: Unique ID
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
+            {
+                Return (FHCI (0x02))
+            }
+
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
             {
                 Return (FHCI (0x02))
             }
@@ -61567,8 +59892,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 }
             }
 
-            Name (_UID, 0x03)  // _UID: Unique ID
+            Name (_UID, Zero)  // _UID: Unique ID
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
+            {
+                Return (FHCI (0x03))
+            }
+
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
             {
                 Return (FHCI (0x03))
             }
@@ -61714,8 +60044,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 }
             }
 
-            Name (_UID, 0x04)  // _UID: Unique ID
+            Name (_UID, Zero)  // _UID: Unique ID
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
+            {
+                Return (FHCI (0x04))
+            }
+
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
             {
                 Return (FHCI (0x04))
             }
@@ -61861,8 +60196,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 }
             }
 
-            Name (_UID, 0x05)  // _UID: Unique ID
+            Name (_UID, Zero)  // _UID: Unique ID
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
+            {
+                Return (FHCI (0x05))
+            }
+
+            Method (_CID, 0, NotSerialized)  // _CID: Compatible ID
             {
                 Return (FHCI (0x05))
             }
@@ -61985,7 +60325,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_ADR, Zero)  // _ADR: Address
             Name (_HID, "INT3471")  // _HID: Hardware ID
-            Name (_CID, "INT3481")  // _CID: Compatible ID
+            Name (_CID, "INT3471")  // _CID: Compatible ID
             Name (_DDN, "IMX135-CRDG2")  // _DDN: DOS Device Name
             Name (_UID, "0")  // _UID: Unique ID
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
@@ -62149,7 +60489,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_ADR, Zero)  // _ADR: Address
             Name (_HID, "INT3474")  // _HID: Hardware ID
-            Name (_CID, "INT3484")  // _CID: Compatible ID
+            Name (_CID, "INT3474")  // _CID: Compatible ID
             Name (_DDN, "OV2740-CRDG2")  // _DDN: DOS Device Name
             Name (_UID, "0")  // _UID: Unique ID
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
@@ -62268,9 +60608,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_ADR, Zero)  // _ADR: Address
             Name (_HID, "INT3472")  // _HID: Hardware ID
-            Name (_CID, "INT3482")  // _CID: Compatible ID
+            Name (_CID, "INT3472")  // _CID: Compatible ID
             Name (_DDN, "PMIC-CRDG2")  // _DDN: DOS Device Name
-            Name (_UID, 0x0C)  // _UID: Unique ID
+            Name (_UID, "0")  // _UID: Unique ID
             Name (_PLD, Package (0x01)  // _PLD: Physical Location of Device
             {
                 ToPLD (
@@ -62435,11 +60775,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PC00.I2C0",
-                            0x00, ResourceConsumer, _Y43, Exclusive,
+                            0x00, ResourceConsumer, _Y40, Exclusive,
                             )
                     })
-                    CreateWordField (IIC0, \_SB.PC00.I2CM._Y43._ADR, DAD0)  // _ADR: Address
-                    CreateDWordField (IIC0, \_SB.PC00.I2CM._Y43._SPE, DSP0)  // _SPE: Speed
+                    CreateWordField (IIC0, \_SB.PC00.I2CM._Y40._ADR, DAD0)  // _ADR: Address
+                    CreateDWordField (IIC0, \_SB.PC00.I2CM._Y40._SPE, DSP0)  // _SPE: Speed
                     DAD0 = Arg1
                     DSP0 = Arg2
                     Return (IIC0) /* \_SB_.PC00.I2CM.IIC0 */
@@ -62450,11 +60790,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PC00.I2C1",
-                            0x00, ResourceConsumer, _Y44, Exclusive,
+                            0x00, ResourceConsumer, _Y41, Exclusive,
                             )
                     })
-                    CreateWordField (IIC1, \_SB.PC00.I2CM._Y44._ADR, DAD1)  // _ADR: Address
-                    CreateDWordField (IIC1, \_SB.PC00.I2CM._Y44._SPE, DSP1)  // _SPE: Speed
+                    CreateWordField (IIC1, \_SB.PC00.I2CM._Y41._ADR, DAD1)  // _ADR: Address
+                    CreateDWordField (IIC1, \_SB.PC00.I2CM._Y41._SPE, DSP1)  // _SPE: Speed
                     DAD1 = Arg1
                     DSP1 = Arg2
                     Return (IIC1) /* \_SB_.PC00.I2CM.IIC1 */
@@ -62465,11 +60805,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PC00.I2C2",
-                            0x00, ResourceConsumer, _Y45, Exclusive,
+                            0x00, ResourceConsumer, _Y42, Exclusive,
                             )
                     })
-                    CreateWordField (IIC2, \_SB.PC00.I2CM._Y45._ADR, DAD2)  // _ADR: Address
-                    CreateDWordField (IIC2, \_SB.PC00.I2CM._Y45._SPE, DSP2)  // _SPE: Speed
+                    CreateWordField (IIC2, \_SB.PC00.I2CM._Y42._ADR, DAD2)  // _ADR: Address
+                    CreateDWordField (IIC2, \_SB.PC00.I2CM._Y42._SPE, DSP2)  // _SPE: Speed
                     DAD2 = Arg1
                     DSP2 = Arg2
                     Return (IIC2) /* \_SB_.PC00.I2CM.IIC2 */
@@ -62480,11 +60820,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PC00.I2C3",
-                            0x00, ResourceConsumer, _Y46, Exclusive,
+                            0x00, ResourceConsumer, _Y43, Exclusive,
                             )
                     })
-                    CreateWordField (IIC3, \_SB.PC00.I2CM._Y46._ADR, DAD3)  // _ADR: Address
-                    CreateDWordField (IIC3, \_SB.PC00.I2CM._Y46._SPE, DSP3)  // _SPE: Speed
+                    CreateWordField (IIC3, \_SB.PC00.I2CM._Y43._ADR, DAD3)  // _ADR: Address
+                    CreateDWordField (IIC3, \_SB.PC00.I2CM._Y43._SPE, DSP3)  // _SPE: Speed
                     DAD3 = Arg1
                     DSP3 = Arg2
                     Return (IIC3) /* \_SB_.PC00.I2CM.IIC3 */
@@ -62495,11 +60835,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PC00.I2C4",
-                            0x00, ResourceConsumer, _Y47, Exclusive,
+                            0x00, ResourceConsumer, _Y44, Exclusive,
                             )
                     })
-                    CreateWordField (IIC4, \_SB.PC00.I2CM._Y47._ADR, DAD4)  // _ADR: Address
-                    CreateDWordField (IIC4, \_SB.PC00.I2CM._Y47._SPE, DSP4)  // _SPE: Speed
+                    CreateWordField (IIC4, \_SB.PC00.I2CM._Y44._ADR, DAD4)  // _ADR: Address
+                    CreateDWordField (IIC4, \_SB.PC00.I2CM._Y44._SPE, DSP4)  // _SPE: Speed
                     DAD4 = Arg1
                     DSP4 = Arg2
                     Return (IIC4) /* \_SB_.PC00.I2CM.IIC4 */
@@ -62510,11 +60850,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     {
                         I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                             AddressingMode7Bit, "\\_SB.PC00.I2C5",
-                            0x00, ResourceConsumer, _Y48, Exclusive,
+                            0x00, ResourceConsumer, _Y45, Exclusive,
                             )
                     })
-                    CreateWordField (IIC5, \_SB.PC00.I2CM._Y48._ADR, DAD5)  // _ADR: Address
-                    CreateDWordField (IIC5, \_SB.PC00.I2CM._Y48._SPE, DSP5)  // _SPE: Speed
+                    CreateWordField (IIC5, \_SB.PC00.I2CM._Y45._ADR, DAD5)  // _ADR: Address
+                    CreateDWordField (IIC5, \_SB.PC00.I2CM._Y45._SPE, DSP5)  // _SPE: Speed
                     DAD5 = Arg1
                     DSP5 = Arg2
                     Return (IIC5) /* \_SB_.PC00.I2CM.IIC5 */
@@ -62538,11 +60878,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SpiSerialBusV2 (0x0000, PolarityLow, FourWireMode, 0x08,
                             ControllerInitiated, 0x00989680, ClockPolarityLow,
                             ClockPhaseFirst, "\\_SB.PC00.SPI1",
-                            0x00, ResourceConsumer, _Y49, Exclusive,
+                            0x00, ResourceConsumer, _Y46, Exclusive,
                             )
                     })
-                    CreateWordField (IIC7, \_SB.PC00.SPIM._Y49._PHA, DPH7)  // _PHA: Clock Phase
-                    CreateDWordField (IIC7, \_SB.PC00.SPIM._Y49._SPE, DSP7)  // _SPE: Speed
+                    CreateWordField (IIC7, \_SB.PC00.SPIM._Y46._PHA, DPH7)  // _PHA: Clock Phase
+                    CreateDWordField (IIC7, \_SB.PC00.SPIM._Y46._SPE, DSP7)  // _SPE: Speed
                     DPH7 = Arg1
                     DSP7 = Arg2
                     Return (IIC7) /* \_SB_.PC00.SPIM.IIC7 */
@@ -62554,11 +60894,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SpiSerialBusV2 (0x0000, PolarityLow, FourWireMode, 0x08,
                             ControllerInitiated, 0x00989680, ClockPolarityLow,
                             ClockPhaseFirst, "\\_SB.PC00.SPI2",
-                            0x00, ResourceConsumer, _Y4A, Exclusive,
+                            0x00, ResourceConsumer, _Y47, Exclusive,
                             )
                     })
-                    CreateWordField (IIC8, \_SB.PC00.SPIM._Y4A._PHA, DPH8)  // _PHA: Clock Phase
-                    CreateDWordField (IIC8, \_SB.PC00.SPIM._Y4A._SPE, DSP8)  // _SPE: Speed
+                    CreateWordField (IIC8, \_SB.PC00.SPIM._Y47._PHA, DPH8)  // _PHA: Clock Phase
+                    CreateDWordField (IIC8, \_SB.PC00.SPIM._Y47._SPE, DSP8)  // _SPE: Speed
                     DPH8 = Arg1
                     DSP8 = Arg2
                     Return (IIC8) /* \_SB_.PC00.SPIM.IIC8 */
@@ -62689,7 +61029,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                     AddressingMode7Bit, "NULL",
-                    0x00, ResourceConsumer, _Y4B, Exclusive,
+                    0x00, ResourceConsumer, _Y48, Exclusive,
                     )
             })
             Name (SBFG, ResourceTemplate ()
@@ -62703,15 +61043,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             })
             Name (SBFI, ResourceTemplate ()
             {
-                Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y4C)
+                Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y49)
                 {
                     0x00000000,
                 }
             })
-            CreateWordField (SBFB, \_SB.PC00.I2C0.TPD0._Y4B._ADR, BADR)  // _ADR: Address
-            CreateDWordField (SBFB, \_SB.PC00.I2C0.TPD0._Y4B._SPE, SPED)  // _SPE: Speed
+            CreateWordField (SBFB, \_SB.PC00.I2C0.TPD0._Y48._ADR, BADR)  // _ADR: Address
+            CreateDWordField (SBFB, \_SB.PC00.I2C0.TPD0._Y48._SPE, SPED)  // _SPE: Speed
             CreateWordField (SBFG, 0x17, INT1)
-            CreateDWordField (SBFI, \_SB.PC00.I2C0.TPD0._Y4C._INT, INT2)  // _INT: Interrupts
+            CreateDWordField (SBFI, \_SB.PC00.I2C0.TPD0._Y49._INT, INT2)  // _INT: Interrupts
             Method (_INI, 0, NotSerialized)  // _INI: Initialize
             {
                 If ((OSYS < 0x07DC))
@@ -62838,7 +61178,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                     AddressingMode7Bit, "NULL",
-                    0x00, ResourceConsumer, _Y4D, Exclusive,
+                    0x00, ResourceConsumer, _Y4A, Exclusive,
                     )
             })
             Name (SBFG, ResourceTemplate ()
@@ -62852,15 +61192,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             })
             Name (SBFI, ResourceTemplate ()
             {
-                Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, _Y4E)
+                Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, _Y4B)
                 {
                     0x00000000,
                 }
             })
-            CreateWordField (SBFB, \_SB.PC00.I2C0.TPL1._Y4D._ADR, BADR)  // _ADR: Address
-            CreateDWordField (SBFB, \_SB.PC00.I2C0.TPL1._Y4D._SPE, SPED)  // _SPE: Speed
+            CreateWordField (SBFB, \_SB.PC00.I2C0.TPL1._Y4A._ADR, BADR)  // _ADR: Address
+            CreateDWordField (SBFB, \_SB.PC00.I2C0.TPL1._Y4A._SPE, SPED)  // _SPE: Speed
             CreateWordField (SBFG, 0x17, INT1)
-            CreateDWordField (SBFI, \_SB.PC00.I2C0.TPL1._Y4E._INT, INT2)  // _INT: Interrupts
+            CreateDWordField (SBFI, \_SB.PC00.I2C0.TPL1._Y4B._INT, INT2)  // _INT: Interrupts
             Method (_INI, 0, NotSerialized)  // _INI: Initialize
             {
                 If ((OSYS < 0x07DC))
@@ -63028,7 +61368,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                     AddressingMode7Bit, "NULL",
-                    0x00, ResourceConsumer, _Y4F, Exclusive,
+                    0x00, ResourceConsumer, _Y4C, Exclusive,
                     )
             })
             Name (SBFG, ResourceTemplate ()
@@ -63042,15 +61382,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             })
             Name (SBFI, ResourceTemplate ()
             {
-                Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y50)
+                Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y4D)
                 {
                     0x00000000,
                 }
             })
-            CreateWordField (SBFB, \_SB.PC00.I2C1.TPD0._Y4F._ADR, BADR)  // _ADR: Address
-            CreateDWordField (SBFB, \_SB.PC00.I2C1.TPD0._Y4F._SPE, SPED)  // _SPE: Speed
+            CreateWordField (SBFB, \_SB.PC00.I2C1.TPD0._Y4C._ADR, BADR)  // _ADR: Address
+            CreateDWordField (SBFB, \_SB.PC00.I2C1.TPD0._Y4C._SPE, SPED)  // _SPE: Speed
             CreateWordField (SBFG, 0x17, INT1)
-            CreateDWordField (SBFI, \_SB.PC00.I2C1.TPD0._Y50._INT, INT2)  // _INT: Interrupts
+            CreateDWordField (SBFI, \_SB.PC00.I2C1.TPD0._Y4D._INT, INT2)  // _INT: Interrupts
             Method (_INI, 0, NotSerialized)  // _INI: Initialize
             {
                 If ((OSYS < 0x07DC))
@@ -63177,7 +61517,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                     AddressingMode7Bit, "NULL",
-                    0x00, ResourceConsumer, _Y51, Exclusive,
+                    0x00, ResourceConsumer, _Y4E, Exclusive,
                     )
             })
             Name (SBFG, ResourceTemplate ()
@@ -63191,15 +61531,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             })
             Name (SBFI, ResourceTemplate ()
             {
-                Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, _Y52)
+                Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, _Y4F)
                 {
                     0x00000000,
                 }
             })
-            CreateWordField (SBFB, \_SB.PC00.I2C1.TPL1._Y51._ADR, BADR)  // _ADR: Address
-            CreateDWordField (SBFB, \_SB.PC00.I2C1.TPL1._Y51._SPE, SPED)  // _SPE: Speed
+            CreateWordField (SBFB, \_SB.PC00.I2C1.TPL1._Y4E._ADR, BADR)  // _ADR: Address
+            CreateDWordField (SBFB, \_SB.PC00.I2C1.TPL1._Y4E._SPE, SPED)  // _SPE: Speed
             CreateWordField (SBFG, 0x17, INT1)
-            CreateDWordField (SBFI, \_SB.PC00.I2C1.TPL1._Y52._INT, INT2)  // _INT: Interrupts
+            CreateDWordField (SBFI, \_SB.PC00.I2C1.TPL1._Y4F._INT, INT2)  // _INT: Interrupts
             Method (_INI, 0, NotSerialized)  // _INI: Initialize
             {
                 If ((OSYS < 0x07DC))
@@ -63367,7 +61707,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                     AddressingMode7Bit, "NULL",
-                    0x00, ResourceConsumer, _Y53, Exclusive,
+                    0x00, ResourceConsumer, _Y50, Exclusive,
                     )
             })
             Name (SBFG, ResourceTemplate ()
@@ -63381,15 +61721,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             })
             Name (SBFI, ResourceTemplate ()
             {
-                Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y54)
+                Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y51)
                 {
                     0x00000000,
                 }
             })
-            CreateWordField (SBFB, \_SB.PC00.I2C2.TPD0._Y53._ADR, BADR)  // _ADR: Address
-            CreateDWordField (SBFB, \_SB.PC00.I2C2.TPD0._Y53._SPE, SPED)  // _SPE: Speed
+            CreateWordField (SBFB, \_SB.PC00.I2C2.TPD0._Y50._ADR, BADR)  // _ADR: Address
+            CreateDWordField (SBFB, \_SB.PC00.I2C2.TPD0._Y50._SPE, SPED)  // _SPE: Speed
             CreateWordField (SBFG, 0x17, INT1)
-            CreateDWordField (SBFI, \_SB.PC00.I2C2.TPD0._Y54._INT, INT2)  // _INT: Interrupts
+            CreateDWordField (SBFI, \_SB.PC00.I2C2.TPD0._Y51._INT, INT2)  // _INT: Interrupts
             Method (_INI, 0, NotSerialized)  // _INI: Initialize
             {
                 If ((OSYS < 0x07DC))
@@ -63516,7 +61856,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                     AddressingMode7Bit, "NULL",
-                    0x00, ResourceConsumer, _Y55, Exclusive,
+                    0x00, ResourceConsumer, _Y52, Exclusive,
                     )
             })
             Name (SBFG, ResourceTemplate ()
@@ -63530,15 +61870,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             })
             Name (SBFI, ResourceTemplate ()
             {
-                Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, _Y56)
+                Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, _Y53)
                 {
                     0x00000000,
                 }
             })
-            CreateWordField (SBFB, \_SB.PC00.I2C2.TPL1._Y55._ADR, BADR)  // _ADR: Address
-            CreateDWordField (SBFB, \_SB.PC00.I2C2.TPL1._Y55._SPE, SPED)  // _SPE: Speed
+            CreateWordField (SBFB, \_SB.PC00.I2C2.TPL1._Y52._ADR, BADR)  // _ADR: Address
+            CreateDWordField (SBFB, \_SB.PC00.I2C2.TPL1._Y52._SPE, SPED)  // _SPE: Speed
             CreateWordField (SBFG, 0x17, INT1)
-            CreateDWordField (SBFI, \_SB.PC00.I2C2.TPL1._Y56._INT, INT2)  // _INT: Interrupts
+            CreateDWordField (SBFI, \_SB.PC00.I2C2.TPL1._Y53._INT, INT2)  // _INT: Interrupts
             Method (_INI, 0, NotSerialized)  // _INI: Initialize
             {
                 If ((OSYS < 0x07DC))
@@ -63706,7 +62046,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                     AddressingMode7Bit, "NULL",
-                    0x00, ResourceConsumer, _Y57, Exclusive,
+                    0x00, ResourceConsumer, _Y54, Exclusive,
                     )
             })
             Name (SBFG, ResourceTemplate ()
@@ -63720,15 +62060,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             })
             Name (SBFI, ResourceTemplate ()
             {
-                Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y58)
+                Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y55)
                 {
                     0x00000000,
                 }
             })
-            CreateWordField (SBFB, \_SB.PC00.I2C3.TPD0._Y57._ADR, BADR)  // _ADR: Address
-            CreateDWordField (SBFB, \_SB.PC00.I2C3.TPD0._Y57._SPE, SPED)  // _SPE: Speed
+            CreateWordField (SBFB, \_SB.PC00.I2C3.TPD0._Y54._ADR, BADR)  // _ADR: Address
+            CreateDWordField (SBFB, \_SB.PC00.I2C3.TPD0._Y54._SPE, SPED)  // _SPE: Speed
             CreateWordField (SBFG, 0x17, INT1)
-            CreateDWordField (SBFI, \_SB.PC00.I2C3.TPD0._Y58._INT, INT2)  // _INT: Interrupts
+            CreateDWordField (SBFI, \_SB.PC00.I2C3.TPD0._Y55._INT, INT2)  // _INT: Interrupts
             Method (_INI, 0, NotSerialized)  // _INI: Initialize
             {
                 If ((OSYS < 0x07DC))
@@ -63855,7 +62195,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
                     AddressingMode7Bit, "NULL",
-                    0x00, ResourceConsumer, _Y59, Exclusive,
+                    0x00, ResourceConsumer, _Y56, Exclusive,
                     )
             })
             Name (SBFG, ResourceTemplate ()
@@ -63869,15 +62209,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             })
             Name (SBFI, ResourceTemplate ()
             {
-                Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, _Y5A)
+                Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, _Y57)
                 {
                     0x00000000,
                 }
             })
-            CreateWordField (SBFB, \_SB.PC00.I2C3.TPL1._Y59._ADR, BADR)  // _ADR: Address
-            CreateDWordField (SBFB, \_SB.PC00.I2C3.TPL1._Y59._SPE, SPED)  // _SPE: Speed
+            CreateWordField (SBFB, \_SB.PC00.I2C3.TPL1._Y56._ADR, BADR)  // _ADR: Address
+            CreateDWordField (SBFB, \_SB.PC00.I2C3.TPL1._Y56._SPE, SPED)  // _SPE: Speed
             CreateWordField (SBFG, 0x17, INT1)
-            CreateDWordField (SBFI, \_SB.PC00.I2C3.TPL1._Y5A._INT, INT2)  // _INT: Interrupts
+            CreateDWordField (SBFI, \_SB.PC00.I2C3.TPL1._Y57._INT, INT2)  // _INT: Interrupts
             Method (_INI, 0, NotSerialized)  // _INI: Initialize
             {
                 If ((OSYS < 0x07DC))
@@ -64104,7 +62444,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 })
                 Name (IBUF, ResourceTemplate ()
                 {
-                    Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y5B)
+                    Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y58)
                     {
                         0x00000000,
                     }
@@ -64112,7 +62452,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (GBUF, ResourceTemplate ()
                 {
                     GpioInt (Level, ActiveLow, ExclusiveAndWake, PullDefault, 0x0000,
-                        "\\_SB.GPI0", 0x00, ResourceConsumer, _Y5C,
+                        "\\_SB.GPI0", 0x00, ResourceConsumer, _Y59,
                         )
                         {   // Pin list
                             0x0000
@@ -64129,12 +62469,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 })
                 CreateWordField (BBUF, 0x17, SPIN)
                 CreateWordField (GBUF, 0x17, GPIN)
-                CreateDWordField (IBUF, \_SB.PC00.SPI1.FPNT._CRS._Y5B._INT, IPIN)  // _INT: Interrupts
+                CreateDWordField (IBUF, \_SB.PC00.SPI1.FPNT._CRS._Y58._INT, IPIN)  // _INT: Interrupts
                 CreateWordField (UBUF, 0x17, UPIN)
-                CreateBitField (IBUF, \_SB.PC00.SPI1.FPNT._CRS._Y5B._LL, ILVL)  // _LL_: Low Level
-                CreateBitField (IBUF, \_SB.PC00.SPI1.FPNT._CRS._Y5B._HE, ITRG)  // _HE_: High-Edge
-                CreateField (GBUF, \_SB.PC00.SPI1.FPNT._CRS._Y5C._POL, 0x02, GLVL)  // _POL: Polarity
-                CreateBitField (GBUF, \_SB.PC00.SPI1.FPNT._CRS._Y5C._MOD, GTRG)  // _MOD: Mode
+                CreateBitField (IBUF, \_SB.PC00.SPI1.FPNT._CRS._Y58._LL, ILVL)  // _LL_: Low Level
+                CreateBitField (IBUF, \_SB.PC00.SPI1.FPNT._CRS._Y58._HE, ITRG)  // _HE_: High-Edge
+                CreateField (GBUF, \_SB.PC00.SPI1.FPNT._CRS._Y59._POL, 0x02, GLVL)  // _POL: Polarity
+                CreateBitField (GBUF, \_SB.PC00.SPI1.FPNT._CRS._Y59._MOD, GTRG)  // _MOD: Mode
                 SPIN = GNUM (GFPS)
                 GPIN = GNUM (GFPI)
                 IPIN = INUM (GFPI)
@@ -64292,7 +62632,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 })
                 Name (IBUF, ResourceTemplate ()
                 {
-                    Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y5D)
+                    Interrupt (ResourceConsumer, Level, ActiveLow, ExclusiveAndWake, ,, _Y5A)
                     {
                         0x00000000,
                     }
@@ -64300,7 +62640,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (GBUF, ResourceTemplate ()
                 {
                     GpioInt (Level, ActiveLow, ExclusiveAndWake, PullDefault, 0x0000,
-                        "\\_SB.GPI0", 0x00, ResourceConsumer, _Y5E,
+                        "\\_SB.GPI0", 0x00, ResourceConsumer, _Y5B,
                         )
                         {   // Pin list
                             0x0000
@@ -64317,12 +62657,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 })
                 CreateWordField (BBUF, 0x17, SPIN)
                 CreateWordField (GBUF, 0x17, GPIN)
-                CreateDWordField (IBUF, \_SB.PC00.SPI2.FPNT._CRS._Y5D._INT, IPIN)  // _INT: Interrupts
+                CreateDWordField (IBUF, \_SB.PC00.SPI2.FPNT._CRS._Y5A._INT, IPIN)  // _INT: Interrupts
                 CreateWordField (UBUF, 0x17, UPIN)
-                CreateBitField (IBUF, \_SB.PC00.SPI2.FPNT._CRS._Y5D._LL, ILVL)  // _LL_: Low Level
-                CreateBitField (IBUF, \_SB.PC00.SPI2.FPNT._CRS._Y5D._HE, ITRG)  // _HE_: High-Edge
-                CreateField (GBUF, \_SB.PC00.SPI2.FPNT._CRS._Y5E._POL, 0x02, GLVL)  // _POL: Polarity
-                CreateBitField (GBUF, \_SB.PC00.SPI2.FPNT._CRS._Y5E._MOD, GTRG)  // _MOD: Mode
+                CreateBitField (IBUF, \_SB.PC00.SPI2.FPNT._CRS._Y5A._LL, ILVL)  // _LL_: Low Level
+                CreateBitField (IBUF, \_SB.PC00.SPI2.FPNT._CRS._Y5A._HE, ITRG)  // _HE_: High-Edge
+                CreateField (GBUF, \_SB.PC00.SPI2.FPNT._CRS._Y5B._POL, 0x02, GLVL)  // _POL: Polarity
+                CreateBitField (GBUF, \_SB.PC00.SPI2.FPNT._CRS._Y5B._MOD, GTRG)  // _MOD: Mode
                 SPIN = GNUM (GFPS)
                 GPIN = GNUM (GFPI)
                 IPIN = INUM (GFPI)
@@ -72523,15 +70863,14 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 Name (_HID, "INTC1058")  // _HID: Hardware ID
                 Name (_DDN, "Intel SPI OED Device")  // _DDN: DOS Device Name
-                Name (PKG0, Package (0x01)
-                {
-                    "\\_SB.PC00.XHCI.RHUB.HS04.VGPO"
-                })
                 Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
                 {
                     If ((CVFS == 0x02))
                     {
-                        Return (PKG0) /* \_SB_.PC00.SPI1.SPFD.PKG0 */
+                        Return (Package (0x01)
+                        {
+                            ^^^XHCI.RHUB.HS04.VGPO
+                        })
                     }
                     Else
                     {
@@ -72663,16 +71002,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             }
                         })
                     }
-                }
-
-                Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
-                {
-                    Return (0x03)
-                }
-
-                Method (_S4D, 0, NotSerialized)  // _S4D: S4 Device State
-                {
-                    Return (0x03)
                 }
 
                 Method (CBAR, 3, Serialized)
@@ -78497,7 +76826,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    OperationRegion (ABNV, SystemMemory, 0x59E01000, 0x0016)
+    OperationRegion (ABNV, SystemMemory, 0x65E22000, 0x0016)
     Field (ABNV, AnyAcc, Lock, Preserve)
     {
         ABMA,   64, 
@@ -78510,7 +76839,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         ABTS,   16
     }
 
-    Scope (_SB.PC00.RP07.PXSX)
+    Scope (_SB.PC00.RP04.PXSX)
     {
         Method (RWRD, 0, Serialized)
         {
@@ -78606,7 +76935,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 RWRY [0x2B] = STM9 /* \_SB_.STM9 */
             }
 
-            Return (RWRY) /* \_SB_.PC00.RP07.PXSX.RWRD.RWRY */
+            Return (RWRY) /* \_SB_.PC00.RP04.PXSX.RWRD.RWRY */
         }
 
         Method (RWSI, 0, Serialized)
@@ -78683,7 +77012,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 RWGY [0x17] = SGDB /* \_SB_.SGDB */
             }
 
-            Return (RWGY) /* \_SB_.PC00.RP07.PXSX.RWGS.RWGY */
+            Return (RWGY) /* \_SB_.PC00.RP04.PXSX.RWGS.RWGY */
         }
     }
 
@@ -78783,208 +77112,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    Scope (_SB)
-    {
-        Name (DSMI, One)
-        Device (AMW0)
-        {
-            Name (_HID, "PNP0C14" /* Windows Management Instrumentation Device */)  // _HID: Hardware ID
-            Name (_UID, "MTKSAR")  // _UID: Unique ID
-            Name (_WDG, Buffer (0x3C)
-            {
-                /* 0000 */  0xD4, 0x6E, 0x52, 0xB2, 0x45, 0xCB, 0xFA, 0x49,  // .nR.E..I
-                /* 0008 */  0x92, 0x30, 0x8D, 0x2F, 0xE8, 0xAF, 0xB8, 0xEC,  // .0./....
-                /* 0010 */  0x4D, 0x4B, 0x01, 0x02, 0xA0, 0x0D, 0x2A, 0x1E,  // MK....*.
-                /* 0018 */  0x9E, 0x2B, 0x4F, 0x42, 0x9C, 0x87, 0xB1, 0xDA,  // .+OB....
-                /* 0020 */  0xC3, 0xF4, 0xE9, 0xDA, 0xB0, 0x00, 0x01, 0x08,  // ........
-                /* 0028 */  0x21, 0x12, 0x90, 0x05, 0x66, 0xD5, 0xD1, 0x11,  // !...f...
-                /* 0030 */  0xB2, 0xF0, 0x00, 0xA0, 0xC9, 0x06, 0x29, 0x10,  // ......).
-                /* 0038 */  0x4D, 0x46, 0x01, 0x00                           // MF..
-            })
-            Method (WMMK, 3, NotSerialized)
-            {
-                If ((Arg1 == One))
-                {
-                    Return (One)
-                }
-
-                If ((Arg1 == 0x02))
-                {
-                    Return (One)
-                }
-
-                If ((Arg1 == 0x03))
-                {
-                    Return (DSMI) /* \_SB_.DSMI */
-                }
-            }
-
-            Method (_WED, 1, NotSerialized)  // _Wxx: Wake Event, xx=0x00-0xFF
-            {
-                If ((Arg0 == 0xB0))
-                {
-                    Return (One)
-                }
-
-                Return (Zero)
-            }
-
-            Name (WQMF, Buffer (0x04AB)
-            {
-                /* 0000 */  0x46, 0x4F, 0x4D, 0x42, 0x01, 0x00, 0x00, 0x00,  // FOMB....
-                /* 0008 */  0x9B, 0x04, 0x00, 0x00, 0xF8, 0x10, 0x00, 0x00,  // ........
-                /* 0010 */  0x44, 0x53, 0x00, 0x01, 0x1A, 0x7D, 0xDA, 0x54,  // DS...}.T
-                /* 0018 */  0x18, 0x43, 0x88, 0x00, 0x01, 0x06, 0x18, 0x42,  // .C.....B
-                /* 0020 */  0x10, 0x07, 0x10, 0x8A, 0x0F, 0x21, 0x02, 0x8B,  // .....!..
-                /* 0028 */  0x80, 0x50, 0x60, 0x18, 0x14, 0x81, 0xC3, 0x42,  // .P`....B
-                /* 0030 */  0x52, 0x89, 0x50, 0x28, 0x7E, 0x09, 0xE8, 0x4F,  // R.P(~..O
-                /* 0038 */  0x20, 0xBF, 0x02, 0x10, 0x3A, 0x14, 0x20, 0x53,  //  ...:. S
-                /* 0040 */  0x80, 0x41, 0x01, 0x4E, 0x11, 0x44, 0x10, 0xA4,  // .A.N.D..
-                /* 0048 */  0x63, 0x01, 0xC2, 0x05, 0x98, 0x86, 0x91, 0x65,  // c......e
-                /* 0050 */  0x01, 0xBA, 0x05, 0x38, 0x17, 0xE0, 0x5B, 0x80,  // ...8..[.
-                /* 0058 */  0x72, 0x01, 0x16, 0x05, 0x68, 0xC7, 0x21, 0xD2,  // r...h.!.
-                /* 0060 */  0x01, 0x25, 0x72, 0x04, 0x28, 0x31, 0x23, 0x40,  // .%r.(1#@
-                /* 0068 */  0xE9, 0x44, 0x97, 0x4D, 0x54, 0x81, 0x17, 0x8A,  // .D.MT...
-                /* 0070 */  0xA2, 0x49, 0x44, 0x49, 0x10, 0x3D, 0x7E, 0x84,  // .IDI.=~.
-                /* 0078 */  0xD8, 0xE5, 0x0A, 0x90, 0x3C, 0x00, 0x69, 0x16,  // ....<.i.
-                /* 0080 */  0x60, 0x58, 0x80, 0x75, 0x01, 0xB2, 0x67, 0x40,  // `X.u..g@
-                /* 0088 */  0xC6, 0x84, 0x95, 0x33, 0x04, 0xD4, 0x00, 0x5A,  // ...3...Z
-                /* 0090 */  0x9D, 0x80, 0xF0, 0x2B, 0x9D, 0x15, 0x92, 0xA0,  // ...+....
-                /* 0098 */  0xD7, 0x79, 0xC8, 0xE4, 0x94, 0x90, 0x03, 0xC0,  // .y......
-                /* 00A0 */  0x84, 0x56, 0x01, 0xC2, 0xE2, 0xAC, 0x59, 0x42,  // .V....YB
-                /* 00A8 */  0x97, 0x6A, 0x18, 0xAA, 0x61, 0x1C, 0xD4, 0xC5,  // .j..a...
-                /* 00B0 */  0xA0, 0x51, 0x43, 0x60, 0x83, 0x31, 0x44, 0x49,  // .QC`.1DI
-                /* 00B8 */  0x70, 0xA8, 0x41, 0x7B, 0x54, 0xCD, 0x8F, 0x43,  // p.A{T..C
-                /* 00C0 */  0x33, 0x6B, 0x7B, 0xC0, 0x9A, 0x71, 0x48, 0x26,  // 3k{..qH&
-                /* 00C8 */  0x6D, 0x28, 0x28, 0x29, 0x10, 0x1A, 0xD7, 0x59,  // m(()...Y
-                /* 00D0 */  0x7A, 0x46, 0x11, 0x8F, 0xD2, 0x30, 0xC7, 0xC5,  // zF...0..
-                /* 00D8 */  0x90, 0x8D, 0xC6, 0xA1, 0xB1, 0xC3, 0xF0, 0x10,  // ........
-                /* 00E0 */  0x83, 0x1D, 0xC4, 0x61, 0x1C, 0x6F, 0xE4, 0x04,  // ...a.o..
-                /* 00E8 */  0x9E, 0xD0, 0x51, 0x1E, 0x75, 0x61, 0x02, 0xC4,  // ..Q.ua..
-                /* 00F0 */  0xA3, 0x0A, 0xA3, 0x39, 0x28, 0x12, 0xE0, 0x18,  // ...9(...
-                /* 00F8 */  0x80, 0x1E, 0x53, 0xD8, 0xF7, 0x81, 0xD8, 0x47,  // ..S....G
-                /* 0100 */  0x71, 0x1A, 0x0F, 0x05, 0x07, 0x1B, 0xE3, 0x08,  // q.......
-                /* 0108 */  0x8E, 0x2B, 0xC1, 0x59, 0x9F, 0xC1, 0xFF, 0xFF,  // .+.Y....
-                /* 0110 */  0x14, 0xA2, 0x45, 0x28, 0xE8, 0x0E, 0x20, 0x8C,  // ..E(.. .
-                /* 0118 */  0x98, 0x87, 0x14, 0x25, 0x60, 0xBC, 0x18, 0x21,  // ...%`..!
-                /* 0120 */  0xA2, 0x1E, 0x95, 0x01, 0x03, 0x05, 0x09, 0x74,  // .......t
-                /* 0128 */  0x56, 0x31, 0xA2, 0x14, 0x0D, 0x26, 0xC8, 0xC0,  // V1...&..
-                /* 0130 */  0x9E, 0x80, 0x31, 0xE2, 0x85, 0x08, 0x1A, 0xE3,  // ..1.....
-                /* 0138 */  0x38, 0xBA, 0xC6, 0x90, 0xE7, 0x51, 0xD1, 0x59,  // 8....Q.Y
-                /* 0140 */  0x1C, 0x10, 0x46, 0x06, 0x84, 0xC0, 0xCE, 0xE3,  // ..F.....
-                /* 0148 */  0x48, 0x4D, 0x60, 0xF7, 0x02, 0x14, 0x0A, 0x50,  // HM`....P
-                /* 0150 */  0x26, 0xC0, 0x1A, 0x84, 0xB4, 0x5D, 0x08, 0x34,  // &....].4
-                /* 0158 */  0xAD, 0xB3, 0x6B, 0x6B, 0x48, 0x82, 0x0A, 0x12,  // ..kkH...
-                /* 0160 */  0x2A, 0x4A, 0x8C, 0x13, 0xAC, 0xF1, 0x6A, 0x20,  // *J....j 
-                /* 0168 */  0x94, 0x20, 0x11, 0x3B, 0x9B, 0xA4, 0x50, 0x8A,  // . .;..P.
-                /* 0170 */  0xC3, 0x14, 0x4C, 0xAC, 0xB8, 0x51, 0xA2, 0x05,  // ..L..Q..
-                /* 0178 */  0x09, 0x1B, 0x24, 0x4C, 0xE8, 0xF6, 0x07, 0x41,  // ..$L...A
-                /* 0180 */  0xA2, 0x9D, 0x0B, 0x24, 0x01, 0x44, 0x91, 0x46,  // ...$.D.F
-                /* 0188 */  0x83, 0x3A, 0x30, 0xF8, 0x6C, 0xE0, 0x73, 0xC1,  // .:0.l.s.
-                /* 0190 */  0xDB, 0x84, 0x67, 0x77, 0x5A, 0x41, 0x4E, 0xEC,  // ..gwZAN.
-                /* 0198 */  0xB8, 0x1E, 0x23, 0x1E, 0x0A, 0x3C, 0x32, 0x76,  // ..#..<2v
-                /* 01A0 */  0x5B, 0xF0, 0x3F, 0xC1, 0xA7, 0x04, 0xFC, 0x10,  // [.?.....
-                /* 01A8 */  0x03, 0xBE, 0x1E, 0x3C, 0x1C, 0xB0, 0x71, 0x86,  // ...<..q.
-                /* 01B0 */  0xC3, 0x0C, 0xD1, 0x73, 0x0E, 0x77, 0x02, 0x87,  // ...s.w..
-                /* 01B8 */  0xC8, 0x00, 0x3D, 0xAF, 0xE7, 0x02, 0xEC, 0xA8,  // ..=.....
-                /* 01C0 */  0x4E, 0xE6, 0xA1, 0xA0, 0x54, 0x01, 0x66, 0x6F,  // N...T.fo
-                /* 01C8 */  0x13, 0x84, 0xE0, 0x78, 0x7C, 0x1A, 0xF0, 0x7C,  // ...x|..|
-                /* 01D0 */  0x4E, 0x38, 0x81, 0xE5, 0x0F, 0x02, 0x35, 0x32,  // N8....52
-                /* 01D8 */  0x43, 0xFB, 0xE4, 0xE1, 0x4B, 0x81, 0xCF, 0x14,  // C...K...
-                /* 01E0 */  0x26, 0xB0, 0x58, 0x08, 0x29, 0x80, 0xD0, 0x78,  // &.X.)..x
-                /* 01E8 */  0xC0, 0xAF, 0xF8, 0xF0, 0x41, 0x6E, 0x0E, 0x9E,  // ....An..
-                /* 01F0 */  0xAF, 0x0F, 0x27, 0x30, 0xFF, 0xFF, 0xD7, 0x0E,  // ..'0....
-                /* 01F8 */  0x9C, 0xD1, 0xA3, 0x81, 0x4E, 0x0B, 0x1E, 0xF0,  // ....N...
-                /* 0200 */  0x29, 0x3C, 0x2A, 0x18, 0x26, 0xDE, 0xCB, 0xC2,  // )<*.&...
-                /* 0208 */  0x01, 0xF8, 0x9A, 0xC0, 0x0E, 0x27, 0xC0, 0x23,  // .....'.#
-                /* 0210 */  0x82, 0x87, 0xF3, 0x00, 0x13, 0xBD, 0x54, 0xD9,  // ......T.
-                /* 0218 */  0x58, 0xAA, 0x07, 0x41, 0x25, 0x9F, 0x11, 0xE4,  // X..A%...
-                /* 0220 */  0xF1, 0x28, 0x41, 0xB4, 0x0E, 0x89, 0x1C, 0x00,  // .(A.....
-                /* 0228 */  0x5E, 0x2D, 0xF8, 0x71, 0x43, 0x70, 0x3A, 0xD9,  // ^-.qCp:.
-                /* 0230 */  0x70, 0x81, 0x14, 0x92, 0x07, 0xA1, 0x01, 0x19,  // p.......
-                /* 0238 */  0xCE, 0x82, 0xE0, 0x28, 0x88, 0xC7, 0xEF, 0x93,  // ...(....
-                /* 0240 */  0x8D, 0x9D, 0x1C, 0x05, 0xD0, 0x93, 0xC0, 0x47,  // .......G
-                /* 0248 */  0x83, 0xD0, 0xF1, 0xC1, 0x07, 0x06, 0x3C, 0xDE,  // ......<.
-                /* 0250 */  0xA1, 0x9D, 0x99, 0xA7, 0xE1, 0xD1, 0xE3, 0x8E,  // ........
-                /* 0258 */  0x20, 0x70, 0xC7, 0x81, 0x5D, 0x64, 0xD0, 0xB7,  //  p..]d..
-                /* 0260 */  0x0F, 0x43, 0x3C, 0xD4, 0xF0, 0x1F, 0x0C, 0x1D,  // .C<.....
-                /* 0268 */  0x03, 0xB9, 0x19, 0x9C, 0x85, 0x09, 0xD8, 0x09,  // ........
-                /* 0270 */  0x01, 0xFE, 0xED, 0xC3, 0x07, 0x1B, 0x1F, 0x39,  // .......9
-                /* 0278 */  0x1E, 0x38, 0x12, 0x58, 0xE0, 0x09, 0x01, 0x14,  // .8.X....
-                /* 0280 */  0x40, 0xBE, 0x11, 0xF8, 0xB4, 0xF3, 0x54, 0xC0,  // @.....T.
-                /* 0288 */  0xE6, 0xF0, 0xC0, 0xE3, 0xE3, 0x0E, 0x83, 0xE7,  // ........
-                /* 0290 */  0xC1, 0x21, 0x64, 0x01, 0x42, 0xB2, 0x20, 0xF4,  // .!d.B. .
-                /* 0298 */  0xFF, 0x1F, 0x17, 0x1F, 0xA8, 0xCF, 0x33, 0x0C,  // ......3.
-                /* 02A0 */  0xFB, 0x55, 0x05, 0x33, 0xA8, 0x97, 0x09, 0x9F,  // .U.3....
-                /* 02A8 */  0x03, 0x0C, 0xEB, 0xA1, 0x73, 0x58, 0xA3, 0x85,  // ....sX..
-                /* 02B0 */  0x3D, 0xE2, 0x07, 0x09, 0x5F, 0x42, 0x3C, 0x33,  // =..._B<3
-                /* 02B8 */  0xDF, 0x5F, 0x7C, 0xFC, 0x00, 0x0B, 0x20, 0xDE,  // ._|... .
-                /* 02C0 */  0xFB, 0x25, 0x80, 0x4C, 0xC0, 0x80, 0x6C, 0x80,  // .%.L..l.
-                /* 02C8 */  0x8F, 0x03, 0x60, 0x19, 0xE6, 0xA9, 0x79, 0xE6,  // ..`...y.
-                /* 02D0 */  0xC1, 0xDE, 0x06, 0x3C, 0x3A, 0x5F, 0x6D, 0x7C,  // ...<:_m|
-                /* 02D8 */  0x05, 0xF1, 0xF9, 0x01, 0x1B, 0xE2, 0x28, 0x81,  // ......(.
-                /* 02E0 */  0x3A, 0x14, 0x58, 0xFE, 0x51, 0x02, 0x31, 0xF2,  // :.X.Q.1.
-                /* 02E8 */  0xB8, 0xA7, 0x15, 0xF5, 0x91, 0xC7, 0x97, 0x8F,  // ........
-                /* 02F0 */  0xA7, 0x20, 0x2E, 0xF8, 0x2C, 0x81, 0x92, 0x7A,  // . ..,..z
-                /* 02F8 */  0x64, 0xF2, 0x59, 0x02, 0x25, 0x0D, 0x8E, 0x82,  // d.Y.%...
-                /* 0300 */  0xF8, 0x2C, 0xE1, 0xD8, 0x67, 0x09, 0xF4, 0x40,  // .,..g..@
-                /* 0308 */  0x3C, 0x0B, 0x2C, 0x88, 0xE7, 0xE9, 0x5B, 0x8C,  // <.,...[.
-                /* 0310 */  0x09, 0xC6, 0x3B, 0x4E, 0x80, 0xE2, 0x8E, 0x70,  // ..;N...p
-                /* 0318 */  0xC0, 0x60, 0x39, 0x86, 0xE1, 0xF6, 0x79, 0x8C,  // .`9...y.
-                /* 0320 */  0xB0, 0x0E, 0x14, 0xF0, 0xFF, 0xFF, 0x07, 0x0A,  // ........
-                /* 0328 */  0xE0, 0x1C, 0xFE, 0x40, 0x01, 0xBA, 0xA3, 0x80,  // ...@....
-                /* 0330 */  0x0F, 0x14, 0xC0, 0xF5, 0x44, 0xE4, 0x03, 0x05,  // ....D...
-                /* 0338 */  0x98, 0xEF, 0x0B, 0x30, 0x63, 0x1C, 0x29, 0xD0,  // ...0c.).
-                /* 0340 */  0x21, 0x8E, 0x14, 0x88, 0x2B, 0x02, 0xEE, 0x3C,  // !...+..<
-                /* 0348 */  0xC4, 0x8F, 0x60, 0x3A, 0x52, 0xA0, 0x4E, 0x15,  // ..`:R.N.
-                /* 0350 */  0x96, 0x7B, 0xA4, 0x40, 0x9D, 0x78, 0x7C, 0xE6,  // .{.@.x|.
-                /* 0358 */  0xE1, 0x03, 0xF7, 0x29, 0xC0, 0x47, 0x0A, 0xDC,  // ...).G..
-                /* 0360 */  0xF0, 0x3C, 0x0B, 0x58, 0x04, 0x63, 0x9E, 0x28,  // .<.X.c.(
-                /* 0368 */  0x50, 0xFF, 0xFF, 0x13, 0x05, 0xBC, 0xE3, 0xD1,  // P.......
-                /* 0370 */  0x11, 0x83, 0xE5, 0xC4, 0xC7, 0x56, 0xF9, 0x24,  // .....V.$
-                /* 0378 */  0x60, 0xE3, 0x97, 0x07, 0x82, 0xE2, 0x8B, 0x9B,  // `.......
-                /* 0380 */  0xCF, 0x6D, 0xFC, 0x04, 0xE7, 0xFB, 0x1B, 0x3B,  // .m.....;
-                /* 0388 */  0xE9, 0xF1, 0x53, 0x0F, 0xE0, 0x10, 0xD2, 0xA7,  // ..S.....
-                /* 0390 */  0x1E, 0xC0, 0xD0, 0xC5, 0x05, 0x3B, 0xAB, 0x27,  // .....;.'
-                /* 0398 */  0x06, 0x4C, 0x94, 0x07, 0x83, 0x09, 0xF4, 0xFF,  // .L......
-                /* 03A0 */  0x3F, 0x51, 0x58, 0x3C, 0x0C, 0xEA, 0xA8, 0x09,  // ?QX<....
-                /* 03A8 */  0x4C, 0x47, 0xE1, 0xA3, 0x26, 0xD8, 0x8F, 0x92,  // LG..&...
-                /* 03B0 */  0xB8, 0x51, 0xC3, 0xBD, 0xAA, 0x62, 0x46, 0xFC,  // .Q...bF.
-                /* 03B8 */  0x8A, 0x67, 0x94, 0xD7, 0x4C, 0xCC, 0x65, 0xD3,  // .g..L.e.
-                /* 03C0 */  0x67, 0x81, 0xD7, 0x13, 0x0F, 0xDE, 0x13, 0xE7,  // g.......
-                /* 03C8 */  0x28, 0x67, 0xF0, 0xBA, 0x87, 0xB9, 0x19, 0xF8,  // (g......
-                /* 03D0 */  0x94, 0x09, 0xDB, 0xD8, 0x48, 0x74, 0xA8, 0x78,  // ....Ht.x
-                /* 03D8 */  0x8F, 0x38, 0xAD, 0x23, 0x8A, 0xE1, 0xDB, 0x65,  // .8.#...e
-                /* 03E0 */  0x9C, 0x47, 0xCB, 0x33, 0x8B, 0xF5, 0x94, 0x69,  // .G.3...i
-                /* 03E8 */  0x98, 0x10, 0x8F, 0x97, 0x4F, 0x99, 0xBE, 0x55,  // ....O..U
-                /* 03F0 */  0x3C, 0x5F, 0xF6, 0x86, 0x22, 0xB8, 0xC8, 0x51,  // <_.."..Q
-                /* 03F8 */  0x0D, 0xF4, 0x88, 0x11, 0x2D, 0x5E, 0xD0, 0x70,  // ....-^.p
-                /* 0400 */  0x81, 0x7C, 0xCA, 0x64, 0xC1, 0x1F, 0x29, 0x3A,  // .|.d..):
-                /* 0408 */  0x12, 0xF8, 0x94, 0x09, 0x1C, 0xFF, 0xFF, 0xA7,  // ........
-                /* 0410 */  0x4C, 0xC0, 0xD5, 0xEC, 0x9F, 0x32, 0xB1, 0xE7,  // L....2..
-                /* 0418 */  0x31, 0xFC, 0x89, 0xC1, 0xD7, 0x4B, 0x38, 0x13,  // 1....K8.
-                /* 0420 */  0x71, 0xC0, 0x71, 0x53, 0x51, 0x07, 0x15, 0xD4,  // q.qSQ...
-                /* 0428 */  0xB9, 0xC2, 0x07, 0x15, 0x76, 0x39, 0xE4, 0x87,  // ....v9..
-                /* 0430 */  0x3D, 0x8C, 0xE0, 0x73, 0x04, 0x68, 0x0E, 0x04,  // =..s.h..
-                /* 0438 */  0x6F, 0x9A, 0xC6, 0x79, 0xD1, 0x7C, 0x11, 0x78,  // o..y.|.x
-                /* 0440 */  0x62, 0xC2, 0x1C, 0x21, 0x30, 0x68, 0xCF, 0x3C,  // b..!0h.<
-                /* 0448 */  0xBE, 0x43, 0xE0, 0x8F, 0x3A, 0x60, 0x3C, 0xA0,  // .C..:`<.
-                /* 0450 */  0x82, 0x63, 0xBC, 0x70, 0x0E, 0xE3, 0xF0, 0xFF,  // .c.p....
-                /* 0458 */  0xFF, 0x07, 0x54, 0x70, 0x9E, 0x69, 0x70, 0x87,  // ..Tp.ip.
-                /* 0460 */  0x71, 0x70, 0x1C, 0xD9, 0xE1, 0x8F, 0x81, 0x2B,  // qp.....+
-                /* 0468 */  0xB4, 0xE9, 0x53, 0xA3, 0x51, 0xAB, 0x06, 0x65,  // ..S.Q..e
-                /* 0470 */  0x6A, 0x94, 0x69, 0x50, 0xAB, 0x4F, 0xA5, 0xC6,  // j.iP.O..
-                /* 0478 */  0x8C, 0x9D, 0x1D, 0x2C, 0xEF, 0x6D, 0xA0, 0xC3,  // ...,.m..
-                /* 0480 */  0x81, 0xC3, 0x81, 0x50, 0xC1, 0x2F, 0x23, 0x19,  // ...P./#.
-                /* 0488 */  0x39, 0x4E, 0x18, 0x44, 0x40, 0x0E, 0x7C, 0x86,  // 9N.D@.|.
-                /* 0490 */  0x15, 0x90, 0xE3, 0x9F, 0x62, 0xA9, 0xF4, 0x03,  // ....b...
-                /* 0498 */  0xBA, 0x80, 0x1C, 0x04, 0x44, 0x40, 0x16, 0xA2,  // ....D@..
-                /* 04A0 */  0x03, 0x84, 0xC5, 0x00, 0xA1, 0xE2, 0x7D, 0x80,  // ......}.
-                /* 04A8 */  0xB0, 0xFF, 0x3F                                 // ..?
-            })
-        }
-    }
-
     Scope (_SB.PC00.LPCB)
     {
         Device (HPET)
@@ -78996,7 +77123,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Memory32Fixed (ReadWrite,
                     0xFED00000,         // Address Base
                     0x00000400,         // Address Length
-                    _Y5F)
+                    _Y5C)
             })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -79012,7 +77139,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 If (HPTE)
                 {
-                    CreateDWordField (BUF0, \_SB.PC00.LPCB.HPET._Y5F._BAS, HPT0)  // _BAS: Base Address
+                    CreateDWordField (BUF0, \_SB.PC00.LPCB.HPET._Y5C._BAS, HPT0)  // _BAS: Base Address
                     HPT0 = HPTB /* \HPTB */
                 }
 
@@ -79307,10 +77434,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0x0000,             // Range Maximum
                         0x04,               // Alignment
                         0x04,               // Length
-                        _Y60)
+                        _Y5D)
                 })
-                CreateWordField (RBUF, \_SB.PC00.LPCB.CWDT._CRS._Y60._MIN, OMIN)  // _MIN: Minimum Base Address
-                CreateWordField (RBUF, \_SB.PC00.LPCB.CWDT._CRS._Y60._MAX, OMAX)  // _MAX: Maximum Base Address
+                CreateWordField (RBUF, \_SB.PC00.LPCB.CWDT._CRS._Y5D._MIN, OMIN)  // _MIN: Minimum Base Address
+                CreateWordField (RBUF, \_SB.PC00.LPCB.CWDT._CRS._Y5D._MAX, OMAX)  // _MAX: Maximum Base Address
                 OMIN = (PMBS + 0x54)
                 OMAX = (PMBS + 0x54)
                 Return (RBUF) /* \_SB_.PC00.LPCB.CWDT._CRS.RBUF */
@@ -79375,25 +77502,25 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Memory32Fixed (ReadOnly,
                 0x00000000,         // Address Base
                 0x00001000,         // Address Length
-                _Y61)
+                _Y5E)
             Memory32Fixed (ReadOnly,
                 0xFED70000,         // Address Base
                 0x00001000,         // Address Length
-                _Y62)
+                _Y5F)
         })
         Name (CRSD, ResourceTemplate ()
         {
             Memory32Fixed (ReadWrite,
                 0xFED40000,         // Address Base
                 0x00005000,         // Address Length
-                _Y63)
+                _Y60)
         })
         Name (CRID, ResourceTemplate ()
         {
             Memory32Fixed (ReadWrite,
                 0xFED40000,         // Address Base
                 0x00005000,         // Address Length
-                _Y64)
+                _Y61)
         })
         Name (CREI, ResourceTemplate ()
         {
@@ -79401,7 +77528,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFED40000,         // Address Base
                 0x00005000,         // Address Length
                 )
-            Interrupt (ResourceConsumer, Level, ActiveLow, Shared, ,, _Y65)
+            Interrupt (ResourceConsumer, Level, ActiveLow, Shared, ,, _Y62)
             {
                 0x00000000,
             }
@@ -79410,12 +77537,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             If ((AMDT == One))
             {
-                CreateDWordField (CRST, \_SB.TPM._Y61._BAS, MTFB)  // _BAS: Base Address
-                CreateDWordField (CRST, \_SB.TPM._Y61._LEN, LTFB)  // _LEN: Length
+                CreateDWordField (CRST, \_SB.TPM._Y5E._BAS, MTFB)  // _BAS: Base Address
+                CreateDWordField (CRST, \_SB.TPM._Y5E._LEN, LTFB)  // _LEN: Length
                 MTFB = TPMB /* \TPMB */
                 LTFB = TPBS /* \TPBS */
-                CreateDWordField (CRST, \_SB.TPM._Y62._BAS, MTFC)  // _BAS: Base Address
-                CreateDWordField (CRST, \_SB.TPM._Y62._LEN, LTFC)  // _LEN: Length
+                CreateDWordField (CRST, \_SB.TPM._Y5F._BAS, MTFC)  // _BAS: Base Address
+                CreateDWordField (CRST, \_SB.TPM._Y5F._LEN, LTFC)  // _LEN: Length
                 MTFC = TPMC /* \TPMC */
                 LTFC = TPCS /* \TPCS */
                 Return (CRST) /* \_SB_.TPM_.CRST */
@@ -79424,8 +77551,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 If ((DTP1 == One))
                 {
-                    CreateDWordField (CRSD, \_SB.TPM._Y63._BAS, MTFE)  // _BAS: Base Address
-                    CreateDWordField (CRSD, \_SB.TPM._Y63._LEN, LTFE)  // _LEN: Length
+                    CreateDWordField (CRSD, \_SB.TPM._Y60._BAS, MTFE)  // _BAS: Base Address
+                    CreateDWordField (CRSD, \_SB.TPM._Y60._LEN, LTFE)  // _LEN: Length
                     MTFE = 0xFED40000
                     LTFE = 0x5000
                     Return (CRSD) /* \_SB_.TPM_.CRSD */
@@ -79434,22 +77561,22 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 {
                     If (((TMRQ == Zero) && (TMRQ != 0xFFFFFFFF)))
                     {
-                        CreateDWordField (CRID, \_SB.TPM._Y64._BAS, MTFD)  // _BAS: Base Address
-                        CreateDWordField (CRID, \_SB.TPM._Y64._LEN, LTFD)  // _LEN: Length
+                        CreateDWordField (CRID, \_SB.TPM._Y61._BAS, MTFD)  // _BAS: Base Address
+                        CreateDWordField (CRID, \_SB.TPM._Y61._LEN, LTFD)  // _LEN: Length
                         MTFD = 0xFED40000
                         LTFD = 0x5000
                         Return (CRID) /* \_SB_.TPM_.CRID */
                     }
                     Else
                     {
-                        CreateDWordField (CREI, \_SB.TPM._Y65._INT, LIRQ)  // _INT: Interrupts
+                        CreateDWordField (CREI, \_SB.TPM._Y62._INT, LIRQ)  // _INT: Interrupts
                         LIRQ = TMRQ /* \_SB_.TPM_.TMRQ */
                         Return (CREI) /* \_SB_.TPM_.CREI */
                     }
                 }
                 ElseIf ((TTPF == Zero))
                 {
-                    CreateDWordField (CRST, \_SB.TPM._Y62._BAS, MTFF)  // _BAS: Base Address
+                    CreateDWordField (CRST, \_SB.TPM._Y5F._BAS, MTFF)  // _BAS: Base Address
                     MTFF = FTPM /* \FTPM */
                     Return (CRST) /* \_SB_.TPM_.CRST */
                 }
@@ -79467,14 +77594,14 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (((TMRQ != Zero) && (TMRQ != 0xFFFFFFFF)))
             {
                 CreateDWordField (Arg0, 0x11, IRQ0)
-                CreateDWordField (CREI, \_SB.TPM._Y65._INT, LIRQ)  // _INT: Interrupts
+                CreateDWordField (CREI, \_SB.TPM._Y62._INT, LIRQ)  // _INT: Interrupts
                 LIRQ = IRQ0 /* \_SB_.TPM_._SRS.IRQ0 */
                 TMRQ = IRQ0 /* \_SB_.TPM_._SRS.IRQ0 */
                 CreateBitField (Arg0, 0x79, ITRG)
-                CreateBitField (CREI, \_SB.TPM._Y65._HE, LTRG)  // _HE_: High-Edge
+                CreateBitField (CREI, \_SB.TPM._Y62._HE, LTRG)  // _HE_: High-Edge
                 LTRG = ITRG /* \_SB_.TPM_._SRS.ITRG */
                 CreateBitField (Arg0, 0x7A, ILVL)
-                CreateBitField (CREI, \_SB.TPM._Y65._LL, LLVL)  // _LL_: Low Level
+                CreateBitField (CREI, \_SB.TPM._Y62._LL, LLVL)  // _LL_: Low Level
                 LLVL = ILVL /* \_SB_.TPM_._SRS.ILVL */
                 If ((((IDTF & 0x0F) == Zero) || ((IDTF & 0x0F
                     ) == 0x0F)))
@@ -79822,7 +77949,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB)
     {
-        OperationRegion (RAMW, SystemMemory, 0x59E94000, 0x0100)
+        OperationRegion (RAMW, SystemMemory, 0x65EB6000, 0x0100)
         Field (RAMW, AnyAcc, NoLock, Preserve)
         {
             AMLS,   32, 
@@ -79867,7 +77994,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB)
     {
-        OperationRegion (ACPO, SystemMemory, ACPB, 0x14)
+        OperationRegion (ACPO, SystemMemory, ACPB, 0x10)
         Field (ACPO, AnyAcc, NoLock, Preserve)
         {
             ACPS,   32, 
@@ -79878,24 +78005,20 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             WLDP,   8, 
             BTDP,   8, 
             FANF,   8, 
-            CPUV,   8, 
             MLED,   8, 
-            CLED,   8, 
-            CLE2,   8, 
-            CPUW,   16
+            CLED,   8
         }
     }
 
     Scope (_SB)
     {
-        OperationRegion (ACAO, SystemMemory, ACAB, 0x14)
+        OperationRegion (ACAO, SystemMemory, ACAB, 0x10)
         Field (ACAO, AnyAcc, NoLock, Preserve)
         {
             ACAS,   32, 
             CAL1,   32, 
             CA10,   32, 
-            CA11,   32, 
-            CA14,   32
+            CA11,   32
         }
     }
 
@@ -79956,7 +78079,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB)
     {
-        OperationRegion (ASIO, SystemMemory, ASIB, 0x0E)
+        OperationRegion (ASIO, SystemMemory, ASIB, 0x0D)
         Field (ASIO, AnyAcc, NoLock, Preserve)
         {
             ASIS,   32, 
@@ -79967,8 +78090,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             TPHI,   8, 
             TPP2,   8, 
             TPL2,   8, 
-            FPVD,   16, 
-            TPSD,   8
+            FPVD,   16
         }
     }
 
@@ -79997,7 +78119,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB)
     {
-        OperationRegion (AURO, SystemMemory, AWRB, 0x43)
+        OperationRegion (AURO, SystemMemory, AWRB, 0x42)
         Field (AURO, AnyAcc, NoLock, Preserve)
         {
             STRE,   8, 
@@ -80065,8 +78187,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             ZTGA,   8, 
             SGDA,   8, 
             ZTGB,   8, 
-            SGDB,   8, 
-            RE59,   8
+            SGDB,   8
         }
     }
 
@@ -80229,7 +78350,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    Scope (_SB.PC00.XHCI.RHUB.HS01)
+    Scope (_SB.PC00.XHCI.RHUB.HS06)
     {
         Name (CAPD, Package (0x01)
         {
@@ -80242,107 +78363,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         })
         Device (DCAM)
         {
-            Name (_ADR, One)  // _ADR: Address
+            Name (_ADR, 0x06)  // _ADR: Address
             Method (_PLD, 0, NotSerialized)  // _PLD: Physical Location of Device
             {
-                Return (CAPD) /* \_SB_.PC00.XHCI.RHUB.HS01.CAPD */
-            }
-        }
-    }
-
-    Scope (_SB)
-    {
-        Device (CIND)
-        {
-            Name (_HID, "INT33D3" /* Intel GPIO Buttons */)  // _HID: Hardware ID
-            Name (_CID, "PNP0C60" /* Display Sensor Device */)  // _CID: Compatible ID
-            Method (_STA, 0, Serialized)  // _STA: Status
-            {
-                Return (0x0F)
-            }
-        }
-    }
-
-    Scope (_SB)
-    {
-        Device (HIDD)
-        {
-            Name (_HID, "INTC1051")  // _HID: Hardware ID
-            Name (HRDY, Zero)
-            Method (_STA, 0, Serialized)  // _STA: Status
-            {
-                Return (0x0F)
-            }
-
-            Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
-            {
-                If ((Arg0 == ToUUID ("eeec56b3-4442-408f-a792-4edd4d758054") /* Unknown UUID */))
-                {
-                    If ((One == ToInteger (Arg1)))
-                    {
-                        Switch (ToInteger (Arg2))
-                        {
-                            Case (Zero)
-                            {
-                                Return (Buffer (0x02)
-                                {
-                                     0xFF, 0x01                                       // ..
-                                })
-                            }
-                            Case (One)
-                            {
-                                BTNL ()
-                            }
-                            Case (0x02)
-                            {
-                                Return (Zero)
-                            }
-                            Case (0x03)
-                            {
-                                HDSM (DerefOf (Arg3 [Zero]))
-                            }
-                            Case (0x07)
-                            {
-                                Return (0xC000)
-                            }
-                            Case (0x08)
-                            {
-                                Local0 = ^^PC00.LPCB.EC0.ST8E (0x33, Zero)
-                                If (((Local0 & One) == One))
-                                {
-                                    Return (Zero)
-                                }
-                                Else
-                                {
-                                    Return (0x40)
-                                }
-                            }
-                            Case (0x09)
-                            {
-                                Return (0xC000)
-                            }
-
-                        }
-                    }
-                    Else
-                    {
-                    }
-                }
-
-                Return (Buffer (One)
-                {
-                     0x00                                             // .
-                })
-            }
-
-            Method (BTNL, 0, Serialized)
-            {
-                PB1E |= 0x20
-            }
-
-            Method (HDSM, 1, Serialized)
-            {
-                HRDY = Arg0
+                Return (CAPD) /* \_SB_.PC00.XHCI.RHUB.HS06.CAPD */
             }
         }
     }
@@ -80600,7 +78624,82 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Notify (IETM, 0x88) // Device-Specific
                     SMIF = 0x05
                     FANF = Arg0
+                    NVPM (Arg0)
+                    If ((^^PC00.PEG0.PG00._STA == One))
+                    {
+                        ^^PC00.LPCB.EC0.BRAH = 0xC9
+                        If (((Arg0 == One) & ((^^PC00.LPCB.EC0.CNTD & 0x40) != 0x40)
+                            ))
+                        {
+                            ^^PC00.LPCB.EC0.CNTD &= 0x18
+                            ^^PC00.LPCB.EC0.CNTD |= 0x40
+                        }
+                        ElseIf (((Arg0 == 0x02) & ((^^PC00.LPCB.EC0.CNTD & 0x20) != 
+                            0x20)))
+                        {
+                            ^^PC00.LPCB.EC0.CNTD &= 0x18
+                            ^^PC00.LPCB.EC0.CNTD |= 0x20
+                        }
+                        ElseIf (((Arg0 == Zero) & ((^^PC00.LPCB.EC0.CNTD & 0x80) != 
+                            0x80)))
+                        {
+                            ^^PC00.LPCB.EC0.CNTD &= 0x18
+                            ^^PC00.LPCB.EC0.CNTD |= 0x80
+                        }
+
+                        Notify (^^PC00.PEG0.PEGP, 0xD1) // Hardware-Specific
+                    }
+
                     Return (ASMI (Arg0))
+                }
+
+                Method (NVPM, 1, NotSerialized)
+                {
+                    If ((Arg0 == Zero))
+                    {
+                        If (CondRefOf (\_SB.NPCF))
+                        {
+                            ^^NPCF.ACBT = Zero
+                            ^^NPCF.DCBT = Zero
+                            ^^NPCF.DBAC = Zero
+                            ^^NPCF.DBDC = One
+                            ^^NPCF.AMAT = 0x28
+                            ^^NPCF.AMIT = Zero
+                            ^^NPCF.ATPP = 0x78
+                            ^^NPCF.DTPP = Zero
+                        }
+                    }
+                    ElseIf ((Arg0 == One))
+                    {
+                        If (CondRefOf (\_SB.NPCF))
+                        {
+                            ^^NPCF.ACBT = Zero
+                            ^^NPCF.DCBT = Zero
+                            ^^NPCF.DBAC = One
+                            ^^NPCF.DBDC = One
+                            ^^NPCF.AMAT = Zero
+                            ^^NPCF.AMIT = Zero
+                            ^^NPCF.ATPP = 0xC8
+                            ^^NPCF.DTPP = 0xC8
+                        }
+                    }
+                    ElseIf ((Arg0 == 0x02))
+                    {
+                        If (CondRefOf (\_SB.NPCF))
+                        {
+                            ^^NPCF.ACBT = Zero
+                            ^^NPCF.DCBT = Zero
+                            ^^NPCF.DBAC = Zero
+                            ^^NPCF.DBDC = One
+                            ^^NPCF.AMAT = 0x78
+                            ^^NPCF.AMIT = Zero
+                            ^^NPCF.ATPP = 0xC8
+                            ^^NPCF.DTPP = Zero
+                        }
+                    }
+
+                    Notify (NPCF, 0xC0) // Hardware-Specific
+                    Notify (^^PC00.PEG0.PEGP, 0xC0) // Hardware-Specific
                 }
             }
 
@@ -80647,7 +78746,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 If ((Local0 == 0x5256534F))
                 {
                     OSVR (IIA0)
-                    Return (One)
+                    Return (Zero)
                 }
 
                 If ((Local0 == 0x53524556))
@@ -80725,11 +78824,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (Zero)
                     }
 
-                    If ((IIA0 == 0x00050027))
-                    {
-                        Return (Zero)
-                    }
-
                     If ((IIA0 == 0x00010011))
                     {
                         If (WLDP)
@@ -80772,12 +78866,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((IIA0 == 0x00080044))
                     {
                         Return (Zero)
-                    }
-
-                    If ((IIA0 == 0x00100053))
-                    {
-                        Local0 = 0x00010001
-                        Return (Local0)
                     }
 
                     If ((IIA0 == 0x00030022))
@@ -80832,39 +78920,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return ((GALE (0x40) | 0x00050000))
                     }
 
-                    If ((IIA0 == 0x00040017))
-                    {
-                        Local0 = GGOV (0x0900000F)
-                        Local0 = ~Local0
-                        Local0 &= One
-                        Local0 |= 0x00010000
-                        Return (Local0)
-                        Return (Zero)
-                    }
-
-                    If ((IIA0 == 0x000600B1))
-                    {
-                        MEMD [Zero] = Zero
-                        CA1M = CA14 /* \_SB_.CA14 */
-                        If ((ToInteger (CA14) == Zero))
-                        {
-                            Return (MEMD) /* \_SB_.ATKD.MEMD */
-                        }
-
-                        Local2 = Zero
-                        Local3 = One
-                        Local1 = CA1M /* \_SB_.ATKD.CA1M */
-                        MEMD [Zero] = 0x0200
-                        While ((Local3 < 0x81))
-                        {
-                            MEMD [Local3] = RMEM ((Local1 + Local2))
-                            Local2 += 0x04
-                            Local3 += One
-                        }
-
-                        Return (MEMD) /* \_SB_.ATKD.MEMD */
-                    }
-
                     If ((IIA0 == 0x00120078))
                     {
                         Local0 = Zero
@@ -80886,31 +78941,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (Zero)
                     }
 
-                    If ((IIA0 == 0x00050042))
-                    {
-                        Return (0x00010036)
-                    }
-
-                    If ((IIA0 == 0x00050043))
-                    {
-                        Local0 = Zero
-                        Local1 = Zero
-                        Local0 |= Local1
-                        Return (Local0)
-                    }
-
-                    If ((IIA0 == 0x00050002))
-                    {
-                        Return (Zero)
-                    }
-
                     If ((IIA0 == 0x00110019))
                     {
                         Local0 = FANF /* \_SB_.FANF */
                         Local1 = 0x00030000
                         Local0 |= Local1
-                        Local2 = (CPUV << 0x14)
-                        Local0 |= Local2
                         Return (Local0)
                     }
 
@@ -80941,21 +78976,21 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                     If ((IIA0 == 0x00120061))
                     {
-                        Return (Zero)
-                    }
-
-                    If ((IIA0 == 0x00060062))
-                    {
-                        If (^^PC00.LPCB.EC0.RPIN (0x0E))
+                        Local1 = ^^PC00.LPCB.EC0.STA8 (Zero)
+                        If ((Local1 & 0x10))
                         {
-                            Local0 = 0x00010001
-                        }
-                        Else
-                        {
-                            Local0 = 0x00010000
+                            Return (0x00010001)
                         }
 
-                        Return (Local0)
+                        If ((Local1 & 0x08))
+                        {
+                            Return (0x00010002)
+                        }
+
+                        If (!(Local1 & 0x18))
+                        {
+                            Return (0x00010000)
+                        }
                     }
 
                     If ((IIA0 == 0x00110015))
@@ -80976,7 +79011,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Local0 <<= 0x08
                             Local0 += ^^PC00.LPCB.EC0.GLKB (0x02)
                             Local0 |= 0x00050000
-                            Local0 |= 0x00200000
                             Local0 |= 0x00100000
                             Return (Local0)
                         }
@@ -81007,25 +79041,16 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (Local0)
                     }
 
-                    If ((IIA0 == 0x0012006D))
-                    {
-                        Return (Zero)
-                    }
-
                     If ((IIA0 == 0x00100023))
                     {
-                        Local0 = 0x00010000
                         If ((KFSK == 0x80))
                         {
-                            Local0 |= One
+                            Return (0x00010001)
                         }
-
-                        Return (Local0)
-                    }
-
-                    If ((IIA0 == 0x00060078))
-                    {
-                        Return (Zero)
+                        Else
+                        {
+                            Return (0x00010000)
+                        }
                     }
 
                     If ((IIA0 == 0x00060079))
@@ -81037,6 +79062,14 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (Local0)
                     }
 
+                    If ((IIA0 == 0x00040017))
+                    {
+                        Local0 = GGOV (0x0900000F)
+                        Local0 |= 0x00010000
+                        Return (Local0)
+                        Return (Zero)
+                    }
+
                     If ((IIA0 == 0x00050033))
                     {
                         Return (0x00010000)
@@ -81044,7 +79077,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                     If ((IIA0 == 0x00060059))
                     {
-                        Return (0x00010000)
+                        Return (Zero)
                     }
 
                     If ((IIA0 == 0x00060068))
@@ -81162,20 +79195,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (One)
                     }
 
-                    If ((IIA0 == 0x00040017))
-                    {
-                        If ((IIA1 == One))
-                        {
-                            SGOV (0x0900000F, Zero)
-                        }
-                        Else
-                        {
-                            SGOV (0x0900000F, One)
-                        }
-
-                        Return (One)
-                    }
-
                     If ((IIA0 == 0x00110019))
                     {
                         FANL (IIA1)
@@ -81253,13 +79272,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                     If ((IIA0 == 0x00120057))
                     {
-                        Local0 = ^^PC00.LPCB.EC0.SRSC (IIA1)
-                        If ((ACPF == One))
-                        {
-                            Notify (^^PC00.LPCB.EC0.BAT0, 0x80) // Status Change
-                        }
-
-                        Return (Local0)
+                        Return (^^PC00.LPCB.EC0.SRSC (IIA1))
                     }
 
                     If ((IIA0 == 0x00100023))
@@ -81290,89 +79303,21 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         }
 
                         Return (One)
+                        Return (Zero)
                     }
 
-                    Name (TPRZ, Zero)
-                    Name (ECSS, Buffer (0x03)
+                    If ((IIA0 == 0x00040017))
                     {
-                         0x00, 0x00, 0x00                                 // ...
-                    })
-                    Name (ECRF, Zero)
-                    Name (ECWF, Zero)
-                    If ((IIA0 == 0x00060059))
-                    {
-                        ECRF = Zero
-                        ECWF = Zero
-                        Local0 = (IIA1 & 0xFF)
-                        TPRZ = (IIA1 & 0xFFFFFF00)
-                        Local1 = (TPRZ >> 0x08)
-                        Local2 = (Local1 & 0xFF)
-                        ECSS [Zero] = Local2
-                        Local1 >>= 0x08
-                        Local2 = (Local1 & 0xFF)
-                        ECSS [One] = Local2
-                        Local1 >>= 0x08
-                        Local2 = (Local1 & 0xFF)
-                        ECSS [0x02] = Local2
-                        If ((Local0 == 0xE2))
+                        If ((IIA1 == One))
                         {
-                            ECWF = One
+                            SGOV (0x0900000F, One)
+                        }
+                        Else
+                        {
+                            SGOV (0x0900000F, Zero)
                         }
 
-                        If ((Local0 == 0xE4))
-                        {
-                            ECWF = One
-                        }
-
-                        If ((Local0 == 0xE6))
-                        {
-                            ECWF = One
-                        }
-
-                        If ((Local0 == 0xED))
-                        {
-                            ECWF = One
-                        }
-
-                        If ((Local0 == 0xEF))
-                        {
-                            ECWF = One
-                        }
-
-                        If ((Local0 == 0xE0))
-                        {
-                            ECRF = One
-                        }
-
-                        If ((Local0 == 0xE1))
-                        {
-                            ECRF = One
-                        }
-
-                        If ((Local0 == 0xE3))
-                        {
-                            ECRF = One
-                        }
-
-                        If ((Local0 == 0xE5))
-                        {
-                            ECRF = One
-                        }
-
-                        If ((Local0 == 0xEE))
-                        {
-                            ECRF = One
-                        }
-
-                        If ((One == ECWF))
-                        {
-                            Return (^^PC00.LPCB.EC0.WEBC (Local0, 0x03, ECSS))
-                        }
-
-                        If ((One == ECRF))
-                        {
-                            Return (^^PC00.LPCB.EC0.REB2 (Local0, 0x2E, ECSS, 0x03))
-                        }
+                        Return (One)
                     }
 
                     If ((IIA0 == 0x00060023))
@@ -82104,7 +80049,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
             Method (GLCD, 0, NotSerialized)
             {
-                Return (LCDV) /* \_SB_.LCDV */
+                Return (0xFFFFFFFE)
             }
 
             Method (ANVI, 1, Serialized)
@@ -82249,6 +80194,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Offset (0x6E), 
                 BFLB,   8, 
                 BCLB,   8, 
+                Offset (0x8E), 
+                CNTD,   8, 
                 Offset (0x90), 
                 EPWS,   8, 
                 EB0S,   8, 
@@ -82974,6 +80921,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (TBF2) /* \_SB_.PC00.LPCB.EC0_.REB2.TBF2 */
                 }
 
+                BCLB |= 0x20
+                BFLB = Arg0
                 BRAH = 0xC9
                 Local3 = Zero
                 While ((Local3 < Arg3))
@@ -82983,8 +80932,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Local3++
                 }
 
-                BCLB |= 0x20
-                BFLB = Arg0
                 Local1 = 0x01F4
                 While (((BCLB & 0x80) != 0x80))
                 {
@@ -83002,6 +80949,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 {
                     BRAI = (0x40 + Local0)
                     TBF2 [Local0] = BRAD /* \_SB_.PC00.LPCB.EC0_.BRAD */
+                    Local3 = DerefOf (TBF2 [Local0])
                     Local0++
                 }
 
@@ -83049,6 +80997,25 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
 
             Return (Ones)
+        }
+
+        Method (CECD, 1, Serialized)
+        {
+            Local0 = REBC (0x11, 0x02)
+            Local1 = DerefOf (Local0 [One])
+            Local2 = (Local1 & 0x03)
+            If ((Local2 != Zero))
+            {
+                Return (Zero)
+            }
+
+            Local3 = (Local1 >> 0x07)
+            If ((Local3 == Arg0))
+            {
+                Return (Zero)
+            }
+
+            Return (One)
         }
     }
 
@@ -83227,13 +81194,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         Method (SRSC, 1, NotSerialized)
         {
-            Name (DUBF, Buffer (0x02)
+            Name (DUBF, Buffer (One)
             {
-                 0x00, 0x00                                       // ..
+                 0x00                                             // .
             })
-            Local0 = Arg0
-            DUBF [Zero] = Local0
-            Return (WEBC (0x06, 0x02, DUBF))
+            DUBF [Zero] = Arg0
+            Return (WEBC (0x06, One, DUBF))
         }
 
         Method (RTAH, 1, NotSerialized)
@@ -83421,6 +81387,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 ST9F (0x2B, 0x20, 0x20)
             }
+
+            BDIN = Zero
         }
     }
 
@@ -83680,6 +81648,14 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
         }
 
+        Method (_Q71, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            If (ATKP)
+            {
+                ^^^^ATKD.IANE (0x5B)
+            }
+        }
+
         Method (_Q80, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             If (GLID ())
@@ -83772,19 +81748,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
         }
 
-        Method (_QCF, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If ((ACPF == One))
-            {
-                Notify (BAT0, 0x80) // Status Change
-            }
-
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0xE5)
-            }
-        }
-
         Method (_QAC, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Local0 = RP2E (0x95)
@@ -83794,20 +81757,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
         }
 
-        Method (_QB7, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        Method (_QEE, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0x98)
-            }
         }
 
-        Method (_QEB, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        Method (_QED, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0x97)
-            }
         }
 
         Method (_QB3, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
@@ -83833,20 +81788,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         Method (_QD7, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
-            Notify (^^^^HIDD, 0xCD) // Hardware-Specific
             DSTI = One
-            DSSI = One
-            If (((STDE == One) || (STXE == One)))
-            {
-                Notify (WFDE, 0xD0) // Hardware-Specific
-            }
-
-            ^^^^DSMI = One
-            If ((MDSE == One))
-            {
-                Notify (AMW0, 0xB0) // Device-Specific
-            }
-
             If (ATKP)
             {
                 ^^^^ATKD.IANE (0xFA)
@@ -83855,20 +81797,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         Method (_QD8, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
-            Notify (^^^^HIDD, 0xCC) // Hardware-Specific
             DSTI = 0x02
-            DSSI = 0x02
-            If (((STDE == One) || (STXE == One)))
-            {
-                Notify (WFDE, 0xD0) // Hardware-Specific
-            }
-
-            ^^^^DSMI = 0x02
-            If ((MDSE == One))
-            {
-                Notify (AMW0, 0xB0) // Device-Specific
-            }
-
             If (ATKP)
             {
                 ^^^^ATKD.IANE (0xFA)
@@ -83890,10 +81819,46 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         Method (_QAA, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
+            BOTP = One
+            Notify (^^^PEG0.PEGP, 0xD5) // Hardware-Specific
         }
 
         Method (_QAB, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
+            BOTP = Zero
+            Acquire (CMUT, 0xFFFF)
+            BRAH = 0xC9
+            Local0 = (CNTD & 0x07)
+            Release (CMUT)
+            If ((CNTB > Local0))
+            {
+                Local1 = CNTB /* \_SB_.PC00.LPCB.EC0_.CNTB */
+            }
+            Else
+            {
+                Local1 = Local0
+            }
+
+            If ((Local1 == Zero))
+            {
+                Notify (^^^PEG0.PEGP, 0xD1) // Hardware-Specific
+            }
+            ElseIf ((Local1 == One))
+            {
+                Notify (^^^PEG0.PEGP, 0xD2) // Hardware-Specific
+            }
+            ElseIf ((Local1 == 0x02))
+            {
+                Notify (^^^PEG0.PEGP, 0xD3) // Hardware-Specific
+            }
+            ElseIf ((Local1 == 0x03))
+            {
+                Notify (^^^PEG0.PEGP, 0xD4) // Hardware-Specific
+            }
+            ElseIf ((Local1 >= 0x04))
+            {
+                Notify (^^^PEG0.PEGP, 0xD5) // Hardware-Specific
+            }
         }
 
         Method (_QC7, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
@@ -83917,6 +81882,38 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Name (BDIN, Zero)
         Method (_QDD, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
+            If ((CNTB < 0x05))
+            {
+                CNTB += One
+            }
+
+            Acquire (CMUT, 0xFFFF)
+            BRAH = 0xC9
+            Local0 = (CNTD & 0x07)
+            Release (CMUT)
+            If (((CNTB > Local0) && (BOTP == Zero)))
+            {
+                If ((CNTB == Zero))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD1) // Hardware-Specific
+                }
+                ElseIf ((CNTB == One))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD2) // Hardware-Specific
+                }
+                ElseIf ((CNTB == 0x02))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD3) // Hardware-Specific
+                }
+                ElseIf ((CNTB == 0x03))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD4) // Hardware-Specific
+                }
+                ElseIf ((CNTB >= 0x04))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD5) // Hardware-Specific
+                }
+            }
         }
 
         Method (_QA8, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
@@ -83925,14 +81922,102 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 ^^^^ATKD.IANE (0x9A)
             }
+
+            CNTB = 0x04
+            Notify (^^^PEG0.PEGP, 0xD5) // Hardware-Specific
         }
 
         Method (_QA9, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
+            CNTB = Zero
+            Acquire (CMUT, 0xFFFF)
+            BRAH = 0xC9
+            Local0 = (CNTD & 0x07)
+            Release (CMUT)
+            Local1 = Local0
+            If ((BOTP == Zero))
+            {
+                If ((Local1 == Zero))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD1) // Hardware-Specific
+                }
+                ElseIf ((Local1 == One))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD2) // Hardware-Specific
+                }
+                ElseIf ((Local1 == 0x02))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD3) // Hardware-Specific
+                }
+                ElseIf ((Local1 == 0x03))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD4) // Hardware-Specific
+                }
+                ElseIf ((Local1 >= 0x04))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD5) // Hardware-Specific
+                }
+            }
         }
 
-        Method (_QEE, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        Method (_QBA, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
+            Acquire (CMUT, 0xFFFF)
+            BRAH = 0xC9
+            Local0 = (CNTD & 0x07)
+            Release (CMUT)
+            If (((Local0 > CNTB) && (BOTP == Zero)))
+            {
+                If ((Local0 == One))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD2) // Hardware-Specific
+                }
+                ElseIf ((Local0 == 0x02))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD3) // Hardware-Specific
+                }
+                ElseIf ((Local0 == 0x03))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD4) // Hardware-Specific
+                }
+                ElseIf ((Local0 >= 0x04))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD5) // Hardware-Specific
+                }
+            }
+        }
+
+        Method (_QBB, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            Local1 = CNTB /* \_SB_.PC00.LPCB.EC0_.CNTB */
+            If ((BOTP == Zero))
+            {
+                If ((Local1 == Zero))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD1) // Hardware-Specific
+                }
+                ElseIf ((Local1 == One))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD2) // Hardware-Specific
+                }
+                ElseIf ((Local1 == 0x02))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD3) // Hardware-Specific
+                }
+                ElseIf ((Local1 == 0x03))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD4) // Hardware-Specific
+                }
+                ElseIf ((Local1 >= 0x04))
+                {
+                    Notify (^^^PEG0.PEGP, 0xD5) // Hardware-Specific
+                }
+            }
+
+            Acquire (CMUT, 0xFFFF)
+            BRAH = 0xC9
+            CNTD &= 0xF8
+            Release (CMUT)
         }
 
         Method (_QEF, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
@@ -83990,22 +82075,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         Method (_QCE, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
-        }
-
-        Method (_Q40, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-        }
-
-        Method (_Q41, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-        }
-
-        Method (_QC1, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0xEE)
-            }
         }
     }
 
@@ -84514,11 +82583,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                 If (Local0)
                 {
-                    If ((EB0S & 0x10))
-                    {
-                        Local0 = Zero
-                    }
-                    ElseIf (CHGS (Zero))
+                    If (CHGS (Zero))
                     {
                         Local0 = 0x02
                     }
@@ -84530,17 +82595,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Else
                 {
                     Local0 = One
-                }
-
-                Name (RBU1, Buffer (0x02)
-                {
-                     0x00, 0x00                                       // ..
-                })
-                RBU1 = REBC (0x05, 0x02)
-                If (((ToInteger (DerefOf (RBU1 [Zero])) == 0x50) || (
-                    ToInteger (DerefOf (RBU1 [Zero])) == 0x3C)))
-                {
-                    Local0 |= 0x08
                 }
 
                 If (BLLO)
@@ -84603,8 +82657,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 {
                     Acquire (CMUT, 0xFFFF)
                     BRAH = 0xC9
-                    Local0 = B0DV /* \_SB_.PC00.LPCB.EC0_.B0DV */
+                    PBST [0x03] = B0DV /* \_SB_.PC00.LPCB.EC0_.B0DV */
                     Release (CMUT)
+                    Local0 = DerefOf (PBST [0x03])
                     PBST [One] = (DerefOf (PBST [One]) * Local0)
                     PBST [One] = (DerefOf (PBST [One]) / 0x03E8)
                     PBST [0x02] = (DerefOf (PBST [0x02]) * Local0)
@@ -84794,13 +82849,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Return (KELV (Local0))
             }
 
-            Name (_PSL, Package (0x04)  // _PSL: Passive List
-            {
-                \_SB.PR00, 
-                \_SB.PR01, 
-                \_SB.PR02, 
-                \_SB.PR03
-            })
             Method (XTSP, 0, NotSerialized)
             {
                 Local0 = (TSP * 0x0A)
@@ -84815,19 +82863,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Method (XTC2, 0, NotSerialized)
             {
                 Return (TC2) /* \TC2_ */
-            }
-
-            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
-            {
-                RPSV ()
-                If (PLCY)
-                {
-                    Return (KELV (\_SB.PPSV))
-                }
-                Else
-                {
-                    Return (KELV (\_SB.TPSV))
-                }
             }
 
             Method (_SCP, 1, NotSerialized)  // _SCP: Set Cooling Policy
@@ -84963,7 +82998,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (XUPC, Package (0x04)
                 {
                     0xFF, 
-                    Zero, 
+                    0x03, 
                     Zero, 
                     Zero
                 })
@@ -84981,7 +83016,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     }
                 })
                 CreateField (DerefOf (XPLD [Zero]), 0x40, One, VISI)
-                VISI = Zero
+                VISI = One
                 CreateField (DerefOf (XPLD [Zero]), 0x57, 0x08, GPOS)
                 GPOS = One
                 Return (XPLD) /* \_SB_.PC00.XHCI.RHUB.HS01._PLD.XPLD */
@@ -85033,7 +83068,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (XUPC, Package (0x04)
                 {
                     0xFF, 
-                    0x0A, 
+                    Zero, 
                     Zero, 
                     Zero
                 })
@@ -85067,7 +83102,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 Name (XUPC, Package (0x04)
                 {
-                    Zero, 
+                    0xFF, 
                     Zero, 
                     Zero, 
                     Zero
@@ -85086,7 +83121,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     }
                 })
                 CreateField (DerefOf (XPLD [Zero]), 0x40, One, VISI)
-                VISI = Zero
+                VISI = One
                 CreateField (DerefOf (XPLD [Zero]), 0x57, 0x08, GPOS)
                 GPOS = 0x04
                 Return (XPLD) /* \_SB_.PC00.XHCI.RHUB.HS04._PLD.XPLD */
@@ -85137,7 +83172,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 Name (XUPC, Package (0x04)
                 {
-                    Zero, 
+                    0xFF, 
                     Zero, 
                     Zero, 
                     Zero
@@ -85173,7 +83208,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (XUPC, Package (0x04)
                 {
                     0xFF, 
-                    0x03, 
+                    Zero, 
                     Zero, 
                     Zero
                 })
@@ -85191,7 +83226,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     }
                 })
                 CreateField (DerefOf (XPLD [Zero]), 0x40, One, VISI)
-                VISI = One
+                VISI = Zero
                 CreateField (DerefOf (XPLD [Zero]), 0x57, 0x08, GPOS)
                 GPOS = 0x07
                 Return (XPLD) /* \_SB_.PC00.XHCI.RHUB.HS07._PLD.XPLD */
@@ -85403,7 +83438,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 CreateField (DerefOf (XPLD [Zero]), 0x40, One, VISI)
                 VISI = One
                 CreateField (DerefOf (XPLD [Zero]), 0x57, 0x08, GPOS)
-                GPOS = 0x07
+                GPOS = One
                 Return (XPLD) /* \_SB_.PC00.XHCI.RHUB.SS01._PLD.XPLD */
             }
         }
@@ -85610,28 +83645,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    If (CondRefOf (\_SB.PC00.RP08))
-    {
-        Scope (_SB.PC00.RP08)
-        {
-            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
-            {
-                Return (GPRW (0x69, 0x04))
-            }
-        }
-    }
-
-    If (CondRefOf (\_SB.PC00.RP08.PXSX))
-    {
-        Scope (_SB.PC00.RP08.PXSX)
-        {
-            Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
-            {
-                Return (GPRW (0x69, 0x04))
-            }
-        }
-    }
-
     If (CondRefOf (\_SB.PC00.CNVW))
     {
         Scope (_SB.PC00.CNVW)
@@ -85652,7 +83665,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Device (ETPD)
         {
             Name (_ADR, One)  // _ADR: Address
-            Name (ETPH, Package (0x23)
+            Name (ETPH, Package (0x24)
             {
                 "ELAN1200", 
                 "ELAN1201", 
@@ -85688,6 +83701,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 "ELAN1206", 
                 "ASUE1407", 
                 "ASUE140A", 
+                "ASUE120B", 
                 "ASUE140D"
             })
             Name (FTPH, Package (0x0C)
@@ -85705,13 +83719,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 "FTE1200", 
                 "FTE1200"
             })
-            Name (GTPH, Package (0x05)
+            Name (PTPH, Package (0x01)
             {
-                "GDX1505", 
-                "GDX1300", 
-                "GDX1200", 
-                "GDX1301", 
-                "GDX1515"
+                "ASUP1204"
             })
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
             {
@@ -85725,9 +83735,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (DerefOf (FTPH [TPHI]))
                 }
 
-                If ((TPDI & 0x40))
+                If ((TPDI & 0x80))
                 {
-                    Return (DerefOf (GTPH [TPHI]))
+                    Return (DerefOf (PTPH [TPHI]))
                 }
 
                 Return ("ELAN1010")
@@ -85796,96 +83806,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     }
                 })
                 Return (SBFI) /* \_SB_.PC00.I2C1.ETPD._CRS.SBFI */
-            }
-        }
-    }
-
-    Scope (_SB.PC00.I2C0)
-    {
-        Device (TPL0)
-        {
-            Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
-            Name (_UID, One)  // _UID: Unique ID
-            Name (_S0W, 0x03)  // _S0W: S0 Device Wake State
-            Name (SADR, Buffer (One)
-            {
-                 0x10                                             // .
-            })
-            Name (HIDS, Package (0x01)
-            {
-                "ELAN9009"
-            })
-            Name (HIDA, Buffer (One)
-            {
-                 0x01                                             // .
-            })
-            Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
-            {
-                Return (DerefOf (HIDS [TPLI]))
-            }
-
-            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-            {
-                If ((Arg0 == ToUUID ("3cdff6f7-4267-4555-ad05-b30a3d8938de") /* HID I2C Device */))
-                {
-                    If ((Arg2 == Zero))
-                    {
-                        If ((Arg1 == One))
-                        {
-                            Return (Buffer (One)
-                            {
-                                 0x03                                             // .
-                            })
-                        }
-                        Else
-                        {
-                            Return (Buffer (One)
-                            {
-                                 0x00                                             // .
-                            })
-                        }
-                    }
-
-                    If ((Arg2 == One))
-                    {
-                        Return (DerefOf (HIDA [TPLI]))
-                    }
-                }
-                Else
-                {
-                    Return (Buffer (One)
-                    {
-                         0x00                                             // .
-                    })
-                }
-            }
-
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If ((TPLP == Zero))
-                {
-                    Return (Zero)
-                }
-
-                Return (0x0F)
-            }
-
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (SBFI, ResourceTemplate ()
-                {
-                    I2cSerialBusV2 (0x0000, ControllerInitiated, 0x00061A80,
-                        AddressingMode7Bit, "\\_SB.PC00.I2C0",
-                        0x00, ResourceConsumer, _Y66, Exclusive,
-                        )
-                    Interrupt (ResourceConsumer, Level, ActiveLow, Exclusive, ,, )
-                    {
-                        0x0000002B,
-                    }
-                })
-                CreateWordField (SBFI, \_SB.PC00.I2C0.TPL0._CRS._Y66._ADR, ADR1)  // _ADR: Address
-                ADR1 = DerefOf (SADR [TPLI])
-                Return (SBFI) /* \_SB_.PC00.I2C0.TPL0._CRS.SBFI */
             }
         }
     }

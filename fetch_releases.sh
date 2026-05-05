@@ -8,31 +8,60 @@ insert_row() {
     sed -i "/| ${SERIE} |/a ${ROW}" "$FILE"
 }
 
+parse_body() {
+    local BODY="$1"
+    local DIALPAD NUMBERPAD DIAL STYLUS MODEL
+
+    DIALPAD=$(grep -iE '^DialPad:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
+    NUMBERPAD=$(grep -iE '^NumberPad:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
+    DIAL=$(grep -iE '^Dial:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
+    STYLUS=$(grep -iE '^Stylus \(Touchscreen\):' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
+    MODEL=$(grep -iE '^Model:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
+
+    [[ "$DIALPAD" == "Y" ]] && DIALPAD="Yes" || DIALPAD=""
+    [[ "$NUMBERPAD" == "Y" ]] && NUMBERPAD="Yes" || NUMBERPAD=""
+    [[ "$DIAL" == "Y" ]] && DIAL="Yes" || DIAL=""
+    [[ "$STYLUS" == "Y" ]] && STYLUS="Yes" || STYLUS=""
+
+    echo "$DIALPAD|$NUMBERPAD|$DIAL|$STYLUS|$MODEL"
+}
+
+normalize_tag() {
+    echo "$1" | sed -E 's/_[0-9]+$//'
+}
+
 update_readme() {
-    local FILE="$1"
+    local FINAL_BASENAME="$1"
     local TAG="$2"
+    local DIALPAD="$3"
+    local NUMBERPAD="$4"
+    local DIAL="$5"
+    local STYLUS="$6"
+    local MODEL="$7"
 
-    [[ "$FILE" != *.dsl ]] && return
+    BASE_TAG=$(normalize_tag "$TAG")
 
-    local BASE="${FILE%.dsl}"
+    MODEL_COL=""
+    if [[ -n "$MODEL" && "$BASE_TAG" != *"$MODEL"* ]]; then
+        MODEL_COL="$MODEL"
+    fi
+
+    # always delete old version of tag
+    sed -i "\|${BASE_TAG}|d" Readme.MD
 
     local SERIE=""
-    if [[ "$BASE" =~ ProArt ]]; then SERIE="ProArt"
-    elif [[ "$BASE" =~ ROG ]]; then SERIE="ROG"
-    elif [[ "$BASE" =~ Zenbook ]]; then SERIE="Zenbook"
-    elif [[ "$BASE" =~ Vivobook ]]; then SERIE="Vivobook"
+    if [[ "$FINAL_BASENAME" =~ ProArt ]]; then SERIE="ProArt"
+    elif [[ "$FINAL_BASENAME" =~ ROG ]]; then SERIE="ROG"
+    elif [[ "$FINAL_BASENAME" =~ Zenbook ]]; then SERIE="Zenbook"
+    elif [[ "$FINAL_BASENAME" =~ Vivobook ]]; then SERIE="Vivobook"
     else SERIE="Other"
     fi
 
-    local DSL_NAME="${BASE}.dsl"
-    local DEV_NAME="${BASE}.devices"
+    local DSL_NAME="${FINAL_BASENAME}.dsl"
+    local DEV_NAME="${FINAL_BASENAME}.devices"
 
     local DSL_PATH="data/$DSL_NAME"
     local DEV_PATH="data/$DEV_NAME"
-
-    if grep -q "$DSL_PATH" Readme.MD; then
-        return
-    fi
 
     local DEV_COL=""
     if [[ -f "$DEV_PATH" ]]; then
@@ -41,7 +70,7 @@ update_readme() {
 
     local SRC_URL="https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/${TAG}"
 
-    local ROW="| | [${DSL_NAME}](${DSL_PATH}) | ${DEV_COL} | [asus-dsdt-tables/releases/tag/${TAG}](${SRC_URL}) |  |  |  |"
+    local ROW="| | [${DSL_NAME}](${DSL_PATH}) | ${DEV_COL} | [asus-dsdt-tables/releases/tag/${TAG}](${SRC_URL}) | ${DIALPAD} | ${NUMBERPAD} | ${DIAL} | ${STYLUS} | ${MODEL_COL} |"
 
     if [[ -s Readme.MD ]]; then
         tail -c1 Readme.MD | read -r _ || echo >> Readme.MD
@@ -51,9 +80,6 @@ update_readme() {
 }
 
 REPO="asus-linux-drivers/asus-dsdt-tables"
-OUTDIR="data"
-
-mkdir -p "$OUTDIR"
 
 WORKDIR=$(mktemp -d)
 
@@ -61,6 +87,13 @@ TAGS=$(gh release list -R "$REPO" --limit 1000 --json tagName -q '.[].tagName')
 
 for TAG in $TAGS; do
     echo "Processing release: $TAG"
+
+    BASE="${TAG%_*}"
+
+    if compgen -G "$WORKDIR/${BASE}*" > /dev/null; then
+        echo "  Skipping: $TAG because already exists newer version"
+        continue
+    fi
 
     ASSETS=$(gh release view "$TAG" -R "$REPO" --json assets -q '.assets[].name')
 
@@ -77,57 +110,81 @@ for TAG in $TAGS; do
         echo "  Downloading: $ASSET"
 
         TAR_PATH="$WORKDIR/$ASSET"
-        EXTRACT_DIR="$WORKDIR/extracted_$TAG"
+        EXTRACT_DIR="$WORKDIR/$TAG"
 
         mkdir -p "$EXTRACT_DIR"
 
         gh release download "$TAG" -R "$REPO" -p "$ASSET" -D "$WORKDIR" >/dev/null
 
         tar -xzf "$TAR_PATH" -C "$EXTRACT_DIR"
-
-        find "$EXTRACT_DIR" -type f \( -name "*.dsl" -o -name "*.devices" \) | while read -r FILE; do
-
-            BASENAME=$(basename "$FILE")
-
-            shopt -s nocasematch
-            if [[ ! "$BASENAME" =~ asus ]]; then
-                BASENAME="asus_$BASENAME"
-            fi
-
-            FIRST4="${BASENAME:0:4}"
-            REST="${BASENAME:4}"
-
-            BASENAME="${FIRST4^^}${REST}"
-
-            shopt -u nocasematch
-
-            PLAIN_NAME="$BASENAME"
-            DSL_HASH="${TAG##*_}"
-            HASHED_NAME="${BASENAME%.*}_$DSL_HASH.${BASENAME##*.}"
-
-            FINAL_NAME="$PLAIN_NAME"
-
-            if [[ -f "$OUTDIR/$PLAIN_NAME" ]]; then
-
-                EXISTING_DSL_FILE="$OUTDIR/${BASENAME%.*}.dsl"
-
-                EXISTING_DSL_FILE_HASH=$(
-                    grep -v 'Disassembly of' "$EXISTING_DSL_FILE" |
-                    sha256sum | awk '{print $1}'
-                )
-
-                if [[ "${EXISTING_DSL_FILE_HASH:0:12}" != "$DSL_HASH" ]]; then
-                    FINAL_NAME="$HASHED_NAME"
-                fi
-            fi
-
-            update_readme "$FINAL_NAME" "$TAG"
-
-            if [[ ! -f "$OUTDIR/$FINAL_NAME" ]]; then
-                cp "$FILE" "$OUTDIR/$FINAL_NAME"
-            fi
-        done
     done
 done
 
+echo ""
+
+OUTDIR="data"
+
+mkdir -p "$OUTDIR"
+
+for EXTRACT_DIR in "$WORKDIR"/*; do
+
+    # no archives
+    [[ -d "$EXTRACT_DIR" ]] || continue
+
+    echo "Processing release: $EXTRACT_DIR"
+
+    TAG=$(basename "$EXTRACT_DIR")
+    # DSDT = dir without the _<hash>
+    DIR_NAME_WITH_NO_HASH=$(echo "$TAG" | sed -E 's/_[0-9a-f]{12}(_[0-9]+)?$//')
+    DSDT_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH"
+    DSL_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH.dsl"
+    DEVICES_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH.devices"
+
+    # try to create .dsl from DSDT if missing
+    if [[ ! -s "$DSL_FILE" && "$DSDT_FILE" ]]; then
+
+        if command -v iasl >/dev/null 2>&1; then
+
+            echo "  Generating missing .dsl ($DSL_FILE) from DSDT ($DSDT_FILE)"
+            sudo iasl -d "$DSDT_FILE" >/dev/null 2>&1;
+
+            # was generated .dsl file but is empty
+            if [ ! -s "$DSL_FILE" ]; then
+                echo "  Warning: .dsl was not generated (sharing only a raw DSDT)"
+            fi
+        fi
+    fi
+
+    # add prefix ASUS (to the saved data files data/ASUS_*.dsl|.devices and to the table in Readme.MD)
+    shopt -s nocasematch
+    if [[ ! "$DIR_NAME_WITH_NO_HASH" =~ asus ]]; then
+        FINAL_BASENAME="asus_$DIR_NAME_WITH_NO_HASH"
+    fi
+
+    FIRST4="${FINAL_BASENAME:0:4}"
+    REST="${FINAL_BASENAME:4}"
+
+    FINAL_BASENAME="${FIRST4^^}${REST}"
+    shopt -u nocasematch
+
+    # copy files
+    if [[ -s "$DSL_FILE" ]]; then
+        cp -f "$DSL_FILE" "$OUTDIR/$FINAL_BASENAME.dsl"
+    fi
+    if [[ -s "$DSDT_FILE" ]]; then
+        cp -f "$DSDT_FILE" "$OUTDIR/$FINAL_BASENAME"
+    fi
+    if [[ -s "$DEVICES_FILE" ]]; then
+        cp -f "$DEVICES_FILE" "$OUTDIR/$FINAL_BASENAME.devices"
+    fi
+
+    # update table in Readme.MD
+
+
+    BODY=$(gh release view "$TAG" -R "$REPO" --json body -q '.body')
+    IFS='|' read -r DIALPAD NUMBERPAD DIAL STYLUS MODEL <<< "$(parse_body "$BODY")"
+    update_readme "$FINAL_BASENAME" "$TAG" "$DIALPAD" "$NUMBERPAD" "$DIAL" "$STYLUS" "$MODEL"
+done
+
+echo ""
 echo "Done. Files stored in $OUTDIR/"
