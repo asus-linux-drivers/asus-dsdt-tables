@@ -39,9 +39,10 @@ update_readme() {
     local STYLUS="$6"
     local MODEL="$7"
 
+    local BASE_TAG
     BASE_TAG=$(normalize_tag "$TAG")
 
-    MODEL_COL=""
+    local MODEL_COL=""
     if [[ -n "$MODEL" && "$BASE_TAG" != *"$MODEL"* ]]; then
         MODEL_COL="$MODEL"
     fi
@@ -141,7 +142,7 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
     DEVICES_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH.devices"
 
     # try to create .dsl from DSDT if missing
-    if [[ ! -s "$DSL_FILE" && "$DSDT_FILE" ]]; then
+    if [[ ! -s "$DSL_FILE" && -f "$DSDT_FILE" ]]; then
 
         if command -v iasl >/dev/null 2>&1; then
 
@@ -159,6 +160,8 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
     shopt -s nocasematch
     if [[ ! "$DIR_NAME_WITH_NO_HASH" =~ asus ]]; then
         FINAL_BASENAME="asus_$DIR_NAME_WITH_NO_HASH"
+    else
+        FINAL_BASENAME="$DIR_NAME_WITH_NO_HASH"
     fi
 
     FIRST4="${FINAL_BASENAME:0:4}"
