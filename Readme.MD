@@ -45,7 +45,7 @@ or
 
 - Create pull request
 
-# Asus DSDT tables
+## Data
 
 \*a star means a user input  
 \*\*a double star means .devices file contains touchpad block only  
