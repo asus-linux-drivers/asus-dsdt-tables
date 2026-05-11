@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+dsl_normalize() {
+    grep -v '^ \* Disassembly of ' "$1"
+}
+
 insert_row() {
     local SERIE="$1"
     local ROW="$2"
@@ -185,7 +189,21 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
 
     # copy files
     if [[ -s "$DSL_FILE" ]]; then
-        cp -f "$DSL_FILE" "$OUTDIR/$FINAL_BASENAME.dsl"
+        
+        DSL_OUTDIR_FILE="$OUTDIR/$FINAL_BASENAME.dsl"
+
+        if [[ -f "$DSL_OUTDIR_FILE" ]]; then
+            DSL_FILE_HASH=$(dsl_normalize "$DSL_FILE" | sha256sum | awk '{print $1}')
+            DSL_OUTDIR_FILE_HASH=$(dsl_normalize "$DSL_OUTDIR_FILE" | sha256sum | awk '{print $1}')
+
+            if [[ "$DSL_FILE_HASH" == "$DSL_OUTDIR_FILE_HASH" ]]; then
+                echo "  Skipping .dsl (identical content except the line with the timestamp)"
+            else
+                cp -f "$DSL_FILE" "$DSL_OUTDIR_FILE"
+            fi
+        else
+            cp -f "$DSL_FILE" "$OUTDIR/$FINAL_BASENAME.dsl"
+        fi
     fi
     if [[ -s "$DSDT_FILE" ]]; then
         cp -f "$DSDT_FILE" "$OUTDIR/$FINAL_BASENAME"
