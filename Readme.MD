@@ -21,7 +21,7 @@ $ bash dsdt_probe.sh
 
 or
 
-- Create a new issue with an archive (e.g. zip) containing info about your laptop below: DSDT table, the list of all registered devices, and the laptop model name. Also, please include in the issue description the most precise laptop model name (e.g. obtained from the product website where you bought it) if it differs from the output of the command below, and whether the laptop has a NumberPad, DialPad or Dial.
+- Create a new issue with an archive (e.g. zip) containing info about your laptop below: DSDT table, the list of all registered devices, and the laptop model name. Also, please include in the issue description the most precise laptop model name (e.g. obtained from the product website where you bought it) if it differs from the output of the command below, and whether the laptop has a DialPad, NumberPad, Dial or Stylus (Touchscreen).
 
 ```
 # requirement
