@@ -47,8 +47,8 @@ or
 
 # Asus DSDT tables
 
-*a star means a user input
-**a double star means .devices file contains touchpad block only
+\*a star means a user input  
+\*\*a double star means .devices file contains touchpad block only  
 
 | Serie | DSL file | DEVICES file | Source | DialPad* | NumberPad* | Dial* | Stylus (Touchscreen)* | Model*
 |----------------------|-------------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|
