@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /tmp/tmp.QlQmcYvava/ASUS_Zenbook_14_UX3405CA_UX3405CA_47f9c80f51f8_2/ASUS_Zenbook_14_UX3405CA_UX3405CA, Mon May 11 09:48:54 2026
+ * Disassembly of /tmp/tmp.lTVUntZ9Fd/ASUS_Zenbook_14_UX3405CA_UX3405CA_d1a36a345fc7/ASUS_Zenbook_14_UX3405CA_UX3405CA, Mon May 11 23:54:50 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
  *     Length           0x00069CCC (433356)
  *     Revision         0x02
- *     Checksum         0xD1
+ *     Checksum         0x61
  *     OEM ID           "_ASUS_"
  *     OEM Table ID     "Notebook"
  *     OEM Revision     0x01072009 (17244169)
@@ -1297,15 +1297,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (TPCS, 0x1000)
     Name (TPMM, 0xFED40000)
     Name (FTPM, 0xFED40040)
-    Name (PPIM, 0x63E82F98)
+    Name (PPIM, 0x63E81F98)
     Name (PPIL, 0x1C)
     Name (AMDT, Zero)
     Name (TPMF, One)
     Name (PPIV, One)
     Name (DTP1, One)
-    Name (SANB, 0x63E83B98)
+    Name (SANB, 0x63E82B98)
     Name (SANL, 0x0138)
-    Name (VMNB, 0x63E4EF98)
+    Name (VMNB, 0x63E4DF98)
     Name (VMNL, 0x000B)
     Name (BRMT, Zero)
     Name (RDLY, 0xA0)
@@ -1432,7 +1432,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         PBUS,   8
     }
 
-    OperationRegion (GNVS, SystemMemory, 0x63E49000, 0x0DAC)
+    OperationRegion (GNVS, SystemMemory, 0x63E48000, 0x0DAC)
     Field (GNVS, AnyAcc, Lock, Preserve)
     {
         OSYS,   16, 
@@ -3364,7 +3364,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         FNAU,   8
     }
 
-    Name (PNVB, 0x63E4E018)
+    Name (PNVB, 0x63E4D018)
     Name (PNVL, 0x04AF)
     OperationRegion (PNVA, SystemMemory, PNVB, PNVL)
     Field (PNVA, AnyAcc, Lock, Preserve)
@@ -3824,7 +3824,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (TOPM, 0x00000000)
     Name (ROMS, 0xFFE00000)
     Name (VGAF, One)
-    Name (CNVB, 0x63DFD000)
+    Name (CNVB, 0x63DFC000)
     Name (CNVL, 0x0020)
     OperationRegion (CPNV, SystemMemory, CNVB, CNVL)
     Field (CPNV, AnyAcc, Lock, Preserve)
@@ -7709,7 +7709,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    Name (SNVB, 0x63E4F000)
+    Name (SNVB, 0x63E4E000)
     Name (SNVL, 0x0008)
     OperationRegion (SBNV, SystemMemory, SNVB, SNVL)
     Field (SBNV, AnyAcc, Lock, Preserve)
@@ -71957,7 +71957,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    OperationRegion (ABNV, SystemMemory, 0x63E35000, 0x0016)
+    OperationRegion (ABNV, SystemMemory, 0x63E34000, 0x0016)
     Field (ABNV, AnyAcc, Lock, Preserve)
     {
         ABMA,   64, 
@@ -72649,7 +72649,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB)
     {
-        OperationRegion (RAMW, SystemMemory, 0x63F08000, 0x0100)
+        OperationRegion (RAMW, SystemMemory, 0x63F07000, 0x0100)
         Field (RAMW, AnyAcc, NoLock, Preserve)
         {
             AMLS,   32, 

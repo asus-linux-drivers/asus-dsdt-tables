@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /tmp/tmp.QlQmcYvava/ASUS_Zenbook_14_UM3406KA_UM3406KA_ebb580aaf4d0/ASUS_Zenbook_14_UM3406KA_UM3406KA, Mon May 11 09:48:53 2026
+ * Disassembly of /tmp/tmp.lTVUntZ9Fd/ASUS_Zenbook_14_UM3406KA_UM3406KA_3ceaf95f5c99/ASUS_Zenbook_14_UM3406KA_UM3406KA, Mon May 11 23:54:49 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
  *     Length           0x00012668 (75368)
  *     Revision         0x02
- *     Checksum         0x32
+ *     Checksum         0x42
  *     OEM ID           "_ASUS_"
  *     OEM Table ID     "Notebook"
  *     OEM Revision     0x01072009 (17244169)
@@ -2047,9 +2047,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Name (IOL, 0xF000)
             Name (MBB, 0x80000000)
             Name (MBL, 0x80000000)
-            Name (MAB, 0x0000000880000000)
-            Name (MAL, 0x0000007F80000000)
-            Name (MAM, 0x00000087FFFFFFFF)
+            Name (MAB, 0x0000000480000000)
+            Name (MAL, 0x0000007B80000000)
+            Name (MAM, 0x0000007FFFFFFFFF)
             Name (NRSB, 0x70066000)
             OperationRegion (NRSV, SystemMemory, NRSB, 0x1000)
             Field (NRSV, AnyAcc, NoLock, Preserve)
