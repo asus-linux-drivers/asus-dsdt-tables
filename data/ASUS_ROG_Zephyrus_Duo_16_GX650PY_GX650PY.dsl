@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of ./Results/OEM/DSDT.aml, Tue Apr 28 14:32:48 2026
+ * Disassembly of /tmp/tmp.QlQmcYvava/ROG_Zephyrus_Duo_16_GX650PY_GX650PY_5f971c1b8322/ROG_Zephyrus_Duo_16_GX650PY_GX650PY, Mon May 11 09:49:08 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x00010586 (66950)
+ *     Length           0x000105A6 (66982)
  *     Revision         0x02
- *     Checksum         0xF1
+ *     Checksum         0xEE
  *     OEM ID           "ALASKA"
  *     OEM Table ID     "A M I "
  *     OEM Revision     0x01072009 (17244169)
@@ -326,13 +326,13 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
     Name (TTPF, Zero)
     Name (DTPT, Zero)
     Name (TTDP, One)
-    Name (TPMB, 0xB434E000)
+    Name (TPMB, 0xB414D000)
     Name (TPBS, 0x4000)
-    Name (TPMC, 0xB4352000)
+    Name (TPMC, 0xB4151000)
     Name (TPCS, 0x4000)
     Name (TPMM, 0xFD210510)
     Name (FTPM, 0xFD210510)
-    Name (PPIM, 0xB645EF98)
+    Name (PPIM, 0xB6272C98)
     Name (PPIL, 0x1C)
     Name (TPMF, One)
     Name (PPIV, One)
@@ -738,6 +738,13 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
 
     Scope (_GPE)
     {
+    }
+
+    OperationRegion (GNVS, SystemMemory, 0xB625EF98, 0x04)
+    Field (GNVS, AnyAcc, Lock, Preserve)
+    {
+        CNSB,   8, 
+        DPTC,   8
     }
 
     Scope (_SB)
@@ -2006,7 +2013,7 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 0x19
             }
         })
-        Name (PG3E, Package (0x04)
+        Name (PG3F, Package (0x04)
         {
             Package (0x04)
             {
@@ -2040,7 +2047,7 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 Zero
             }
         })
-        Name (AG3E, Package (0x04)
+        Name (AG3F, Package (0x04)
         {
             Package (0x04)
             {
@@ -2074,7 +2081,7 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 0x2D
             }
         })
-        Name (PG40, Package (0x04)
+        Name (PG41, Package (0x04)
         {
             Package (0x04)
             {
@@ -2108,7 +2115,7 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 Zero
             }
         })
-        Name (AG40, Package (0x04)
+        Name (AG41, Package (0x04)
         {
             Package (0x04)
             {
@@ -2142,7 +2149,7 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 0x1B
             }
         })
-        Name (PG41, Package (0x04)
+        Name (PG42, Package (0x04)
         {
             Package (0x04)
             {
@@ -2176,7 +2183,7 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 Zero
             }
         })
-        Name (AG41, Package (0x04)
+        Name (AG42, Package (0x04)
         {
             Package (0x04)
             {
@@ -2208,74 +2215,6 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 0x03, 
                 Zero, 
                 0x1F
-            }
-        })
-        Name (PG42, Package (0x04)
-        {
-            Package (0x04)
-            {
-                0xFFFF, 
-                Zero, 
-                LNKG, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0xFFFF, 
-                One, 
-                LNKH, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0xFFFF, 
-                0x02, 
-                LNKE, 
-                Zero
-            }, 
-
-            Package (0x04)
-            {
-                0xFFFF, 
-                0x03, 
-                LNKF, 
-                Zero
-            }
-        })
-        Name (AG42, Package (0x04)
-        {
-            Package (0x04)
-            {
-                0xFFFF, 
-                Zero, 
-                Zero, 
-                0x2E
-            }, 
-
-            Package (0x04)
-            {
-                0xFFFF, 
-                One, 
-                Zero, 
-                0x2F
-            }, 
-
-            Package (0x04)
-            {
-                0xFFFF, 
-                0x02, 
-                Zero, 
-                0x2C
-            }, 
-
-            Package (0x04)
-            {
-                0xFFFF, 
-                0x03, 
-                Zero, 
-                0x2D
             }
         })
         Name (PG43, Package (0x04)
@@ -2313,6 +2252,74 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
             }
         })
         Name (AG43, Package (0x04)
+        {
+            Package (0x04)
+            {
+                0xFFFF, 
+                Zero, 
+                Zero, 
+                0x2E
+            }, 
+
+            Package (0x04)
+            {
+                0xFFFF, 
+                One, 
+                Zero, 
+                0x2F
+            }, 
+
+            Package (0x04)
+            {
+                0xFFFF, 
+                0x02, 
+                Zero, 
+                0x2C
+            }, 
+
+            Package (0x04)
+            {
+                0xFFFF, 
+                0x03, 
+                Zero, 
+                0x2D
+            }
+        })
+        Name (PG44, Package (0x04)
+        {
+            Package (0x04)
+            {
+                0xFFFF, 
+                Zero, 
+                LNKG, 
+                Zero
+            }, 
+
+            Package (0x04)
+            {
+                0xFFFF, 
+                One, 
+                LNKH, 
+                Zero
+            }, 
+
+            Package (0x04)
+            {
+                0xFFFF, 
+                0x02, 
+                LNKE, 
+                Zero
+            }, 
+
+            Package (0x04)
+            {
+                0xFFFF, 
+                0x03, 
+                LNKF, 
+                Zero
+            }
+        })
+        Name (AG44, Package (0x04)
         {
             Package (0x04)
             {
@@ -3863,10 +3870,10 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 {
                     If (PICM)
                     {
-                        Return (AG3E) /* \_SB_.AG3E */
+                        Return (AG3F) /* \_SB_.AG3F */
                     }
 
-                    Return (PG3E) /* \_SB_.PG3E */
+                    Return (PG3F) /* \_SB_.PG3F */
                 }
 
                 Device (XHC2)
@@ -3993,10 +4000,10 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 {
                     If (PICM)
                     {
-                        Return (AG40) /* \_SB_.AG40 */
+                        Return (AG41) /* \_SB_.AG41 */
                     }
 
-                    Return (PG40) /* \_SB_.PG40 */
+                    Return (PG41) /* \_SB_.PG41 */
                 }
 
                 Device (D004)
@@ -4012,10 +4019,10 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 {
                     If (PICM)
                     {
-                        Return (AG41) /* \_SB_.AG41 */
+                        Return (AG42) /* \_SB_.AG42 */
                     }
 
-                    Return (PG41) /* \_SB_.PG41 */
+                    Return (PG42) /* \_SB_.PG42 */
                 }
 
                 Device (D005)
@@ -4031,10 +4038,10 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 {
                     If (PICM)
                     {
-                        Return (AG42) /* \_SB_.AG42 */
+                        Return (AG43) /* \_SB_.AG43 */
                     }
 
-                    Return (PG42) /* \_SB_.PG42 */
+                    Return (PG43) /* \_SB_.PG43 */
                 }
 
                 Device (D011)
@@ -4050,10 +4057,10 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
                 {
                     If (PICM)
                     {
-                        Return (AG43) /* \_SB_.AG43 */
+                        Return (AG44) /* \_SB_.AG44 */
                     }
 
-                    Return (PG43) /* \_SB_.PG43 */
+                    Return (PG44) /* \_SB_.PG44 */
                 }
 
                 Device (D012)
@@ -7286,7 +7293,7 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
 
     Scope (_SB)
     {
-        OperationRegion (RAMW, SystemMemory, 0xB6460000, 0x0100)
+        OperationRegion (RAMW, SystemMemory, 0xB6260000, 0x0100)
         Field (RAMW, AnyAcc, NoLock, Preserve)
         {
             AMLS,   32, 
@@ -15653,3 +15660,4 @@ DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
         }
     }
 }
+

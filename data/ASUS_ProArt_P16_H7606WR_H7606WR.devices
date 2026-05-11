@@ -1,0 +1,223 @@
+I: Bus=0019 Vendor=0000 Product=0001 Version=0000
+N: Name="Power Button"
+P: Phys=PNP0C0C/button/input0
+S: Sysfs=/devices/platform/PNP0C0C:00/input/input0
+U: Uniq=
+H: Handlers=kbd event0 
+B: PROP=0
+B: EV=3
+B: KEY=8000 10000000000000 0
+
+I: Bus=0019 Vendor=0000 Product=0005 Version=0000
+N: Name="Lid Switch"
+P: Phys=PNP0C0D/button/input0
+S: Sysfs=/devices/platform/PNP0C0D:00/input/input1
+U: Uniq=
+H: Handlers=event1 
+B: PROP=0
+B: EV=21
+B: SW=1
+
+I: Bus=0019 Vendor=0000 Product=0006 Version=0000
+N: Name="Video Bus"
+P: Phys=LNXVIDEO/video/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input12
+U: Uniq=
+H: Handlers=kbd event6 
+B: PROP=0
+B: EV=3
+B: KEY=3e000b00000000 0 0 0
+
+I: Bus=0018 Vendor=093a Product=3014 Version=0100
+N: Name="ASCP1A01:00 093A:3014 Mouse"
+P: Phys=i2c-ASCP1A01:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ASCP1A01:00/0018:093A:3014.0006/input/input13
+U: Uniq=
+H: Handlers=mouse1 event7 
+B: PROP=0
+B: EV=17
+B: KEY=30000 0 0 0 0
+B: REL=903
+B: MSC=10
+
+I: Bus=0018 Vendor=093a Product=3014 Version=0100
+N: Name="ASCP1A01:00 093A:3014 Touchpad"
+P: Phys=i2c-ASCP1A01:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ASCP1A01:00/0018:093A:3014.0006/input/input14
+U: Uniq=
+H: Handlers=mouse2 event11 
+B: PROP=5
+B: EV=10001b
+B: KEY=e520 10000 0 0 0 0
+B: ABS=2e0800000000003
+B: MSC=20
+
+I: Bus=0018 Vendor=2575 Product=0e01 Version=0100
+N: Name="WDHT2602:00 2575:0E01"
+P: Phys=i2c-WDHT2602:00
+S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-WDHT2602:00/0018:2575:0E01.0007/input/input15
+U: Uniq=
+H: Handlers=mouse3 event8 
+B: PROP=2
+B: EV=1b
+B: KEY=400 0 0 0 0 0
+B: ABS=260800000000003
+B: MSC=20
+
+I: Bus=0018 Vendor=2575 Product=0e01 Version=0100
+N: Name="WDHT2602:00 2575:0E01 Stylus"
+P: Phys=i2c-WDHT2602:00
+S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-WDHT2602:00/0018:2575:0E01.0007/input/input16
+U: Uniq=
+H: Handlers=mouse4 event9 
+B: PROP=2
+B: EV=1b
+B: KEY=c03 0 0 0 0 0
+B: ABS=1000d000003
+B: MSC=11
+
+I: Bus=0018 Vendor=2575 Product=0e01 Version=0100
+N: Name="WDHT2602:00 2575:0E01 UNKNOWN"
+P: Phys=i2c-WDHT2602:00
+S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-WDHT2602:00/0018:2575:0E01.0007/input/input17
+U: Uniq=
+H: Handlers=event10 
+B: PROP=0
+B: EV=1b
+B: KEY=1 0 0 0 0
+B: ABS=10000000000
+B: MSC=10
+
+I: Bus=0003 Vendor=046d Product=4062 Version=0111
+N: Name="Logitech K850"
+P: Phys=usb-0000:67:00.0-1/input2:2
+S: Sysfs=/devices/pci0000:00/0000:00:08.3/0000:67:00.0/usb3/3-1/3-1:1.2/0003:046D:C52B.0004/0003:046D:4062.000A/input/input30
+U: Uniq=33-b9-4c-07
+H: Handlers=sysrq kbd event2 leds 
+B: PROP=0
+B: EV=12001f
+B: KEY=3f00733fff 0 0 483ffff17aff32d bfd4444600000000 1 130ff38b17d007 ffff7bfad941dfff ffbeffdfffefffff fffffffffffffffe
+B: REL=1040
+B: ABS=100000000
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=046d Product=405e Version=0111
+N: Name="Logitech M720 Triathlon"
+P: Phys=usb-0000:67:00.0-1/input2:1
+S: Sysfs=/devices/pci0000:00/0000:00:08.3/0000:67:00.0/usb3/3-1/3-1:1.2/0003:046D:C52B.0004/0003:046D:405E.0009/input/input31
+U: Uniq=df-08-07-66
+H: Handlers=sysrq kbd mouse0 event3 leds 
+B: PROP=0
+B: EV=12001f
+B: KEY=3f00733fff 0 0 483ffff17aff32d bfd4444600000000 ffff0001 130ff38b17d007 ffff7bfad941dfff ffbeffdfffefffff fffffffffffffffe
+B: REL=1943
+B: ABS=100000000
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=0b05 Product=19b6 Version=0110
+N: Name="ITE Tech. Inc. ITE Device(8910)"
+P: Phys=usb-0000:67:00.0-4/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.3/0000:67:00.0/usb3/3-4/3-4:1.0/0003:0B05:19B6.0008/input/input32
+U: Uniq=
+H: Handlers=sysrq rfkill kbd mouse5 event4 leds 
+B: PROP=0
+B: EV=12001f
+B: KEY=733eff 0 20000 483ffff17aff32d bfd4444600000000 1f0001 1b30c730b17cc07 ffbe7bfad9715fff febeffdfffefffff fffffffffffffffe
+B: REL=1943
+B: ABS=10100000000
+B: MSC=10
+B: LED=1f
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HD-Audio Generic HDMI/DP,pcm=3"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:65:00.1/sound/card1/input33
+U: Uniq=
+H: Handlers=event5 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=3"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:64:00.1/sound/card0/input34
+U: Uniq=
+H: Handlers=event12 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0019 Vendor=0000 Product=0000 Version=0000
+N: Name="Asus WMI hotkeys"
+P: Phys=asus-nb-wmi/input0
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input38
+U: Uniq=
+H: Handlers=rfkill kbd event13 
+B: PROP=0
+B: EV=100013
+B: KEY=400000000000000 10000000c0000 400400000 800000000000 0 0 181606f00900c00 380027801701000 e000000000000 0
+B: MSC=10
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=7"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:64:00.1/sound/card0/input35
+U: Uniq=
+H: Handlers=event14 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=8"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:64:00.1/sound/card0/input36
+U: Uniq=
+H: Handlers=event15 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=9"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:64:00.1/sound/card0/input37
+U: Uniq=
+H: Handlers=event16 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HD-Audio Generic Mic"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:65:00.6/sound/card2/input39
+U: Uniq=
+H: Handlers=event17 
+B: PROP=0
+B: EV=21
+B: SW=10
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HD-Audio Generic Mic"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:65:00.6/sound/card2/input40
+U: Uniq=
+H: Handlers=event18 
+B: PROP=0
+B: EV=21
+B: SW=10
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HD-Audio Generic Headphone"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:65:00.6/sound/card2/input41
+U: Uniq=
+H: Handlers=event19 
+B: PROP=0
+B: EV=21
+B: SW=4
+

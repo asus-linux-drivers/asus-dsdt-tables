@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /tmp/tmp.QlQmcYvava/ProArt_PX13_HN7306EAC_1036620b5675/ProArt_PX13_HN7306EAC, Mon May 11 09:49:05 2026
+ * Disassembly of /tmp/tmp.QlQmcYvava/ASUS_Zenbook_14_UM3406KA_UM3406KA_ebb580aaf4d0/ASUS_Zenbook_14_UM3406KA_UM3406KA, Mon May 11 09:48:53 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x00013060 (77920)
+ *     Length           0x00012668 (75368)
  *     Revision         0x02
- *     Checksum         0x8B
+ *     Checksum         0x32
  *     OEM ID           "_ASUS_"
  *     OEM Table ID     "Notebook"
  *     OEM Revision     0x01072009 (17244169)
@@ -24,24 +24,152 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (_SB_.ALS_, DeviceObj)
     External (_SB_.ALS_.LUXL, UnknownObj)
     External (_SB_.APTS, MethodObj)    // 1 Arguments
-    External (_SB_.ATKD.DIBF, UnknownObj)
-    External (_SB_.ATKD.WMNB.DIBF, UnknownObj)
     External (_SB_.AWAK, MethodObj)    // 1 Arguments
     External (_SB_.FAN0, DeviceObj)
     External (_SB_.GGOV, MethodObj)    // 2 Arguments
+    External (_SB_.GPIO, DeviceObj)
+    External (_SB_.I2CB, DeviceObj)
     External (_SB_.IETM, DeviceObj)
-    External (_SB_.NPCF, UnknownObj)
-    External (_SB_.NPCF.ACBT, UnknownObj)
-    External (_SB_.NPCF.AMAT, UnknownObj)
-    External (_SB_.NPCF.ATPP, UnknownObj)
-    External (_SB_.NPCF.DBAC, UnknownObj)
-    External (_SB_.NPCF.DBDC, UnknownObj)
-    External (_SB_.NPCF.DTGP, UnknownObj)
     External (_SB_.PCI0.GFX0.VGA_.LCD_, DeviceObj)
+    External (_SB_.PCI0.GPP9.M037, DeviceObj)
+    External (_SB_.PCI0.GPP9.M046, IntObj)
+    External (_SB_.PCI0.GPP9.M047, IntObj)
+    External (_SB_.PCI0.GPP9.M049, MethodObj)    // 2 Arguments
+    External (_SB_.PCI0.GPP9.M050, DeviceObj)
+    External (_SB_.PCI0.GPP9.M051, DeviceObj)
+    External (_SB_.PCI0.GPP9.M052, DeviceObj)
+    External (_SB_.PCI0.GPP9.M053, DeviceObj)
+    External (_SB_.PCI0.GPP9.M054, DeviceObj)
+    External (_SB_.PCI0.GPP9.M055, DeviceObj)
+    External (_SB_.PCI0.GPP9.M056, DeviceObj)
+    External (_SB_.PCI0.GPP9.M057, DeviceObj)
+    External (_SB_.PCI0.GPP9.M058, DeviceObj)
+    External (_SB_.PCI0.GPP9.M059, DeviceObj)
+    External (_SB_.PCI0.GPP9.M062, DeviceObj)
+    External (_SB_.PCI0.GPP9.M068, DeviceObj)
+    External (_SB_.PCI0.GPP9.M069, DeviceObj)
+    External (_SB_.PCI0.GPP9.M070, DeviceObj)
+    External (_SB_.PCI0.GPP9.M071, DeviceObj)
+    External (_SB_.PCI0.GPP9.M072, DeviceObj)
+    External (_SB_.PCI0.GPP9.M074, DeviceObj)
+    External (_SB_.PCI0.GPP9.M075, DeviceObj)
+    External (_SB_.PCI0.GPP9.M076, DeviceObj)
+    External (_SB_.PCI0.GPP9.M077, DeviceObj)
+    External (_SB_.PCI0.GPP9.M078, DeviceObj)
+    External (_SB_.PCI0.GPP9.M079, DeviceObj)
+    External (_SB_.PCI0.GPP9.M080, DeviceObj)
+    External (_SB_.PCI0.GPP9.M081, DeviceObj)
+    External (_SB_.PCI0.GPP9.M082, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M083, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M084, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M085, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M086, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M087, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M088, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M089, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M090, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M091, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M092, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M093, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M094, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M095, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M096, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M097, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M098, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M099, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M100, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M101, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M102, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M103, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M104, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M105, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M106, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M107, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M108, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M109, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M110, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M115, BuffObj)
+    External (_SB_.PCI0.GPP9.M116, BuffFieldObj)
+    External (_SB_.PCI0.GPP9.M117, BuffFieldObj)
+    External (_SB_.PCI0.GPP9.M118, BuffFieldObj)
+    External (_SB_.PCI0.GPP9.M119, BuffFieldObj)
+    External (_SB_.PCI0.GPP9.M120, BuffFieldObj)
+    External (_SB_.PCI0.GPP9.M122, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M127, DeviceObj)
+    External (_SB_.PCI0.GPP9.M128, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M131, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M132, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M133, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M134, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M135, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M136, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M220, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M221, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M226, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M227, DeviceObj)
+    External (_SB_.PCI0.GPP9.M229, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M231, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M233, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M235, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M23A, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M251, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M280, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M290, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M29A, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M310, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M31C, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M320, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M321, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M322, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M323, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M324, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M325, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M326, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M327, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M328, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M329, DeviceObj)
+    External (_SB_.PCI0.GPP9.M32A, DeviceObj)
+    External (_SB_.PCI0.GPP9.M32B, DeviceObj)
+    External (_SB_.PCI0.GPP9.M32C, DeviceObj)
+    External (_SB_.PCI0.GPP9.M330, DeviceObj)
+    External (_SB_.PCI0.GPP9.M331, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M378, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M379, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M380, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M381, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M382, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M383, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M384, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M385, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M386, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M387, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M388, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M389, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M390, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M391, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M392, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M404, BuffObj)
+    External (_SB_.PCI0.GPP9.M408, MutexObj)
+    External (_SB_.PCI0.GPP9.M414, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M444, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M449, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M453, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M454, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M455, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M456, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M457, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M4C0, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M4F0, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M610, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M620, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M631, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.M652, FieldUnitObj)
+    External (_SB_.PCI0.GPP9.PEGP, UnknownObj)
     External (_SB_.PCI0.GPP9.PEGP.EDP1, DeviceObj)
     External (_SB_.PCI0.GPP9.PEGP.NLIM, UnknownObj)
     External (_SB_.PCI0.GPP9.PEGP.TGPU, UnknownObj)
     External (_SB_.PCI0.GPPA.VGA_.LCD_, DeviceObj)
+    External (_SB_.PCI0.PB2_.M434, IntObj)
     External (_SB_.PCI0.SBRG.EC0_.ACNG, IntObj)
     External (_SB_.PCI0.SBRG.EC0_.ACPS, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.SBRG.EC0_.BLCT, UnknownObj)
@@ -286,8 +414,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (PEBS, 0xE0000000)
     Name (PELN, 0x10000000)
     Name (CSMI, 0x61)
-    Name (DSSP, Zero)
-    Name (FHPP, One)
     Name (SMIA, 0xB2)
     Name (OFST, 0x35)
     Name (TRST, 0x02)
@@ -302,7 +428,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (TPCS, 0x1000)
     Name (TPMM, 0xFED40000)
     Name (FTPM, 0xFFFFFFFF)
-    Name (PPIM, 0x70F63F98)
+    Name (PPIM, 0x70063F98)
     Name (PPIL, 0x1C)
     Name (TPMF, One)
     Name (PPIV, One)
@@ -1641,7 +1767,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 Zero, 
                 Zero, 
-                0x25
+                0x27
             }, 
 
             Package (0x04)
@@ -1649,7 +1775,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 One, 
                 Zero, 
-                0x26
+                0x24
             }, 
 
             Package (0x04)
@@ -1657,7 +1783,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 0x02, 
                 Zero, 
-                0x27
+                0x25
             }, 
 
             Package (0x04)
@@ -1665,7 +1791,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 0x03, 
                 Zero, 
-                0x24
+                0x26
             }
         })
         Name (PDF5, Package (0x04)
@@ -1709,7 +1835,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 Zero, 
                 Zero, 
-                0x29
+                0x2B
             }, 
 
             Package (0x04)
@@ -1717,7 +1843,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 One, 
                 Zero, 
-                0x2A
+                0x28
             }, 
 
             Package (0x04)
@@ -1725,7 +1851,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 0x02, 
                 Zero, 
-                0x2B
+                0x29
             }, 
 
             Package (0x04)
@@ -1733,7 +1859,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 0x03, 
                 Zero, 
-                0x28
+                0x2A
             }
         })
         Name (PDF9, Package (0x04)
@@ -1777,7 +1903,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 Zero, 
                 Zero, 
-                0x2D
+                0x2F
             }, 
 
             Package (0x04)
@@ -1785,7 +1911,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 One, 
                 Zero, 
-                0x2E
+                0x2C
             }, 
 
             Package (0x04)
@@ -1793,7 +1919,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 0x02, 
                 Zero, 
-                0x2F
+                0x2D
             }, 
 
             Package (0x04)
@@ -1801,7 +1927,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0xFFFF, 
                 0x03, 
                 Zero, 
-                0x2C
+                0x2E
             }
         })
         Name (PD00, Package (0x04)
@@ -1920,11 +2046,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Name (IOB, 0x1000)
             Name (IOL, 0xF000)
             Name (MBB, 0x80000000)
-            Name (MBL, 0x60000000)
-            Name (MAB, 0x0000002090000000)
-            Name (MAL, 0x00000078C0000000)
-            Name (MAM, 0x000000994FFFFFFF)
-            Name (NRSB, 0x70F66000)
+            Name (MBL, 0x80000000)
+            Name (MAB, 0x0000000880000000)
+            Name (MAL, 0x0000007F80000000)
+            Name (MAM, 0x00000087FFFFFFFF)
+            Name (NRSB, 0x70066000)
             OperationRegion (NRSV, SystemMemory, NRSB, 0x1000)
             Field (NRSV, AnyAcc, NoLock, Preserve)
             {
@@ -2638,30 +2764,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                                     0x00,               // Length
                                     )
                                 Memory32Fixed (ReadWrite,
-                                    0xFEC00000,         // Address Base
-                                    0x00010000,         // Address Length
-                                    )
-                                Memory32Fixed (ReadWrite,
-                                    0xFED45000,         // Address Base
-                                    0x0003C200,         // Address Length
-                                    )
-                                Memory32Fixed (ReadWrite,
-                                    0xFED81900,         // Address Base
-                                    0x00000700,         // Address Length
-                                    )
-                                Memory32Fixed (ReadWrite,
-                                    0xFEDC0000,         // Address Base
-                                    0x00001000,         // Address Length
-                                    )
-                                Memory32Fixed (ReadWrite,
-                                    0xFEDC6000,         // Address Base
-                                    0x00001000,         // Address Length
-                                    )
-                                Memory32Fixed (ReadWrite,
-                                    0xFEE01000,         // Address Base
-                                    0x011FF000,         // Address Length
-                                    )
-                                Memory32Fixed (ReadWrite,
                                     0x00000000,         // Address Base
                                     0x00000000,         // Address Length
                                     _Y13)
@@ -2828,9 +2930,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         If ((Arg0 == 0x04))
         {
             PT80 (0xE4)
-            If ((\_SB.APBM == One))
+            If ((\_SB.CMBS == Zero))
             {
                 Notify (\_SB.PWRB, 0x02) // Device Wake
+            }
+            Else
+            {
+                Notify (\_SB.BTNS, 0x02) // Device Wake
             }
         }
 
@@ -2840,7 +2946,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         SWAK (Arg0)
         MWAK (Arg0)
         \_SB.PCI0.SBRG.EC0.EC0W (Arg0)
-        DIDW (Arg0)
         AWTR (Arg0)
         Return (WAKP) /* \WAKP */
     }
@@ -3506,10 +3611,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             ,   6, 
         HPEN,   1, 
         Offset (0x60), 
-        P1EB,   16, 
-        Offset (0xF0), 
-            ,   3, 
-        RSTU,   1
+        P1EB,   16
     }
 
     OperationRegion (GSMG, SystemMemory, 0xFED81500, 0x03FF)
@@ -3574,7 +3676,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (RDHW, Zero)
     Name (TBEN, Zero)
     Name (TBNH, 0x03)
-    Name (DPTC, One)
+    Name (DPTC, Zero)
     Name (THPN, 0x05)
     Name (THPD, 0x04)
     Name (NFCS, 0x04)
@@ -3586,7 +3688,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB)
     {
-        Name (APBM, 0x00)
+        Name (CMBS, 0x00)
         Device (PWRB)
         {
             Name (_HID, EisaId ("PNP0C0C") /* Power Button Device */)  // _HID: Hardware ID
@@ -3595,7 +3697,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 Name (PSTA, Zero)
                 M460 ("PLA-ASL-\\_SB.PWRB._STA = 0xB\n", Zero, Zero, Zero, Zero, Zero, Zero)
-                PSTA = 0x0B
+                If ((CMBS == Zero))
+                {
+                    PSTA = 0x0B
+                }
+
                 Return (PSTA) /* \_SB_.PWRB._STA.PSTA */
             }
         }
@@ -3608,7 +3714,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 Name (RBUF, ResourceTemplate ()
                 {
-                    GpioInt (Edge, ActiveBoth, ExclusiveAndWake, PullUp, 0x0000,
+                    GpioInt (Edge, ActiveBoth, Exclusive, PullUp, 0x0000,
                         "\\_SB.GPIO", 0x00, ResourceConsumer, ,
                         )
                         {   // Pin list
@@ -3621,9 +3727,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 Name (PSTA, Zero)
-                If ((APBM == Zero))
+                M460 ("PLA-ASL-\\_SB.BTNS._STA = 0xB\n", Zero, Zero, Zero, Zero, Zero, Zero)
+                If ((CMBS == One))
                 {
-                    M460 ("PLA-ASL-\\_SB.BTNS._STA = 0xB\n", Zero, Zero, Zero, Zero, Zero, Zero)
                     PSTA = 0x0B
                 }
 
@@ -3933,103 +4039,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0x27
                     }
                 })
-                Device (RTL8)
-                {
-                    Name (_ADR, Zero)  // _ADR: Address
-                    Name (DSEN, 0x00)
-                    Name (RPB, Zero)
-                    Name (RPD, Zero)
-                    Name (RPF, Zero)
-                    Method (_INI, 0, Serialized)  // _INI: Initialize
-                    {
-                        M460 ("PLA-ASL-RTK-DashLanDevice-_INI\n", Zero, Zero, Zero, Zero, Zero, Zero)
-                        RPD = (^^_ADR >> 0x10)
-                        RPF = (^^_ADR & 0xFFFF)
-                        M460 ("PLA-ASL-RTK-DashLanDevice-_INI Parent B/D/F: %X/%X/%X\n", RPB, RPD, RPF, Zero, Zero, Zero)
-                    }
-
-                    Method (_REG, 2, NotSerialized)  // _REG: Region Availability
-                    {
-                        If (((Arg0 == 0x02) && (Arg1 == One)))
-                        {
-                            M460 ("PLA-ASL-RTK-DashLanDevice-_REG Dash Option: %d\n", DSEN, Zero, Zero, Zero, Zero, Zero)
-                            If ((DSEN == Zero))
-                            {
-                                Local0 = M017 (RPB, RPD, RPF, 0x19, Zero, 0x08)
-                                Local1 = M017 (Local0, Zero, Zero, Zero, Zero, 0x10)
-                                M460 ("PLA-ASL-RTK-DashLanDevice-_REG Vendor ID: 0x%X\n", Local1, Zero, Zero, Zero, Zero, Zero)
-                                If ((Local1 == 0x10EC))
-                                {
-                                    Local2 = M019 (Local0, Zero, Zero, 0x10)
-                                    Local2 &= 0xFFF0
-                                    OperationRegion (VAIO, SystemIO, Local2, 0x0100)
-                                    Field (VAIO, ByteAcc, NoLock, Preserve)
-                                    {
-                                        Offset (0x40), 
-                                        XX40,   32, 
-                                        Offset (0x64), 
-                                        XX64,   32, 
-                                        XX68,   32, 
-                                        Offset (0xB0), 
-                                        XXB0,   32
-                                    }
-
-                                    Local1 = XX40 /* \_SB_.PCI0.GPP3.RTL8._REG.XX40 */
-                                    XXB0 = 0x6E000000
-                                    Sleep (0x02)
-                                    Local2 = XXB0 /* \_SB_.PCI0.GPP3.RTL8._REG.XXB0 */
-                                    If (((Local1 & 0x7C800000) == 0x50000000))
-                                    {
-                                        M460 ("PLA-ASL-RTK-DashLanDevice-_REG Disable multi-function for RTK8111EP\n", Zero, Zero, Zero, Zero, Zero, Zero)
-                                        XX64 = 0xFFFFFFFF
-                                        XX68 = 0x8001F000
-                                        Sleep (0x02)
-                                        XX64 = 0xFFFFFFFF
-                                        XX68 = 0x8002F000
-                                        Sleep (0x02)
-                                        XX64 = 0xFFFFFFFF
-                                        XX68 = 0x8003F000
-                                        Sleep (0x02)
-                                        XX64 = 0xFFFFFFFF
-                                        XX68 = 0x8004F000
-                                    }
-                                    ElseIf (((((Local1 & 0x7CF00000) == 0x54A00000) || ((
-                                        Local1 & 0x7CF00000) == 0x54B00000)) && ((Local2 & 0x78) == Zero)))
-                                    {
-                                        M460 ("PLA-ASL-RTK-DashLanDevice-_REG Disable multi-function for RTK8111FP\n", Zero, Zero, Zero, Zero, Zero, Zero)
-                                        XX64 = 0xFFFFFFFF
-                                        XX68 = 0x8002F000
-                                        Sleep (0x02)
-                                        XX68 = 0x8004F000
-                                        Sleep (0x02)
-                                        XX68 = 0x8007F000
-                                    }
-                                    ElseIf ((((Local1 & 0x7CF00000) == 0x60900000) && ((Local2 & 
-                                        0xFF) == 0x07)))
-                                    {
-                                        M460 ("PLA-ASL-RTK-DashLanDevice-_REG Disable multi-function for RTK8125AP\n", Zero, Zero, Zero, Zero, Zero, Zero)
-                                        XX64 = 0xFFFFFFFF
-                                        XX68 = 0x8001F000
-                                        Sleep (0x02)
-                                        XX68 = 0x8002F000
-                                        Sleep (0x02)
-                                        XX68 = 0x8003F000
-                                    }
-                                    Else
-                                    {
-                                        M460 ("PLA-ASL-RTK-DashLanDevice-_REG Do nothing for other RTK Controller\n", Zero, Zero, Zero, Zero, Zero, Zero)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                Device (RUSB)
-                {
-                    Name (_ADR, 0x04)  // _ADR: Address
-                }
-
                 Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
                 {
                     ToUUID ("fdf06fad-f744-4451-bb64-ecd792215b10") /* Unknown UUID */, 
@@ -4206,9 +4215,90 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0x2D
                     }
                 })
-                Device (WWAN)
+                Device (RTL8)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
+                    Name (DSEN, 0x00)
+                    Name (RPB, Zero)
+                    Name (RPD, Zero)
+                    Name (RPF, Zero)
+                    Method (_INI, 0, Serialized)  // _INI: Initialize
+                    {
+                        M460 ("PLA-ASL-RTK-DashLanDevice-_INI\n", Zero, Zero, Zero, Zero, Zero, Zero)
+                        RPD = (^^_ADR >> 0x10)
+                        RPF = (^^_ADR & 0xFFFF)
+                        M460 ("PLA-ASL-RTK-DashLanDevice-_INI Parent B/D/F: %X/%X/%X\n", RPB, RPD, RPF, Zero, Zero, Zero)
+                    }
+
+                    Method (_REG, 2, NotSerialized)  // _REG: Region Availability
+                    {
+                        If (((Arg0 == 0x02) && (Arg1 == One)))
+                        {
+                            M460 ("PLA-ASL-RTK-DashLanDevice-_REG Dash Option: %d\n", DSEN, Zero, Zero, Zero, Zero, Zero)
+                            If ((DSEN == Zero))
+                            {
+                                Local0 = M017 (RPB, RPD, RPF, 0x19, Zero, 0x08)
+                                Local1 = M017 (Local0, Zero, Zero, Zero, Zero, 0x10)
+                                M460 ("PLA-ASL-RTK-DashLanDevice-_REG Vendor ID: 0x%X\n", Local1, Zero, Zero, Zero, Zero, Zero)
+                                If ((Local1 == 0x10EC))
+                                {
+                                    Local2 = M019 (Local0, Zero, Zero, 0x10)
+                                    Local2 &= 0xFFF0
+                                    OperationRegion (VAIO, SystemIO, Local2, 0x0100)
+                                    Field (VAIO, ByteAcc, NoLock, Preserve)
+                                    {
+                                        Offset (0x40), 
+                                        XX40,   32, 
+                                        Offset (0x64), 
+                                        XX64,   32, 
+                                        XX68,   32, 
+                                        Offset (0xB0), 
+                                        XXB0,   32
+                                    }
+
+                                    Local1 = XX40 /* \_SB_.PCI0.GPP6.RTL8._REG.XX40 */
+                                    XXB0 = 0x6E000000
+                                    Sleep (0x02)
+                                    Local2 = XXB0 /* \_SB_.PCI0.GPP6.RTL8._REG.XXB0 */
+                                    If (((Local1 & 0x7C800000) == 0x50000000))
+                                    {
+                                        M460 ("PLA-ASL-RTK-DashLanDevice-_REG Disable multi-function for RTK8111EP\n", Zero, Zero, Zero, Zero, Zero, Zero)
+                                        XX64 = 0xFFFFFFFF
+                                        XX68 = 0x8001F000
+                                        Sleep (0x02)
+                                        XX64 = 0xFFFFFFFF
+                                        XX68 = 0x8002F000
+                                        Sleep (0x02)
+                                        XX64 = 0xFFFFFFFF
+                                        XX68 = 0x8003F000
+                                        Sleep (0x02)
+                                        XX64 = 0xFFFFFFFF
+                                        XX68 = 0x8004F000
+                                    }
+                                    ElseIf (((((Local1 & 0x7CF00000) == 0x54A00000) || ((
+                                        Local1 & 0x7CF00000) == 0x54B00000)) && ((Local2 & 0x78) == Zero)))
+                                    {
+                                        M460 ("PLA-ASL-RTK-DashLanDevice-_REG Disable multi-function for RTK8111FP\n", Zero, Zero, Zero, Zero, Zero, Zero)
+                                        XX64 = 0xFFFFFFFF
+                                        XX68 = 0x8002F000
+                                        Sleep (0x02)
+                                        XX68 = 0x8004F000
+                                        Sleep (0x02)
+                                        XX68 = 0x8007F000
+                                    }
+                                    Else
+                                    {
+                                        M460 ("PLA-ASL-RTK-DashLanDevice-_REG Do nothing for other RTK Controller\n", Zero, Zero, Zero, Zero, Zero, Zero)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                Device (RUSB)
+                {
+                    Name (_ADR, 0x04)  // _ADR: Address
                 }
 
                 Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
@@ -4262,6 +4352,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0x29
                     }
                 })
+                Device (WWAN)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                }
+
                 Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
                 {
                     ToUUID ("fdf06fad-f744-4451-bb64-ecd792215b10") /* Unknown UUID */, 
@@ -4364,6 +4459,107 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0x21
                     }
                 })
+                Scope (\_SB.PCI0.GPP9)
+                {
+                    Method (_DSD, 0, Serialized)  // _DSD: Device-Specific Data
+                    {
+                        Return (Package (0x06)
+                        {
+                            ToUUID ("6b4ad420-8fd3-4364-acf8-eb94876fd9eb") /* Unknown UUID */, 
+                            Package (0x00) {}, 
+                            ToUUID ("6211e2c0-58a3-4af3-90e1-927a4e0c55a4") /* Unknown UUID */, 
+                            Package (0x01)
+                            {
+                                Package (0x02)
+                                {
+                                    "HotPlugSupportInD3", 
+                                    One
+                                }
+                            }, 
+
+                            ToUUID ("fdf06fad-f744-4451-bb64-ecd792215b10") /* Unknown UUID */, 
+                            Package (0x01)
+                            {
+                                Package (0x02)
+                                {
+                                    "FundamentalDeviceResetTriggeredOnD3ToD0", 
+                                    One
+                                }
+                            }
+                        })
+                    }
+
+                    Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                    {
+                        Name (M432, Zero)
+                        Name (M433, Zero)
+                        If ((Arg0 == ToUUID ("e5c937d0-3553-4d7a-9117-ea4d19c3434d") /* Device Labeling Interface */))
+                        {
+                            Switch (ToInteger (Arg2))
+                            {
+                                Case (Zero)
+                                {
+                                    Name (M435, Buffer (0x02)
+                                    {
+                                         0x00, 0x00                                       // ..
+                                    })
+                                    CreateBitField (M435, Zero, M436)
+                                    CreateBitField (M435, 0x05, M445)
+                                    CreateBitField (M435, 0x0A, M437)
+                                    CreateBitField (M435, 0x0B, M438)
+                                    If ((Arg1 >= 0x04))
+                                    {
+                                        M436 = One
+                                        M445 = One
+                                        M432 = ((M049 (M128, 0x66) >> 0x04) & One)
+                                        M433 = ((M049 (M128, 0x66) >> 0x05) & One)
+                                        If ((M432 == One))
+                                        {
+                                            M437 = One
+                                        }
+
+                                        If ((M433 == One))
+                                        {
+                                            M438 = One
+                                        }
+                                    }
+                                    Else
+                                    {
+                                        M436 = One
+                                        M445 = One
+                                    }
+
+                                    Return (M435) /* \_SB_.PCI0.GPP9._DSM.M435 */
+                                }
+                                Case (0x05)
+                                {
+                                    Return (Zero)
+                                }
+                                Case (0x0A)
+                                {
+                                    Return (One)
+                                }
+                                Case (0x0B)
+                                {
+                                    Local0 = ToInteger (Arg3)
+                                    Return (Local0)
+                                }
+                                Default
+                                {
+                                    Return (Zero)
+                                }
+
+                            }
+                        }
+                        Else
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x00                                             // .
+                            })
+                        }
+                    }
+                }
             }
 
             Device (GP10)
@@ -4631,7 +4827,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         Zero, 
                         Zero, 
-                        0x25
+                        0x27
                     }, 
 
                     Package (0x04)
@@ -4639,7 +4835,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         One, 
                         Zero, 
-                        0x26
+                        0x24
                     }, 
 
                     Package (0x04)
@@ -4647,7 +4843,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         0x02, 
                         Zero, 
-                        0x27
+                        0x25
                     }, 
 
                     Package (0x04)
@@ -4655,13 +4851,28 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         0x03, 
                         Zero, 
-                        0x24
+                        0x26
                     }
                 })
                 Device (VGA)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (DOSA, Zero)
+                    Method (SINI, 0, Serialized)
+                    {
+                        M460 ("PLA-ASL-\\_SB.PCI0.GPPA.VGA0._INI\n", Zero, Zero, Zero, Zero, Zero, Zero)
+                    }
+
+                    Method (SREG, 2, NotSerialized)
+                    {
+                        M460 ("PLA-ASL-\\_SB.PCI0.GPPA.VGA0._REG Arg0:0x%x Arg1:0x%x\n", Arg0, Arg1, Zero, Zero, Zero, Zero)
+                        If ((Arg1 == One))
+                        {
+                            ALIB (0xBB, Zero)
+                            M460 ("PLA-ASL-\\_SB.PCI0.GPPA.VGA0._REG Set/clear the IGPU C2P register DEADBEEF\n", Zero, Zero, Zero, Zero, Zero, Zero)
+                        }
+                    }
+
                     Method (_DOS, 1, NotSerialized)  // _DOS: Disable Output Switching
                     {
                         DOSA = Arg0
@@ -4796,7 +5007,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         Zero, 
                         Zero, 
-                        0x29
+                        0x2B
                     }, 
 
                     Package (0x04)
@@ -4804,7 +5015,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         One, 
                         Zero, 
-                        0x2A
+                        0x28
                     }, 
 
                     Package (0x04)
@@ -4812,7 +5023,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         0x02, 
                         Zero, 
-                        0x2B
+                        0x29
                     }, 
 
                     Package (0x04)
@@ -4820,7 +5031,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         0x03, 
                         Zero, 
-                        0x28
+                        0x2A
                     }
                 })
                 Device (IPU)
@@ -4872,7 +5083,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         Zero, 
                         Zero, 
-                        0x2D
+                        0x2F
                     }, 
 
                     Package (0x04)
@@ -4880,7 +5091,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         One, 
                         Zero, 
-                        0x2E
+                        0x2C
                     }, 
 
                     Package (0x04)
@@ -4888,7 +5099,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         0x02, 
                         Zero, 
-                        0x2F
+                        0x2D
                     }, 
 
                     Package (0x04)
@@ -4896,7 +5107,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0xFFFF, 
                         0x03, 
                         Zero, 
-                        0x2C
+                        0x2E
                     }
                 })
                 Device (XHC0)
@@ -7113,26 +7324,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB.PCI0)
     {
-        Method (LUID, 0, Serialized)
-        {
-            If (CondRefOf (LURM, Local0))
-            {
-                If ((DerefOf (Local0) == One))
-                {
-                    Return (0x0105D041)
-                }
-            }
-
-            Return (0x0005D041)
-        }
-
         Device (UAR1)
         {
-            Method (_HID, 0, Serialized)  // _HID: Hardware ID
-            {
-                Return (LUID ())
-            }
-
+            Name (_HID, EisaId ("PNP0500") /* Standard PC COM Serial Port */)  // _HID: Hardware ID
             Name (_UID, One)  // _UID: Unique ID
             Name (_DDN, "COM1")  // _DDN: DOS Device Name
             Method (_STA, 0, NotSerialized)  // _STA: Status
@@ -7211,11 +7405,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         Device (UAR2)
         {
-            Method (_HID, 0, Serialized)  // _HID: Hardware ID
-            {
-                Return (LUID ())
-            }
-
+            Name (_HID, EisaId ("PNP0500") /* Standard PC COM Serial Port */)  // _HID: Hardware ID
             Name (_UID, 0x02)  // _UID: Unique ID
             Name (_DDN, "COM2")  // _DDN: DOS Device Name
             Method (_STA, 0, NotSerialized)  // _STA: Status
@@ -7294,11 +7484,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         Device (UAR3)
         {
-            Method (_HID, 0, Serialized)  // _HID: Hardware ID
-            {
-                Return (LUID ())
-            }
-
+            Name (_HID, EisaId ("PNP0500") /* Standard PC COM Serial Port */)  // _HID: Hardware ID
             Name (_UID, 0x03)  // _UID: Unique ID
             Name (_DDN, "COM3")  // _DDN: DOS Device Name
             Method (_STA, 0, NotSerialized)  // _STA: Status
@@ -7377,11 +7563,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         Device (UAR4)
         {
-            Method (_HID, 0, Serialized)  // _HID: Hardware ID
-            {
-                Return (LUID ())
-            }
-
+            Name (_HID, EisaId ("PNP0500") /* Standard PC COM Serial Port */)  // _HID: Hardware ID
             Name (_UID, 0x04)  // _UID: Unique ID
             Name (_DDN, "COM4")  // _DDN: DOS Device Name
             Method (_STA, 0, NotSerialized)  // _STA: Status
@@ -7682,9 +7864,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         If (((Arg0 == 0x03) || (Arg0 == 0x04)))
         {
-            If ((\_SB.APBM == One))
+            If ((\_SB.CMBS == Zero))
             {
                 Notify (\_SB.PWRB, 0x02) // Device Wake
+            }
+            Else
+            {
+                Notify (\_SB.BTNS, 0x02) // Device Wake
             }
         }
     }
@@ -8232,7 +8418,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Scope (_SB.PCI0.GPPA.PSP)
     {
         Name (_HID, EisaId ("PNP0C02") /* PNP Motherboard Resources */)  // _HID: Hardware ID
-        Name (PSPB, 0xFD200000)
+        Name (PSPB, 0xFD300000)
         Name (PSPL, 0x00100000)
         Name (_STA, 0x0F)  // _STA: Status
         Name (CRS, ResourceTemplate ()
@@ -8254,7 +8440,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB)
     {
-        OperationRegion (RAMW, SystemMemory, 0x70F65000, 0x0100)
+        OperationRegion (RAMW, SystemMemory, 0x70065000, 0x0100)
         Field (RAMW, AnyAcc, NoLock, Preserve)
         {
             Offset (0x00), 
@@ -8290,21 +8476,17 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Offset (0x3C), 
             AWRB,   32, 
             Offset (0x40), 
-            ARCB,   32, 
-            Offset (0x44), 
             AWIB,   32, 
-            Offset (0x48), 
+            Offset (0x44), 
             AWQB,   32, 
-            Offset (0x4C), 
+            Offset (0x48), 
             AWMB,   32, 
-            Offset (0x50), 
+            Offset (0x4C), 
             ASBB,   32, 
-            Offset (0x54), 
+            Offset (0x50), 
             AWOB,   32, 
-            Offset (0x58), 
-            ACUB,   32, 
-            Offset (0x5C), 
-            ARSB,   32
+            Offset (0x54), 
+            ACUB,   32
         }
     }
 
@@ -8330,7 +8512,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB)
     {
-        OperationRegion (ACPO, SystemMemory, ACPB, 0x22)
+        OperationRegion (ACPO, SystemMemory, ACPB, 0x26)
         Field (ACPO, AnyAcc, NoLock, Preserve)
         {
             Offset (0x00), 
@@ -8374,7 +8556,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Offset (0x1D), 
             SUBS,   32, 
             Offset (0x21), 
-            AUFI,   8
+            AUFI,   8, 
+            Offset (0x22), 
+            CPCC,   8, 
+            Offset (0x23), 
+            CECC,   8, 
+            Offset (0x24), 
+            MPCC,   8, 
+            Offset (0x25), 
+            MECC,   8
         }
     }
 
@@ -8514,7 +8704,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Offset (0x0B), 
             FPVD,   16, 
             Offset (0x0D), 
-            TPSD,   8
+            TPSF,   8
         }
     }
 
@@ -8566,7 +8756,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB)
     {
-        OperationRegion (AUMO, SystemMemory, AWMB, 0x7C)
+        OperationRegion (AUMO, SystemMemory, AWMB, 0x75)
         Field (AUMO, AnyAcc, NoLock, Preserve)
         {
             Offset (0x00), 
@@ -8758,58 +8948,44 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Offset (0x60), 
             MC12,   8, 
             Offset (0x61), 
-            MCF7,   8, 
-            Offset (0x62), 
-            MC13,   8, 
-            Offset (0x63), 
-            MC14,   8, 
-            Offset (0x64), 
-            MC15,   8, 
-            Offset (0x65), 
-            MC16,   8, 
-            Offset (0x66), 
-            MC17,   8, 
-            Offset (0x67), 
-            MC18,   8, 
-            Offset (0x68), 
             MCCF,   8, 
-            Offset (0x69), 
+            Offset (0x62), 
             MCC1,   8, 
-            Offset (0x6A), 
+            Offset (0x63), 
             MCC2,   8, 
-            Offset (0x6B), 
+            Offset (0x64), 
             MFPE,   8, 
-            Offset (0x6C), 
+            Offset (0x65), 
             MFPS,   8, 
-            Offset (0x6D), 
+            Offset (0x66), 
             MFSR,   8, 
-            Offset (0x6E), 
+            Offset (0x67), 
             MATA,   8, 
-            Offset (0x6F), 
+            Offset (0x68), 
             MA01,   8, 
-            Offset (0x70), 
+            Offset (0x69), 
             MA02,   8, 
-            Offset (0x71), 
+            Offset (0x6A), 
             MA03,   8, 
-            Offset (0x72), 
+            Offset (0x6B), 
             MA04,   8, 
-            Offset (0x73), 
+            Offset (0x6C), 
             MA05,   8, 
-            Offset (0x74), 
+            Offset (0x6D), 
             MA06,   8, 
-            Offset (0x75), 
+            Offset (0x6E), 
             MSSP,   8, 
-            Offset (0x76), 
+            Offset (0x6F), 
             MS01,   8, 
-            Offset (0x77), 
+            Offset (0x70), 
             MS02,   8, 
-            Offset (0x78), 
+            Offset (0x71), 
             MS03,   8, 
-            Offset (0x79), 
+            Offset (0x72), 
             MS04,   8, 
-            Offset (0x7A), 
+            Offset (0x73), 
             MS05,   8, 
-            Offset (0x7B), 
+            Offset (0x74), 
             MS06,   8
         }
     }
@@ -8835,177 +9011,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             AWOS,   32, 
             Offset (0x04), 
             TIMS,   32
-        }
-    }
-
-    Scope (_SB)
-    {
-        OperationRegion (ACUO, SystemMemory, ACUB, 0x3A)
-        Field (ACUO, AnyAcc, NoLock, Preserve)
-        {
-            Offset (0x00), 
-            ACUS,   32, 
-            Offset (0x04), 
-            CREX,   8, 
-            Offset (0x05), 
-            SBUN,   8, 
-            Offset (0x06), 
-            RE74,   32, 
-            Offset (0x0A), 
-            RE78,   32, 
-            Offset (0x0E), 
-            RE7C,   32, 
-            Offset (0x12), 
-            RE2C,   32, 
-            Offset (0x16), 
-            REFC,   32, 
-            Offset (0x1A), 
-            REA8,   32, 
-            Offset (0x1E), 
-            R234,   32, 
-            Offset (0x22), 
-            R3F4,   32, 
-            Offset (0x26), 
-            R248,   32, 
-            Offset (0x2A), 
-            RE90,   32, 
-            Offset (0x2E), 
-            R3E0,   32, 
-            Offset (0x32), 
-            R300,   32, 
-            Offset (0x36), 
-            R304,   32
-        }
-    }
-
-    Device (_SB.PCI0.GPP4.CADR)
-    {
-        Name (DGPS, Zero)
-        Name (_PSC, Zero)  // _PSC: Power State Current
-        Name (_ADR, Zero)  // _ADR: Address
-        OperationRegion (CROP, SystemMemory, (0xE0000000 + (SBUN << 0x14)), 0x1000)
-        Field (CROP, DWordAcc, NoLock, Preserve)
-        {
-            Offset (0x74), 
-            CR74,   32, 
-            Offset (0x7C), 
-            CR7C,   32, 
-            Offset (0x800), 
-            CULK,   32
-        }
-
-        Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
-        {
-            Return (Zero)
-        }
-
-        Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
-        {
-            _PSC = Zero
-            If ((DGPS != Zero))
-            {
-                ^^RPR2._ON ()
-                DGPS = Zero
-            }
-        }
-
-        Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
-        {
-            If ((DGPS == Zero))
-            {
-                ^^RPR2._OFF ()
-                DGPS = One
-            }
-
-            _PSC = 0x03
-        }
-
-        Method (_STA, 0, NotSerialized)  // _STA: Status
-        {
-            If ((CREX == One))
-            {
-                Return (0x0F)
-            }
-            Else
-            {
-                Return (Zero)
-            }
-        }
-    }
-
-    Scope (_SB.PCI0.GPP4)
-    {
-        OperationRegion (CRRP, SystemMemory, 0xE0012000, 0x1000)
-        Field (CRRP, DWordAcc, NoLock, Preserve)
-        {
-            Offset (0x04), 
-            CMDR,   8, 
-            Offset (0x19), 
-            PRBN,   8, 
-            Offset (0x52), 
-                ,   13, 
-            LASX,   1, 
-            Offset (0x54), 
-            D0ST,   2, 
-            Offset (0x62), 
-            CEDR,   1, 
-            Offset (0x68), 
-            ASPM,   2, 
-                ,   2, 
-            LNKD,   1, 
-            Offset (0x80), 
-                ,   10, 
-            LREN,   1, 
-            Offset (0xE2), 
-                ,   2, 
-            L23E,   1, 
-            L23R,   1
-        }
-
-        Name (PRFF, One)
-        PowerResource (RPR2, 0x00, 0x0000)
-        {
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                Return (PRFF) /* \_SB_.PCI0.GPP4.PRFF */
-            }
-
-            Method (_ON, 0, Serialized)  // _ON_: Power On
-            {
-                If ((PRFF == Zero)) {}
-                PRFF = One
-            }
-
-            Method (_OFF, 0, Serialized)  // _OFF: Power Off
-            {
-                If ((PRFF == One)) {}
-                PRFF = Zero
-            }
-        }
-
-        Name (_PR0, Package (0x01)  // _PR0: Power Resources for D0
-        {
-            RPR2
-        })
-        Name (_PR2, Package (0x01)  // _PR2: Power Resources for D2
-        {
-            RPR2
-        })
-        Name (_PR3, Package (0x01)  // _PR3: Power Resources for D3hot
-        {
-            RPR2
-        })
-        Name (_S0W, 0x04)  // _S0W: S0 Device Wake State
-    }
-
-    Scope (_GPE)
-    {
-        Method (_E02, 0, NotSerialized)  // _Exx: Edge-Triggered GPE, xx=0x00-0xFF
-        {
-            If ((\_SB.CREX == One))
-            {
-                Notify (\_SB.PCI0.GPP4.CADR, One) // Device Check
-            }
         }
     }
 
@@ -9224,36 +9229,36 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 CreateWordField (DPTI, Zero, SSZE)
                 CreateByteField (DPTI, 0x02, MSID)
                 CreateDWordField (DPTI, 0x03, DECI)
-                Name (AL20, 0x147B)
+                Name (AL20, 0x1999)
                 Name (AL21, Zero)
-                Name (AL22, 0x2700)
+                Name (AL22, 0x2600)
                 Name (AL23, Zero)
-                Name (AL24, 0x83)
-                Name (AL25, 0x199A)
-                Name (AL26, 0x01E5)
-                Name (AL27, One)
+                Name (AL24, 0x21)
+                Name (AL25, 0x2666)
+                Name (AL26, 0x8B)
+                Name (AL27, 0x02FB)
                 Name (AL28, Zero)
                 Name (AL29, Zero)
                 Name (AL2A, Zero)
                 Name (AL2B, Zero)
-                Name (AL2C, 0x0DEA)
+                Name (AL2C, 0xA0)
                 Name (AL2D, Zero)
-                Name (AL2E, 0xAFC8)
-                AL20 = 0x147B
+                Name (AL2E, 0x4E20)
+                AL20 = 0x1999
                 AL21 = Zero
-                AL22 = 0x2700
+                AL22 = 0x2600
                 AL23 = Zero
-                AL24 = 0x83
-                AL25 = 0x199A
-                AL26 = 0x01E5
-                AL27 = One
+                AL24 = 0x21
+                AL25 = 0x2666
+                AL26 = 0x8B
+                AL27 = 0x02FB
                 AL28 = Zero
                 AL29 = Zero
                 AL2A = Zero
                 AL2B = Zero
-                AL2C = 0x0DEA
+                AL2C = 0xA0
                 AL2D = Zero
-                AL2E = 0xAFC8
+                AL2E = 0x4E20
                 SSZE = 0x07
                 MSID = 0x20
                 DECI = AL20 /* \_SB_.PCI0.SBRG.EC0_._INI.AL20 */
@@ -9570,12 +9575,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x01)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                Local0 = KBCS (One, 0x83, TEMP, One)
+                CMD = 0xFF
+                EDA1 = 0x83
+                EDA2 = Arg0
+                ECAC ()
+                Local0 = EDA1 /* \_SB_.PCI0.SBRG.EC0_.EDA1 */
                 Release (MU4T)
                 Return (Local0)
             }
@@ -9588,14 +9592,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x02)
-                {
-                    Zero, 
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                TEMP [One] = Arg1
-                KBCS (0x02, 0x84, TEMP, Zero)
+                CMD = 0xFF
+                EDA1 = 0x84
+                EDA2 = Arg0
+                EDA3 = Arg1
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
@@ -9608,39 +9609,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                If (!(Arg0 & 0x60))
-                {
-                    Name (PORT, Zero)
-                    PORT = ((Arg1 >> 0x04) & 0xFF)
-                    If (((PORT >= Zero) && (PORT <= 0x0B)))
-                    {
-                        Name (TEMP, Package (0x05)
-                        {
-                            Zero, 
-                            Zero, 
-                            Zero, 
-                            Zero, 
-                            Zero
-                        })
-                        TEMP [Zero] = Zero
-                        TEMP [One] = Arg1
-                        Local0 = KBCS (0x02, 0x87, TEMP, One)
-                    }
-                    Else
-                    {
-                        Return (Zero)
-                    }
-                }
-                Else
-                {
-                    CMD = 0xFF
-                    EDA1 = 0x87
-                    EDA2 = Arg0
-                    EDA3 = Arg1
-                    ECAC ()
-                    Local0 = EDA1 /* \_SB_.PCI0.SBRG.EC0_.EDA1 */
-                }
-
+                CMD = 0xFF
+                EDA1 = 0x87
+                EDA2 = Arg0
+                EDA3 = Arg1
+                ECAC ()
+                Local0 = EDA1 /* \_SB_.PCI0.SBRG.EC0_.EDA1 */
                 Release (MU4T)
                 If ((Arg0 == Zero))
                 {
@@ -9689,13 +9663,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x01)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                TEMP [One] = Arg1
-                Local0 = KBCS (0x02, 0x95, TEMP, One)
+                CMD = 0xFF
+                EDA1 = 0x95
+                EDA2 = Arg0
+                EDA3 = Arg1
+                ECAC ()
+                Local0 = EDA1 /* \_SB_.PCI0.SBRG.EC0_.EDA1 */
                 Release (MU4T)
                 If ((Arg0 == Zero))
                 {
@@ -9713,12 +9686,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x01)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                KBCS (One, 0x98, TEMP, Zero)
+                CMD = 0xFF
+                EDA1 = 0x98
+                EDA2 = Arg0
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
@@ -9731,14 +9702,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x03)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                TEMP [One] = Arg1
-                TEMP [0x02] = Arg2
-                KBCS (0x03, 0x9E, TEMP, Zero)
+                CMD = 0xFF
+                EDA1 = 0x9E
+                EDA2 = Arg0
+                EDA3 = Arg1
+                EDA4 = Arg2
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
@@ -9751,14 +9720,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x03)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                TEMP [One] = Arg1
-                TEMP [0x02] = Arg2
-                KBCS (0x03, 0x9F, TEMP, Zero)
+                CMD = 0xFF
+                EDA1 = 0x9F
+                EDA2 = Arg0
+                EDA3 = Arg1
+                EDA4 = Arg2
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
@@ -9771,12 +9738,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x01)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                Local0 = KBCS (One, 0xA8, TEMP, One)
+                CMD = 0xFF
+                EDA1 = 0xA8
+                EDA2 = Arg0
+                ECAC ()
+                Local0 = EDA1 /* \_SB_.PCI0.SBRG.EC0_.EDA1 */
                 Release (MU4T)
                 Return (Local0)
             }
@@ -9789,13 +9755,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x02)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                TEMP [One] = Arg1
-                KBCS (0x02, 0xA9, TEMP, Zero)
+                CMD = 0xFF
+                EDA1 = 0xA9
+                EDA2 = Arg0
+                EDA3 = Arg1
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
@@ -9808,12 +9772,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x01)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                KBCS (One, 0xB0, TEMP, Zero)
+                CMD = 0xFF
+                EDA1 = 0xB0
+                EDA2 = Arg0
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
@@ -9826,12 +9788,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x01)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                KBCS (One, 0xB1, TEMP, Zero)
+                CMD = 0xFF
+                EDA1 = 0xB1
+                EDA2 = Arg0
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
@@ -9844,12 +9804,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x01)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                KBCS (One, 0xB2, TEMP, Zero)
+                CMD = 0xFF
+                EDA1 = 0xB2
+                EDA2 = Arg0
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
@@ -9857,54 +9815,16 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Return (Ones)
         }
 
-        Method (STC4, 1, Serialized)
-        {
-            If (ECAV ())
-            {
-                Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x01)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                Local0 = KBCS (One, 0xC4, TEMP, One)
-                Release (MU4T)
-                Return (Local0)
-            }
-
-            Return (Zero)
-        }
-
-        Method (STC5, 2, Serialized)
-        {
-            If (ECAV ())
-            {
-                Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x02)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                TEMP [One] = Arg1
-                KBCS (0x02, 0xC5, TEMP, Zero)
-                Release (MU4T)
-                Return (One)
-            }
-
-            Return (Zero)
-        }
-
         Method (STE0, 1, Serialized)
         {
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x01)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                Local0 = KBCS (One, 0xE0, TEMP, One)
+                CMD = 0xFF
+                EDA1 = 0xE0
+                EDA2 = Arg0
+                ECAC ()
+                Local0 = EDA1 /* \_SB_.PCI0.SBRG.EC0_.EDA1 */
                 Release (MU4T)
                 Return (Local0)
             }
@@ -9917,35 +9837,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x02)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                TEMP [One] = Arg1
-                KBCS (0x02, 0xE1, TEMP, Zero)
+                CMD = 0xFF
+                EDA1 = 0xE1
+                EDA2 = Arg0
+                EDA3 = Arg1
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
-            }
-
-            Return (Ones)
-        }
-
-        Method (STDD, 3, Serialized)
-        {
-            If (ECAV ())
-            {
-                Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x03)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                TEMP [One] = Arg1
-                TEMP [0x02] = Arg2
-                Local0 = KBCS (0x03, 0xDD, TEMP, One)
-                Release (MU4T)
-                Return (Local0)
             }
 
             Return (Ones)
@@ -9972,33 +9870,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Local1 = (Local0 & 0xFF)
                 Local0 >>= 0x08
                 Local0 &= 0xFF
-                Switch (ToInteger (Arg0))
-                {
-                    Case (0xBA)
-                    {
-                        Local0 = RP2E (Local1)
-                        Release (MU4T)
-                        Return (Local0)
-                    }
-                    Default
-                    {
-                        Name (TEMP, Package (0x05)
-                        {
-                            Zero, 
-                            Zero, 
-                            Zero, 
-                            Zero, 
-                            Zero
-                        })
-                        TEMP [Zero] = Local0
-                        TEMP [One] = Local1
-                        Local0 = KBCS (0x02, Arg0, TEMP, One)
-                        Release (MU4T)
-                        Return (Local0)
-                    }
-
-                }
-
+                CMD = 0xFF
+                EDA1 = Arg0
+                EDA2 = Local0
+                EDA3 = Local1
+                ECAC ()
+                Local0 = EDA1 /* \_SB_.PCI0.SBRG.EC0_.EDA1 */
                 Release (MU4T)
                 Return (Local0)
             }
@@ -10327,28 +10204,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                WOBF (0x0258, 0x0257)
-                WKBC (0xFF, 0x0258)
-                WKBC (0xCC, 0x0258)
-                WKBD (Arg0, 0x0258, 0x0257)
-                WKBD (Arg1, 0x0258, 0x0257)
-                WIBF (0x0258)
-                Local0 = 0xFFFF
-                While ((Local0 > Zero))
-                {
-                    Local1 = E4CP /* \_SB_.PCI0.SBRG.EC0_.E4CP */
-                    If ((Local1 & One))
-                    {
-                        Break
-                    }
-                    Else
-                    {
-                        Local0 -= One
-                        IODP = Zero
-                    }
-                }
-
-                Local0 = E4DP /* \_SB_.PCI0.SBRG.EC0_.E4DP */
+                CMD = 0xFF
+                EDA1 = 0xCC
+                EDA2 = Arg0
+                EDA3 = Arg1
+                ECAC ()
+                Local0 = EDA1 /* \_SB_.PCI0.SBRG.EC0_.EDA1 */
                 Release (MU4T)
                 Return (Local0)
             }
@@ -10379,7 +10240,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                KBCS (Zero, 0x9A, Zero, Zero)
+                CMD = 0xFF
+                EDA1 = 0x9A
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
@@ -10392,7 +10255,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                KBCS (Zero, 0x9B, Zero, Zero)
+                CMD = 0xFF
+                EDA1 = 0x9B
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
@@ -10405,51 +10270,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x01)
-                {
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                KBCS (One, 0xE7, TEMP, Zero)
+                CMD = 0xFF
+                EDA1 = 0xE7
+                EDA2 = Arg0
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
 
             Return (Ones)
-        }
-
-        Method (FRPM, 1, Serialized)
-        {
-            If (ECAV ())
-            {
-                Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x05)
-                {
-                    Zero, 
-                    Zero, 
-                    Zero, 
-                    Zero, 
-                    Zero
-                })
-                TEMP [Zero] = 0x82
-                TEMP [One] = 0x32
-                TEMP [0x02] = Arg0
-                KBCS (0x03, 0xDD, TEMP, Zero)
-                TEMP [Zero] = 0x02
-                TEMP [One] = 0x33
-                TEMP [0x02] = Zero
-                Local0 = KBCS (0x03, 0xDD, TEMP, One)
-                TEMP [Zero] = 0x02
-                TEMP [One] = 0x34
-                TEMP [0x02] = Zero
-                Local1 = KBCS (0x03, 0xDD, TEMP, One)
-                Local1 <<= 0x08
-                Local1 |= Local0
-                Release (MU4T)
-                Return (Local1)
-            }
-
-            Return (One)
         }
     }
 
@@ -10643,160 +10472,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Return (WEBC (0x06, 0x02, DUBF))
         }
 
-        Method (GDFC, 1, NotSerialized)
-        {
-            Name (DUBF, Buffer (0x10)
-            {
-                /* 0000 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                /* 0008 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
-            })
-            Name (DFC0, Buffer (One)
-            {
-                 0x00                                             // .
-            })
-            DFC0 [Zero] = Arg0
-            WEBC (0x20, One, DFC0)
-            DUBF = REBC (0x21, 0x10)
-            Return (DUBF) /* \_SB_.PCI0.SBRG.EC0_.GDFC.DUBF */
-        }
-
-        Method (SUFC, 5, NotSerialized)
-        {
-            Name (DUBF, Buffer (0x10)
-            {
-                /* 0000 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                /* 0008 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
-            })
-            Name (UFC0, Buffer (One)
-            {
-                 0x00                                             // .
-            })
-            DUBF [Zero] = (Arg0 >> Zero)
-            DUBF [One] = (Arg0 >> 0x08)
-            DUBF [0x02] = (Arg0 >> 0x10)
-            DUBF [0x03] = (Arg0 >> 0x18)
-            DUBF [0x04] = (Arg1 >> Zero)
-            DUBF [0x05] = (Arg1 >> 0x08)
-            DUBF [0x06] = (Arg1 >> 0x10)
-            DUBF [0x07] = (Arg1 >> 0x18)
-            DUBF [0x08] = (Arg2 >> Zero)
-            DUBF [0x09] = (Arg2 >> 0x08)
-            DUBF [0x0A] = (Arg2 >> 0x10)
-            DUBF [0x0B] = (Arg2 >> 0x18)
-            DUBF [0x0C] = (Arg3 >> Zero)
-            DUBF [0x0D] = (Arg3 >> 0x08)
-            DUBF [0x0E] = (Arg3 >> 0x10)
-            DUBF [0x0F] = (Arg3 >> 0x18)
-            UFC0 [Zero] = Arg4
-            WEBC (0x20, One, UFC0)
-            Return (WEBC (0x22, 0x10, DUBF))
-        }
-
-        Method (GFLB, 1, NotSerialized)
-        {
-            Name (DUBF, Buffer (0x10)
-            {
-                 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
-            })
-            Name (FLB0, Buffer (One)
-            {
-                 0x00                                             // .
-            })
-            FLB0 [Zero] = Arg0
-            WEBC (0x20, One, FLB0)
-            DUBF = REBC (0x24, 0x08)
-            Return (DUBF) /* \_SB_.PCI0.SBRG.EC0_.GFLB.DUBF */
-        }
-
-        Method (SFHP, 3, NotSerialized)
-        {
-            Name (DHBF, Buffer (0x03)
-            {
-                 0x00, 0x00, 0x00                                 // ...
-            })
-            Local0 = Zero
-            While ((Local0 != 0x03))
-            {
-                DHBF [Zero] = Local0
-                If ((Local0 == Zero))
-                {
-                    DHBF [One] = (Arg0 >> Zero)
-                    DHBF [0x02] = (Arg0 >> 0x08)
-                }
-                ElseIf ((Local0 == One))
-                {
-                    DHBF [One] = (Arg1 >> Zero)
-                    DHBF [0x02] = (Arg1 >> 0x08)
-                }
-                ElseIf ((Local0 == 0x02))
-                {
-                    DHBF [One] = (Arg2 >> Zero)
-                    DHBF [0x02] = (Arg2 >> 0x08)
-                }
-
-                WEBC (0x4C, 0x03, DHBF)
-                Local0 += One
-            }
-
-            Return (One)
-        }
-
-        Method (SPTV, 1, NotSerialized)
-        {
-            Name (DPTI, Buffer (0x07) {})
-            CreateWordField (DPTI, Zero, SSZE)
-            CreateByteField (DPTI, 0x02, MSID)
-            CreateDWordField (DPTI, 0x03, DECI)
-            Arg0 *= 0x03E8
-            SSZE = 0x07
-            MSID = 0x07
-            DECI = Arg0
-            ALIB (0x0C, DPTI)
-            Return (One)
-        }
-
-        Method (EDCV, 1, NotSerialized)
-        {
-            Name (DPTI, Buffer (0x07) {})
-            CreateWordField (DPTI, Zero, SSZE)
-            CreateByteField (DPTI, 0x02, MSID)
-            CreateDWordField (DPTI, 0x03, DECI)
-            Arg0 *= 0x03E8
-            SSZE = 0x07
-            MSID = 0x0C
-            DECI = Arg0
-            ALIB (0x0C, DPTI)
-            Return (One)
-        }
-
-        Method (TDCV, 1, NotSerialized)
-        {
-            Name (DPTI, Buffer (0x07) {})
-            CreateWordField (DPTI, Zero, SSZE)
-            CreateByteField (DPTI, 0x02, MSID)
-            CreateDWordField (DPTI, 0x03, DECI)
-            Arg0 *= 0x03E8
-            SSZE = 0x07
-            MSID = 0x0B
-            DECI = Arg0
-            ALIB (0x0C, DPTI)
-            Return (One)
-        }
-
-        Method (STPV, 1, NotSerialized)
-        {
-            Name (DPTI, Buffer (0x07) {})
-            CreateWordField (DPTI, Zero, SSZE)
-            CreateByteField (DPTI, 0x02, MSID)
-            CreateDWordField (DPTI, 0x03, DECI)
-            Arg0 *= 0x03E8
-            SSZE = 0x07
-            MSID = 0x05
-            DECI = Arg0
-            ALIB (0x0C, DPTI)
-            Return (One)
-        }
-
         Method (RTAH, 1, NotSerialized)
         {
             If ((Arg0 == Zero))
@@ -10930,38 +10605,14 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Return (One)
         }
 
-        Method (KBEN, 1, NotSerialized)
-        {
-            If ((Arg0 == Zero))
-            {
-                Local0 = ST8E (0x33, Zero)
-                Local0 |= 0x80
-                ST9E (0x33, 0xFF, Local0)
-                Return (One)
-            }
-
-            If ((Arg0 == One))
-            {
-                Local0 = ST8E (0x33, Zero)
-                Local0 &= 0x7F
-                ST9E (0x33, 0xFF, Local0)
-                Return (One)
-            }
-
-            Return (Zero)
-        }
-
-        Method (FLIP, 1, NotSerialized)
-        {
-            Return (Zero)
-        }
-
         Method (CSEE, 1, Serialized)
         {
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                KBCS (Zero, Arg0, Zero, Zero)
+                CMD = Arg0
+                EDA1 = Arg0
+                ECAC ()
                 Release (MU4T)
                 Return (Zero)
             }
@@ -11011,10 +10662,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
 
             ^AC0.ACDC = 0xFF
-            If ((Arg0 == 0x04))
-            {
-                FSIS = Zero
-            }
         }
 
         Method (AGPL, 1, Serialized)
@@ -11026,28 +10673,27 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     CreateWordField (DPTI, Zero, SSZE)
     CreateByteField (DPTI, 0x02, MSID)
     CreateDWordField (DPTI, 0x03, DECI)
-    Name (AL20, 0x147B)
+    Name (AL20, 0x1999)
     Name (AL21, Zero)
-    Name (AL22, 0x2700)
+    Name (AL22, 0x2600)
     Name (AL23, Zero)
-    Name (AL24, 0x83)
-    Name (AL25, 0x199A)
-    Name (AL26, 0x01E5)
-    Name (AL27, One)
+    Name (AL24, 0x21)
+    Name (AL25, 0x2666)
+    Name (AL26, 0x8B)
+    Name (AL27, 0x02FB)
     Name (AL28, Zero)
     Name (AL29, Zero)
     Name (AL2A, Zero)
     Name (AL2B, Zero)
-    Name (AL2C, 0x0DEA)
+    Name (AL2C, 0xA0)
     Name (AL2D, Zero)
-    Name (AL2E, 0xAFC8)
+    Name (AL2E, 0x4E20)
     Scope (_SB.PCI0.SBRG.EC0)
     {
         Name (F8FG, Zero)
         Name (BLCT, Zero)
         Name (ACNG, Zero)
         Name (DSTI, One)
-        Name (OPTM, Zero)
         Method (_Q0A, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Notify (SLPB, 0x80) // Status Change
@@ -11235,7 +10881,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             If (ATKP)
             {
-                ^^^^ATKD.IANE (0x8B)
+                ^^^^ATKD.IANE (0x86)
             }
 
             Return (Zero)
@@ -11277,7 +10923,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             If (ATKP)
             {
-                ^^^^ATKD.IANE (0xAE)
+                ^^^^ATKD.IANE (0x9D)
             }
         }
 
@@ -11302,24 +10948,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
 
             Notify (LID, 0x80) // Status Change
-        }
-
-        Method (_QAD, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            ACNG = Zero
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0xCF)
-            }
-        }
-
-        Method (_QAE, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            ACNG = One
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0xCF)
-            }
         }
 
         Method (_QB0, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
@@ -11485,7 +11113,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Method (_QD7, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             DSMA = One
-            If ((MDSE >= One))
+            If ((MDSE == One))
             {
                 Notify (MTDE, 0xB0) // Device-Specific
             }
@@ -11499,7 +11127,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Method (_QD8, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             DSMA = 0x02
-            If ((MDSE >= One))
+            If ((MDSE == One))
             {
                 Notify (MTDE, 0xB0) // Device-Specific
             }
@@ -11510,56 +11138,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
         }
 
-        Method (_Q6B, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0x5F)
-            }
-        }
-
         Method (_QDB, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             If (ATKP)
             {
                 ^^^^ATKD.IANE (0x9B)
                 ^^^^ATKD.IANE (0x6D)
-            }
-        }
-
-        Method (_QD6, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            Name (PADF, Buffer (0x02)
-            {
-                 0x00, 0x00                                       // ..
-            })
-            Name (SFHD, Buffer (One)
-            {
-                 0x00                                             // .
-            })
-            SFHD = REBC (0x1F, One)
-            Local0 = DerefOf (SFHD [Zero])
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0xFA)
-                ^^^^ATKD.IANE (0xBD)
-            }
-
-            If ((Local0 == Zero))
-            {
-                DSMA = One
-                If ((MDSE >= One))
-                {
-                    Notify (MTDE, 0xB0) // Device-Specific
-                }
-            }
-            ElseIf ((Local0 == 0x05))
-            {
-                DSMA = 0x02
-                If ((MDSE >= One))
-                {
-                    Notify (MTDE, 0xB0) // Device-Specific
-                }
             }
         }
 
@@ -11618,6 +11202,16 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 ^^^^ATKD.IANE (0xE8)
             }
+        }
+
+        Method (_QDE, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            Notify (PWRB, 0x80) // Status Change
+        }
+
+        Method (_QDF, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            Notify (PWRB, 0x80) // Status Change
         }
 
         Method (_QAF, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
@@ -11712,82 +11306,94 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
         }
 
+        Method (_QD9, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            Name (CMFB, Buffer (0x02)
+            {
+                 0x01, 0x00                                       // ..
+            })
+            CMFB = REBC (0x1E, 0x02)
+            CFML = DerefOf (CMFB [Zero])
+            CFM2 = DerefOf (CMFB [One])
+            Local0 = (CFML | (CFM2 << 0x08))
+        }
+
         Method (_QCE, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
-            AL20 = 0x147B
+            AL20 = 0x1999
             AL21 = Zero
-            AL22 = 0x2700
+            AL22 = 0x2600
             AL23 = Zero
-            AL24 = 0x83
-            AL25 = 0x199A
-            AL26 = 0x01E5
-            AL27 = One
+            AL24 = 0x21
+            AL25 = 0x2666
+            AL26 = 0x8B
+            AL27 = 0x02FB
             AL28 = Zero
             AL29 = Zero
             AL2A = Zero
             AL2B = Zero
-            AL2C = 0x0DEA
+            AL2C = 0xA0
             AL2D = Zero
-            AL2E = 0xAFC8
+            AL2E = 0x4E20
             SSZE = 0x07
             MSID = 0x20
-            DECI = AL20 /* \AL20 */
+            DECI = AL20 /* \_SB_.AL20 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x21
-            DECI = AL21 /* \AL21 */
+            DECI = AL21 /* \_SB_.AL21 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x22
-            DECI = AL22 /* \AL22 */
+            DECI = AL22 /* \_SB_.AL22 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x23
-            DECI = AL23 /* \AL23 */
+            DECI = AL23 /* \_SB_.AL23 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x24
-            DECI = AL24 /* \AL24 */
+            DECI = AL24 /* \_SB_.AL24 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x25
-            DECI = AL25 /* \AL25 */
+            DECI = AL25 /* \_SB_.AL25 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x26
-            DECI = AL26 /* \AL26 */
+            DECI = AL26 /* \_SB_.AL26 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x27
-            DECI = AL27 /* \AL27 */
+            DECI = AL27 /* \_SB_.AL27 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x28
-            DECI = AL28 /* \AL28 */
+            DECI = AL28 /* \_SB_.AL28 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x29
-            DECI = AL29 /* \AL29 */
+            DECI = AL29 /* \_SB_.AL29 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x2A
-            DECI = AL2A /* \AL2A */
+            DECI = AL2A /* \_SB_.AL2A */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x2B
-            DECI = AL2B /* \AL2B */
+            DECI = AL2B /* \_SB_.AL2B */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x2C
-            DECI = AL2C /* \AL2C */
+            DECI = AL2C /* \_SB_.AL2C */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x2D
-            DECI = AL2D /* \AL2D */
+            DECI = AL2D /* \_SB_.AL2D */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x2E
-            DECI = AL2E /* \AL2E */
+            DECI = AL2E /* \_SB_.AL2E */
             ALIB (0x0C, DPTI)
         }
 
@@ -11810,64 +11416,72 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             AL2E = Zero
             SSZE = 0x07
             MSID = 0x20
-            DECI = AL20 /* \AL20 */
+            DECI = AL20 /* \_SB_.AL20 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x21
-            DECI = AL21 /* \AL21 */
+            DECI = AL21 /* \_SB_.AL21 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x22
-            DECI = AL22 /* \AL22 */
+            DECI = AL22 /* \_SB_.AL22 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x23
-            DECI = AL23 /* \AL23 */
+            DECI = AL23 /* \_SB_.AL23 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x24
-            DECI = AL24 /* \AL24 */
+            DECI = AL24 /* \_SB_.AL24 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x25
-            DECI = AL25 /* \AL25 */
+            DECI = AL25 /* \_SB_.AL25 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x26
-            DECI = AL26 /* \AL26 */
+            DECI = AL26 /* \_SB_.AL26 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x27
-            DECI = AL27 /* \AL27 */
+            DECI = AL27 /* \_SB_.AL27 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x28
-            DECI = AL28 /* \AL28 */
+            DECI = AL28 /* \_SB_.AL28 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x29
-            DECI = AL29 /* \AL29 */
+            DECI = AL29 /* \_SB_.AL29 */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x2A
-            DECI = AL2A /* \AL2A */
+            DECI = AL2A /* \_SB_.AL2A */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x2B
-            DECI = AL2B /* \AL2B */
+            DECI = AL2B /* \_SB_.AL2B */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x2C
-            DECI = AL2C /* \AL2C */
+            DECI = AL2C /* \_SB_.AL2C */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x2D
-            DECI = AL2D /* \AL2D */
+            DECI = AL2D /* \_SB_.AL2D */
             ALIB (0x0C, DPTI)
             SSZE = 0x07
             MSID = 0x2E
-            DECI = AL2E /* \AL2E */
+            DECI = AL2E /* \_SB_.AL2E */
             ALIB (0x0C, DPTI)
+        }
+
+        Method (_QD2, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        {
+            Local0 = STCC (Zero, 0x27)
+            ^^^GPP9.PEGP.NLIM = One
+            ^^^GPP9.PEGP.TGPU = Local0
+            Notify (^^^GPP9.PEGP, 0xC0) // Hardware-Specific
         }
 
         Method (_QF2, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
@@ -11892,74 +11506,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
         }
 
-        Method (_QDF, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            Local0 = REBC (0x3A, One)
-            Local1 = DerefOf (Local0 [Zero])
-            If ((Local1 == One))
-            {
-                DSMA = 0x02
-                If ((MDSE >= One))
-                {
-                    Notify (MTDE, 0xB0) // Device-Specific
-                }
-            }
-            Else
-            {
-                DSMA = One
-                If ((MDSE >= One))
-                {
-                    Notify (MTDE, 0xB0) // Device-Specific
-                }
-            }
-
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0xED)
-                ^^^^ATKD.IANE (0x75)
-                ^^^^ATKD.IANE (0xBD)
-            }
-        }
-
-        Method (_QDE, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            Local0 = REBC (0x36, One)
-            Local1 = DerefOf (Local0 [Zero])
-            If ((Local1 == One))
-            {
-                DSMA = 0x02
-                If ((MDSE >= One))
-                {
-                    Notify (MTDE, 0xB0) // Device-Specific
-                }
-            }
-            Else
-            {
-                DSMA = One
-                If ((MDSE >= One))
-                {
-                    Notify (MTDE, 0xB0) // Device-Specific
-                }
-            }
-
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0x75)
-                ^^^^ATKD.IANE (0xBD)
-            }
-        }
-
         Method (_QFC, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             Notify (FAN0, 0x80) // Status Change
-        }
-
-        Method (_QFD, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0xB0)
-            }
         }
     }
 
@@ -12496,7 +12045,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Local0 |= Local2
                 }
 
-                Acquire (CMUT, 0xFFFF)
                 BRAH = 0xC9
                 If ((EB0S & 0x08))
                 {
@@ -12504,7 +12052,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Local0 |= Local2
                 }
 
-                Release (CMUT)
                 If ((Local1 >= 0x8000))
                 {
                     Local1 = (0xFFFF - Local1)
@@ -12841,13 +12388,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 \_SB.PCI0.SBRG.EC0.BRAH = 0xC9
                 Local0 = \_SB.PCI0.SBRG.EC0.ECRT
                 Release (\_SB.PCI0.SBRG.EC0.CMUT)
+                \_SB.TCRT = 0x78
                 If ((Local0 < 0x80))
                 {
                     \_SB.TCRT = Local0
                 }
             }
-
-            \_SB.TCRT = 0x78
         }
 
         Method (RPSV, 0, NotSerialized)
@@ -13107,6 +12653,25 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Name (LEDS, Zero)
         Name (FNIV, Zero)
         Name (ACPT, Zero)
+        Name (DPTI, Buffer (0x07) {})
+        CreateWordField (DPTI, Zero, SSZE)
+        CreateByteField (DPTI, 0x02, MSID)
+        CreateDWordField (DPTI, 0x03, DECI)
+        Name (AL20, 0x1999)
+        Name (AL21, Zero)
+        Name (AL22, 0x2600)
+        Name (AL23, Zero)
+        Name (AL24, 0x21)
+        Name (AL25, 0x2666)
+        Name (AL26, 0x8B)
+        Name (AL27, 0x02FB)
+        Name (AL28, Zero)
+        Name (AL29, Zero)
+        Name (AL2A, Zero)
+        Name (AL2B, Zero)
+        Name (AL2C, 0xA0)
+        Name (AL2D, Zero)
+        Name (AL2E, 0x4E20)
         Device (ATKD)
         {
             Name (_HID, "PNP0C14" /* Windows Management Instrumentation Device */)  // _HID: Hardware ID
@@ -13201,26 +12766,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 {
                     WAPF |= Arg0 /* \_SB_.ATKD.WAPF */
                     Return (One)
-                }
-
-                Method (DIAL, 1, NotSerialized)
-                {
-                    If ((Arg0 == One))
-                    {
-                        DIBF = 0x02
-                        Notify (^^I2CD.DIDV, One) // Device Check
-                        Return (One)
-                    }
-                    ElseIf ((Arg0 == Zero))
-                    {
-                        DIBF = Zero
-                        Notify (^^I2CD.DIDV, One) // Device Check
-                        Return (One)
-                    }
-                    Else
-                    {
-                        Return (Zero)
-                    }
                 }
             }
 
@@ -13510,48 +13055,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return ((0x00010000 + Local0))
                     }
 
-                    Name (LFAN, Package (0x04)
-                    {
-                        Zero, 
-                        Zero, 
-                        Zero, 
-                        Zero
-                    })
-                    If ((IIA0 == 0x00110035))
-                    {
-                        Local0 = ^^PCI0.SBRG.EC0.FRPM (Zero)
-                        If ((Local0 != Zero))
-                        {
-                            Local0 /= 0x64
-                        }
-
-                        Local0 += 0x00010000
-                        LFAN [Zero] = Local0
-                        Local1 = ^^PCI0.SBRG.EC0.FRPM (One)
-                        If ((Local1 != Zero))
-                        {
-                            Local1 /= 0x64
-                        }
-
-                        Local1 += 0x00010000
-                        LFAN [One] = Local1
-                        Local2 = ^^PCI0.SBRG.EC0.FRPM (0x02)
-                        If ((Local2 != Zero))
-                        {
-                            Local2 /= 0x64
-                        }
-
-                        LFAN [0x02] = Local2
-                        Local3 = ^^PCI0.SBRG.EC0.FRPM (0x03)
-                        If ((Local3 != Zero))
-                        {
-                            Local3 /= 0x64
-                        }
-
-                        LFAN [0x03] = Local3
-                        Return (LFAN) /* \_SB_.ATKD.WMNB.LFAN */
-                    }
-
                     If ((IIA0 == 0x00010001))
                     {
                         Return (0x00040000)
@@ -13559,134 +13062,30 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                     If ((IIA0 == 0x00120061))
                     {
-                        Local0 = 0x00030000
-                        Local0 |= 0x00040000
                         ^^PCI0.SBRG.EC0.ACNG = ^^PCI0.SBRG.EC0.REBC (0x2C, One)
                         If ((^^PCI0.SBRG.EC0.ACNG == One))
                         {
-                            Local0 = (0x02 | Local0)
+                            Return (0x00030002)
                         }
 
                         If (^^PCI0.SBRG.EC0.ACPS ())
                         {
-                            Local0 = (One | Local0)
-                        }
-
-                        Return (Local0)
-                    }
-
-                    If ((IIA0 == 0x00060062))
-                    {
-                        If (^^PCI0.SBRG.EC0.RPIN (0x0E))
-                        {
-                            Local0 = 0x00010000
+                            Return (0x00030001)
                         }
                         Else
                         {
-                            Local0 = 0x00010001
-                        }
-
-                        Return (Local0)
-                    }
-
-                    If ((IIA0 == 0x00060077))
-                    {
-                        If ((DSMA == One))
-                        {
-                            Return (0x00010000)
-                        }
-                        Else
-                        {
-                            AL20 = 0x147B
-                            AL21 = Zero
-                            AL22 = 0x2600
-                            AL23 = Zero
-                            AL24 = 0x83
-                            AL25 = 0x199A
-                            AL26 = 0x01E5
-                            AL27 = One
-                            AL28 = Zero
-                            AL29 = Zero
-                            AL2A = Zero
-                            AL2B = Zero
-                            AL2C = 0x0DEA
-                            AL2D = Zero
-                            AL2E = 0x88B8
-                            SSZE = 0x07
-                            MSID = 0x20
-                            DECI = AL20 /* \_SB_.ATKD.WMNB.AL20 */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x21
-                            DECI = AL21 /* \_SB_.ATKD.WMNB.AL21 */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x22
-                            DECI = AL22 /* \_SB_.ATKD.WMNB.AL22 */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x23
-                            DECI = AL23 /* \_SB_.ATKD.WMNB.AL23 */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x24
-                            DECI = AL24 /* \_SB_.ATKD.WMNB.AL24 */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x25
-                            DECI = AL25 /* \_SB_.ATKD.WMNB.AL25 */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x26
-                            DECI = AL26 /* \_SB_.ATKD.WMNB.AL26 */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x27
-                            DECI = AL27 /* \_SB_.ATKD.WMNB.AL27 */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x28
-                            DECI = AL28 /* \_SB_.ATKD.WMNB.AL28 */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x29
-                            DECI = AL29 /* \_SB_.ATKD.WMNB.AL29 */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x2A
-                            DECI = AL2A /* \_SB_.ATKD.WMNB.AL2A */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x2B
-                            DECI = AL2B /* \_SB_.ATKD.WMNB.AL2B */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x2C
-                            DECI = AL2C /* \_SB_.ATKD.WMNB.AL2C */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x2D
-                            DECI = AL2D /* \_SB_.ATKD.WMNB.AL2D */
-                            ALIB (0x0C, DPTI)
-                            SSZE = 0x07
-                            MSID = 0x2E
-                            DECI = AL2E /* \_SB_.ATKD.WMNB.AL2E */
-                            ALIB (0x0C, DPTI)
-                            Return (0x00010003)
+                            Return (0x00030000)
                         }
                     }
 
-                    If ((IIA0 == 0x0006006D))
+                    If ((IIA0 == 0x00110015))
                     {
-                        Name (SFH0, Buffer (One)
-                        {
-                             0x00                                             // .
-                        })
-                        SFH0 = ^^PCI0.SBRG.EC0.REBC (0x1F, One)
-                        Local0 = DerefOf (SFH0 [Zero])
-                        Local0 |= 0x00010000
-                        Local0 |= 0x00020000
-                        Return (Local0)
+                        Return (Zero)
+                    }
+
+                    If ((IIA0 == 0x00110016))
+                    {
+                        Return (Zero)
                     }
 
                     If ((IIA0 == 0x00050021))
@@ -13751,12 +13150,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (Local0)
                     }
 
-                    If ((IIA0 == 0x0012006E))
-                    {
-                        M460 ("0x0012006E dsts Entry\n", Zero, Zero, Zero, Zero, Zero, 0x63)
-                        Return (0x00010001)
-                    }
-
                     If ((IIA0 == 0x0012006D))
                     {
                         Local0 = ^^PCI0.SBRG.EC0.REBC (0x25, One)
@@ -13771,9 +13164,20 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         }
                     }
 
-                    If ((IIA0 == 0x00120075))
+                    If ((IIA0 == 0x00110018))
                     {
                         Return (0x00010003)
+                    }
+
+                    If ((IIA0 == 0x00110019))
+                    {
+                        Local0 = FANF /* \_SB_.FANF */
+                        Local1 = 0x00070000
+                        Local0 |= Local1
+                        Local0 |= 0x08000000
+                        Local5 = 0x20000000
+                        Local0 |= Local5
+                        Return (Local0)
                     }
 
                     If ((IIA0 == 0x00100023))
@@ -13788,29 +13192,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     }
 
                     If ((IIA0 == 0x00060078))
-                    {
-                        Local1 = ^^PCI0.SBRG.EC0.ST8E (0x50, Zero)
-                        If (((Local1 & One) == One))
-                        {
-                            Local0 = One
-                        }
-                        ElseIf (((Local1 & 0x02) == 0x02))
-                        {
-                            Local0 = Zero
-                        }
-
-                        If ((FSIS == Zero))
-                        {
-                            Local0 |= 0x00080000
-                        }
-
-                        Local0 |= 0x00050000
-                        Local2 = (Local0 & One)
-                        Return (Local0)
-                        Return (Zero)
-                    }
-
-                    If ((IIA0 == 0x00060079))
                     {
                         Return (Zero)
                     }
@@ -13898,91 +13279,27 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         }
                     }
 
-                    If ((IIA0 == 0x00120080))
+                    If ((IIA0 == 0x00110041))
                     {
-                        Name (TBF1, Buffer (One)
-                        {
-                             0x00                                             // .
-                        })
-                        TBF1 = ^^PCI0.SBRG.EC0.REBC (0x4F, One)
-                        Local0 = DerefOf (TBF1 [Zero])
-                        If ((Local0 == One))
+                        Local0 = ^^PCI0.SBRG.EC0.REBC (0x61, One)
+                        Local1 = DerefOf (Local0 [Zero])
+                        Local1 &= One
+                        If ((Local1 == Zero))
                         {
                             Return (0x00010000)
                         }
-                        Else
+                        ElseIf ((Local1 == One))
                         {
-                            Return (Zero)
+                            Return (0x00010001)
                         }
-                    }
-
-                    If ((IIA0 == 0x00090031))
-                    {
-                        Local0 = Zero
-                        Local1 = Zero
-                        Local0 = ^^PCI0.SBRG.EC0.STC4 (0x05)
-                        M460 ("0x00090031 DSTS Local0: 0x%X\n", Local0, Zero, Zero, Zero, Zero, Zero)
-                        If (((Local0 & 0x10) == 0x10))
-                        {
-                            Local1 = Zero
-                        }
-
-                        If (((Local0 & 0x08) == 0x08))
-                        {
-                            Local1 = 0x0100
-                        }
-
-                        If (((Local0 & 0x04) == 0x04))
-                        {
-                            Local1 = 0x0200
-                        }
-
-                        If (((Local0 & 0x02) == 0x02))
-                        {
-                            Local1 = 0x0300
-                        }
-
-                        M460 ("0x00090031 DSTS Local1: 0x%X\n", Local1, Zero, Zero, Zero, Zero, Zero)
-                        Local1 |= ^^PCI0.SBRG.EC0.OPTM /* \_SB_.PCI0.SBRG.EC0_.OPTM */
-                        Local1 |= 0x00010000
-                        Return (Local1)
-                    }
-
-                    If ((IIA0 == 0x001200F2))
-                    {
-                        Local0 = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                        Switch (ToInteger (Local0))
-                        {
-                            Case (One)
-                            {
-                                Local1 = ^^PCI0.SBRG.EC0.STDD (0x0C, Zero, Zero)
-                                Local2 = ^^PCI0.SBRG.EC0.STDD (0x0C, One, Zero)
-                            }
-                            Case (0x02)
-                            {
-                                Local1 = ^^PCI0.SBRG.EC0.STDD (0x0C, 0x02, Zero)
-                                Local2 = ^^PCI0.SBRG.EC0.STDD (0x0C, 0x03, Zero)
-                            }
-                            Case (0x03)
-                            {
-                                Local1 = ^^PCI0.SBRG.EC0.STDD (0x0C, 0x04, Zero)
-                                Local2 = ^^PCI0.SBRG.EC0.STDD (0x0C, 0x05, Zero)
-                            }
-                            Default
-                            {
-                                Local1 = Zero
-                                Local2 = Zero
-                            }
-
-                        }
-
-                        Local2 <<= 0x08
-                        Local2 |= Local1
-                        Local2 |= 0x00010000
-                        Return (Local2)
                     }
 
                     If ((IIA0 == 0x00010002))
+                    {
+                        Return (Zero)
+                    }
+
+                    If ((IIA0 == 0x00050027))
                     {
                         Return (Zero)
                     }
@@ -14016,7 +13333,28 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (Zero)
                     }
 
+                    If ((IIA0 == 0x00080042))
+                    {
+                        Return (Zero)
+                    }
+
+                    If ((IIA0 == 0x00080043))
+                    {
+                        Return (Zero)
+                    }
+
+                    If ((IIA0 == 0x00080044))
+                    {
+                        Return (Zero)
+                    }
+
                     If ((IIA0 == 0x00030022))
+                    {
+                        Local0 = Zero
+                        Return (Local0)
+                    }
+
+                    If ((IIA0 == 0x00100054))
                     {
                         Local0 = Zero
                         Return (Local0)
@@ -14062,24 +13400,23 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return ((GALE (0x40) | 0x00050000))
                     }
 
+                    If ((IIA0 == 0x00040017))
+                    {
+                        Local0 = GGOV (Zero, 0x18)
+                        Local0 = ~Local0
+                        Local0 &= One
+                        Local0 |= 0x00010000
+                        Return (Local0)
+                        Return (Zero)
+                    }
+
                     If ((IIA0 == 0x000600B1))
                     {
                         MEMD [Zero] = Zero
-                        If ((IIA1 == Zero))
+                        CA1M = CA14 /* \_SB_.CA14 */
+                        If ((ToInteger (CA14) == Zero))
                         {
-                            CA1M = CA14 /* \_SB_.CA14 */
-                            If ((ToInteger (CA14) == Zero))
-                            {
-                                Return (MEMD) /* \_SB_.ATKD.MEMD */
-                            }
-                        }
-                        ElseIf ((IIA1 == One))
-                        {
-                            CA1M = CA16 /* \_SB_.CA16 */
-                            If ((ToInteger (CA16) == Zero))
-                            {
-                                Return (MEMD) /* \_SB_.ATKD.MEMD */
-                            }
+                            Return (MEMD) /* \_SB_.ATKD.MEMD */
                         }
 
                         Local2 = Zero
@@ -14099,21 +13436,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((IIA0 == 0x000600B2))
                     {
                         MEMD [Zero] = Zero
-                        If ((IIA1 == Zero))
+                        CA1M = CA15 /* \_SB_.CA15 */
+                        If ((ToInteger (CA15) == Zero))
                         {
-                            CA1M = CA15 /* \_SB_.CA15 */
-                            If ((ToInteger (CA15) == Zero))
-                            {
-                                Return (MEMD) /* \_SB_.ATKD.MEMD */
-                            }
-                        }
-                        ElseIf ((IIA1 == One))
-                        {
-                            CA1M = CA17 /* \_SB_.CA17 */
-                            If ((ToInteger (CA17) == Zero))
-                            {
-                                Return (MEMD) /* \_SB_.ATKD.MEMD */
-                            }
+                            Return (MEMD) /* \_SB_.ATKD.MEMD */
                         }
 
                         Local2 = Zero
@@ -14136,33 +13462,32 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (Local0)
                     }
 
-                    If ((IIA0 == 0x00100063))
+                    If ((IIA0 == 0x00010032))
                     {
-                        If ((DIBF == 0x02))
-                        {
-                            Return (0x00010001)
-                        }
+                        Return (Zero)
+                    }
 
-                        If ((DIBF == One))
-                        {
-                            Return (0x00010001)
-                        }
-
-                        If ((DIBF == Zero))
-                        {
-                            Return (0x00010000)
-                        }
+                    If ((IIA0 == 0x00060069))
+                    {
+                        Return (Zero)
                     }
 
                     If ((IIA0 == 0x00130041))
                     {
-                        Return (0x00010000)
+                        Return (Zero)
+                    }
+
+                    If ((IIA0 == 0x00050042))
+                    {
+                        Return (0x00010036)
                     }
 
                     If ((IIA0 == 0x00050043))
                     {
                         Local0 = Zero
-                        Local1 = Zero
+                        Local1 = 0x00010000
+                        Local0 |= Local1
+                        Local1 = 0x00040000
                         Local0 |= Local1
                         Return (Local0)
                     }
@@ -14172,151 +13497,20 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (0x00010000)
                     }
 
-                    If ((IIA0 == 0x00110024))
+                    If ((IIA0 == 0x0004001B))
                     {
-                        If ((IIA1 == Zero))
-                        {
-                            Local0 = 0x80
-                        }
-                        ElseIf ((IIA1 == One))
-                        {
-                            Local0 = 0x81
-                        }
-                        ElseIf ((IIA1 == 0x02))
-                        {
-                            Local0 = 0x82
-                        }
-                        Else
-                        {
-                            Return (Zero)
-                        }
-
-                        Return (^^PCI0.SBRG.EC0.GDFC (Local0))
-                    }
-
-                    If ((IIA0 == 0x00110025))
-                    {
-                        If ((IIA1 == Zero))
-                        {
-                            Local0 = 0x84
-                        }
-                        ElseIf ((IIA1 == One))
-                        {
-                            Local0 = 0x85
-                        }
-                        ElseIf ((IIA1 == 0x02))
-                        {
-                            Local0 = 0x86
-                        }
-                        Else
-                        {
-                            Return (Zero)
-                        }
-
-                        Return (^^PCI0.SBRG.EC0.GDFC (Local0))
-                    }
-
-                    If ((IIA0 == 0x00110026))
-                    {
-                        Return (^^PCI0.SBRG.EC0.GFLB (0x20))
-                    }
-
-                    If ((IIA0 == 0x00110027))
-                    {
-                        Return (^^PCI0.SBRG.EC0.GFLB (0x24))
-                    }
-
-                    If ((IIA0 == 0x00110034))
-                    {
-                        Name (GHPB, Buffer (0x0C)
-                        {
-                            /* 0000 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                            /* 0008 */  0x00, 0x00, 0x00, 0x00                           // ....
-                        })
-                        GHPB = ^^PCI0.SBRG.EC0.REBC (0x5A, 0x0C)
-                        Name (RHPB, Buffer (0x0C)
-                        {
-                            /* 0000 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                            /* 0008 */  0x00, 0x00, 0x00, 0x00                           // ....
-                        })
                         Local0 = Zero
-                        Local1 = Zero
-                        While ((Local0 != 0x09))
-                        {
-                            RHPB [Local1] = DerefOf (GHPB [Local0])
-                            Local0++
-                            Local1++
-                            If (((Local0 % 0x03) == Zero))
-                            {
-                                RHPB [Local1] = Zero
-                                Local1++
-                            }
-                        }
-
-                        Return (RHPB) /* \_SB_.ATKD.WMNB.RHPB */
-                    }
-
-                    If ((IIA0 == 0x001200A0))
-                    {
-                        Return (0x00010000)
-                    }
-
-                    If ((IIA0 == 0x001200A1))
-                    {
-                        Return (0x00010000)
-                    }
-
-                    If ((IIA0 == 0x001200A2))
-                    {
-                        Return (0x00010000)
-                    }
-
-                    If ((IIA0 == 0x001200A3))
-                    {
-                        Return (0x00010000)
-                    }
-
-                    If ((IIA0 == 0x001200B0))
-                    {
-                        Return (0x00010000)
-                    }
-
-                    If ((IIA0 == 0x001200B1))
-                    {
-                        Return (0x00010000)
-                    }
-
-                    If ((IIA0 == 0x001200C1))
-                    {
-                        Return (0x00010000)
-                    }
-
-                    If ((IIA0 == 0x00120097))
-                    {
-                        If (^^PCI0.SBRG.EC0.ECAV ())
-                        {
-                            Acquire (^^PCI0.SBRG.EC0.CMUT, 0xFFFF)
-                            ^^PCI0.SBRG.EC0.BRAH = 0xC9
-                            Local0 = ^^PCI0.SBRG.EC0.ETS0 /* \_SB_.PCI0.SBRG.EC0_.ETS0 */
-                            Release (^^PCI0.SBRG.EC0.CMUT)
-                            Local0 |= 0x00010000
-                            Return (Local0)
-                        }
-                        Else
-                        {
-                            Return (0x00010000)
-                        }
+                        Local1 = 0x00020000
+                        Local0 |= Local1
+                        Local2 = 0x00010000
+                        Local0 |= Local2
+                        Return (Local0)
                     }
 
                     If ((IIA0 == 0x0005002F))
                     {
                         Local1 = 0x00010000
                         Return (Local1)
-                    }
-
-                    If ((IIA0 == 0x0012009E))
-                    {
-                        Return (0x00010000)
                     }
 
                     If ((IIA0 == 0x00060023))
@@ -14372,64 +13566,130 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Name (UMAS, Zero)
                         If ((AUFI == One))
                         {
-                            Name (UMA1, Package (0x06)
+                            Name (UMA1, Package (0x07)
                             {
                                 Zero, 
                                 One, 
                                 0x02, 
                                 0x04, 
                                 0x08, 
+                                0x0C, 
                                 0x10
                             })
                             UMAS = SizeOf (UMA1)
                         }
                         ElseIf ((AUFI == 0x02))
                         {
-                            Name (UMA2, Package (0x08)
+                            Name (UMA2, Package (0x09)
                             {
                                 Zero, 
                                 One, 
                                 0x02, 
                                 0x04, 
                                 0x08, 
+                                0x0C, 
                                 0x10, 
-                                0x20, 
-                                0x30
+                                0x18, 
+                                0x20
                             })
                             UMAS = SizeOf (UMA2)
                         }
                         ElseIf ((AUFI == 0x03))
                         {
-                            Name (UMA3, Package (0x09)
+                            Name (UMA3, Package (0x0A)
                             {
                                 Zero, 
                                 One, 
                                 0x02, 
                                 0x04, 
                                 0x08, 
+                                0x0C, 
                                 0x10, 
+                                0x18, 
                                 0x20, 
-                                0x40, 
-                                0x60
+                                0x30
                             })
                             UMAS = SizeOf (UMA3)
                         }
-                        Else
+                        ElseIf ((AUFI == 0x04))
                         {
-                            Name (UMA4, Package (0x0A)
+                            Name (UMA4, Package (0x0B)
                             {
                                 Zero, 
                                 One, 
                                 0x02, 
                                 0x04, 
                                 0x08, 
+                                0x0C, 
                                 0x10, 
+                                0x18, 
                                 0x20, 
-                                0x40, 
-                                0x80, 
-                                0xC0
+                                0x30, 
+                                0x40
                             })
                             UMAS = SizeOf (UMA4)
+                        }
+                        ElseIf ((AUFI == 0x05))
+                        {
+                            Name (UMA5, Package (0x0C)
+                            {
+                                Zero, 
+                                One, 
+                                0x02, 
+                                0x04, 
+                                0x08, 
+                                0x0C, 
+                                0x10, 
+                                0x18, 
+                                0x20, 
+                                0x30, 
+                                0x40, 
+                                0x60
+                            })
+                            UMAS = SizeOf (UMA5)
+                        }
+                        ElseIf ((AUFI == 0x06))
+                        {
+                            Name (UMA6, Package (0x0E)
+                            {
+                                Zero, 
+                                One, 
+                                0x02, 
+                                0x04, 
+                                0x08, 
+                                0x0C, 
+                                0x10, 
+                                0x18, 
+                                0x20, 
+                                0x30, 
+                                0x40, 
+                                0x60, 
+                                0x80, 
+                                0x90
+                            })
+                            UMAS = SizeOf (UMA6)
+                        }
+                        Else
+                        {
+                            Name (UMA7, Package (0x0F)
+                            {
+                                Zero, 
+                                One, 
+                                0x02, 
+                                0x04, 
+                                0x08, 
+                                0x0C, 
+                                0x10, 
+                                0x18, 
+                                0x20, 
+                                0x30, 
+                                0x40, 
+                                0x60, 
+                                0x80, 
+                                0xA0, 
+                                0xC0
+                            })
+                            UMAS = SizeOf (UMA7)
                         }
 
                         Local0 = ((UMAS + 0x03) * 0x02)
@@ -14469,9 +13729,21 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Local3 = DerefOf (UMA3 [Local2])
                             }
-                            Else
+                            ElseIf ((AUFI == 0x04))
                             {
                                 Local3 = DerefOf (UMA4 [Local2])
+                            }
+                            ElseIf ((AUFI == 0x05))
+                            {
+                                Local3 = DerefOf (UMA5 [Local2])
+                            }
+                            ElseIf ((AUFI == 0x06))
+                            {
+                                Local3 = DerefOf (UMA6 [Local2])
+                            }
+                            Else
+                            {
+                                Local3 = DerefOf (UMA7 [Local2])
                             }
 
                             WBUF [Local1] = (Local3 >> Zero)
@@ -14506,21 +13778,21 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     CreateWordField (DPTI, Zero, SSZE)
                     CreateByteField (DPTI, 0x02, MSID)
                     CreateDWordField (DPTI, 0x03, DECI)
-                    Name (AL20, 0x147B)
+                    Name (AL20, 0x1999)
                     Name (AL21, Zero)
-                    Name (AL22, 0x2700)
+                    Name (AL22, 0x2600)
                     Name (AL23, Zero)
-                    Name (AL24, 0x83)
-                    Name (AL25, 0x199A)
-                    Name (AL26, 0x01E5)
-                    Name (AL27, One)
+                    Name (AL24, 0x21)
+                    Name (AL25, 0x2666)
+                    Name (AL26, 0x8B)
+                    Name (AL27, 0x02FB)
                     Name (AL28, Zero)
                     Name (AL29, Zero)
                     Name (AL2A, Zero)
                     Name (AL2B, Zero)
-                    Name (AL2C, 0x0DEA)
+                    Name (AL2C, 0xA0)
                     Name (AL2D, Zero)
-                    Name (AL2E, 0xAFC8)
+                    Name (AL2E, 0x4E20)
                     If ((IIA0 == 0x00050011))
                     {
                         If ((IIA1 == 0x02))
@@ -14540,21 +13812,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((IIA0 == 0x00100022))
                     {
                         Return (One)
-                    }
-
-                    If ((IIA0 == 0x0006006D))
-                    {
-                        Name (KBLF, Buffer (One)
-                        {
-                             0x00                                             // .
-                        })
-                        If ((IIA1 <= One))
-                        {
-                            KBLF [Zero] = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                            Return (^^PCI0.SBRG.EC0.WEBC (0x6F, One, KBLF))
-                        }
-
-                        Return (Zero)
                     }
 
                     If ((IIA0 == 0x00110013))
@@ -14605,16 +13862,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (Zero)
                     }
 
-                    If ((IIA0 == 0x00100052))
-                    {
-                        Return (^^PCI0.SBRG.EC0.KBEN (IIA1))
-                    }
-
-                    If ((IIA0 == 0x00060064))
-                    {
-                        Return (^^PCI0.SBRG.EC0.FLIP (IIA1))
-                    }
-
                     If ((IIA0 == 0x00120057))
                     {
                         Local0 = ^^PCI0.SBRG.EC0.SRSC (IIA1)
@@ -14626,42 +13873,46 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (Local0)
                     }
 
-                    If ((IIA0 == 0x00120075))
+                    If ((IIA0 == 0x00110019))
                     {
-                        ^^PCI0.SBRG.EC0.WEBC (0x23, Zero, Zero)
-                        ^^PCI0.SBRG.EC0.WEBC (0x2A, Zero, Zero)
-                        Local3 = ^^PCI0.SBRG.EC0.STCC (Zero, 0xD0)
-                        Local3 &= 0xFE
-                        ^^PCI0.SBRG.EC0.STCD (Zero, 0xD0, Local3)
-                        Local3 = ^^PCI0.SBRG.EC0.STCC (Zero, 0xD8)
-                        Local3 &= 0xFE
-                        ^^PCI0.SBRG.EC0.STCD (Zero, 0xD8, Local3)
-                        ^^PCI0.SBRG.EC0.WEBC (0x40, Zero, Zero)
-                        Local1 = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                        Local2 = Zero
-                        Local2 = ^^PCI0.SBRG.EC0.STC4 (0x05)
-                        Local2 &= 0xFE
-                        ^^PCI0.SBRG.EC0.STC5 (0x05, Local2)
+                        FANF = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
+                        If ((IIA1 == One))
+                        {
+                            Local1 = 0x02
+                        }
+                        ElseIf ((IIA1 == Zero))
+                        {
+                            Local1 = Zero
+                        }
+                        ElseIf ((IIA1 == 0x02))
+                        {
+                            Local1 = One
+                        }
+                        ElseIf ((IIA1 == 0x03))
+                        {
+                            Local1 = 0x03
+                        }
+
                         If ((Local1 == One))
                         {
                             Local0 = 0x04
                             ACPT = 0x02
                             Local5 = 0xA5
-                            AL20 = 0x147B
+                            AL20 = 0x1999
                             AL21 = Zero
-                            AL22 = 0x2700
+                            AL22 = 0x2600
                             AL23 = Zero
-                            AL24 = 0x62
-                            AL25 = 0x147B
-                            AL26 = 0x01BF
-                            AL27 = One
+                            AL24 = 0x21
+                            AL25 = 0x2666
+                            AL26 = 0x74
+                            AL27 = 0x02C9
                             AL28 = Zero
                             AL29 = Zero
                             AL2A = Zero
                             AL2B = Zero
-                            AL2C = 0x0F96
+                            AL2C = 0x0350
                             AL2D = Zero
-                            AL2E = 0xEA60
+                            AL2E = 0x6D60
                             SSZE = 0x07
                             MSID = 0x20
                             DECI = AL20 /* \_SB_.ATKD.WMNB.AL20 */
@@ -14728,21 +13979,21 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Local0 = One
                             ACPT = One
                             Local5 = 0x64
-                            AL20 = 0x147B
+                            AL20 = 0x1999
                             AL21 = Zero
-                            AL22 = 0x2700
+                            AL22 = 0x2600
                             AL23 = Zero
-                            AL24 = 0x83
-                            AL25 = 0x199A
-                            AL26 = 0x01E5
-                            AL27 = One
+                            AL24 = 0x21
+                            AL25 = 0x2666
+                            AL26 = 0x8B
+                            AL27 = 0x02FB
                             AL28 = Zero
                             AL29 = Zero
                             AL2A = Zero
                             AL2B = Zero
-                            AL2C = 0x0DEA
+                            AL2C = 0xA0
                             AL2D = Zero
-                            AL2E = 0xAFC8
+                            AL2E = 0x4E20
                             SSZE = 0x07
                             MSID = 0x20
                             DECI = AL20 /* \_SB_.ATKD.WMNB.AL20 */
@@ -14809,25 +14060,100 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Local0 = 0x02
                             ACPT = 0x03
                             Local5 = 0x50
-                            Local2 = Zero
-                            Local2 = ^^PCI0.SBRG.EC0.STC4 (0x05)
-                            Local2 |= One
-                            ^^PCI0.SBRG.EC0.STC5 (0x05, Local2)
-                            AL20 = 0x147B
+                            AL20 = 0x1999
                             AL21 = Zero
                             AL22 = 0x2500
                             AL23 = Zero
-                            AL24 = 0x83
-                            AL25 = 0x199A
-                            AL26 = 0x01E4
-                            AL27 = One
+                            AL24 = 0x21
+                            AL25 = 0x2666
+                            AL26 = 0xBF
+                            AL27 = 0x02C3
                             AL28 = Zero
                             AL29 = Zero
                             AL2A = Zero
                             AL2B = Zero
-                            AL2C = 0x0E11
+                            AL2C = 0xD3
                             AL2D = Zero
-                            AL2E = 0x88B8
+                            AL2E = 0x3A98
+                            SSZE = 0x07
+                            MSID = 0x20
+                            DECI = AL20 /* \_SB_.ATKD.WMNB.AL20 */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x21
+                            DECI = AL21 /* \_SB_.ATKD.WMNB.AL21 */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x22
+                            DECI = AL22 /* \_SB_.ATKD.WMNB.AL22 */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x23
+                            DECI = AL23 /* \_SB_.ATKD.WMNB.AL23 */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x24
+                            DECI = AL24 /* \_SB_.ATKD.WMNB.AL24 */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x25
+                            DECI = AL25 /* \_SB_.ATKD.WMNB.AL25 */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x26
+                            DECI = AL26 /* \_SB_.ATKD.WMNB.AL26 */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x27
+                            DECI = AL27 /* \_SB_.ATKD.WMNB.AL27 */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x28
+                            DECI = AL28 /* \_SB_.ATKD.WMNB.AL28 */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x29
+                            DECI = AL29 /* \_SB_.ATKD.WMNB.AL29 */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x2A
+                            DECI = AL2A /* \_SB_.ATKD.WMNB.AL2A */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x2B
+                            DECI = AL2B /* \_SB_.ATKD.WMNB.AL2B */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x2C
+                            DECI = AL2C /* \_SB_.ATKD.WMNB.AL2C */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x2D
+                            DECI = AL2D /* \_SB_.ATKD.WMNB.AL2D */
+                            ALIB (0x0C, DPTI)
+                            SSZE = 0x07
+                            MSID = 0x2E
+                            DECI = AL2E /* \_SB_.ATKD.WMNB.AL2E */
+                            ALIB (0x0C, DPTI)
+                        }
+                        ElseIf ((Local1 == 0x03))
+                        {
+                            Local0 = 0x10
+                            AL20 = 0x1999
+                            AL21 = Zero
+                            AL22 = 0x2500
+                            AL23 = Zero
+                            AL24 = 0x21
+                            AL25 = 0x2666
+                            AL26 = 0xA4
+                            AL27 = 0x0320
+                            AL28 = Zero
+                            AL29 = Zero
+                            AL2A = Zero
+                            AL2B = Zero
+                            AL2C = 0xFE33
+                            AL2D = Zero
+                            AL2E = 0x6D60
                             SSZE = 0x07
                             MSID = 0x20
                             DECI = AL20 /* \_SB_.ATKD.WMNB.AL20 */
@@ -14913,61 +14239,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Local0 = (KFSK | Local0)
                         ^^PCI0.SBRG.EC0.ST9E (0x3C, 0xFF, Local0)
                         Return (One)
-                    }
-
-                    If ((IIA0 == 0x00060078))
-                    {
-                        Local2 = 0xFF
-                        If ((IIA1 == 0x02))
-                        {
-                            If ((FSIS == One))
-                            {
-                                Return (Zero)
-                            }
-
-                            FSIS = One
-                            Local1 = ^^PCI0.SBRG.EC0.ST8E (0x50, Zero)
-                            If (((Local1 & One) == One))
-                            {
-                                ^^PCI0.SBRG.EC0.ST9E (0x50, 0x80, 0xFF)
-                                Sleep (0x0A)
-                                Local1 = ^^PCI0.SBRG.EC0.ST8E (0x50, Zero)
-                                If (((Local1 & One) == One))
-                                {
-                                    Return (Zero)
-                                }
-                            }
-
-                            Local2 = One
-                        }
-                        ElseIf ((IIA1 == 0x03))
-                        {
-                            If ((FSIS == One))
-                            {
-                                Return (Zero)
-                            }
-
-                            FSIS = One
-                            Local1 = ^^PCI0.SBRG.EC0.ST8E (0x50, Zero)
-                            If (((Local1 & 0x02) == 0x02))
-                            {
-                                Return (Zero)
-                            }
-
-                            Local2 = Zero
-                        }
-
-                        If ((Local2 == 0xFF))
-                        {
-                            Return (Zero)
-                        }
-
-                        Return (One)
-                    }
-
-                    If ((IIA0 == 0x00060079))
-                    {
-                        Return (Zero)
                     }
 
                     If ((IIA0 == 0x00130025))
@@ -15126,51 +14397,16 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (One)
                     }
 
-                    If ((IIA0 == 0x00120080))
+                    If ((IIA0 == 0x00110041))
                     {
-                        Name (WBF1, Buffer (One)
+                        Name (SSDP, Buffer (One)
                         {
                              0x00                                             // .
                         })
-                        WBF1 [Zero] = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                        ^^PCI0.SBRG.EC0.WEBC (0x2F, One, WBF1)
+                        Local0 = (IIA1 & 0xFF)
+                        SSDP [Zero] = Local0
+                        ^^PCI0.SBRG.EC0.WEBC (0x60, One, SSDP)
                         Return (One)
-                    }
-
-                    If ((IIA0 == 0x00090031))
-                    {
-                        M460 ("0x00090031 DEVS IIA1: 0x%X\n", IIA1, Zero, Zero, Zero, Zero, Zero)
-                        Local0 = Zero
-                        Local1 = Zero
-                        ^^PCI0.SBRG.EC0.OPTM = (IIA1 & One)
-                        Local0 = (IIA1 >> 0x08)
-                        M460 ("0x00090031 1 Local0: 0x%X\n", Local0, Zero, Zero, Zero, Zero, Zero)
-                        Local0 &= 0x0F
-                        M460 ("0x00090031 2 Local0: 0x%X\n", Local0, Zero, Zero, Zero, Zero, Zero)
-                        Local1 = ^^PCI0.SBRG.EC0.STC4 (0x05)
-                        Local1 &= One
-                        If ((Local0 == 0x03))
-                        {
-                            Local1 |= 0x02
-                        }
-
-                        If ((Local0 == 0x02))
-                        {
-                            Local1 |= 0x04
-                        }
-
-                        If ((Local0 == One))
-                        {
-                            Local1 |= 0x08
-                        }
-
-                        If ((Local0 == Zero))
-                        {
-                            Local1 |= 0x10
-                        }
-
-                        M460 ("0x00090031 3 Local1: 0x%X\n", Local1, Zero, Zero, Zero, Zero, Zero)
-                        Return (^^PCI0.SBRG.EC0.STC5 (0x05, Local1))
                     }
 
                     If ((IIA0 == 0x00010012))
@@ -15221,83 +14457,33 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (Zero)
                     }
 
-                    If ((IIA0 == 0x00100063))
+                    If ((IIA0 == 0x00040017))
                     {
-                        Return (DIAL (IIA1))
-                    }
-
-                    If ((IIA0 == 0x00110024))
-                    {
-                        Return (^^PCI0.SBRG.EC0.SUFC (IIA1, IIA2, IIA3, IIA4, 0x40))
-                    }
-
-                    If ((IIA0 == 0x00110025))
-                    {
-                        Return (^^PCI0.SBRG.EC0.SUFC (IIA1, IIA2, IIA3, IIA4, 0x44))
-                    }
-
-                    If ((IIA0 == 0x00110034))
-                    {
-                        Return (^^PCI0.SBRG.EC0.SFHP (IIA1, IIA2, IIA3))
-                    }
-
-                    If ((IIA0 == 0x001200A0))
-                    {
-                        Name (PLTW, Buffer (One)
+                        If ((IIA1 == One))
                         {
-                             0x00                                             // .
-                        })
-                        PLTW [Zero] = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                        Return (^^PCI0.SBRG.EC0.WEBC (0x28, One, PLTW))
-                    }
+                            SGOV (Zero, 0x18, Zero)
+                        }
+                        Else
+                        {
+                            SGOV (Zero, 0x18, One)
+                        }
 
-                    If ((IIA0 == 0x001200A1))
-                    {
-                        Return (^^PCI0.SBRG.EC0.EDCV (IIA1))
-                    }
-
-                    If ((IIA0 == 0x001200A2))
-                    {
-                        Return (^^PCI0.SBRG.EC0.TDCV (IIA1))
-                    }
-
-                    If ((IIA0 == 0x001200A3))
-                    {
-                        SSZE = 0x07
-                        MSID = 0x2E
-                        DECI = (IIA1 * 0x03E8)
-                        ALIB (0x0C, DPTI)
                         Return (One)
                     }
 
-                    If ((IIA0 == 0x001200B0))
+                    If ((IIA0 == 0x0004001B))
                     {
-                        Name (PLAO, Buffer (One)
+                        If ((IIA1 == One))
                         {
-                             0x00                                             // .
-                        })
-                        PLAO [Zero] = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                        Return (^^PCI0.SBRG.EC0.WEBC (0x39, One, PLAO))
-                    }
+                            SGOV (Zero, 0x04, Zero)
+                        }
 
-                    If ((IIA0 == 0x001200B1))
-                    {
-                        Name (PLPS, Buffer (One)
+                        If ((IIA1 == Zero))
                         {
-                             0x00                                             // .
-                        })
-                        PLPS [Zero] = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                        Return (^^PCI0.SBRG.EC0.WEBC (0x38, One, PLPS))
-                    }
+                            SGOV (Zero, 0x04, One)
+                        }
 
-                    If ((IIA0 == 0x001200C1))
-                    {
-                        Name (PLFW, Buffer (One)
-                        {
-                             0x00                                             // .
-                        })
-                        PLFW [Zero] = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                        Return (^^PCI0.SBRG.EC0.WEBC (0x2D, One, PLFW))
+                        Return (One)
                     }
 
                     If ((IIA0 == 0x0009001A)) {}
@@ -15305,36 +14491,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     {
                          0x00                                             // .
                     })
-                    If ((IIA0 == 0x001200C0))
-                    {
-                        Return (Zero)
-                    }
-
-                    If ((IIA0 == 0x001200C2))
-                    {
-                        Name (SGTT, Buffer (One)
-                        {
-                             0x00                                             // .
-                        })
-                        SGTT [Zero] = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                        ^^PCI0.SBRG.EC0.WEBC (0x2E, One, SGTT)
-                        Return (One)
-                    }
-
-                    If ((IIA0 == 0x00120098))
-                    {
-                        ^^NPCF.ACBT = (IIA1 * 0x08)
-                        Notify (NPCF, 0xC0) // Hardware-Specific
-                        Return (One)
-                    }
-
-                    If ((IIA0 == 0x0012009A))
-                    {
-                        ^^NPCF.ATPP = (IIA1 * 0x08)
-                        Notify (NPCF, 0xC0) // Hardware-Specific
-                        Return (One)
-                    }
-
                     If ((IIA0 == 0x00060096))
                     {
                         SMIF = 0x06
@@ -15359,21 +14515,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         })
                         CSOB [Zero] = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
                         Return (^^PCI0.SBRG.EC0.WEBC (0x58, One, CSOB))
-                    }
-
-                    If ((IIA0 == 0x0012009D))
-                    {
-                        Return (Zero)
-                    }
-
-                    If ((IIA0 == 0x0012009E))
-                    {
-                        Name (CPUT, Buffer (One)
-                        {
-                             0x00                                             // .
-                        })
-                        CPUT [Zero] = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                        Return (^^PCI0.SBRG.EC0.WEBC (0x6C, One, CPUT))
                     }
 
                     If ((IIA0 == 0x00060023))
@@ -16147,106 +15288,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    Scope (\)
-    {
-        Name (DIBF, 0x02)
-        Method (DIDW, 1, NotSerialized)
-        {
-        }
-    }
-
-    Scope (_SB.I2CD)
-    {
-        Device (DIDV)
-        {
-            Name (_ADR, One)  // _ADR: Address
-            Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
-            {
-                Return ("ASUS2020")
-            }
-
-            Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
-            Name (_UID, One)  // _UID: Unique ID
-            Name (_S0W, 0x03)  // _S0W: S0 Device Wake State
-            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-            {
-                If ((Arg0 == ToUUID ("3cdff6f7-4267-4555-ad05-b30a3d8938de") /* HID I2C Device */))
-                {
-                    If ((Arg2 == Zero))
-                    {
-                        If ((Arg1 == One))
-                        {
-                            Return (Buffer (One)
-                            {
-                                 0x03                                             // .
-                            })
-                        }
-                        Else
-                        {
-                            Return (Buffer (One)
-                            {
-                                 0x00                                             // .
-                            })
-                        }
-                    }
-
-                    If ((Arg2 == One))
-                    {
-                        Return (One)
-                    }
-                }
-                Else
-                {
-                    Return (Buffer (One)
-                    {
-                         0x00                                             // .
-                    })
-                }
-            }
-
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If ((DIBF == One))
-                {
-                    Return (0x0F)
-                }
-                ElseIf ((DIBF == 0x02))
-                {
-                    If ((TPSD & One))
-                    {
-                        Return (0x0F)
-                    }
-                    Else
-                    {
-                        Return (Zero)
-                    }
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
-
-            Method (_CRS, 0, Serialized)  // _CRS: Current Resource Settings
-            {
-                Name (SBFI, ResourceTemplate ()
-                {
-                    I2cSerialBusV2 (0x001D, ControllerInitiated, 0x00061A80,
-                        AddressingMode7Bit, "\\_SB.I2CD",
-                        0x00, ResourceConsumer, , Exclusive,
-                        )
-                    GpioInt (Level, ActiveLow, ExclusiveAndWake, PullUp, 0x0000,
-                        "\\_SB.GPIO", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0018
-                        }
-                })
-                Return (SBFI) /* \_SB_.I2CD.DIDV._CRS.SBFI */
-            }
-        }
-    }
-
     Scope (_SB)
     {
         Device (FAN0)
@@ -16266,9 +15307,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Name (FOPR, Package (0x04)
             {
                 Zero, 
-                0x0CE4, 
-                0x0ED8, 
-                0x1130
+                0x0960, 
+                0x0A5A, 
+                0x0B86
             })
             Name (TFST, Package (0x03)
             {
@@ -16278,9 +15319,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             })
             Method (_FST, 0, Serialized)  // _FST: Fan Status
             {
-                Local0 = ^^PCI0.SBRG.EC0.ST8E (0x3D, Zero)
-                Local1 = ^^PCI0.SBRG.EC0.RP2E (0xC6)
-                Local2 = ^^PCI0.SBRG.EC0.RP2E (0xC7)
+                Local0 = ^^PCI0.SBRG.EC0.ST83 (Zero)
+                Local1 = ^^PCI0.SBRG.EC0.RP2E (0x9C)
+                Local2 = ^^PCI0.SBRG.EC0.RP2E (0x9D)
                 Local0 *= 0x64
                 Local0 /= 0xFF
                 TFST [One] = Local0
@@ -16356,6 +15397,22 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Return (0x0F)
             }
         }
+
+        Device (ASUH)
+        {
+            Name (_HID, "ASUH2024")  // _HID: Hardware ID
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                If ((TPSF & 0x02))
+                {
+                    Return (Zero)
+                }
+                Else
+                {
+                    Return (0x0F)
+                }
+            }
+        }
     }
 
     Scope (_SB.PCI0.GPPC.XHC0)
@@ -16370,7 +15427,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 {
                     Name (XUPC, Package (0x04)
                     {
-                        Zero, 
+                        0xFF, 
                         Zero, 
                         Zero, 
                         Zero
@@ -16438,7 +15495,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 {
                     Name (XUPC, Package (0x04)
                     {
-                        0xFF, 
+                        Zero, 
                         Zero, 
                         Zero, 
                         Zero
@@ -16492,7 +15549,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         }
                     })
                     CreateField (DerefOf (XPLD [Zero]), 0x40, One, VISI)
-                    VISI = One
+                    VISI = Zero
                     CreateField (DerefOf (XPLD [Zero]), 0x57, 0x08, GPOS)
                     GPOS = 0x06
                     Return (XPLD) /* \_SB_.PCI0.GPPC.XHC0.RHUB.PRT4._PLD.XPLD */
@@ -16560,9 +15617,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         }
                     })
                     CreateField (DerefOf (XPLD [Zero]), 0x40, One, VISI)
-                    VISI = One
+                    VISI = Zero
                     CreateField (DerefOf (XPLD [Zero]), 0x57, 0x08, GPOS)
-                    GPOS = 0x08
+                    GPOS = 0x09
                     Return (XPLD) /* \_SB_.PCI0.GPPC.XHC0.RHUB.PRT6._PLD.XPLD */
                 }
             }
@@ -16637,7 +15694,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     CreateField (DerefOf (XPLD [Zero]), 0x40, One, VISI)
                     VISI = Zero
                     CreateField (DerefOf (XPLD [Zero]), 0x57, 0x08, GPOS)
-                    GPOS = 0x09
+                    GPOS = 0x08
                     Return (XPLD) /* \_SB_.PCI0.GPPA.XHC1.RHUB.PRT1._PLD.XPLD */
                 }
 
@@ -16864,57 +15921,83 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    Scope (_SB.I2CB)
+    Scope (_SB.PCI0.SBRG)
+    {
+        Device (PS2K)
+        {
+            Name (_HID, EisaId ("ATK3001"))  // _HID: Hardware ID
+            Name (_CID, EisaId ("PNP030B"))  // _CID: Compatible ID
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                If ((IOST & 0x0400))
+                {
+                    Return (0x0F)
+                }
+                Else
+                {
+                    Return (Zero)
+                }
+            }
+
+            Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
+            {
+                IO (Decode16,
+                    0x0060,             // Range Minimum
+                    0x0060,             // Range Maximum
+                    0x00,               // Alignment
+                    0x01,               // Length
+                    )
+                IO (Decode16,
+                    0x0064,             // Range Minimum
+                    0x0064,             // Range Maximum
+                    0x00,               // Alignment
+                    0x01,               // Length
+                    )
+                IRQ (Edge, ActiveLow, Shared, )
+                    {1}
+            })
+            Name (_PRS, ResourceTemplate ()  // _PRS: Possible Resource Settings
+            {
+                StartDependentFn (0x00, 0x00)
+                {
+                    IO (Decode16,
+                        0x0060,             // Range Minimum
+                        0x0060,             // Range Maximum
+                        0x00,               // Alignment
+                        0x01,               // Length
+                        )
+                    IO (Decode16,
+                        0x0064,             // Range Minimum
+                        0x0064,             // Range Maximum
+                        0x00,               // Alignment
+                        0x01,               // Length
+                        )
+                    IRQ (Edge, ActiveLow, Shared, )
+                        {1}
+                }
+                EndDependentFn ()
+            })
+        }
+    }
+
+    Scope (_SB.I2CC)
     {
         Device (ETPD)
         {
             Name (_ADR, One)  // _ADR: Address
-            Name (ETPH, Package (0x22)
+            Name (ETPH, Package (0x02)
             {
-                "ELAN1200", 
-                "ELAN1201", 
-                "ELAN1203", 
-                "ELAN1200", 
-                "ELAN1201", 
-                "ELAN1300", 
-                "ELAN1301", 
-                "ELAN1300", 
-                "ELAN1301", 
-                "ELAN1000", 
-                "ELAN1200", 
-                "ELAN1200", 
-                "ELAN1200", 
-                "ELAN1200", 
-                "ELAN1200", 
-                "ELAN1203", 
-                "ELAN1203", 
-                "ELAN1201", 
-                "ELAN1300", 
-                "ELAN1300", 
-                "ELAN1200", 
-                "ELAN1300", 
-                "ELAN1201", 
-                "ELAN1200", 
-                "ELAN1201", 
-                "ELAN1200", 
-                "ELAN1401", 
-                "ELAN1200", 
-                "ELAN1401", 
-                "ELAN1401", 
-                "ELAN1401", 
-                "ELAN1206", 
-                "ASUE1407", 
-                "ASUE140A"
+                "ASUE120C", 
+                "ASUE1417"
             })
-            Name (FTPH, Package (0x02)
+            Name (FTPH, Package (0x01)
             {
-                "ASCF1A00", 
-                "ASCF1A03"
+                "ASUF1415"
             })
             Name (PTPH, Package (0x02)
             {
-                "ASCP1A00", 
-                "ASCP1A03"
+                "ASUP1206", 
+                "ASUP1415"
             })
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
             {
@@ -16990,7 +16073,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (SBFI, ResourceTemplate ()
                 {
                     I2cSerialBusV2 (0x0015, ControllerInitiated, 0x00061A80,
-                        AddressingMode7Bit, "\\_SB.I2CB",
+                        AddressingMode7Bit, "\\_SB.I2CC",
                         0x00, ResourceConsumer, , Exclusive,
                         )
                     GpioInt (Level, ActiveLow, ExclusiveAndWake, PullUp, 0x0000,
@@ -17000,7 +16083,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             0x0008
                         }
                 })
-                Return (SBFI) /* \_SB_.I2CB.ETPD._CRS.SBFI */
+                Return (SBFI) /* \_SB_.I2CC.ETPD._CRS.SBFI */
             }
         }
     }
@@ -17087,72 +16170,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         "\\_SB.GPIO", 0x00, ResourceConsumer, ,
                         )
                         {   // Pin list
-                            0x0009
+                            0x009D
                         }
                 })
                 CreateWordField (SBFI, \_SB.I2CA.TPL0._CRS._Y34._ADR, ADR1)  // _ADR: Address
                 ADR1 = DerefOf (SADR [TPLI])
                 Return (SBFI) /* \_SB_.I2CA.TPL0._CRS.SBFI */
             }
-        }
-    }
-
-    Scope (_SB.PCI0.SBRG)
-    {
-        Device (PS2K)
-        {
-            Name (_HID, EisaId ("ATK3001"))  // _HID: Hardware ID
-            Name (_CID, EisaId ("PNP030B"))  // _CID: Compatible ID
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If ((IOST & 0x0400))
-                {
-                    Return (0x0F)
-                }
-                Else
-                {
-                    Return (Zero)
-                }
-            }
-
-            Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
-            {
-                IO (Decode16,
-                    0x0060,             // Range Minimum
-                    0x0060,             // Range Maximum
-                    0x00,               // Alignment
-                    0x01,               // Length
-                    )
-                IO (Decode16,
-                    0x0064,             // Range Minimum
-                    0x0064,             // Range Maximum
-                    0x00,               // Alignment
-                    0x01,               // Length
-                    )
-                IRQ (Edge, ActiveLow, Shared, )
-                    {1}
-            })
-            Name (_PRS, ResourceTemplate ()  // _PRS: Possible Resource Settings
-            {
-                StartDependentFn (0x00, 0x00)
-                {
-                    IO (Decode16,
-                        0x0060,             // Range Minimum
-                        0x0060,             // Range Maximum
-                        0x00,               // Alignment
-                        0x01,               // Length
-                        )
-                    IO (Decode16,
-                        0x0064,             // Range Minimum
-                        0x0064,             // Range Maximum
-                        0x00,               // Alignment
-                        0x01,               // Length
-                        )
-                    IRQ (Edge, ActiveLow, Shared, )
-                        {1}
-                }
-                EndDependentFn ()
-            })
         }
     }
 
@@ -17447,25 +16471,18 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             If ((MD6G == One))
             {
-                Name (MCL6, Package (0x1A)
+                Name (MCL6, Package (0x13)
                 {
                     0x4D, 
                     0x54, 
                     0x43, 
                     0x4C, 
-                    0x03, 
+                    0x02, 
                     One, 
-                    0xF9, 
-                    0xDF, 
-                    0xDF, 
-                    0xD9, 
-                    Zero, 
-                    Zero, 
-                    One, 
-                    Zero, 
                     0x80, 
                     Zero, 
-                    0x08, 
+                    Zero, 
+                    Zero, 
                     Zero, 
                     Zero, 
                     One, 
@@ -17493,13 +16510,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     MCL6 [0x10] = MC10 /* \_SB_.MC10 */
                     MCL6 [0x11] = MC11 /* \_SB_.MC11 */
                     MCL6 [0x12] = MC12 /* \_SB_.MC12 */
-                    MCL6 [0x13] = MCF7 /* \_SB_.MCF7 */
-                    MCL6 [0x14] = MC13 /* \_SB_.MC13 */
-                    MCL6 [0x15] = MC14 /* \_SB_.MC14 */
-                    MCL6 [0x16] = MC15 /* \_SB_.MC15 */
-                    MCL6 [0x17] = MC16 /* \_SB_.MC16 */
-                    MCL6 [0x18] = MC17 /* \_SB_.MC17 */
-                    MCL6 [0x19] = MC18 /* \_SB_.MC18 */
                 }
 
                 Return (MCL6) /* \_SB_.PCI0.GPP5.WLAN.MTCL.MCL6 */
@@ -17914,9 +16924,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     }
 
     Mutex (BTMT, 0x00)
-    If (CondRefOf (\_SB.PCI0.GPPC.XHC0.RHUB.PRT3))
+    If (CondRefOf (\_SB.PCI0.GPPC.XHC0.RHUB.PRT1))
     {
-        Scope (_SB.PCI0.GPPC.XHC0.RHUB.PRT3)
+        Scope (_SB.PCI0.GPPC.XHC0.RHUB.PRT1)
         {
             PowerResource (BTPR, 0x05, 0x0000)
             {
@@ -18007,7 +17017,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Method (SPCF, 1, Serialized)
         {
             M460 ("PLA-ASL-_SB.PCI0.GPPX.SPCF\n", Zero, Zero, Zero, Zero, Zero, Zero)
-            If ((Arg0 == 0x00020005))
+            If ((Arg0 == 0x00020001))
             {
                 M460 ("PLA-ASL-_SB.PCI0.GPPX.SPCF NVMe 1\n", Zero, Zero, Zero, Zero, Zero, Zero)
                 Local0 = M019 (Zero, (Arg0 >> 0x10), (Arg0 & 0xFF), 
@@ -18038,7 +17048,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Method (RPCF, 1, Serialized)
         {
             M460 ("PLA-ASL-_SB.PCI0.GPPX.RPCF\n", Zero, Zero, Zero, Zero, Zero, Zero)
-            If ((Arg0 == 0x00020005))
+            If ((Arg0 == 0x00020001))
             {
                 M460 ("PLA-ASL-_SB.PCI0.GPPX.RPCF NVMe 1\n", Zero, Zero, Zero, Zero, Zero, Zero)
                 Local1 = PXCR (NBRI, Zero, Zero)
@@ -18046,8 +17056,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 M020 (NBRI, Zero, Zero, (Local1 + 0x10), (PXLC & 0xFFFFFEFC))
                 M020 (NBRI, Zero, Zero, (Local1 + 0x28), PXD2)
                 M020 (NBRI, Zero, Zero, 0x10, NBAR)
-                Local2 = (NCMD & 0xFFFFFBFF)
-                M020 (NBRI, Zero, Zero, 0x04, (Local2 | 0x06))
+                M020 (NBRI, Zero, Zero, 0x04, 0x06)
             }
             Else
             {
@@ -18057,8 +17066,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 M020 (BRI2, Zero, Zero, (Local1 + 0x10), (XLC2 & 0xFFFFFEFC))
                 M020 (BRI2, Zero, Zero, (Local1 + 0x28), XD22)
                 M020 (BRI2, Zero, Zero, 0x10, BAR2)
-                Local2 = (CMD2 & 0xFFFFFBFF)
-                M020 (BRI2, Zero, Zero, 0x04, (Local2 | 0x06))
+                M020 (BRI2, Zero, Zero, 0x04, 0x06)
             }
         }
 
@@ -18071,9 +17079,153 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 SMIC,   8, 
                 SMID,   8
             }
+        }
+    }
 
-            SMIC = 0xD1
-            SMIC = 0xD8
+    Scope (_SB.I2CB)
+    {
+        Device (SPKR)
+        {
+            Name (_HID, "CSC3551")  // _HID: Hardware ID
+            Name (_SUB, "10431194")  // _SUB: Subsystem ID
+            Name (_UID, One)  // _UID: Unique ID
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, ResourceTemplate ()
+                {
+                    I2cSerialBusV2 (0x0040, ControllerInitiated, 0x000F4240,
+                        AddressingMode7Bit, "\\_SB.I2CB",
+                        0x00, ResourceConsumer, , Exclusive,
+                        )
+                    I2cSerialBusV2 (0x0041, ControllerInitiated, 0x000F4240,
+                        AddressingMode7Bit, "\\_SB.I2CB",
+                        0x00, ResourceConsumer, , Exclusive,
+                        )
+                    GpioIo (Exclusive, PullDown, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                        "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x0009
+                        }
+                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionInputOnly,
+                        "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x0054
+                        }
+                    GpioIo (Shared, PullUp, 0x0064, 0x0000, IoRestrictionInputOnly,
+                        "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x000B
+                        }
+                    GpioInt (Edge, ActiveBoth, Shared, PullUp, 0x0064,
+                        "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x000B
+                        }
+                })
+                Return (RBUF) /* \_SB_.I2CB.SPKR._CRS.RBUF */
+            }
+
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (0x0F)
+            }
+
+            Method (_DIS, 0, NotSerialized)  // _DIS: Disable Device
+            {
+            }
+
+            Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
+            {
+                ToUUID ("daffd814-6eba-4d8c-8a91-bc9bbf4aa301") /* Device Properties for _DSD */, 
+                Package (0x07)
+                {
+                    Package (0x02)
+                    {
+                        "cirrus,dev-index", 
+                        Package (0x02)
+                        {
+                            0x40, 
+                            0x41
+                        }
+                    }, 
+
+                    Package (0x02)
+                    {
+                        "reset-gpios", 
+                        Package (0x08)
+                        {
+                            SPKR, 
+                            Zero, 
+                            Zero, 
+                            Zero, 
+                            SPKR, 
+                            Zero, 
+                            Zero, 
+                            Zero
+                        }
+                    }, 
+
+                    Package (0x02)
+                    {
+                        "spk-id-gpios", 
+                        Package (0x08)
+                        {
+                            SPKR, 
+                            One, 
+                            Zero, 
+                            Zero, 
+                            SPKR, 
+                            One, 
+                            Zero, 
+                            Zero
+                        }
+                    }, 
+
+                    Package (0x02)
+                    {
+                        "cirrus,speaker-position", 
+                        Package (0x02)
+                        {
+                            Zero, 
+                            One
+                        }
+                    }, 
+
+                    Package (0x02)
+                    {
+                        "cirrus,boost-type", 
+                        Package (0x02)
+                        {
+                            One, 
+                            One
+                        }
+                    }, 
+
+                    Package (0x02)
+                    {
+                        "cirrus,gpio1-func", 
+                        Package (0x02)
+                        {
+                            One, 
+                            Zero
+                        }
+                    }, 
+
+                    Package (0x02)
+                    {
+                        "cirrus,gpio2-func", 
+                        Package (0x02)
+                        {
+                            0x02, 
+                            0x02
+                        }
+                    }
+                }
+            })
         }
     }
 }

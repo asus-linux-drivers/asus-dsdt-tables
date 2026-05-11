@@ -1,17 +1,17 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20220331 (64-bit version)
- * Copyright (c) 2000 - 2022 Intel Corporation
+ * AML/ASL+ Disassembler version 20200925 (64-bit version)
+ * Copyright (c) 2000 - 2020 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of DSDT, Wed Aug  7 21:51:36 2024
+ * Disassembly of /tmp/tmp.QlQmcYvava/Vivobook_Go_E1404FA_E1404FA_9740ba8ded20_2/Vivobook_Go_E1404FA_E1404FA, Mon May 11 09:49:18 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x00012C9F (76959)
+ *     Length           0x00012CB6 (76982)
  *     Revision         0x02
- *     Checksum         0xB4
+ *     Checksum         0x03
  *     OEM ID           "_ASUS_"
  *     OEM Table ID     "Notebook"
  *     OEM Revision     0x01072009 (17244169)
@@ -6334,7 +6334,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     0xD1, 
                     0xCC, 
                     0x40, 
-                    0x18, 
+                    0x98, 
                     Zero, 
                     Zero, 
                     One, 
@@ -6356,7 +6356,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     0xD1, 
                     0xCC, 
                     0x41, 
-                    0x18, 
+                    0x98, 
                     Zero, 
                     Zero, 
                     One, 
@@ -13194,7 +13194,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Local0 = One
                         Local0 <<= 0x08
                         Local0 += GLKB (0x02)
-                        Local0 |= 0x00150000
+                        Local0 |= 0x00140000
+                        Local1 = Zero
+                        Local1 = (KB_B & One)
+                        If ((Local1 == Zero))
+                        {
+                            Local0 |= 0x00010000
+                        }
                     }
 
                     Return (Local0)
@@ -14376,7 +14382,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Method (VERS, 2, Serialized)
         {
             Local0 = 0x0300
-            Local0 += 0x08
+            Local0 += 0x0E
             Return (Local0)
         }
     }
@@ -15602,7 +15608,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
             Else
             {
-                Local2 &= Zero
+                Local2 = Zero
             }
 
             ^^PCI0.SBRG.EC0.WR_M (0x9054, Local2)

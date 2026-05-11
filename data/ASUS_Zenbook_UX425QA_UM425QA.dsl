@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /tmp/tmp.Eqi40k1ZsE/Vivobook_S_Flip_TN3604YA_TN3604YA_323eef3a93a5/Vivobook_S_Flip_TN3604YA_TN3604YA, Mon May 11 09:41:13 2026
+ * Disassembly of /tmp/tmp.QlQmcYvava/Zenbook_UX425QA_UM425QA_b31e2ab8beeb_2/Zenbook_UX425QA_UM425QA, Mon May 11 09:49:28 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x0000F8D8 (63704)
+ *     Length           0x0000DBAE (56238)
  *     Revision         0x02
- *     Checksum         0x80
+ *     Checksum         0x2B
  *     OEM ID           "_ASUS_"
  *     OEM Table ID     "Notebook"
  *     OEM Revision     0x01072009 (17244169)
@@ -22,14 +22,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 {
     External (_SB_.ALIB, MethodObj)    // 2 Arguments
     External (_SB_.APTS, MethodObj)    // 1 Arguments
-    External (_SB_.ATKD.MAKY, UnknownObj)
     External (_SB_.AWAK, MethodObj)    // 1 Arguments
     External (_SB_.PCI0.GP17.VGA_.AFN7, MethodObj)    // 1 Arguments
     External (_SB_.PCI0.SBRG.EC0_.AFN4, MethodObj)    // 1 Arguments
     External (_SB_.PCI0.SBRG.EC0_.ALIB, MethodObj)    // 2 Arguments
-    External (_SB_.PCI0.SBRG.EC0_.OLIP, IntObj)
     External (_SB_.PCI0.SBRG.EC0_.SKEY, MethodObj)    // 1 Arguments
-    External (_SB_.SGOR, MethodObj)    // 1 Arguments
     External (_SB_.SGOV, MethodObj)    // 2 Arguments
     External (_SB_.UBTC, DeviceObj)
     External (_SB_.UBTC.CCI0, IntObj)
@@ -119,8 +116,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (PEBS, 0xF0000000)
     Name (PELN, 0x08000000)
     Name (CSMI, 0x61)
-    Name (DSSP, Zero)
-    Name (FHPP, One)
     Name (SMIA, 0xB2)
     Name (OFST, 0x35)
     Name (TRST, 0x02)
@@ -131,13 +126,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (TTPF, Zero)
     Name (DTPT, Zero)
     Name (TTDP, One)
-    Name (TPMB, 0xBC068000)
+    Name (TPMB, 0xCC0C8000)
     Name (TPBS, 0x4000)
-    Name (TPMC, 0xBC06C000)
+    Name (TPMC, 0xCC0CC000)
     Name (TPCS, 0x4000)
     Name (TPMM, 0xFD210510)
     Name (FTPM, 0xFD210510)
-    Name (PPIM, 0xBC2EFC98)
+    Name (PPIM, 0xCC344C98)
     Name (PPIL, 0x1C)
     Name (AMDT, One)
     Name (TPMF, One)
@@ -395,7 +390,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (TOPM, 0x00000000)
     Name (ROMS, 0xFFE00000)
     Name (VGAF, One)
-    OperationRegion (GNVS, SystemMemory, 0xBC2EFB18, 0x10)
+    OperationRegion (GNVS, SystemMemory, 0xCC344B18, 0x10)
     Field (GNVS, AnyAcc, Lock, Preserve)
     {
         CNSB,   8, 
@@ -1576,8 +1571,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Name (BRL, 0x0100)
             Name (IOB, 0x1000)
             Name (IOL, 0xF000)
-            Name (MBB, 0xC0000000)
-            Name (MBL, 0x40000000)
+            Name (MBB, 0xD0000000)
+            Name (MBL, 0x30000000)
             Name (MAB, 0x0000000000000000)
             Name (MAL, 0x0000000000000000)
             Name (MAM, 0x0000000000000000)
@@ -2300,54 +2295,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                                 Divide ((Arg0 * 0xFF), 0x64, Local1, Local0)
                                 AFN7 (Local0)
                             }
-                        }
-
-                        Name (AUOP, Package (0x01)
-                        {
-                            Buffer (0x0100)
-                            {
-                                /* 0000 */  0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00,  // ........
-                                /* 0008 */  0x4C, 0x83, 0x78, 0x41, 0x00, 0x00, 0x00, 0x00,  // L.xA....
-                                /* 0010 */  0x00, 0x20, 0x01, 0x04, 0xB5, 0x22, 0x16, 0x78,  // . ...".x
-                                /* 0018 */  0x00, 0x0C, 0xF1, 0xAE, 0x52, 0x3C, 0xB9, 0x23,  // ....R<.#
-                                /* 0020 */  0x0C, 0x50, 0x54, 0x00, 0x00, 0x00, 0x01, 0x01,  // .PT.....
-                                /* 0028 */  0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01,  // ........
-                                /* 0030 */  0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x1D, 0x9E,  // ........
-                                /* 0038 */  0x80, 0x78, 0xC0, 0xD0, 0x20, 0x70, 0x20, 0x08,  // .x.. p .
-                                /* 0040 */  0x88, 0x00, 0x58, 0xD7, 0x10, 0x00, 0x00, 0x1B,  // ..X.....
-                                /* 0048 */  0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 0050 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 0058 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x00,  // ........
-                                /* 0060 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03,  // ........
-                                /* 0068 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFE,  // ........
-                                /* 0070 */  0x00, 0x41, 0x54, 0x4E, 0x41, 0x36, 0x30, 0x42,  // .ATNA60B
-                                /* 0078 */  0x58, 0x30, 0x31, 0x2D, 0x31, 0x20, 0x01, 0x1E,  // X01-1 ..
-                                /* 0080 */  0x02, 0x03, 0x0F, 0x00, 0xE3, 0x05, 0x80, 0x00,  // ........
-                                /* 0088 */  0xE6, 0x06, 0x05, 0x01, 0x74, 0x60, 0x07, 0x00,  // ....t`..
-                                /* 0090 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 0098 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00A0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00A8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00B0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00B8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00C0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00C8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00D0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00D8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00E0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00E8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00F0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                                /* 00F8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xB7   // ........
-                            }
-                        })
-                        Method (_DDC, 1, NotSerialized)  // _DDC: Display Data Current
-                        {
-                            If ((^^^^SBRG.EC0.OLIP == One))
-                            {
-                                Return (AUOP) /* \_SB_.PCI0.GP17.VGA_.LCD_.AUOP */
-                            }
-
-                            Return (Zero)
                         }
                     }
                 }
@@ -5968,8 +5915,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (_ADR, One)  // _ADR: Address
                 Name (UPC1, Package (0x04)
                 {
-                    Zero, 
-                    0x03, 
+                    0xFF, 
+                    0x09, 
                     Zero, 
                     Zero
                 })
@@ -5998,8 +5945,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (_ADR, 0x02)  // _ADR: Address
                 Name (UPC1, Package (0x04)
                 {
-                    0xFF, 
-                    0xFF, 
+                    Zero, 
+                    0x03, 
                     Zero, 
                     Zero
                 })
@@ -6013,7 +5960,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Buffer (0x14)
                     {
                         /* 0000 */  0x82, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                        /* 0008 */  0x10, 0x0C, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00,  // ........
+                        /* 0008 */  0x91, 0x0C, 0x00, 0x01, 0x01, 0x00, 0x00, 0x00,  // ........
                         /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
                     }
                 })
@@ -6157,30 +6104,75 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Device (PRT4)
             {
                 Name (_ADR, 0x04)  // _ADR: Address
-                Name (UPC1, Package (0x04)
+                Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
                 {
                     0xFF, 
-                    0x09, 
+                    0xFF, 
                     Zero, 
                     Zero
                 })
-                Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
+                Name (_PLD, Package (0x01)  // _PLD: Physical Location of Device
                 {
-                    Return (UPC1) /* \_SB_.PCI0.GP17.XHC0.RHUB.PRT4.UPC1 */
+                    ToPLD (
+                        PLD_Revision           = 0x2,
+                        PLD_IgnoreColor        = 0x1,
+                        PLD_Red                = 0x0,
+                        PLD_Green              = 0x0,
+                        PLD_Blue               = 0x0,
+                        PLD_Width              = 0x0,
+                        PLD_Height             = 0x0,
+                        PLD_UserVisible        = 0x0,
+                        PLD_Dock               = 0x0,
+                        PLD_Lid                = 0x0,
+                        PLD_Panel              = "LEFT",
+                        PLD_VerticalPosition   = "UPPER",
+                        PLD_HorizontalPosition = "LEFT",
+                        PLD_Shape              = "VERTICALRECTANGLE",
+                        PLD_GroupOrientation   = 0x0,
+                        PLD_GroupToken         = 0x0,
+                        PLD_GroupPosition      = 0xB,
+                        PLD_Bay                = 0x0,
+                        PLD_Ejectable          = 0x0,
+                        PLD_EjectRequired      = 0x0,
+                        PLD_CabinetNumber      = 0x0,
+                        PLD_CardCageNumber     = 0x0,
+                        PLD_Reference          = 0x0,
+                        PLD_Rotation           = 0x0,
+                        PLD_Order              = 0x0,
+                        PLD_VerticalOffset     = 0xFFFF,
+                        PLD_HorizontalOffset   = 0xFFFF)
+
+                })
+                PowerResource (BTRT, 0x05, 0x0000)
+                {
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        Return (One)
+                    }
+
+                    Method (_ON, 0, NotSerialized)  // _ON_: Power On
+                    {
+                    }
+
+                    Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
+                    {
+                    }
+
+                    Method (_RST, 0, NotSerialized)  // _RST: Device Reset
+                    {
+                        SGOV (0xFED81544, Zero)
+                        Sleep (0x69)
+                        SGOV (0xFED81544, One)
+                        Sleep (0x69)
+                    }
                 }
 
-                Name (PLD1, Package (0x01)
+                Method (_PRR, 0, NotSerialized)  // _PRR: Power Resource for Reset
                 {
-                    Buffer (0x14)
+                    Return (Package (0x01)
                     {
-                        /* 0000 */  0x82, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                        /* 0008 */  0x11, 0x0C, 0x80, 0x00, 0x01, 0x00, 0x00, 0x00,  // ........
-                        /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                    }
-                })
-                Method (_PLD, 0, Serialized)  // _PLD: Physical Location of Device
-                {
-                    Return (PLD1) /* \_SB_.PCI0.GP17.XHC0.RHUB.PRT4.PLD1 */
+                        BTRT
+                    })
                 }
             }
 
@@ -6256,7 +6248,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (_ADR, One)  // _ADR: Address
                 Name (UPC1, Package (0x04)
                 {
-                    Zero, 
+                    0xFF, 
                     0x09, 
                     Zero, 
                     Zero
@@ -6287,7 +6279,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (UPC1, Package (0x04)
                 {
                     0xFF, 
-                    Zero, 
+                    0x03, 
                     Zero, 
                     Zero
                 })
@@ -6301,7 +6293,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Buffer (0x14)
                     {
                         /* 0000 */  0x82, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                        /* 0008 */  0x91, 0x0C, 0x80, 0x03, 0x01, 0x00, 0x00, 0x00,  // ........
+                        /* 0008 */  0x91, 0x0C, 0x00, 0x03, 0x01, 0x00, 0x00, 0x00,  // ........
                         /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
                     }
                 })
@@ -6314,75 +6306,42 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Device (PRT3)
             {
                 Name (_ADR, 0x03)  // _ADR: Address
-                Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
+                Name (UPC1, Package (0x04)
                 {
-                    0xFF, 
-                    0xFF, 
+                    Zero, 
+                    0x03, 
                     Zero, 
                     Zero
                 })
-                Name (_PLD, Package (0x01)  // _PLD: Physical Location of Device
+                Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                 {
-                    ToPLD (
-                        PLD_Revision           = 0x2,
-                        PLD_IgnoreColor        = 0x1,
-                        PLD_Red                = 0x0,
-                        PLD_Green              = 0x0,
-                        PLD_Blue               = 0x0,
-                        PLD_Width              = 0x0,
-                        PLD_Height             = 0x0,
-                        PLD_UserVisible        = 0x0,
-                        PLD_Dock               = 0x0,
-                        PLD_Lid                = 0x0,
-                        PLD_Panel              = "LEFT",
-                        PLD_VerticalPosition   = "UPPER",
-                        PLD_HorizontalPosition = "LEFT",
-                        PLD_Shape              = "VERTICALRECTANGLE",
-                        PLD_GroupOrientation   = 0x0,
-                        PLD_GroupToken         = 0x0,
-                        PLD_GroupPosition      = 0xB,
-                        PLD_Bay                = 0x0,
-                        PLD_Ejectable          = 0x0,
-                        PLD_EjectRequired      = 0x0,
-                        PLD_CabinetNumber      = 0x0,
-                        PLD_CardCageNumber     = 0x0,
-                        PLD_Reference          = 0x0,
-                        PLD_Rotation           = 0x0,
-                        PLD_Order              = 0x0,
-                        PLD_VerticalOffset     = 0xFFFF,
-                        PLD_HorizontalOffset   = 0xFFFF)
+                    Return (UPC1) /* \_SB_.PCI0.GP17.XHC1.RHUB.PRT3.UPC1 */
+                }
 
-                })
-                PowerResource (BTRT, 0x05, 0x0000)
+                Name (PLD1, Package (0x01)
                 {
-                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x82, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+                        /* 0008 */  0x91, 0x1C, 0x80, 0x03, 0x01, 0x00, 0x00, 0x00,  // ........
+                        /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
+                    }
+                })
+                Method (_PLD, 0, Serialized)  // _PLD: Physical Location of Device
+                {
+                    Return (PLD1) /* \_SB_.PCI0.GP17.XHC1.RHUB.PRT3.PLD1 */
+                }
+
+                Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
+                {
+                    If ((THPN == 0x04))
+                    {
+                        Return (Zero)
+                    }
+                    Else
                     {
                         Return (One)
                     }
-
-                    Method (_ON, 0, NotSerialized)  // _ON_: Power On
-                    {
-                    }
-
-                    Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
-                    {
-                    }
-
-                    Method (_RST, 0, NotSerialized)  // _RST: Device Reset
-                    {
-                        SGOV (0xFED81544, Zero)
-                        Sleep (0xC8)
-                        SGOV (0xFED81544, One)
-                        Sleep (0xC8)
-                    }
-                }
-
-                Method (_PRR, 0, NotSerialized)  // _PRR: Power Resource for Reset
-                {
-                    Return (Package (0x01)
-                    {
-                        BTRT
-                    })
                 }
             }
 
@@ -6391,8 +6350,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (_ADR, 0x04)  // _ADR: Address
                 Name (UPC1, Package (0x04)
                 {
+                    Zero, 
                     0xFF, 
-                    0x03, 
                     Zero, 
                     Zero
                 })
@@ -6406,7 +6365,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Buffer (0x14)
                     {
                         /* 0000 */  0x82, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
-                        /* 0008 */  0x91, 0x0C, 0x00, 0x03, 0x01, 0x00, 0x00, 0x00,  // ........
+                        /* 0008 */  0x91, 0x1D, 0x00, 0x04, 0x01, 0x00, 0x00, 0x00,  // ........
                         /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
                     }
                 })
@@ -6421,7 +6380,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Name (_ADR, 0x05)  // _ADR: Address
                 Name (UPC1, Package (0x04)
                 {
-                    Zero, 
+                    0xFF, 
                     0x09, 
                     Zero, 
                     Zero
@@ -7999,37 +7958,22 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     {
         Device (TPNL)
         {
+            Name (_HID, EisaId ("PNP0C50") /* HID Protocol Device (I2C bus) */)  // _HID: Hardware ID
             Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
             Name (_UID, 0x02)  // _UID: Unique ID
-            Name (HID2, One)
-            Name (WDTN, Package (0x16)
-            {
-                "ELAN9008", 
-                "ASUE140D", 
-                "ASUP1204", 
-                "ELAN1300", 
-                "ELAN1301", 
-                "ELAN1400", 
-                "ELAN140C"
-            })
-            Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
-            {
-                Return (DerefOf (WDTN [Zero]))
-            }
-
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
                 {
-                    I2cSerialBusV2 (0x0010, ControllerInitiated, 0x00061A80,
+                    I2cSerialBusV2 (0x004A, ControllerInitiated, 0x000F4240,
                         AddressingMode7Bit, "\\_SB.I2CB",
                         0x00, ResourceConsumer, , Exclusive,
                         )
-                    GpioInt (Level, ActiveLow, Shared, PullNone, 0x0000,
+                    GpioInt (Level, ActiveLow, Shared, PullUp, 0x0000,
                         "\\_SB.GPIO", 0x00, ResourceConsumer, ,
                         )
                         {   // Pin list
-                            0x000B
+                            0x000C
                         }
                 })
                 Return (RBUF) /* \_SB_.I2CB.TPNL._CRS.RBUF */
@@ -8092,7 +8036,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         }
                         Case (One)
                         {
-                            Return (One)
+                            Return (Zero)
                         }
                         Default
                         {
@@ -8115,7 +8059,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_HID, EisaId ("PNP0C50") /* HID Protocol Device (I2C bus) */)  // _HID: Hardware ID
             Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
-            Name (_UID, 0x02)  // _UID: Unique ID
+            Name (_UID, One)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
@@ -8316,7 +8260,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_HID, EisaId ("PNP0C50") /* HID Protocol Device (I2C bus) */)  // _HID: Hardware ID
             Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
-            Name (_UID, 0x03)  // _UID: Unique ID
+            Name (_UID, One)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
@@ -8517,7 +8461,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_HID, EisaId ("PNP0C50") /* HID Protocol Device (I2C bus) */)  // _HID: Hardware ID
             Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
-            Name (_UID, 0x04)  // _UID: Unique ID
+            Name (_UID, One)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
@@ -8718,7 +8662,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_HID, EisaId ("PNP0C50") /* HID Protocol Device (I2C bus) */)  // _HID: Hardware ID
             Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
-            Name (_UID, 0x05)  // _UID: Unique ID
+            Name (_UID, One)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
@@ -8727,7 +8671,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         AddressingMode7Bit, "\\_SB.I2CA",
                         0x00, ResourceConsumer, , Exclusive,
                         )
-                    GpioInt (Level, ActiveLow, ExclusiveAndWake, PullUp, 0x0000,
+                    GpioInt (Level, ActiveLow, Shared, PullUp, 0x0000,
                         "\\_SB.GPIO", 0x00, ResourceConsumer, ,
                         )
                         {   // Pin list
@@ -8919,7 +8863,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_HID, EisaId ("PNP0C50") /* HID Protocol Device (I2C bus) */)  // _HID: Hardware ID
             Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
-            Name (_UID, 0x06)  // _UID: Unique ID
+            Name (_UID, One)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
@@ -8928,7 +8872,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         AddressingMode7Bit, "\\_SB.I2CB",
                         0x00, ResourceConsumer, , Exclusive,
                         )
-                    GpioInt (Level, ActiveLow, ExclusiveAndWake, PullUp, 0x0000,
+                    GpioInt (Level, ActiveLow, Shared, PullUp, 0x0000,
                         "\\_SB.GPIO", 0x00, ResourceConsumer, ,
                         )
                         {   // Pin list
@@ -9120,7 +9064,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_HID, EisaId ("PNP0C50") /* HID Protocol Device (I2C bus) */)  // _HID: Hardware ID
             Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
-            Name (_UID, 0x07)  // _UID: Unique ID
+            Name (_UID, One)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
@@ -9129,7 +9073,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         AddressingMode7Bit, "\\_SB.I2CC",
                         0x00, ResourceConsumer, , Exclusive,
                         )
-                    GpioInt (Level, ActiveLow, ExclusiveAndWake, PullUp, 0x0000,
+                    GpioInt (Level, ActiveLow, Shared, PullUp, 0x0000,
                         "\\_SB.GPIO", 0x00, ResourceConsumer, ,
                         )
                         {   // Pin list
@@ -9224,14 +9168,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Name (_UID, 0x08)  // _UID: Unique ID
             Name (ETPH, Package (0x16)
             {
-                "ASUE120B", 
-                "ASUE140D", 
-                "ASUP1204", 
-                "ASUE1213", 
+                "ELAN1206", 
+                "ASUE140A", 
+                "ELAN1203", 
+                "ELAN1300", 
                 "ELAN1301", 
                 "ELAN1400", 
-                "ELAN140C", 
-                "ASUF1202"
+                "ELAN140C"
             })
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
             {
@@ -9245,21 +9188,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (DerefOf (ETPH [One]))
                 }
 
-                If ((TPDT == 0x03))
-                {
-                    Return (DerefOf (ETPH [0x02]))
-                }
-
-                If ((TPDT == 0x04))
-                {
-                    Return (DerefOf (ETPH [0x03]))
-                }
-
-                If ((TPDT == 0x05))
-                {
-                    Return (DerefOf (ETPH [0x07]))
-                }
-
                 Return (0x500CD041)
             }
 
@@ -9271,7 +9199,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         AddressingMode7Bit, "\\_SB.I2CD",
                         0x00, ResourceConsumer, , Exclusive,
                         )
-                    GpioInt (Level, ActiveLow, Exclusive, PullNone, 0x0000,
+                    GpioInt (Level, ActiveLow, ExclusiveAndWake, PullNone, 0x0000,
                         "\\_SB.GPIO", 0x00, ResourceConsumer, ,
                         )
                         {   // Pin list
@@ -9361,7 +9289,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Name (_HID, EisaId ("PNP0C50") /* HID Protocol Device (I2C bus) */)  // _HID: Hardware ID
             Name (_CID, "PNP0C50" /* HID Protocol Device (I2C bus) */)  // _CID: Compatible ID
-            Name (_UID, 0x08)  // _UID: Unique ID
+            Name (_UID, One)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
@@ -9370,7 +9298,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         AddressingMode7Bit, "\\_SB.I2CD",
                         0x00, ResourceConsumer, , Exclusive,
                         )
-                    GpioInt (Level, ActiveLow, ExclusiveAndWake, PullUp, 0x0000,
+                    GpioInt (Level, ActiveLow, Shared, PullUp, 0x0000,
                         "\\_SB.GPIO", 0x00, ResourceConsumer, ,
                         )
                         {   // Pin list
@@ -10132,7 +10060,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                 Method (RHRW, 0, NotSerialized)
                 {
-                    Return (GPRW (0x6D, 0x03))
+                    Return (GPRW (0x6D, 0x04))
                 }
 
                 Method (_DSW, 3, NotSerialized)  // _DSW: Device Sleep Wake
@@ -10206,189 +10134,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0x68
                     }
                 })
-                Method (MTDS, 0, Serialized)
-                {
-                    Name (AZRD, Package (0x1F)
-                    {
-                        0x4D, 
-                        0x54, 
-                        0x44, 
-                        0x53, 
-                        One, 
-                        Zero, 
-                        0x02, 
-                        One, 
-                        0x1F, 
-                        0x17, 
-                        0x17, 
-                        0x17, 
-                        0x17, 
-                        0x10, 
-                        0x10, 
-                        0x11, 
-                        0x10, 
-                        0x10, 
-                        0x11, 
-                        0x02, 
-                        0x1F, 
-                        0x17, 
-                        0x17, 
-                        0x17, 
-                        0x17, 
-                        0x10, 
-                        0x10, 
-                        0x11, 
-                        0x10, 
-                        0x10, 
-                        0x11
-                    })
-                    Name (BZRD, Package (0x1F)
-                    {
-                        0x4D, 
-                        0x54, 
-                        0x44, 
-                        0x53, 
-                        One, 
-                        Zero, 
-                        0x02, 
-                        One, 
-                        0x16, 
-                        0x15, 
-                        0x15, 
-                        0x15, 
-                        0x15, 
-                        0x0E, 
-                        0x0E, 
-                        0x0F, 
-                        0x0E, 
-                        0x0E, 
-                        0x0F, 
-                        0x02, 
-                        0x16, 
-                        0x15, 
-                        0x15, 
-                        0x15, 
-                        0x15, 
-                        0x0E, 
-                        0x0E, 
-                        0x0F, 
-                        0x0E, 
-                        0x0E, 
-                        0x0F
-                    })
-                    If (((VDID == 0x792214C3) || (VDID == 0x061614C3)))
-                    {
-                        Return (AZRD) /* \_SB_.PCI0.GPP0.WLAN.MTDS.AZRD */
-                    }
-
-                    If ((VDID == 0x790214C3))
-                    {
-                        Return (BZRD) /* \_SB_.PCI0.GPP0.WLAN.MTDS.BZRD */
-                    }
-                }
-
-                Method (MTGS, 0, Serialized)
-                {
-                    Name (GEOO, Package (0x1C)
-                    {
-                        0x4D, 
-                        0x54, 
-                        0x47, 
-                        0x53, 
-                        One, 
-                        Zero, 
-                        0x03, 
-                        One, 
-                        0x29, 
-                        Zero, 
-                        0x22, 
-                        Zero, 
-                        0x1A, 
-                        Zero, 
-                        0x02, 
-                        0xFF, 
-                        0xFF, 
-                        0xFF, 
-                        0xFF, 
-                        0xFF, 
-                        0xFF, 
-                        0x03, 
-                        0x29, 
-                        Zero, 
-                        0x22, 
-                        Zero, 
-                        0x1A, 
-                        Zero
-                    })
-                    Name (HEOO, Package (0x1C)
-                    {
-                        0x4D, 
-                        0x54, 
-                        0x47, 
-                        0x53, 
-                        One, 
-                        Zero, 
-                        0x03, 
-                        One, 
-                        0x27, 
-                        Zero, 
-                        0x23, 
-                        Zero, 
-                        0x17, 
-                        Zero, 
-                        0x02, 
-                        0xFF, 
-                        0xFF, 
-                        0xFF, 
-                        0xFF, 
-                        0xFF, 
-                        0xFF, 
-                        0x03, 
-                        0x27, 
-                        Zero, 
-                        0x23, 
-                        Zero, 
-                        0x17, 
-                        Zero
-                    })
-                    If (((VDID == 0x792214C3) || (VDID == 0x061614C3)))
-                    {
-                        Return (GEOO) /* \_SB_.PCI0.GPP0.WLAN.MTGS.GEOO */
-                    }
-
-                    If ((VDID == 0x790214C3))
-                    {
-                        Return (HEOO) /* \_SB_.PCI0.GPP0.WLAN.MTGS.HEOO */
-                    }
-                }
-
-                Method (MTCL, 0, Serialized)
-                {
-                    Name (MREG, Package (0x13)
-                    {
-                        0x4D, 
-                        0x54, 
-                        0x43, 
-                        0x4C, 
-                        0x02, 
-                        One, 
-                        0xC1, 
-                        0xCC, 
-                        0x81, 
-                        0x18, 
-                        Zero, 
-                        Zero, 
-                        One, 
-                        Zero, 
-                        Zero, 
-                        Zero, 
-                        0x08, 
-                        Zero, 
-                        Zero
-                    })
-                    Return (MREG) /* \_SB_.PCI0.GPP0.WLAN.MTCL.MREG */
-                }
-
                 Name (WRD2, Package (0x02)
                 {
                     Zero, 
@@ -10426,43 +10171,187 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         0x54, 
                         One, 
                         One, 
-                        0x5C, 
-                        0x54, 
-                        0x54, 
-                        0x54, 
-                        0x54, 
-                        0x5C, 
-                        0x54, 
-                        0x54, 
-                        0x54, 
-                        0x54, 
-                        0x5C, 
-                        0x54, 
-                        0x54, 
-                        0x54, 
-                        0x54, 
-                        0x5C, 
-                        0x54, 
-                        0x54, 
-                        0x54, 
-                        0x54
+                        0x74, 
+                        0x68, 
+                        0x68, 
+                        0x68, 
+                        0x68, 
+                        0x74, 
+                        0x68, 
+                        0x68, 
+                        0x68, 
+                        0x68, 
+                        0x74, 
+                        0x68, 
+                        0x68, 
+                        0x68, 
+                        0x68, 
+                        0x74, 
+                        0x68, 
+                        0x68, 
+                        0x68, 
+                        0x68
                     })
-                    Return (RWRY) /* \_SB_.PCI0.GPP0.WLAN.RWRD.RWRY */
+                    Name (RWR2, Package (0x18)
+                    {
+                        0x52, 
+                        0x54, 
+                        One, 
+                        One, 
+                        0x70, 
+                        0x64, 
+                        0x64, 
+                        0x64, 
+                        0x64, 
+                        0x70, 
+                        0x64, 
+                        0x64, 
+                        0x64, 
+                        0x64, 
+                        0x70, 
+                        0x64, 
+                        0x64, 
+                        0x64, 
+                        0x64, 
+                        0x70, 
+                        0x64, 
+                        0x64, 
+                        0x64, 
+                        0x64
+                    })
+                    If ((VDID == 0x27238086))
+                    {
+                        Return (RWRY) /* \_SB_.PCI0.GPP0.WLAN.RWRD.RWRY */
+                    }
+
+                    Return (RWR2) /* \_SB_.PCI0.GPP0.WLAN.RWRD.RWR2 */
                 }
 
                 Method (RWSI, 0, Serialized)
                 {
-                    Name (RWSY, Package (0x01)
+                    Name (RWS1, Package (0x01)
                     {
                         One
                     })
-                    Return (RWSY) /* \_SB_.PCI0.GPP0.WLAN.RWSI.RWSY */
+                    Return (RWS1) /* \_SB_.PCI0.GPP0.WLAN.RWSI.RWS1 */
+                }
+
+                Method (_DSM, 4, Serialized)  // _DSM: Device-Specific Method
+                {
+                    If ((Arg0 == ToUUID ("f21202bf-8f78-4dc6-a5b3-1f738e285ade") /* Unknown UUID */))
+                    {
+                        If ((Arg2 == Zero))
+                        {
+                            If ((Arg1 == Zero))
+                            {
+                                Return (Buffer (0x02)
+                                {
+                                     0xFF, 0x01                                       // ..
+                                })
+                            }
+                            Else
+                            {
+                                Return (Buffer (One)
+                                {
+                                     0x00                                             // .
+                                })
+                            }
+                        }
+
+                        If ((Arg2 == One))
+                        {
+                            Local0 = Zero
+                            Return (Local0)
+                        }
+
+                        If ((Arg2 == 0x02))
+                        {
+                            Local0 = Zero
+                            Return (Local0)
+                        }
+
+                        If ((Arg2 == 0x03))
+                        {
+                            Local0 = One
+                            Return (Local0)
+                        }
+
+                        If ((Arg2 == 0x06))
+                        {
+                            Return (0x0F)
+                        }
+
+                        Return (Zero)
+                    }
+                    Else
+                    {
+                        Return (Buffer (One)
+                        {
+                             0x00                                             // .
+                        })
+                    }
                 }
             }
         }
 
         Scope (GPP1)
         {
+            Device (PCRD)
+            {
+                Name (_ADR, Zero)  // _ADR: Address
+                Name (_S0W, 0x04)  // _S0W: S0 Device Wake State
+                Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+                {
+                    Name (RBUF, ResourceTemplate ()
+                    {
+                        GpioInt (Edge, ActiveLow, ExclusiveAndWake, PullNone, 0x0000,
+                            "\\_SB.GPIO", 0x00, ResourceConsumer, ,
+                            )
+                            {   // Pin list
+                                0x0002
+                            }
+                    })
+                    Return (RBUF) /* \_SB_.PCI0.GPP1.PCRD._CRS.RBUF */
+                }
+
+                Method (_RMV, 0, NotSerialized)  // _RMV: Removal Status
+                {
+                    Return (Zero)
+                }
+
+                Name (PSTA, One)
+                PowerResource (PWRE, 0x00, 0x0000)
+                {
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        TPST (0x3215)
+                        Return (PSTA) /* \_SB_.PCI0.GPP1.PCRD.PSTA */
+                    }
+
+                    Method (_ON, 0, NotSerialized)  // _ON_: Power On
+                    {
+                        TPST (0x3216)
+                        PSTA = One
+                        TPST (0x3217)
+                    }
+
+                    Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
+                    {
+                        TPST (0x3218)
+                        PSTA = Zero
+                        TPST (0x3219)
+                    }
+                }
+
+                Name (_PR0, Package (0x01)  // _PR0: Power Resources for D0
+                {
+                    PWRE
+                })
+                Name (_PR3, Package (0x01)  // _PR3: Power Resources for D3hot
+                {
+                    PWRE
+                })
+            }
         }
 
         Method (PXCR, 3, Serialized)
@@ -10513,8 +10402,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             M020 (NBRI, Zero, Zero, (Local1 + 0x10), (PXLC & 0xFFFFFEFC))
                             M020 (NBRI, Zero, Zero, (Local1 + 0x28), PXD2)
                             M020 (NBRI, Zero, Zero, 0x10, NBAR)
-                            M020 (NBRI, Zero, Zero, 0x04, 0x06)
-                            APMC = 0xD1
+                            M020 (NBRI, Zero, Zero, 0x04, (NCMD | 0x06))
                             APMC = 0xD8
                         }
 
@@ -10585,7 +10473,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    OperationRegion (EXBU, SystemMemory, 0xBC197A98, 0x0252)
+    OperationRegion (EXBU, SystemMemory, 0xCC1ECA98, 0x0251)
     Field (EXBU, AnyAcc, Lock, Preserve)
     {
         FADR,   32, 
@@ -10613,7 +10501,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         WNVB,   32, 
         WNVC,   32, 
         WNVD,   32, 
-        CALX,   32, 
         AII0,   32, 
         AII1,   32, 
         AII2,   32, 
@@ -10750,7 +10637,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         DA7E,   32, 
         DA7F,   32, 
         DA80,   32, 
-        TPCH,   8
+        CALX,   32
     }
 
     Scope (_SB.PCI0.SBRG)
@@ -10838,8 +10725,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 XXX2,   8, 
                 STAS,   8, 
                 Offset (0x08), 
-                TSR2,   8, 
                 TSR1,   8, 
+                TSR2,   8, 
                 TSR3,   8, 
                 PLMX,   8, 
                 PECV,   8, 
@@ -10847,31 +10734,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Offset (0x0F), 
                     ,   7, 
                 EOBF,   1, 
-                LSTE,   1, 
-                Offset (0x11), 
-                Offset (0x14), 
-                    ,   4, 
-                MICM,   1, 
-                Offset (0x15), 
-                    ,   3, 
-                CMRA,   1, 
-                Offset (0x16), 
-                Offset (0x44), 
-                MAXP,   1, 
-                    ,   1, 
-                CHUP,   1, 
-                CHDN,   1, 
-                    ,   3, 
-                ACAW,   1, 
-                Offset (0x46), 
-                STLA,   16, 
                 Offset (0x61), 
                 QFAN,   8, 
                 Offset (0x63), 
                 TPSV,   8, 
                 THOT,   8, 
                 TCRT,   8, 
-                OLIP,   8, 
                 Offset (0x73), 
                 TSI,    4, 
                 HYST,   4, 
@@ -10879,6 +10747,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 TSLT,   8, 
                 TSSR,   8, 
                 CHGR,   16, 
+                Offset (0x7F), 
+                LSTE,   1, 
                 Offset (0x80), 
                 ECWR,   8, 
                 XX10,   8, 
@@ -10887,6 +10757,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 B1FV,   16, 
                 B1FC,   16, 
                 XX15,   16, 
+                B1ST,   8, 
                 B1CR,   16, 
                 B1RC,   16, 
                 B1VT,   16, 
@@ -10897,21 +10768,16 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 TS4L,   8, 
                 TS4H,   8, 
                 Offset (0xA5), 
-                Offset (0xA8), 
-                HBEC,   1, 
-                HBPF,   1, 
+                KBLL,   8, 
                 Offset (0xAF), 
                 DPVS,   8, 
-                DPTN,   8, 
+                Offset (0xB1), 
                 HBDA,   8, 
-                KBLL,   8, 
+                OSDT,   1, 
+                Offset (0xB3), 
                 FEST,   8, 
                 CSSD,   8, 
                 HBNT,   8, 
-                Offset (0xBC), 
-                DPVP,   8, 
-                OSDT,   1, 
-                Offset (0xBE), 
                 Offset (0xC0), 
                 VER1,   8, 
                 VER2,   8, 
@@ -11132,21 +10998,24 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
             Method (ECD2, 2, Serialized)
             {
-                While ((EC66 & 0x02))
+                If (OSDT)
                 {
-                    Sleep (0x0A)
-                }
+                    While ((EC66 & 0x02))
+                    {
+                        Sleep (0x0A)
+                    }
 
-                EC66 = Arg0
-                While ((EC66 & 0x02))
-                {
-                    Sleep (0x0A)
-                }
+                    EC66 = Arg0
+                    While ((EC66 & 0x02))
+                    {
+                        Sleep (0x0A)
+                    }
 
-                EC62 = Arg1
-                While ((EC66 & 0x02))
-                {
-                    Sleep (0x0A)
+                    EC62 = Arg1
+                    While ((EC66 & 0x02))
+                    {
+                        Sleep (0x0A)
+                    }
                 }
             }
 
@@ -11236,10 +11105,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 }
             }
 
-            Method (_Q96, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-            {
-            }
-
             Method (DPTC, 0, Serialized)
             {
                 Name (ATCS, Buffer (0x07) {})
@@ -11247,39 +11112,31 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 CreateByteField (ATCS, 0x02, SMUF)
                 CreateDWordField (ATCS, 0x03, SMUD)
                 SSZE = 0x07
-                Local0 = 0x00017318
-                SMUF = 0x0C
-                SMUD = Local0
-                ^^^^ALIB (0x0C, ATCS)
-                Local0 = 0x4268
-                SMUF = 0x11
-                SMUD = Local0
-                ^^^^ALIB (0x0C, ATCS)
                 Switch (ToInteger (DPVS))
                 {
                     Case (Zero)
                     {
-                        Local0 = 0x30
+                        Local0 = 0x14
                         Local0 *= 0x03E8
                         SMUF = 0x06
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
+                        Local0 = 0x14
                         Local0 *= 0x03E8
                         SMUF = 0x07
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x05
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x08
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
+                        Local0 = 0xC8
                         SMUF = One
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11292,11 +11149,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x09
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
+                        Local0 = 0x4CCD
                         SMUF = 0x20
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2A00
+                        Local0 = 0x2E00
                         SMUF = 0x22
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11304,50 +11161,50 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x24
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
+                        Local0 = 0x0CCD
                         SMUF = 0x25
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
+                        Local0 = 0x025A
                         SMUF = 0x26
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
+                        Local0 = 0x000000FFFFFFFFCC
                         SMUF = 0x27
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
+                        Local0 = 0x2F7F
                         SMUF = 0x2C
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x3A98
+                        Local0 = 0x1388
                         SMUF = 0x2E
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
                     }
                     Case (One)
                     {
-                        Local0 = 0x30
+                        Local0 = 0x14
                         Local0 *= 0x03E8
                         SMUF = 0x06
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x07
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
+                        Local0 = 0x0A
                         Local0 *= 0x03E8
                         SMUF = 0x05
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x08
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
+                        Local0 = 0xC8
                         SMUF = One
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11360,11 +11217,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x09
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
+                        Local0 = 0x4CCD
                         SMUF = 0x20
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0C00
+                        Local0 = 0x2E00
                         SMUF = 0x22
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11372,50 +11229,50 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x24
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
+                        Local0 = 0x0CCD
                         SMUF = 0x25
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
+                        Local0 = 0x025A
                         SMUF = 0x26
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
+                        Local0 = 0x000000FFFFFFFFCC
                         SMUF = 0x27
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
+                        Local0 = 0x2F7F
                         SMUF = 0x2C
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2710
+                        Local0 = 0x1388
                         SMUF = 0x2E
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
                     }
                     Case (0x02)
                     {
-                        Local0 = 0x30
+                        Local0 = 0x3C
                         Local0 *= 0x03E8
                         SMUF = 0x06
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0177
-                        Local0 *= 0x64
+                        Local0 = 0x2A
+                        Local0 *= 0x03E8
                         SMUF = 0x07
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0F
+                        Local0 = 0x23
                         Local0 *= 0x03E8
                         SMUF = 0x05
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x08
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
+                        Local0 = 0xC8
                         SMUF = One
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11428,11 +11285,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x09
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
+                        Local0 = 0x4CCD
                         SMUF = 0x20
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2B80
+                        Local0 = 0x3400
                         SMUF = 0x22
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11440,50 +11297,118 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x24
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
+                        Local0 = 0x0CCD
                         SMUF = 0x25
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
+                        Local0 = 0x025A
                         SMUF = 0x26
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
+                        Local0 = 0x000000FFFFFFFFCC
                         SMUF = 0x27
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
+                        Local0 = 0x2F7F
                         SMUF = 0x2C
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x4E20
+                        Local0 = 0x2710
+                        SMUF = 0x2E
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                    }
+                    Case (0x03)
+                    {
+                        Local0 = 0x1E
+                        Local0 *= 0x03E8
+                        SMUF = 0x06
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x14
+                        Local0 *= 0x03E8
+                        SMUF = 0x07
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x0F
+                        Local0 *= 0x03E8
+                        SMUF = 0x05
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x0F
+                        Local0 *= 0x03E8
+                        SMUF = 0x08
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0xC8
+                        SMUF = One
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x5F
+                        SMUF = 0x03
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x14
+                        Local0 *= 0x03E8
+                        SMUF = 0x09
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x4CCD
+                        SMUF = 0x20
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x3400
+                        SMUF = 0x22
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x42
+                        SMUF = 0x24
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x0CCD
+                        SMUF = 0x25
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x025A
+                        SMUF = 0x26
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x000000FFFFFFFFCC
+                        SMUF = 0x27
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x2F7F
+                        SMUF = 0x2C
+                        SMUD = Local0
+                        ^^^^ALIB (0x0C, ATCS)
+                        Local0 = 0x2710
                         SMUF = 0x2E
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
                     }
                     Case (0x04)
                     {
-                        Local0 = 0x30
+                        Local0 = 0x1E
                         Local0 *= 0x03E8
                         SMUF = 0x06
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0177
-                        Local0 *= 0x64
+                        Local0 = 0x1E
+                        Local0 *= 0x03E8
                         SMUF = 0x07
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1C
+                        Local0 = 0x14
                         Local0 *= 0x03E8
                         SMUF = 0x05
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x08
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
+                        Local0 = 0xC8
                         SMUF = One
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11496,11 +11421,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x09
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
+                        Local0 = 0x4CCD
                         SMUF = 0x20
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2B00
+                        Local0 = 0x3400
                         SMUF = 0x22
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11508,50 +11433,50 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x24
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
+                        Local0 = 0x0CCD
                         SMUF = 0x25
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
+                        Local0 = 0x025A
                         SMUF = 0x26
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
+                        Local0 = 0x000000FFFFFFFFCC
                         SMUF = 0x27
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
+                        Local0 = 0x2F7F
                         SMUF = 0x2C
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x6590
+                        Local0 = 0x2710
                         SMUF = 0x2E
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
                     }
                     Case (0x05)
                     {
-                        Local0 = 0x30
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x06
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0177
-                        Local0 *= 0x64
+                        Local0 = 0x0F
+                        Local0 *= 0x03E8
                         SMUF = 0x07
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x20
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x05
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x08
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
+                        Local0 = 0xC8
                         SMUF = One
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11564,11 +11489,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x09
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
+                        Local0 = 0x4CCD
                         SMUF = 0x20
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2C00
+                        Local0 = 0x3400
                         SMUF = 0x22
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11576,50 +11501,50 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x24
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
+                        Local0 = 0x0CCD
                         SMUF = 0x25
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
+                        Local0 = 0x025A
                         SMUF = 0x26
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
+                        Local0 = 0x000000FFFFFFFFCC
                         SMUF = 0x27
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
+                        Local0 = 0x2F7F
                         SMUF = 0x2C
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x7530
+                        Local0 = 0x2710
                         SMUF = 0x2E
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
                     }
                     Case (0x06)
                     {
-                        Local0 = 0x30
+                        Local0 = 0x3C
                         Local0 *= 0x03E8
                         SMUF = 0x06
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0177
-                        Local0 *= 0x64
+                        Local0 = 0x2A
+                        Local0 *= 0x03E8
                         SMUF = 0x07
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1C
+                        Local0 = 0x23
                         Local0 *= 0x03E8
                         SMUF = 0x05
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x08
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
+                        Local0 = 0xC8
                         SMUF = One
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11632,11 +11557,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x09
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
+                        Local0 = 0x4CCD
                         SMUF = 0x20
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2980
+                        Local0 = 0x3100
                         SMUF = 0x22
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11644,50 +11569,50 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x24
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
+                        Local0 = 0x0CCD
                         SMUF = 0x25
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
+                        Local0 = 0x025A
                         SMUF = 0x26
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
+                        Local0 = 0x000000FFFFFFFFCC
                         SMUF = 0x27
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
+                        Local0 = 0x2F7F
                         SMUF = 0x2C
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x4E20
+                        Local0 = 0x2710
                         SMUF = 0x2E
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
                     }
                     Case (0x07)
                     {
-                        Local0 = 0x30
+                        Local0 = 0x1E
                         Local0 *= 0x03E8
                         SMUF = 0x06
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0177
-                        Local0 *= 0x64
+                        Local0 = 0x14
+                        Local0 *= 0x03E8
                         SMUF = 0x07
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x12
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x05
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x08
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
+                        Local0 = 0xC8
                         SMUF = One
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11700,11 +11625,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x09
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
+                        Local0 = 0x4CCD
                         SMUF = 0x20
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2700
+                        Local0 = 0x3100
                         SMUF = 0x22
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11712,36 +11637,36 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x24
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
+                        Local0 = 0x0CCD
                         SMUF = 0x25
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
+                        Local0 = 0x025A
                         SMUF = 0x26
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
+                        Local0 = 0x000000FFFFFFFFCC
                         SMUF = 0x27
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
+                        Local0 = 0x2F7F
                         SMUF = 0x2C
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x3E80
+                        Local0 = 0x2710
                         SMUF = 0x2E
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
                     }
                     Case (0x08)
                     {
-                        Local0 = 0x30
+                        Local0 = 0x1E
                         Local0 *= 0x03E8
                         SMUF = 0x06
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0177
-                        Local0 *= 0x64
+                        Local0 = 0x1E
+                        Local0 *= 0x03E8
                         SMUF = 0x07
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11750,12 +11675,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x05
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x08
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
+                        Local0 = 0xC8
                         SMUF = One
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11768,11 +11693,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x09
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
+                        Local0 = 0x4CCD
                         SMUF = 0x20
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2D00
+                        Local0 = 0x3100
                         SMUF = 0x22
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -11780,103 +11705,35 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x24
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
+                        Local0 = 0x0CCD
                         SMUF = 0x25
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
+                        Local0 = 0x025A
                         SMUF = 0x26
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
+                        Local0 = 0x000000FFFFFFFFCC
                         SMUF = 0x27
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
+                        Local0 = 0x2F7F
                         SMUF = 0x2C
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x4E20
+                        Local0 = 0x2710
                         SMUF = 0x2E
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
                     }
                     Case (0x09)
                     {
-                        Local0 = 0x30
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x06
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0177
-                        Local0 *= 0x64
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1C
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2A00
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x3A98
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x0A)
-                    {
-                        Local0 = 0x30
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
+                        Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x07
                         SMUD = Local0
@@ -11886,438 +11743,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x05
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2A00
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2710
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x10)
-                    {
-                        Local0 = 0x11
-                        Local0 *= 0x03E8
-                        SMUF = 0x0C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0A
-                        Local0 *= 0x03E8
-                        SMUF = 0x11
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0A
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0A
-                        Local0 *= 0x03E8
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0A
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2800
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2710
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x11)
-                    {
-                        Local0 = 0x5F
-                        Local0 *= 0x03E8
-                        SMUF = 0x0C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x11
-                        Local0 *= 0x03E8
-                        SMUF = 0x11
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0A
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0A
-                        Local0 *= 0x03E8
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0A
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2800
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2710
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x12)
-                    {
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2800
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x4E20
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x13)
-                    {
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2800
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x4E20
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x14)
-                    {
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x1E
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2800
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2710
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x20)
-                    {
-                        Local0 = 0x30
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
-                        Local0 *= 0x03E8
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
                         Local0 = 0x0F
                         Local0 *= 0x03E8
                         SMUF = 0x08
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
+                        Local0 = 0xC8
                         SMUF = One
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -12330,11 +11761,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x09
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
+                        Local0 = 0x4CCD
                         SMUF = 0x20
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2000
+                        Local0 = 0x3100
                         SMUF = 0x22
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -12342,427 +11773,19 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         SMUF = 0x24
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
+                        Local0 = 0x0CCD
                         SMUF = 0x25
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
+                        Local0 = 0x025A
                         SMUF = 0x26
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
+                        Local0 = 0x000000FFFFFFFFCC
                         SMUF = 0x27
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x55F0
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x21)
-                    {
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0F
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0C00
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2710
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x22)
-                    {
-                        Local0 = 0x30
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0177
-                        Local0 *= 0x64
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0F
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2B00
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x55F0
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x23)
-                    {
-                        Local0 = 0x30
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
-                        Local0 *= 0x03E8
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0F
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2000
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x55F0
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x24)
-                    {
-                        Local0 = 0x30
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
-                        Local0 *= 0x03E8
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0F
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2000
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x3E80
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x25)
-                    {
-                        Local0 = 0x30
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
-                        Local0 *= 0x03E8
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x19
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0F
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0C00
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
-                        SMUF = 0x2C
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2710
-                        SMUF = 0x2E
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                    }
-                    Case (0x26)
-                    {
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x06
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x07
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x05
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0F
-                        Local0 *= 0x03E8
-                        SMUF = 0x08
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x0113
-                        SMUF = One
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x5F
-                        SMUF = 0x03
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x14
-                        Local0 *= 0x03E8
-                        SMUF = 0x09
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x199A
-                        SMUF = 0x20
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2800
-                        SMUF = 0x22
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x42
-                        SMUF = 0x24
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x2666
-                        SMUF = 0x25
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xCC
-                        SMUF = 0x26
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0x02EF
-                        SMUF = 0x27
-                        SMUD = Local0
-                        ^^^^ALIB (0x0C, ATCS)
-                        Local0 = 0xF7CA
+                        Local0 = 0x2F7F
                         SMUF = 0x2C
                         SMUD = Local0
                         ^^^^ALIB (0x0C, ATCS)
@@ -12779,6 +11802,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 }
 
                 Return (Zero)
+            }
+
+            Method (_Q96, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+            {
+                DPTC ()
             }
 
             Scope (\_SB.PCI0.SBRG.EC0)
@@ -12832,7 +11860,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return ((Local0 & 0x02))
                     }
 
-                    Name (B1ST, Zero)
                     Method (_STA, 0, NotSerialized)  // _STA: Status
                     {
                         If (BATS ())
@@ -12854,7 +11881,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Zero, 
                         0x64, 
                         Zero, 
-                        "TN3604YA", 
+                        "UX425", 
                         "123456789", 
                         "LIon", 
                         "ASUSTeK"
@@ -12894,7 +11921,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             0xFFFFFFFF, 
                             0x3C, 
                             0x3C, 
-                            "TN3604YA", 
+                            "UX425", 
                             "123456789", 
                             "LIon", 
                             "ASUSTeK"
@@ -12918,7 +11945,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Return (BIXT) /* \_SB_.PCI0.SBRG.EC0_.BATT._BIX.BIXT */
                     }
 
-                    Method (_BST, 0, Serialized)  // _BST: Battery Status
+                    Method (_BST, 0, NotSerialized)  // _BST: Battery Status
                     {
                         Name (PKG1, Package (0x04)
                         {
@@ -12927,38 +11954,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             Ones, 
                             Ones
                         })
-                        B1ST = ((ECWR & 0x0C) >> 0x02)
-                        Switch (B1ST)
-                        {
-                            Case (Zero)
-                            {
-                                Local0 = Zero
-                            }
-                            Case (One)
-                            {
-                                Local0 = 0x02
-                            }
-                            Case (0x02)
-                            {
-                                If ((ECWR & One))
-                                {
-                                    Local0 = 0x02
-                                }
-                                Else
-                                {
-                                    Local0 = One
-                                }
-                            }
-
-                        }
-
-                        If ((HBDA != 0x64))
-                        {
-                            Local0 |= 0x08
-                        }
-
-                        PKG1 [Zero] = Local0
-                        If ((ECWR & One))
+                        PKG1 [Zero] = (B1ST & 0x07)
+                        If ((B1ST & One))
                         {
                             PKG1 [One] = B1CR /* \_SB_.PCI0.SBRG.EC0_.B1CR */
                         }
@@ -13141,6 +12138,99 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 /* 0030 */  0xB2, 0xF0, 0x00, 0xA0, 0xC9, 0x06, 0x29, 0x10,  // ......).
                 /* 0038 */  0x4D, 0x4F, 0x01, 0x00                           // MO..
             })
+            Method (OFBD, 1, NotSerialized)
+            {
+                Name (FBDT, Package (0x53)
+                {
+                    0x88, 
+                    0x89, 
+                    0x8A, 
+                    0x8B, 
+                    0x8C, 
+                    0x8D, 
+                    0x8E, 
+                    0x8F, 
+                    0x70, 
+                    0x71, 
+                    0x72, 
+                    0x73, 
+                    0x74, 
+                    0x75, 
+                    0x76, 
+                    0x77, 
+                    0x78, 
+                    0x79, 
+                    0x7A, 
+                    0x7B, 
+                    0x7C, 
+                    0x7D, 
+                    0x7E, 
+                    0x7F, 
+                    0x60, 
+                    0x61, 
+                    0x62, 
+                    0x63, 
+                    0x64, 
+                    0x65, 
+                    0x66, 
+                    0x67, 
+                    0x91, 
+                    0x92, 
+                    0x93, 
+                    0x96, 
+                    0xE0, 
+                    0xE1, 
+                    0xE2, 
+                    0xE3, 
+                    0xE4, 
+                    0xE5, 
+                    0xE6, 
+                    0xE7, 
+                    0xE8, 
+                    0xE9, 
+                    0xEA, 
+                    0xEB, 
+                    0xEC, 
+                    0xED, 
+                    0xEE, 
+                    0xEF, 
+                    0xD0, 
+                    0xD1, 
+                    0xD2, 
+                    0xD3, 
+                    0xD4, 
+                    0xD5, 
+                    0xD6, 
+                    0xD7, 
+                    0xD8, 
+                    0xD9, 
+                    0xDA, 
+                    0xDB, 
+                    0xDC, 
+                    0xDD, 
+                    0xDE, 
+                    0xDF, 
+                    0xC0, 
+                    0xC1, 
+                    0xC2, 
+                    0xC3, 
+                    0xC4, 
+                    0xC5, 
+                    0xC6, 
+                    0xC7, 
+                    0xF0, 
+                    0xF1, 
+                    0xF2, 
+                    0xF3, 
+                    0xF6, 
+                    0xF7, 
+                    0xFA
+                })
+                Local0 = Match (FBDT, MEQ, Arg0, MTR, Zero, Zero)
+                Local0++
+                Return (Local0)
+            }
+
             Method (_WED, 1, NotSerialized)  // _Wxx: Wake Event, xx=0x00-0xFF
             {
                 If ((Arg0 == 0xFF))
@@ -13161,11 +12251,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Method (SFUN, 0, NotSerialized)
             {
                 Local0 = 0x21
-                If (ALSP)
-                {
-                    Local0 |= 0x2000
-                }
-
                 Return (Local0)
             }
 
@@ -13306,16 +12391,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Return (SFUN ())
             }
 
-            If ((Local0 == 0x47444353))
-            {
-                Return (SCDG (IIA0, IIA1))
-            }
-
-            If ((Local0 == 0x53524556))
-            {
-                Return (VERS (IIA0, IIA1))
-            }
-
             If ((Local0 == 0x4647574D))
             {
                 Return (MWGF (IIA0, IIA1, Local0))
@@ -13331,6 +12406,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Return (FANL (IIA0))
             }
 
+            If ((Local0 == 0x47444353))
+            {
+                Return (SCDG (IIA0, IIA1))
+            }
+
             If ((Local0 == 0x474F4457))
             {
                 Return (WDOG (IIA0))
@@ -13339,6 +12419,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If ((Local0 == 0x5256534F))
             {
                 Return (OSVR (IIA0))
+            }
+
+            If ((Local0 == 0x53524556))
+            {
+                Return (VERS (IIA0, IIA1))
             }
 
             If ((Local0 == 0x49564E41))
@@ -13377,24 +12462,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     })
                 }
 
-                If ((IIA0 == 0x00100051))
-                {
-                    Return (0xFFFFFFFE)
-                }
-
                 If ((IIA0 == 0x00040017))
-                {
-                    Local0 = 0x00010000
-                    Local0 |= (One & ^^PCI0.SBRG.EC0.MICM)
-                    Return (Local0)
-                }
-
-                If ((IIA0 == 0x00040019))
-                {
-                    Return (Zero)
-                }
-
-                If ((IIA0 == 0x0004001A))
                 {
                     Return (Zero)
                 }
@@ -13444,16 +12512,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (Zero)
                 }
 
-                If ((IIA0 == 0x00050043))
-                {
-                    Return (0x00010000)
-                }
-
-                If ((IIA0 == 0x00050051))
-                {
-                    Return (Zero)
-                }
-
                 If ((IIA0 == 0x00060023))
                 {
                     Return (Zero)
@@ -13464,38 +12522,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (Zero)
                 }
 
-                If ((IIA0 == 0x00060059))
-                {
-                    Return (Zero)
-                }
-
-                If ((IIA0 == 0x0006005C))
-                {
-                    Return (Zero)
-                }
-
-                If ((IIA0 == 0x0006005D))
-                {
-                    Return (Zero)
-                }
-
                 If ((IIA0 == 0x00060061))
                 {
                     Return (Zero)
-                }
-
-                If ((IIA0 == 0x00060078))
-                {
-                    Local0 = 0x00030000
-                    Local0 |= (One & SGOR (0xFED81618))
-                    Return (Local0)
-                }
-
-                If ((IIA0 == 0x00060079))
-                {
-                    Local0 = 0x00010000
-                    Local0 |= (One & ^^PCI0.SBRG.EC0.CMRA)
-                    Return (Local0)
                 }
 
                 If ((IIA0 == 0x00080041))
@@ -13518,27 +12547,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (Zero)
                 }
 
-                If ((IIA0 == 0x00100043))
-                {
-                    Return (Zero)
-                }
-
                 If ((IIA0 == 0x00100053))
                 {
                     Return (Zero)
                 }
 
                 If ((IIA0 == 0x00110011))
-                {
-                    Return (Zero)
-                }
-
-                If ((IIA0 == 0x0011001E))
-                {
-                    Return (Zero)
-                }
-
-                If ((IIA0 == 0x00120058))
                 {
                     Return (Zero)
                 }
@@ -13583,12 +12597,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (Zero)
                 }
 
-                If ((IIA0 == 0x00050002))
-                {
-                    Local0 = 0x00010000
-                    Return (Local0)
-                }
-
                 If ((IIA0 == 0x00050027))
                 {
                     Return (Zero)
@@ -13625,11 +12633,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 }
 
                 If ((IIA0 == 0x00060074))
-                {
-                    Return (Zero)
-                }
-
-                If ((IIA0 == 0x00090026))
                 {
                     Return (Zero)
                 }
@@ -13679,12 +12682,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Local0 |= 0x0200
                     }
 
-                    Local0 |= 0x00800001
-                    If ((^^PCI0.SBRG.EC0.HBPF == One))
-                    {
-                        Local0 |= 0x0800
-                    }
-
                     Return (Local0)
                 }
 
@@ -13693,7 +12690,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (GQFS ())
                 }
 
-                If (WCHK (Zero, IIA0))
+                If (WCHK (IIA0))
                 {
                     WNVA = 0x9603
                     WNVB = 0x02
@@ -13740,20 +12737,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 }
 
                 If ((IIA0 == 0x00040017))
-                {
-                    If ((IIA1 == One))
-                    {
-                        ^^PCI0.SBRG.EC0.MICM = One
-                    }
-                    ElseIf ((IIA1 == Zero))
-                    {
-                        ^^PCI0.SBRG.EC0.MICM = Zero
-                    }
-
-                    Return (One)
-                }
-
-                If ((IIA0 == 0x00040019))
                 {
                     Return (Zero)
                 }
@@ -13817,36 +12800,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (Zero)
                 }
 
-                If ((IIA0 == 0x00060078))
-                {
-                    If ((IIA1 == One))
-                    {
-                        SGOV (0xFED81618, Zero)
-                        ^^PCI0.SBRG.EC0.CMRA = Zero
-                    }
-                    ElseIf ((IIA1 == Zero))
-                    {
-                        SGOV (0xFED81618, One)
-                        ^^PCI0.SBRG.EC0.CMRA = One
-                    }
-
-                    Return (One)
-                }
-
-                If ((IIA0 == 0x00060079))
-                {
-                    If ((IIA1 == One))
-                    {
-                        ^^PCI0.SBRG.EC0.CMRA = One
-                    }
-                    ElseIf ((IIA1 == Zero))
-                    {
-                        ^^PCI0.SBRG.EC0.CMRA = Zero
-                    }
-
-                    Return (One)
-                }
-
                 If ((IIA0 == 0x00090014))
                 {
                     Return (Zero)
@@ -13869,11 +12822,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (Zero)
                 }
 
-                If ((IIA0 == 0x0005001E))
-                {
-                    Return (Zero)
-                }
-
                 If ((IIA0 == 0x00050027))
                 {
                     Return (Zero)
@@ -13884,22 +12832,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (Zero)
                 }
 
-                If ((IIA0 == 0x0005003A))
-                {
-                    Return (Zero)
-                }
-
-                If ((IIA0 == 0x0005003B))
-                {
-                    Return (Zero)
-                }
-
                 If ((IIA0 == 0x00050041))
-                {
-                    Return (Zero)
-                }
-
-                If ((IIA0 == 0x0006005B))
                 {
                     Return (Zero)
                 }
@@ -13907,26 +12840,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 If ((IIA0 == 0x00060074))
                 {
                     Return (Zero)
-                }
-
-                If ((IIA0 == 0x0009001A))
-                {
-                    Return (Zero)
-                }
-
-                If ((IIA0 == 0x00090026))
-                {
-                    Return (Zero)
-                }
-
-                If ((IIA0 == 0x00100043))
-                {
-                    Return (Zero)
-                }
-
-                If ((IIA0 == 0x0010005A))
-                {
-                    Return (0xFFFFFFFE)
                 }
 
                 If ((IIA0 == 0x00100063))
@@ -13946,9 +12859,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                 If ((IIA0 == 0x00120057))
                 {
-                    Notify (^^PCI0.SBRG.EC0.BATT, 0x80) // Status Change
                     ^^PCI0.SBRG.EC0.HBDA = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                    ^^PCI0.SBRG.EC0.HBEC = One
+                    ^^PCI0.SBRG.EC0.ECD2 (0x72, 0xB1)
                     Return (One)
                 }
 
@@ -13957,7 +12869,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Return (FANL (IIA1))
                 }
 
-                If (WCHK (One, IIA0))
+                If (WCHK (IIA0))
                 {
                     WNVA = 0x9603
                     WNVB = 0x03
@@ -14064,6 +12976,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         S2SC (0xE0)
                         S2SC (0xA0)
                     }
+
+                    If (ATKP)
+                    {
+                        ^^^^ATKD.IANE (0x32)
+                    }
                 }
                 Case (0x02)
                 {
@@ -14074,6 +12991,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         S2SC (0xE0)
                         S2SC (0xAE)
                     }
+
+                    If (ATKP)
+                    {
+                        ^^^^ATKD.IANE (0x31)
+                    }
                 }
                 Case (0x03)
                 {
@@ -14083,6 +13005,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         S2SC (0x30)
                         S2SC (0xE0)
                         S2SC (0xB0)
+                    }
+
+                    If (ATKP)
+                    {
+                        ^^^^ATKD.IANE (0x30)
                     }
                 }
                 Case (0x09)
@@ -14111,6 +13038,13 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If (ATKP)
                     {
                         ^^^^ATKD.IANE (0x45)
+                    }
+                }
+                Case (0x23)
+                {
+                    If ((OSYS >= 0x07DC))
+                    {
+                        Notify (ASHS, 0x88) // Device-Specific
                     }
                 }
                 Case (0x22)
@@ -14168,8 +13102,22 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 }
                 Case (0x28)
                 {
-                    If ((BLCT == Zero)) {}
-                    ElseIf ((BLCT == One)) {}
+                    If ((BLCT == Zero))
+                    {
+                        Local0 = One
+                        If (ATKP)
+                        {
+                            Local0 = (0x34 - Local0)
+                            ^^^^ATKD.IANE (Local0)
+                        }
+                    }
+                    ElseIf ((BLCT == One))
+                    {
+                        If (ATKP)
+                        {
+                            ^^^^ATKD.IANE (0x35)
+                        }
+                    }
                 }
                 Case (0x29)
                 {
@@ -14318,7 +13266,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
         }
 
-        Method (_Q81, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        Method (_Q60, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             P80H = 0xAD
             If (ATKP)
@@ -14497,10 +13445,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             QLIB (0x27)
         }
 
-        Method (_Q19, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        Method (_Q17, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             P80H = 0x17
-            QLIB (0x2A)
+            QLIB (0x28)
         }
 
         Method (_Q18, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
@@ -14509,10 +13457,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             QLIB (0x29)
         }
 
-        Method (_Q87, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
+        Method (_Q19, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
             P80H = 0x19
-            QLIB (0x15)
+            QLIB (0x2A)
         }
 
         Method (_Q1A, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
@@ -14584,278 +13532,16 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB.ATKD)
     {
-        Method (RMEM, 1, NotSerialized)
-        {
-            OperationRegion (VMEM, SystemMemory, Arg0, 0x04)
-            Field (VMEM, ByteAcc, NoLock, Preserve)
-            {
-                MEMI,   32
-            }
-
-            Local0 = MEMI /* \_SB_.ATKD.RMEM.MEMI */
-            Return (Local0)
-        }
-
-        Name (BUFF, Package (0x81)
-        {
-            0x0200, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF, 
-            0xFFFFFFFF
-        })
-        Method (SCDG, 2, Serialized)
-        {
-            WNVA = 0x9605
-            WNVB = 0x47444353
-            WNVC = Arg0
-            WNVD = Arg1
-            BUFF [Zero] = W15H ()
-            Local2 = Zero
-            Local3 = One
-            Local1 = CALX /* \CALX */
-            While ((Local3 < 0x81))
-            {
-                BUFF [Local3] = RMEM ((Local1 + Local2))
-                Local2 += 0x04
-                Local3 += One
-            }
-
-            Return (BUFF) /* \_SB_.ATKD.BUFF */
-        }
-    }
-
-    Scope (_SB.ATKD)
-    {
-        Method (VERS, 2, Serialized)
-        {
-            Local0 = Zero
-            Local0 += 0x24
-            Return (Local0)
-        }
-    }
-
-    Scope (_SB.ATKD)
-    {
-        Method (OFBD, 1, NotSerialized)
-        {
-            Name (FBDT, Package (0x53)
-            {
-                0x88, 
-                0x89, 
-                0x8A, 
-                0x8B, 
-                0x8C, 
-                0x8D, 
-                0x8E, 
-                0x8F, 
-                0x70, 
-                0x71, 
-                0x72, 
-                0x73, 
-                0x74, 
-                0x75, 
-                0x76, 
-                0x77, 
-                0x78, 
-                0x79, 
-                0x7A, 
-                0x7B, 
-                0x7C, 
-                0x7D, 
-                0x7E, 
-                0x7F, 
-                0x60, 
-                0x61, 
-                0x62, 
-                0x63, 
-                0x64, 
-                0x65, 
-                0x66, 
-                0x67, 
-                0x91, 
-                0x92, 
-                0x93, 
-                0x96, 
-                0xE0, 
-                0xE1, 
-                0xE2, 
-                0xE3, 
-                0xE4, 
-                0xE5, 
-                0xE6, 
-                0xE7, 
-                0xE8, 
-                0xE9, 
-                0xEA, 
-                0xEB, 
-                0xEC, 
-                0xED, 
-                0xEE, 
-                0xEF, 
-                0xD0, 
-                0xD1, 
-                0xD2, 
-                0xD3, 
-                0xD4, 
-                0xD5, 
-                0xD6, 
-                0xD7, 
-                0xD8, 
-                0xD9, 
-                0xDA, 
-                0xDB, 
-                0xDC, 
-                0xDD, 
-                0xDE, 
-                0xDF, 
-                0xC0, 
-                0xC1, 
-                0xC2, 
-                0xC3, 
-                0xC4, 
-                0xC5, 
-                0xC6, 
-                0xC7, 
-                0xF0, 
-                0xF1, 
-                0xF2, 
-                0xF3, 
-                0xF6, 
-                0xF7, 
-                0xFA
-            })
-            Local0 = Match (FBDT, MEQ, Arg0, MTR, Zero, Zero)
-            Local0++
-            Return (Local0)
-        }
-
         Method (MWGF, 3, Serialized)
         {
+            If ((Arg0 == 0x00020013))
+            {
+                If ((Arg1 == Zero))
+                {
+                    Return (Arg2)
+                }
+            }
+
             If ((Arg0 == 0x00010016))
             {
                 Arg2 = OFBD (Arg1)
@@ -14874,6 +13560,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 FSMI = 0x02
                 Return (ASMI (Zero))
+            }
+
+            If ((Arg0 == 0x0010001F))
+            {
+                FSMI = 0x03
+                Return (ASMI (Arg1))
             }
 
             If ((Arg0 == 0x000100FF))
@@ -15233,16 +13925,86 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         })
     }
 
+    Scope (_SB)
+    {
+        Device (ASHS)
+        {
+            Name (_HID, "ATK4002")  // _HID: Hardware ID
+            Method (HSWC, 1, Serialized)
+            {
+                If ((Arg0 < 0x02))
+                {
+                    OWGD (Arg0)
+                    Return (One)
+                }
+
+                If ((Arg0 == 0x02))
+                {
+                    Local0 = OWGS ()
+                    If (Local0)
+                    {
+                        Return (0x04)
+                    }
+                    Else
+                    {
+                        Return (0x05)
+                    }
+                }
+
+                If ((Arg0 == 0x03))
+                {
+                    Return (OHWS ())
+                }
+
+                If ((Arg0 == 0x04))
+                {
+                    OWGD (Zero)
+                    Return (One)
+                }
+
+                If ((Arg0 == 0x05))
+                {
+                    OWGD (One)
+                    Return (One)
+                }
+
+                If ((Arg0 == 0x80))
+                {
+                    Return (One)
+                }
+            }
+
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (Zero)
+            }
+
+            Method (OWGD, 1, NotSerialized)
+            {
+                ^^ATKD.WLED (Arg0)
+                ^^ATKD.BLED (Arg0)
+                ^^ATKD.WMXC (Arg0)
+            }
+
+            Method (OWGS, 0, NotSerialized)
+            {
+                Local0 = Zero
+                Return (Local0)
+            }
+
+            Method (OHWS, 0, NotSerialized)
+            {
+                Return (0xFF)
+            }
+        }
+    }
+
     Scope (_SB.PCI0.SBRG.EC0)
     {
         Method (SKEY, 1, Serialized)
         {
             Switch (Arg0)
             {
-                Case (0x86)
-                {
-                    ^^^^ATKD.MAKY ()
-                }
                 Case (0x6C)
                 {
                     _Q22 ()
@@ -15259,13 +14021,21 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 {
                     _Q14 ()
                 }
+                Case (0x10)
+                {
+                    _Q15 ()
+                }
+                Case (0x20)
+                {
+                    _Q16 ()
+                }
                 Case (0x35)
                 {
-                    _Q19 ()
+                    _Q17 ()
                 }
                 Case (0x6B)
                 {
-                    _Q87 ()
+                    _Q19 ()
                 }
                 Case (0x8A)
                 {
@@ -15345,17 +14115,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         Method (GQFS, 0, NotSerialized)
         {
-            Return (0x00030000)
+            Return (0x00130000)
         }
     }
 
     Scope (_SB.ATKD)
     {
-        Method (MAKY, 0, NotSerialized)
-        {
-            Return (Zero)
-        }
-
         Method (BSTS, 0, NotSerialized)
         {
             If (ACPF)
@@ -15380,6 +14145,16 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Return (Zero)
         }
 
+        Method (VERS, 2, NotSerialized)
+        {
+            If ((Arg0 == Zero))
+            {
+                Return (0x00090000)
+            }
+
+            Return (0xFFFFFFFE)
+        }
+
         Method (BLED, 1, NotSerialized)
         {
             Return (Zero)
@@ -15397,12 +14172,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB.ATKD)
     {
-        Method (WCHK, 2, Serialized)
+        Method (WCHK, 1, Serialized)
         {
             WNVA = 0x9603
             WNVB = One
-            WNVC = Arg1
-            WNVD = Arg0
+            WNVC = Arg0
+            WNVD = Zero
             Return (W15H ())
         }
     }
@@ -15429,20 +14204,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 ^^^^ATKD.IANE (0xE5)
             }
         }
-
-        Method (_QCF, 0, NotSerialized)  // _Qxx: EC Query, xx=0x00-0xFF
-        {
-            P80H = 0xCF
-            If (ACPF)
-            {
-                Notify (BATT, 0x80) // Status Change
-            }
-
-            If (ATKP)
-            {
-                ^^^^ATKD.IANE (0xE5)
-            }
-        }
     }
 
     Scope (_SB.PCI0.SBRG.EC0)
@@ -15463,6 +14224,173 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 ^^^^ATKD.IANE (0x9B)
             }
+        }
+    }
+
+    Scope (_SB.ATKD)
+    {
+        Method (RMEM, 1, NotSerialized)
+        {
+            OperationRegion (VMEM, SystemMemory, Arg0, 0x04)
+            Field (VMEM, ByteAcc, NoLock, Preserve)
+            {
+                MEMI,   32
+            }
+
+            Local0 = MEMI /* \_SB_.ATKD.RMEM.MEMI */
+            Return (Local0)
+        }
+
+        Name (BUFF, Package (0x81)
+        {
+            0x0200, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF, 
+            0xFFFFFFFF
+        })
+        Method (SCDG, 2, Serialized)
+        {
+            WNVA = 0x9605
+            WNVB = 0x47444353
+            WNVC = Arg0
+            WNVD = Arg1
+            BUFF [Zero] = W15H ()
+            Local2 = Zero
+            Local3 = One
+            Local1 = CALX /* \CALX */
+            While ((Local3 < 0x81))
+            {
+                BUFF [Local3] = RMEM ((Local1 + Local2))
+                Local2 += 0x04
+                Local3 += One
+            }
+
+            Return (BUFF) /* \_SB_.ATKD.BUFF */
         }
     }
 
@@ -15492,15 +14420,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 If (^^PCI0.SBRG.EC0.ECAV)
                 {
-                    If ((^^PCI0.SBRG.EC0.TSR1 != 0xFF))
-                    {
-                        Local0 = ^^PCI0.SBRG.EC0.ECRD (RefOf (^^PCI0.SBRG.EC0.TSR1))
-                    }
-                    Else
-                    {
-                        Local0 = 0x5A
-                    }
-
+                    Local0 = ^^PCI0.SBRG.EC0.ECRD (RefOf (^^PCI0.SBRG.EC0.TSR1))
                     Local0 = (0x0AAC + (Local0 * 0x0A))
                     Return (Local0)
                 }
@@ -15512,14 +14432,28 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 If (^^PCI0.SBRG.EC0.ECAV)
                 {
-                    Local0 = 0x69
+                    Local0 = 0x63
                     If ((Local0 != Zero))
                     {
                         Return ((0x0AAC + (Local0 * 0x0A)))
                     }
                 }
 
-                Return (0x0EC6)
+                Return (0x0E62)
+            }
+
+            Method (_CRT, 0, Serialized)  // _CRT: Critical Temperature
+            {
+                If (^^PCI0.SBRG.EC0.ECAV)
+                {
+                    Local0 = 0x64
+                    If ((Local0 != Zero))
+                    {
+                        Return ((0x0AAC + (Local0 * 0x0A)))
+                    }
+                }
+
+                Return (0x0E94)
             }
 
             Method (_TSP, 0, Serialized)  // _TSP: Thermal Sampling Period
