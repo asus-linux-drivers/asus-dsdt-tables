@@ -44,7 +44,15 @@ update_readme() {
 
     local MODEL_COL=""
     if [[ -n "$MODEL" && "$BASE_TAG" != *"$MODEL"* ]]; then
-        MODEL_COL="$MODEL"
+
+        read -r -p "Use this model from user input: '${MODEL}' for '${FINAL_BASENAME}'? [y/N] " CONFIRM
+
+        if [[ "$CONFIRM" == "y" || "$CONFIRM" == "Y" ]]; then
+            MODEL_COL="$MODEL"
+        else
+            MODEL_COL=""
+            MODEL=""
+        fi
     fi
 
     # always delete old version of tag
