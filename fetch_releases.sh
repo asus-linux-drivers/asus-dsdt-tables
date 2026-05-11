@@ -58,13 +58,18 @@ update_readme() {
     # always delete old version of tag
     sed -i "\|${BASE_TAG}|d" Readme.MD
 
+    shopt -s nocasematch
+
     local SERIE=""
     if [[ "$FINAL_BASENAME" =~ ProArt ]]; then SERIE="ProArt"
     elif [[ "$FINAL_BASENAME" =~ ROG ]]; then SERIE="ROG"
     elif [[ "$FINAL_BASENAME" =~ Zenbook ]]; then SERIE="Zenbook"
     elif [[ "$FINAL_BASENAME" =~ Vivobook ]]; then SERIE="Vivobook"
+    elif [[ "$FINAL_BASENAME" =~ Expertbook ]]; then SERIE="Expertbook"
     else SERIE="Other"
     fi
+
+    shopt -u nocasematch
 
     local DSL_NAME="${FINAL_BASENAME}.dsl"
     local DEV_NAME="${FINAL_BASENAME}.devices"
