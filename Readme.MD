@@ -47,9 +47,10 @@ or
 
 # Asus DSDT tables
 
-*a star means .devices file contains touchpad block only
+*a star means a user input
+**a double star means .devices file contains touchpad block only
 
-| Serie | DSL file | DEVICES file | Source | DialPad | NumberPad | Dial | Stylus (Touchscreen) | Model
+| Serie | DSL file | DEVICES file | Source | DialPad* | NumberPad* | Dial* | Stylus (Touchscreen)* | Model*
 |----------------------|-------------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|
 ProArt | [ASUS ProArt P16 H7606WP.dsl](data/ASUS_ProArt_P16_H7606WP.dsl) | | [g-helper/issues/38#issuecomment](https://github.com/seerge/g-helper/issues/38#issuecomment-3263807485) | Yes | | | |
 | | [ASUS ProArt P16.dsl](data/ASUS_ProArt_P16.dsl) | | [g-helper/issues/38#issuecomment](https://github.com/seerge/g-helper/issues/38#issuecomment-2300258591) | Yes | | | |
@@ -78,7 +79,7 @@ ProArt | [ASUS ProArt P16 H7606WP.dsl](data/ASUS_ProArt_P16_H7606WP.dsl) | | [g-
 | | [ASUS_Zenbook_14_UM3406KA_UM3406KA.dsl](data/ASUS_Zenbook_14_UM3406KA_UM3406KA.dsl) | [ASUS_Zenbook_14_UM3406KA_UM3406KA.devices](data/ASUS_Zenbook_14_UM3406KA_UM3406KA.devices) | [asus-dsdt-tables/releases/tag/ASUS_Zenbook_14_UM3406KA_UM3406KA_ebb580aaf4d0](https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/ASUS_Zenbook_14_UM3406KA_UM3406KA_ebb580aaf4d0) |  |  |  |  |  |
 | | [ASUS Zenbook Pro UX6404.dsl](data/ASUS_Zenbook_Pro_UX6404.dsl) | [ASUS Zenbook Pro UX6404.devices](data/ASUS_Zenbook_Pro_UX6404.devices) | [asus-numberpad-driver/issues/223#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/223#issuecomment-2504935283) | Yes | | | |
 | | [ASUS Zenbook Pro UX7602VI.dsl](data/ASUS_Zenbook_Pro_UX7602VI.dsl) | | [/asus-wmi-hotkeys-driver/issues/13#issuecomment](https://github.com/asus-linux-drivers/asus-wmi-hotkeys-driver/issues/13#issuecomment-2023100667) | | Yes | Yes |
-| Vivobook | [ASUS Vivobook 14 M1405YA.dsl](data/ASUS_Vivobook_14_M1405YA.dsl) | [ASUS Vivobook 14 M1405YA.devices *](data/ASUS_Vivobook_14_M1405YA.devices) | [asus-numberpad-driver/issues/289#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/289#issuecomment-4242323385) | | Yes | | |
+| Vivobook | [ASUS Vivobook 14 M1405YA.dsl](data/ASUS_Vivobook_14_M1405YA.dsl) | [ASUS Vivobook 14 M1405YA.devices**](data/ASUS_Vivobook_14_M1405YA.devices) | [asus-numberpad-driver/issues/289#issuecomment](https://github.com/asus-linux-drivers/asus-numberpad-driver/issues/289#issuecomment-4242323385) | | Yes | | |
 | | [ASUS_Vivobook_Go_E1404FA_E1404FA.dsl](data/ASUS_Vivobook_Go_E1404FA_E1404FA.dsl) | [ASUS_Vivobook_Go_E1404FA_E1404FA.devices](data/ASUS_Vivobook_Go_E1404FA_E1404FA.devices) | [asus-dsdt-tables/releases/tag/Vivobook_Go_E1404FA_E1404FA_9740ba8ded20_2](https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/Vivobook_Go_E1404FA_E1404FA_9740ba8ded20_2) |  | Yes |  |  |  |
 | | [VIVObook_ASUSLaptop_X3400PH_K3400PH.dsl](data/VIVObook_ASUSLaptop_X3400PH_K3400PH.dsl) | [VIVObook_ASUSLaptop_X3400PH_K3400PH.devices](data/VIVObook_ASUSLaptop_X3400PH_K3400PH.devices) | [asus-dsdt-tables/releases/tag/Vivobook_ASUSLaptop_X3400PH_K3400PH_c4bb73285cf9](https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/Vivobook_ASUSLaptop_X3400PH_K3400PH_c4bb73285cf9) | Yes | Yes |  | Yes |  |
 | | [VIVObook_ASUSLaptop_X1404ZA_X1404ZA.dsl](data/VIVObook_ASUSLaptop_X1404ZA_X1404ZA.dsl) | [VIVObook_ASUSLaptop_X1404ZA_X1404ZA.devices](data/VIVObook_ASUSLaptop_X1404ZA_X1404ZA.devices) | [asus-dsdt-tables/releases/tag/Vivobook_ASUSLaptop_X1404ZA_X1404ZA_a8fbef386ca9](https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/Vivobook_ASUSLaptop_X1404ZA_X1404ZA_a8fbef386ca9) | Yes | Yes | Yes | Yes |  |
