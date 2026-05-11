@@ -54,9 +54,23 @@ prompt_model() {
   MODEL=${MODEL:-$LAPTOP}
 }
 
-EXISTING_TAGS=$(curl -s \
-  -H "Authorization: Bearer $TOKEN" \
-  "https://api.github.com/repos/$REPO/tags?per_page=100" | jq -r '.[].name')
+EXISTING_TAGS=""
+
+PAGE=1
+
+while true; do
+  RESPONSE=$(curl -s \
+    -H "Authorization: Bearer $TOKEN" \
+    "https://api.github.com/repos/$REPO/tags?per_page=2&page=$PAGE")
+
+  TAGS=$(echo "$RESPONSE" | jq -r '.[].name')
+
+  [ -z "$TAGS" ] && break
+
+  EXISTING_TAGS+=$'\n'"$TAGS"
+
+  PAGE=$((PAGE + 1))
+done
 
 BASE_TAG="$TAG"
 INDEX=1
