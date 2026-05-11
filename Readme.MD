@@ -92,3 +92,16 @@ ProArt | [ASUS ProArt P16 H7606WP.dsl](data/ASUS_ProArt_P16_H7606WP.dsl) | | [g-
 | | [ASUS_EXPERTBOOK_B9403CVAR_B9403CVAR.dsl](data/ASUS_EXPERTBOOK_B9403CVAR_B9403CVAR.dsl) | [ASUS_EXPERTBOOK_B9403CVAR_B9403CVAR.devices](data/ASUS_EXPERTBOOK_B9403CVAR_B9403CVAR.devices) | [asus-dsdt-tables/releases/tag/ASUS_EXPERTBOOK_B9403CVAR_B9403CVAR_83fc9ce5fb7a](https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/ASUS_EXPERTBOOK_B9403CVAR_B9403CVAR_83fc9ce5fb7a) | Yes | Yes | Yes | Yes |  |
 | Other | | |  | | | | |
 | | [ASUS_Galith.dsl](data/ASUS_Galith.dsl) | [ASUS_Galith.devices](data/ASUS_Galith.devices) | [asus-dsdt-tables/releases/tag/Galith_901af16a499d](https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/Galith_901af16a499d) | Yes | Yes | Yes | Yes |  |
+
+## Utils
+
+```
+$ bash utils/print_device_hids.sh data Touchpad | column -t
+ASUS_Zenbook_UP5401EA_UP5401EA.devices            ASUE140D  Touchpad
+...
+$ bash utils/print_device_hids.sh data Touchpad | bash utils/print_i2c_scope_by_device_hid.sh data -o | column -t
+ASUS_Zenbook_UP5401EA_UP5401EA.dsl            ASUE140D  Touchpad
+...
+$ grep -l '0x38' data/*_Touchpad.dsl | xargs cat
+...
+```
