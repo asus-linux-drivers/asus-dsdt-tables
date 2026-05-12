@@ -9,7 +9,7 @@ insert_row() {
     local ROW="$2"
     local FILE="Readme.MD"
 
-    sed -i "/| ${SERIE} |/a ${ROW}" "$FILE"
+    sed -i "/^[| ]*${SERIE}[ |]/a ${ROW}" "$FILE"
 }
 
 parse_body() {
