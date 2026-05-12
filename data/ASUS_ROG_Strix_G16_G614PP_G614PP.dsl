@@ -5,7 +5,7 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /tmp/tmp.QlQmcYvava/ROG_Strix_G16_G614PP_G614PP_5ecbc99a105a_2/ROG_Strix_G16_G614PP_G614PP, Mon May 11 09:49:06 2026
+ * Disassembly of /tmp/tmp.Z6YnhuWApB/ROG_Strix_G16_G614PP_G614PP_5ecbc99a105a_2/ROG_Strix_G16_G614PP_G614PP, Tue May 12 09:26:31 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
@@ -225,7 +225,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (M631, FieldUnitObj)
     External (MPTS, MethodObj)    // 1 Arguments
     External (MWAK, MethodObj)    // 1 Arguments
-    External (P***, UnknownObj)
+    External (P**K, UnknownObj)
     External (TPSL, UnknownObj)
 
     Name (PEBL, 0x08000000)
