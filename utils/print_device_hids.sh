@@ -61,7 +61,7 @@ in_block {
         id=a[1]
         sub(/:00$/, "", id)
 
-        device=id " " device_type
+        device=id "\t" device_type
     }
 
     if ($0 ~ /^B: MSC=/) {
