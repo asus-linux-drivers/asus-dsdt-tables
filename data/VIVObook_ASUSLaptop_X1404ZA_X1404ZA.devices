@@ -157,3 +157,25 @@ B: PROP=0
 B: EV=21
 B: SW=140
 
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="ASUP1411:00 093A:200B NumberPad"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input18
+U: Uniq=
+H: Handlers=kbd event15 
+B: PROP=0
+B: EV=3
+B: KEY=70000 0 1000 20 229440378447ffc
+
+I: Bus=0003 Vendor=046d Product=c542 Version=0111
+N: Name="Logitech Wireless Receiver Mouse"
+P: Phys=usb-0000:00:14.0-4/input0
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb1/1-4/1-4:1.0/0003:046D:C542.0002/input/input19
+U: Uniq=
+H: Handlers=mouse2 event16 
+B: PROP=0
+B: EV=17
+B: KEY=1f0000 0 0 0 0
+B: REL=903
+B: MSC=10
+

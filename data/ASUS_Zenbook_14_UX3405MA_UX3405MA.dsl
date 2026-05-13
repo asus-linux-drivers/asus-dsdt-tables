@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /tmp/tmp.QlQmcYvava/ASUS_Zenbook_14_UX3405MA_UX3405MA_292e915d4883/ASUS_Zenbook_14_UX3405MA_UX3405MA, Mon May 11 09:48:55 2026
+ * Disassembly of /tmp/tmp.7CoOseiA9n/ASUS_Zenbook_14_UX3405MA_UX3405MA_3a96f2fd5318/ASUS_Zenbook_14_UX3405MA_UX3405MA, Wed May 13 14:16:59 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x0006A22E (434734)
+ *     Length           0x0006A226 (434726)
  *     Revision         0x02
- *     Checksum         0x79
+ *     Checksum         0xCB
  *     OEM ID           "_ASUS_"
  *     OEM Table ID     "Notebook"
  *     OEM Revision     0x01072009 (17244169)
@@ -1271,15 +1271,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (TPCS, 0x1000)
     Name (TPMM, 0xFED40000)
     Name (FTPM, 0xFFFFFFFF)
-    Name (PPIM, 0x61EC7F98)
+    Name (PPIM, 0x61E49F98)
     Name (PPIL, 0x1C)
     Name (AMDT, Zero)
     Name (TPMF, One)
     Name (PPIV, One)
     Name (DTP1, Zero)
-    Name (SANB, 0x61EC8918)
+    Name (SANB, 0x61E4A918)
     Name (SANL, 0x0138)
-    Name (VMNB, 0x61EC8F98)
+    Name (VMNB, 0x61E4AF98)
     Name (VMNL, 0x000B)
     Name (BRMT, Zero)
     Name (RDLY, 0xA0)
@@ -1406,7 +1406,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         PBUS,   8
     }
 
-    OperationRegion (GNVS, SystemMemory, 0x61E8F000, 0x0DA5)
+    OperationRegion (GNVS, SystemMemory, 0x61E11000, 0x0DA5)
     Field (GNVS, AnyAcc, Lock, Preserve)
     {
         OSYS,   16, 
@@ -3331,7 +3331,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         DR04,   32
     }
 
-    Name (PNVB, 0x61EC7698)
+    Name (PNVB, 0x61E49698)
     Name (PNVL, 0x04AF)
     OperationRegion (PNVA, SystemMemory, PNVB, PNVL)
     Field (PNVA, AnyAcc, Lock, Preserve)
@@ -3791,7 +3791,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (TOPM, 0x00000000)
     Name (ROMS, 0xFFE00000)
     Name (VGAF, One)
-    Name (CNVB, 0x61D43000)
+    Name (CNVB, 0x61CC3000)
     Name (CNVL, 0x0020)
     OperationRegion (CPNV, SystemMemory, CNVB, CNVL)
     Field (CPNV, AnyAcc, Lock, Preserve)
@@ -7683,7 +7683,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    Name (SNVB, 0x61E94000)
+    Name (SNVB, 0x61E16000)
     Name (SNVL, 0x0008)
     OperationRegion (SBNV, SystemMemory, SNVB, SNVL)
     Field (SBNV, AnyAcc, Lock, Preserve)
@@ -76266,7 +76266,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    OperationRegion (ABNV, SystemMemory, 0x61E7C000, 0x0016)
+    OperationRegion (ABNV, SystemMemory, 0x61DFE000, 0x0016)
     Field (ABNV, AnyAcc, Lock, Preserve)
     {
         ABMA,   64, 
@@ -76958,7 +76958,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB)
     {
-        OperationRegion (RAMW, SystemMemory, 0x61F7D000, 0x0100)
+        OperationRegion (RAMW, SystemMemory, 0x61EFF000, 0x0100)
         Field (RAMW, AnyAcc, NoLock, Preserve)
         {
             AMLS,   32, 
@@ -82937,7 +82937,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
-                Return (GPRW (0x69, 0x04))
+                Return (Package (0x02)
+                {
+                    0x69, 
+                    Zero
+                })
             }
         }
     }
@@ -82948,7 +82952,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
-                Return (GPRW (0x69, 0x04))
+                Return (Package (0x02)
+                {
+                    0x69, 
+                    Zero
+                })
             }
         }
     }
@@ -82959,7 +82967,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
-                Return (GPRW (0x69, 0x04))
+                Return (Package (0x02)
+                {
+                    0x69, 
+                    0x04
+                })
             }
         }
     }
@@ -82970,7 +82982,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
-                Return (GPRW (0x69, 0x04))
+                Return (Package (0x02)
+                {
+                    0x69, 
+                    0x04
+                })
             }
         }
     }
@@ -82981,7 +82997,11 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         {
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
-                Return (GPRW (0x6D, 0x04))
+                Return (Package (0x02)
+                {
+                    0x6D, 
+                    Zero
+                })
             }
 
             Method (_DSW, 3, NotSerialized)  // _DSW: Device Sleep Wake

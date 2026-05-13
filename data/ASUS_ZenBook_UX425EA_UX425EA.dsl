@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /tmp/tmp.QlQmcYvava/ZenBook_UX425EA_UX425EA_bbe39f6c79df/ZenBook_UX425EA_UX425EA, Mon May 11 09:49:24 2026
+ * Disassembly of /tmp/tmp.7CoOseiA9n/ZenBook_UX425EA_UX425EA_91b37913e5ee/ZenBook_UX425EA_UX425EA, Wed May 13 14:17:24 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x0005A4B8 (369848)
+ *     Length           0x0005A512 (369938)
  *     Revision         0x02
- *     Checksum         0xF6
+ *     Checksum         0xF2
  *     OEM ID           "_ASUS_"
  *     OEM Table ID     "Notebook"
  *     OEM Revision     0x01072009 (17244169)
@@ -496,7 +496,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (FUPS, 0x04)
     Name (FUWS, 0x03)
     Name (FEMD, 0x04)
-    Name (PFTU, 0xB2)
     Name (IOBS, Zero)
     Name (ASSB, Zero)
     Name (AOTB, Zero)
@@ -22180,6 +22179,38 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Method (AOLD, 0, NotSerialized)
                 {
                     Return (AOLX ())
+                }
+
+                Method (_PRR, 0, NotSerialized)  // _PRR: Power Resource for Reset
+                {
+                    Return (Package (0x01)
+                    {
+                        BTRT
+                    })
+                }
+
+                PowerResource (BTRT, 0x05, 0x0000)
+                {
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        Return (Zero)
+                    }
+
+                    Method (_ON, 0, NotSerialized)  // _ON_: Power On
+                    {
+                    }
+
+                    Method (_OFF, 0, NotSerialized)  // _OFF: Power Off
+                    {
+                    }
+
+                    Method (_RST, 0, NotSerialized)  // _RST: Device Reset
+                    {
+                        BTRK (Zero)
+                        Sleep (0x69)
+                        BTRK (One)
+                        Sleep (0x69)
+                    }
                 }
             }
         }
@@ -75432,6 +75463,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 PAR5,   8, 
                 PAR6,   8, 
                 PAR7,   8, 
+                HBEC,   1, 
+                Offset (0xA9), 
                 Offset (0xB0), 
                     ,   7, 
                 EOBF,   1, 
@@ -76091,6 +76124,14 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     {
                         Return (0x0F)
                     }
+                    ElseIf ((PWRS == Zero))
+                    {
+                        Return (0x1F)
+                    }
+                    Else
+                    {
+                        Return (0x0F)
+                    }
 
                     Return (Zero)
                 }
@@ -76294,7 +76335,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                     PKG1 [One] = BTCT /* \_SB_.PC00.LPCB.H_EC.BTCT */
                     PKG1 [0x02] = ((BTFC * RSOC) / 0x64)
-                    PKG1 [0x03] = BTDV /* \_SB_.PC00.LPCB.H_EC.BTDV */
+                    PKG1 [0x03] = BTVT /* \_SB_.PC00.LPCB.H_EC.BTVT */
                     Return (PKG1) /* \_SB_.PC00.LPCB.H_EC.BAT0._BST.PKG1 */
                 }
 
@@ -78289,7 +78330,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((IIA0 == 0x00120057))
                     {
                         ^^PC00.LPCB.H_EC.HBDA = IIA1 /* \_SB_.ATKD.WMNB.IIA1 */
-                        ^^PC00.LPCB.H_EC.ECD2 (0x72, 0xB1)
+                        ^^PC00.LPCB.H_EC.HBEC = One
                         Return (One)
                     }
 

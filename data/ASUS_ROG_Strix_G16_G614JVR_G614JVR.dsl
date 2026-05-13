@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of dsdt.dat, Fri Jan 19 21:38:50 2024
+ * Disassembly of /tmp/tmp.7CoOseiA9n/ROG_Strix_G16_G614JVR_G614JVR_e89a804b729b/ROG_Strix_G16_G614JVR_G614JVR, Wed May 13 14:17:06 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x00093151 (602449)
+ *     Length           0x00093A20 (604704)
  *     Revision         0x02
- *     Checksum         0xB3
+ *     Checksum         0x83
  *     OEM ID           "_ASUS_"
  *     OEM Table ID     "Notebook"
  *     OEM Revision     0x01072009 (17244169)
@@ -21,8 +21,8 @@
 DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 {
     /*
-     * iASL Warning: There were 241 external control methods found during
-     * disassembly, but only 497 were resolved (4294967040 unresolved). Additional
+     * iASL Warning: There were 242 external control methods found during
+     * disassembly, but only 498 were resolved (4294967040 unresolved). Additional
      * ACPI tables may be required to properly disassemble the code. This
      * resulting disassembler output file may not compile because the
      * disassembler did not know how many arguments to assign to the
@@ -159,6 +159,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (_SB_.PC00.LPCB.MBDC, FieldUnitObj)
     External (_SB_.PC00.LPCB.MBEC, FieldUnitObj)
     External (_SB_.PC00.LPCB.MCCD, IntObj)
+    External (_SB_.PC00.LPCB.MDS2, IntObj)
     External (_SB_.PC00.LPCB.MDSA, IntObj)
     External (_SB_.PC00.LPCB.MDSE, IntObj)
     External (_SB_.PC00.LPCB.OSMI, MethodObj)    // 1 Arguments
@@ -1249,6 +1250,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     External (_SB_.PR00.TPSS, PkgObj)
     External (_SB_.PTHH.THEN, MethodObj)    // 0 Arguments
     External (_SB_.PWRB, DeviceObj)
+    External (_SB_.RGPU, MethodObj)    // 0 Arguments
     External (_SB_.SGOV, MethodObj)    // 2 Arguments
     External (_SB_.TCWK, MethodObj)    // 1 Arguments
     External (_SB_.TPM_.PTS_, MethodObj)    // 1 Arguments
@@ -1447,7 +1449,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (TPCS, 0x1000)
     Name (TPMM, 0xFED40000)
     Name (FTPM, 0xFED40040)
-    Name (PPIM, 0x43634F18)
+    Name (PPIM, 0x43B36F18)
     Name (PPIL, 0x1C)
     Name (AMDT, Zero)
     Name (TPMF, One)
@@ -1455,7 +1457,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (DTP1, One)
     Name (OSFG, Zero)
     Name (EXSI, 0xAB)
-    Name (SANB, 0x43634098)
+    Name (SANB, 0x43B36098)
     Name (SANL, 0x01BC)
     OperationRegion (SANV, SystemMemory, SANB, SANL)
     Field (SANV, AnyAcc, Lock, Preserve)
@@ -1653,7 +1655,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         PFG3,   8
     }
 
-    OperationRegion (GNVS, SystemMemory, 0x435F8000, 0x0D04)
+    OperationRegion (GNVS, SystemMemory, 0x43AFA000, 0x0D04)
     Field (GNVS, AnyAcc, Lock, Preserve)
     {
         OSYS,   16, 
@@ -3597,7 +3599,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         CGLS,   8
     }
 
-    Name (TPNB, 0x435FE000)
+    Name (TPNB, 0x43B00000)
     Name (TPNL, 0x003F)
     OperationRegion (TPNV, SystemMemory, TPNB, TPNL)
     Field (TPNV, AnyAcc, Lock, Preserve)
@@ -3635,7 +3637,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
     Name (TOPM, 0x00000000)
     Name (ROMS, 0xFFE00000)
     Name (VGAF, One)
-    Name (CNVB, 0x43434000)
+    Name (CNVB, 0x43936000)
     Name (CNVL, 0x0020)
     OperationRegion (CPNV, SystemMemory, CNVB, CNVL)
     Field (CPNV, AnyAcc, Lock, Preserve)
@@ -3643,7 +3645,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         NTPB,   8
     }
 
-    Name (OGAD, 0x43634018)
+    Name (OGAD, 0x43B36018)
     Name (OGSZ, 0x0005)
     OperationRegion (OGNV, SystemMemory, OGAD, OGSZ)
     Field (OGNV, AnyAcc, Lock, Preserve)
@@ -9004,7 +9006,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    Name (SNVB, 0x435FF000)
+    Name (SNVB, 0x43B01000)
     Name (SNVL, 0x0008)
     OperationRegion (SBNV, SystemMemory, SNVB, SNVL)
     Field (SBNV, AnyAcc, Lock, Preserve)
@@ -9928,7 +9930,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    Name (PNVB, 0x43634B18)
+    Name (PNVB, 0x43B36B18)
     Name (PNVL, 0x037B)
     OperationRegion (PNVA, SystemMemory, PNVB, PNVL)
     Field (PNVA, AnyAcc, Lock, Preserve)
@@ -16236,7 +16238,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
             Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
             {
-                Return (GPRW (0x6D, 0x04))
+                Return (GPRW (0x6D, 0x03))
             }
 
             Method (GPEH, 0, NotSerialized)
@@ -31279,6 +31281,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 {
                     GLCK = Zero
                     \_SB.PC00.LPCB.MSCK = Zero
+                    \_SB.PC00.LPCB.MSD2 = Zero
                     P8XH (Zero, 0xE1)
                     P8XH (One, 0xAB)
                     If (PSCP)
@@ -41457,7 +41460,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 If ((Arg2 == 0x03))
                 {
                     Local0 = UHBS /* \UHBS */
-                    Return (0x3BFF)
+                    Return (0x0007BFFF)
                 }
 
                 If ((Arg2 == 0x06))
@@ -42969,7 +42972,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -44482,7 +44485,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -45995,7 +45998,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -47506,7 +47509,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 If ((Arg2 == 0x03))
                 {
                     Local0 = UHBS /* \UHBS */
-                    Return (0x3BFF)
+                    Return (0x0007BFFF)
                 }
 
                 If ((Arg2 == 0x06))
@@ -49018,7 +49021,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -50531,7 +50534,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -52044,7 +52047,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -53555,7 +53558,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 If ((Arg2 == 0x03))
                 {
                     Local0 = UHBS /* \UHBS */
-                    Return (0x3BFF)
+                    Return (0x0007BFFF)
                 }
 
                 If ((Arg2 == 0x06))
@@ -55067,7 +55070,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -56580,7 +56583,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -58093,7 +58096,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -59606,7 +59609,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -61119,7 +61122,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -62632,7 +62635,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -64145,7 +64148,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -65658,7 +65661,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -67171,7 +67174,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -68684,7 +68687,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -70197,7 +70200,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -71710,7 +71713,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -73223,7 +73226,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -74736,7 +74739,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -76249,7 +76252,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((Arg2 == 0x03))
                     {
                         Local0 = UHBS /* \UHBS */
-                        Return (0x3BFF)
+                        Return (0x0007BFFF)
                     }
 
                     If ((Arg2 == 0x06))
@@ -77764,7 +77767,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Arg2 == 0x03))
                         {
                             Local0 = UHBS /* \UHBS */
-                            Return (0x3BFF)
+                            Return (0x0007BFFF)
                         }
 
                         If ((Arg2 == 0x06))
@@ -79277,7 +79280,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Arg2 == 0x03))
                         {
                             Local0 = UHBS /* \UHBS */
-                            Return (0x3BFF)
+                            Return (0x0007BFFF)
                         }
 
                         If ((Arg2 == 0x06))
@@ -80790,7 +80793,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Arg2 == 0x03))
                         {
                             Local0 = UHBS /* \UHBS */
-                            Return (0x3BFF)
+                            Return (0x0007BFFF)
                         }
 
                         If ((Arg2 == 0x06))
@@ -82303,7 +82306,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         If ((Arg2 == 0x03))
                         {
                             Local0 = UHBS /* \UHBS */
-                            Return (0x3BFF)
+                            Return (0x0007BFFF)
                         }
 
                         If ((Arg2 == 0x06))
@@ -87975,6 +87978,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                     If ((Arg2 == 0x03))
                     {
+                        ^^PC00.LPCB.MSD2 = One
                         ^^PC00.LPCB.MS01 (^^PC00.LPCB.MDSA, ^^PC00.LPCB.MDSE)
                         If ((S0ID == One))
                         {
@@ -87989,6 +87993,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                     If ((Arg2 == 0x04))
                     {
+                        ^^PC00.LPCB.MSD2 = Zero
+                        ^^PC00.LPCB.ADTM (Zero)
                         SGOV (0x080E0012, One)
                         Local0 = (^^PC00.LPCB.MDSA & 0xFFFF)
                         ^^PC00.LPCB.MS01 (Local0, Zero)
@@ -89226,7 +89232,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 If ((Arg2 == 0x03))
                 {
                     Local0 = UHBS /* \UHBS */
-                    Return (0x3BFF)
+                    Return (0x0007BFFF)
                 }
 
                 If ((Arg2 == 0x06))
@@ -116600,7 +116606,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    OperationRegion (ABNV, SystemMemory, 0x435E4000, 0x0016)
+    OperationRegion (ABNV, SystemMemory, 0x43AE6000, 0x0016)
     Field (ABNV, AnyAcc, Lock, Preserve)
     {
         ABMA,   64, 
@@ -117467,7 +117473,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         }
     }
 
-    OperationRegion (EXBU, SystemMemory, 0x43635018, 0x105C)
+    OperationRegion (EXBU, SystemMemory, 0x43B37018, 0x105C)
     Field (EXBU, AnyAcc, Lock, Preserve)
     {
         FADR,   32, 
@@ -117526,6 +117532,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Name (SLED, Zero)
         Name (BTSS, Zero)
         Name (WISS, Zero)
+        Mutex (MUEX, 0x00)
         Name (MDSA, Zero)
         Name (MDSE, Zero)
         Name (RDNT, Zero)
@@ -117566,9 +117573,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Offset (0x12), 
             Offset (0x13), 
             Offset (0x14), 
-            Offset (0x15), 
-            Offset (0x16), 
-            Offset (0x17), 
+            BTPL,   8, 
+            BTPM,   8, 
+            BTPH,   8, 
             KSO8,   8, 
             Offset (0x19), 
             Offset (0x1A), 
@@ -117577,6 +117584,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Offset (0x1D), 
             MSCK,   1, 
             HOTF,   1, 
+            MSD2,   1, 
             Offset (0x1E), 
             PTSF,   8, 
             Offset (0x20), 
@@ -118159,6 +118167,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             WIBF (0x6C)
         }
 
+        Method (GECD, 1, NotSerialized)
+        {
+            COBF (0x6C)
+            IO6C = Arg0
+            WIBF (0x6C)
+            COBF (0x6C)
+            Return (IO68) /* \_SB_.PC00.LPCB.IO68 */
+        }
+
         Method (RECC, 1, Serialized)
         {
             COBF (0x6C)
@@ -118287,7 +118304,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 If (ECOK)
                 {
+                    Acquire (MUEX, 0xFFFF)
                     SACM ()
+                    Release (MUEX)
                     Return (ACPF) /* \ACPF */
                 }
                 Else
@@ -118369,14 +118388,18 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 If (ECOK)
                 {
+                    Acquire (MUEX, 0xFFFF)
                     If (PFB1)
                     {
-                        Return (0x1F)
+                        Local0 = 0x1F
                     }
                     Else
                     {
-                        Return (0x0F)
+                        Local0 = 0x0F
                     }
+
+                    Release (MUEX)
+                    Return (Local0)
                 }
                 Else
                 {
@@ -118391,10 +118414,26 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 0x1000, 
                 0x23A0
             })
+            Method (_BTP, 1, NotSerialized)  // _BTP: Battery Trip Point
+            {
+                If (ECOK)
+                {
+                    Acquire (MUEX, 0xFFFF)
+                    Local0 = Arg0
+                    BTPL = (Local0 & 0xFF)
+                    Local1 = (Local0 >> 0x08)
+                    BTPM = (Local1 & 0xFF)
+                    Local2 = (Local1 >> 0x08)
+                    BTPH = (Local2 & 0xFF)
+                    Release (MUEX)
+                }
+            }
+
             Method (_BIF, 0, NotSerialized)  // _BIF: Battery Information
             {
                 If (ECOK)
                 {
+                    Acquire (MUEX, 0xFFFF)
                     Local0 = ECAE /* \_SB_.PC00.LPCB.ECAE */
                     Local5 = ECAF /* \_SB_.PC00.LPCB.ECAF */
                     Local5 <<= 0x08
@@ -118430,6 +118469,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     BACY [0x04] = MB34 /* \_SB_.PC00.LPCB.MB34 */
                     BIF1 [0x0B] = ToString (BACY, Ones)
                     BIF1 [0x0C] = BCM2 /* \_SB_.PC00.LPCB.BCM2 */
+                    Release (MUEX)
                 }
                 Else
                 {
@@ -118444,6 +118484,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 If (ECOK)
                 {
+                    Acquire (MUEX, 0xFFFF)
                     Local1 = (CFB1 & One)
                     Local0 = (DFB1 & One)
                     Local2 = (Local1 << One)
@@ -118479,6 +118520,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Local3 <<= 0x08
                     Local3 += Local0
                     BST1 [0x03] = Local3
+                    Release (MUEX)
                 }
                 Else
                 {
@@ -118511,7 +118553,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
         }
 
-        Name (LEGA, Package (0x2B)
+        Name (LEGA, Package (0x2C)
         {
             0x13, 
             0x14, 
@@ -118555,7 +118597,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             0xDE, 
             0xD3, 
             0xE0, 
-            0xD9
+            0xD9, 
+            0xE5
         })
         Method (LGPA, 1, Serialized)
         {
@@ -118883,6 +118926,10 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 {
                     ADTM (Zero)
                 }
+                Case (0x2B)
+                {
+                    Notify (BAT0, 0x80) // Status Change
+                }
                 Default
                 {
                 }
@@ -118893,9 +118940,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Method (PWCG, 0, NotSerialized)
         {
             Notify (ADP0, Zero) // Bus Check
-            ^BAT0._BST ()
             Notify (BAT0, 0x80) // Status Change
-            ^BAT0._BIF ()
             Notify (BAT0, 0x81) // Information Change
         }
 
@@ -119017,97 +119062,15 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
         Method (ECLV, 0, NotSerialized)
         {
-            While ((((CKEV () != Zero) || (SLEC != Zero)) && (
-                TI3S < 0x78)))
+            While ((CKEV () != Zero))
             {
                 Local1 = One
                 While ((Local1 != Zero))
                 {
                     Local1 = GEVT ()
                     LEVN (Local1)
-                    TIMC += 0x19
-                    If (((SLEC != Zero) && (Local1 == Zero)))
-                    {
-                        If ((TIMC == 0x19))
-                        {
-                            Sleep (0x64)
-                            TIMC = 0x64
-                            TI3S += 0x04
-                        }
-                        Else
-                        {
-                            Sleep (0x19)
-                            TI3S++
-                        }
-                    }
-
-                    If ((TIMC == 0x64))
-                    {
-                        TIMC = Zero
-                        If ((SLEC != Zero))
-                        {
-                            Local0 = 0x08
-                            While (Local0)
-                            {
-                                Local0--
-                                Local3 = DerefOf (SLEN [Local0])
-                                If ((Local3 != Zero))
-                                {
-                                    Local3--
-                                    SLEN [Local0] = Local3
-                                    If ((Local3 == Zero))
-                                    {
-                                        Local1 = One
-                                        Local2 = DerefOf (SLEV [Local0])
-                                        SLEV [Local0] = Zero
-                                        ILEV (Local2)
-                                        SLEC--
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
             }
-
-            If ((TI3S >= 0x78))
-            {
-                TI3S = Zero
-                If ((EEV0 == Zero))
-                {
-                    EEV0 = 0xFF
-                }
-            }
-        }
-
-        Method (CLRL, 0, Serialized)
-        {
-            SLEC = Zero
-            TIMC = Zero
-            Local0 = 0x08
-            While (Local0)
-            {
-                Local0--
-                SLEV [Local0] = Zero
-                SLEN [Local0] = Zero
-            }
-        }
-
-        Method (ILEV, 1, NotSerialized)
-        {
-            Acquire (MUTL, 0xFFFF)
-            If ((EEV0 == Zero))
-            {
-                EEV0 = 0xFF
-            }
-
-            If ((LEVC < 0x08))
-            {
-                LEVB [LEVC] = Arg0
-                LEVC++
-            }
-
-            Release (MUTL)
         }
 
         Method (LEVN, 1, NotSerialized)
@@ -119376,32 +119339,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             NOD2 (Local0)
         }
 
-        Method (DGD2, 0, Serialized)
-        {
-            If ((ACIN == One))
-            {
-                Local0 = 0xD1
-            }
-            Else
-            {
-                Local0 = DCTH /* \_SB_.PC00.LPCB.DCTH */
-                If ((Local0 < 0x03))
-                {
-                    Local0 += 0xD1
-                }
-                Else
-                {
-                    Local0 += 0xD0
-                    If ((Local0 > 0xD5))
-                    {
-                        Local0 = 0xD5
-                    }
-                }
-            }
-
-            NOD2 (Local0)
-        }
-
         Method (ECLX, 2, Serialized)
         {
             M695 = Arg1
@@ -119641,6 +119578,17 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             {
                 DNOT = Zero
                 ECLX (0xA1, Arg0)
+            }
+        }
+
+        Method (DEYM, 1, NotSerialized)
+        {
+            Local0 = Zero
+            Local1 = (Arg0 * 0x0A)
+            While ((Local0 < Local1))
+            {
+                Local0 += One
+                Stall (0x63)
             }
         }
 
@@ -120542,12 +120490,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Local1 *= 0x0100
                     Local0 += Local1
                     Divide (Local0, 0x64, Local1, Local0)
-                    If (^^PC00.LPCB.CFAN)
-                    {
-                        Local2 = (^^PC00.LPCB.CFAN << 0x10)
-                        Local0 += Local2
-                    }
-
+                    Local2 = (^^PC00.LPCB.CFAN << 0x13)
+                    Local0 += Local2
                     Return ((0x00010000 + Local0))
                 }
 
@@ -120558,12 +120502,8 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     Local1 *= 0x0100
                     Local0 += Local1
                     Divide (Local0, 0x64, Local1, Local0)
-                    If (^^PC00.LPCB.GFAN)
-                    {
-                        Local2 = (^^PC00.LPCB.GFAN << 0x0F)
-                        Local0 += Local2
-                    }
-
+                    Local2 = (^^PC00.LPCB.GFAN << 0x13)
+                    Local0 += Local2
                     Return ((0x00010000 + Local0))
                 }
 
@@ -120873,6 +120813,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                 If ((IIA0 == 0x00120093))
                 {
+                    Return (Zero)
                     Local0 = 0x00010000
                     Local0 |= 0x73
                     Local1 = (^^NPCF.ACBT + ^^NPCF.AMAT) /* External reference */
@@ -121038,7 +120979,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
                 If ((IIA0 == 0x00130023))
                 {
-                    Return (0x00010000)
+                    Return (0xFFFFFFFE)
                 }
 
                 If ((IIA0 == 0x00090020))
@@ -121737,7 +121678,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                     If ((IIA1 == One))
                     {
                         ^^PC00.LPCB.CUMB = Zero
-                        Notify (^^PC00.PEG1.PEGP, 0x03) // Eject Request
+                        RGPU ()
                         ^^PC00.LPCB.IECO = 0xEC
                     }
 
@@ -122510,7 +122451,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         Method (VERS, 2, Serialized)
         {
             Local0 = Zero
-            Local0 += 0x30
+            Local0 += 0x31
             Return (Local0)
         }
     }
@@ -123879,6 +123820,57 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                                         }
                                 }
                             }
+                            ElseIf ((Local1 == 0x00800009))
+                            {
+                                CRT2 ()
+                                SNSR [Zero] = ^^PC00.LPCB.AVGA /* \_SB_.PC00.LPCB.AVGA */
+                                SNSR [One] = Zero
+                                SNSR [0x02] = Zero
+                                SNSR [0x03] = Zero
+                                SNSR [0x04] = Zero
+                                SNSR [0x05] = Zero
+                                SNSR [0x06] = Zero
+                                SNSR [0x07] = Zero
+                                RET2 [Zero] = Buffer (0x08)
+                                    {
+                                         0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
+                                    }
+                                RET2 [One] = ToBuffer (SNSR)
+                                RET2 [0x02] = Buffer (0x08)
+                                    {
+                                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
+                                    }
+                                RET2 [0x03] = Buffer (0x08)
+                                    {
+                                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
+                                    }
+                                RET2 [0x04] = Buffer (0x08)
+                                    {
+                                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
+                                    }
+                                RET2 [0x05] = Buffer (0x08)
+                                    {
+                                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
+                                    }
+                                RET2 [0x06] = Buffer (0x08)
+                                    {
+                                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
+                                    }
+                                RET2 [0x07] = Buffer (0x08)
+                                    {
+                                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
+                                    }
+                            }
+                            ElseIf ((Local1 == 0x0080000A))
+                            {
+                                CRT2 ()
+                                Local2 = F2P1 /* \_SB_.WMIT.WMTK.F2P1 */
+                                RET2 [One] = ToBuffer (^^PC00.LPCB.GECD (Local2))
+                                RET2 [Zero] = Buffer (0x08)
+                                    {
+                                         0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
+                                    }
+                            }
                             Else
                             {
                                 RET2 [Zero] = ToBuffer (F2P0)
@@ -124492,6 +124484,156 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         /* 00C8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
         /* 00D0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00         // .......
     })
+    Name (DR11, Buffer (0xDB)
+    {
+        /* 0000 */  0x7E, 0x78, 0x9F, 0x8B, 0x09, 0x99, 0x0D, 0x16,  // ~x......
+        /* 0008 */  0x52, 0x44, 0xD7, 0x00, 0x00, 0x00, 0x00, 0x01,  // RD......
+        /* 0010 */  0x00, 0x00, 0x00, 0x00, 0xDE, 0x10, 0x00, 0x00,  // ........
+        /* 0018 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 0020 */  0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x34, 0x00,  // ......4.
+        /* 0028 */  0x00, 0x00, 0x01, 0x00, 0x47, 0x00, 0x00, 0x00,  // ....G...
+        /* 0030 */  0x02, 0x00, 0x45, 0x00, 0x00, 0x00, 0x03, 0x00,  // ..E.....
+        /* 0038 */  0x87, 0x00, 0x00, 0x00, 0x04, 0x00, 0x85, 0x00,  // ........
+        /* 0040 */  0x00, 0x00, 0x05, 0x00, 0x83, 0x00, 0x00, 0x00,  // ........
+        /* 0048 */  0x06, 0x00, 0x81, 0x00, 0x00, 0x00, 0x07, 0x00,  // ........
+        /* 0050 */  0x7F, 0x00, 0x00, 0x00, 0x08, 0x00, 0x7D, 0x00,  // ......}.
+        /* 0058 */  0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0xD9, 0x1C,  // ........
+        /* 0060 */  0x04, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00,  // ........
+        /* 0068 */  0x41, 0x5D, 0xC9, 0x00, 0x01, 0x24, 0x2E, 0x00,  // A]...$..
+        /* 0070 */  0x02, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x01,  // ........
+        /* 0078 */  0x00, 0x00, 0x00, 0xD9, 0x1C, 0x04, 0x00, 0x00,  // ........
+        /* 0080 */  0x00, 0x02, 0x00, 0x00, 0x00, 0xE0, 0x7C, 0x97,  // ......|.
+        /* 0088 */  0x01, 0xC4, 0xD5, 0xC4, 0x32, 0x00, 0x00, 0x00,  // ....2...
+        /* 0090 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x26, 0x00, 0x00,  // .....&..
+        /* 0098 */  0x00, 0x32, 0x00, 0x34, 0x00, 0x30, 0x00, 0x2A,  // .2.4.0.*
+        /* 00A0 */  0x00, 0x31, 0x00, 0x30, 0x00, 0x30, 0x00, 0x30,  // .1.0.0.0
+        /* 00A8 */  0x00, 0x30, 0x00, 0x3B, 0x00, 0x36, 0x00, 0x30,  // .0.;.6.0
+        /* 00B0 */  0x00, 0x2A, 0x00, 0x34, 0x00, 0x30, 0x00, 0x30,  // .*.4.0.0
+        /* 00B8 */  0x00, 0x30, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00,  // .0.0....
+        /* 00C0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 00C8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 00D0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00         // .......
+    })
+    Name (DR12, Buffer (0xDB)
+    {
+        /* 0000 */  0x7E, 0x78, 0x9F, 0x8B, 0x09, 0x99, 0x0D, 0x16,  // ~x......
+        /* 0008 */  0x52, 0x44, 0xD7, 0x00, 0x00, 0x00, 0x00, 0x01,  // RD......
+        /* 0010 */  0x00, 0x00, 0x00, 0x00, 0xDE, 0x10, 0x00, 0x00,  // ........
+        /* 0018 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 0020 */  0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x34, 0x00,  // ......4.
+        /* 0028 */  0x00, 0x00, 0x01, 0x00, 0x47, 0x00, 0x00, 0x00,  // ....G...
+        /* 0030 */  0x02, 0x00, 0x45, 0x00, 0x00, 0x00, 0x03, 0x00,  // ..E.....
+        /* 0038 */  0x87, 0x00, 0x00, 0x00, 0x04, 0x00, 0x85, 0x00,  // ........
+        /* 0040 */  0x00, 0x00, 0x05, 0x00, 0x83, 0x00, 0x00, 0x00,  // ........
+        /* 0048 */  0x06, 0x00, 0x81, 0x00, 0x00, 0x00, 0x07, 0x00,  // ........
+        /* 0050 */  0x7F, 0x00, 0x00, 0x00, 0x08, 0x00, 0x7D, 0x00,  // ......}.
+        /* 0058 */  0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0xD9, 0x1C,  // ........
+        /* 0060 */  0x04, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00,  // ........
+        /* 0068 */  0x41, 0x5D, 0xC9, 0x00, 0x01, 0x24, 0x2E, 0x00,  // A]...$..
+        /* 0070 */  0x02, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x01,  // ........
+        /* 0078 */  0x00, 0x00, 0x00, 0xD9, 0x1C, 0x04, 0x00, 0x00,  // ........
+        /* 0080 */  0x00, 0x02, 0x00, 0x00, 0x00, 0xE0, 0x7C, 0x97,  // ......|.
+        /* 0088 */  0x01, 0xC4, 0xD5, 0xC4, 0x32, 0x00, 0x00, 0x00,  // ....2...
+        /* 0090 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x26, 0x00, 0x00,  // .....&..
+        /* 0098 */  0x00, 0x32, 0x00, 0x34, 0x00, 0x30, 0x00, 0x2A,  // .2.4.0.*
+        /* 00A0 */  0x00, 0x31, 0x00, 0x30, 0x00, 0x30, 0x00, 0x30,  // .1.0.0.0
+        /* 00A8 */  0x00, 0x30, 0x00, 0x3B, 0x00, 0x36, 0x00, 0x30,  // .0.;.6.0
+        /* 00B0 */  0x00, 0x2A, 0x00, 0x34, 0x00, 0x30, 0x00, 0x30,  // .*.4.0.0
+        /* 00B8 */  0x00, 0x30, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00,  // .0.0....
+        /* 00C0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 00C8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 00D0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00         // .......
+    })
+    Name (DR13, Buffer (0xDB)
+    {
+        /* 0000 */  0x7E, 0x78, 0x9F, 0x8B, 0x09, 0x99, 0x0D, 0x16,  // ~x......
+        /* 0008 */  0x52, 0x44, 0xD7, 0x00, 0x00, 0x00, 0x00, 0x01,  // RD......
+        /* 0010 */  0x00, 0x00, 0x00, 0x00, 0xDE, 0x10, 0x00, 0x00,  // ........
+        /* 0018 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 0020 */  0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x34, 0x00,  // ......4.
+        /* 0028 */  0x00, 0x00, 0x01, 0x00, 0x47, 0x00, 0x00, 0x00,  // ....G...
+        /* 0030 */  0x02, 0x00, 0x45, 0x00, 0x00, 0x00, 0x03, 0x00,  // ..E.....
+        /* 0038 */  0x87, 0x00, 0x00, 0x00, 0x04, 0x00, 0x85, 0x00,  // ........
+        /* 0040 */  0x00, 0x00, 0x05, 0x00, 0x83, 0x00, 0x00, 0x00,  // ........
+        /* 0048 */  0x06, 0x00, 0x81, 0x00, 0x00, 0x00, 0x07, 0x00,  // ........
+        /* 0050 */  0x7F, 0x00, 0x00, 0x00, 0x08, 0x00, 0x7D, 0x00,  // ......}.
+        /* 0058 */  0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0xD9, 0x1C,  // ........
+        /* 0060 */  0x04, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00,  // ........
+        /* 0068 */  0x41, 0x5D, 0xC9, 0x00, 0x01, 0x24, 0x2E, 0x00,  // A]...$..
+        /* 0070 */  0x02, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x01,  // ........
+        /* 0078 */  0x00, 0x00, 0x00, 0xD9, 0x1C, 0x04, 0x00, 0x00,  // ........
+        /* 0080 */  0x00, 0x02, 0x00, 0x00, 0x00, 0xE0, 0x7C, 0x97,  // ......|.
+        /* 0088 */  0x01, 0xC4, 0xD5, 0xC4, 0x32, 0x00, 0x00, 0x00,  // ....2...
+        /* 0090 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x26, 0x00, 0x00,  // .....&..
+        /* 0098 */  0x00, 0x32, 0x00, 0x34, 0x00, 0x30, 0x00, 0x2A,  // .2.4.0.*
+        /* 00A0 */  0x00, 0x31, 0x00, 0x30, 0x00, 0x30, 0x00, 0x30,  // .1.0.0.0
+        /* 00A8 */  0x00, 0x30, 0x00, 0x3B, 0x00, 0x36, 0x00, 0x30,  // .0.;.6.0
+        /* 00B0 */  0x00, 0x2A, 0x00, 0x34, 0x00, 0x30, 0x00, 0x30,  // .*.4.0.0
+        /* 00B8 */  0x00, 0x30, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00,  // .0.0....
+        /* 00C0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 00C8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 00D0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00         // .......
+    })
+    Name (DR14, Buffer (0xDB)
+    {
+        /* 0000 */  0x7E, 0x78, 0x9F, 0x8B, 0x09, 0x99, 0x0D, 0x16,  // ~x......
+        /* 0008 */  0x52, 0x44, 0xD7, 0x00, 0x00, 0x00, 0x00, 0x01,  // RD......
+        /* 0010 */  0x00, 0x00, 0x00, 0x00, 0xDE, 0x10, 0x00, 0x00,  // ........
+        /* 0018 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 0020 */  0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x34, 0x00,  // ......4.
+        /* 0028 */  0x00, 0x00, 0x01, 0x00, 0x47, 0x00, 0x00, 0x00,  // ....G...
+        /* 0030 */  0x02, 0x00, 0x45, 0x00, 0x00, 0x00, 0x03, 0x00,  // ..E.....
+        /* 0038 */  0x87, 0x00, 0x00, 0x00, 0x04, 0x00, 0x85, 0x00,  // ........
+        /* 0040 */  0x00, 0x00, 0x05, 0x00, 0x83, 0x00, 0x00, 0x00,  // ........
+        /* 0048 */  0x06, 0x00, 0x81, 0x00, 0x00, 0x00, 0x07, 0x00,  // ........
+        /* 0050 */  0x7F, 0x00, 0x00, 0x00, 0x08, 0x00, 0x7D, 0x00,  // ......}.
+        /* 0058 */  0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0xD9, 0x1C,  // ........
+        /* 0060 */  0x04, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00,  // ........
+        /* 0068 */  0x41, 0x5D, 0xC9, 0x00, 0x01, 0x24, 0x2E, 0x00,  // A]...$..
+        /* 0070 */  0x02, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x01,  // ........
+        /* 0078 */  0x00, 0x00, 0x00, 0xD9, 0x1C, 0x04, 0x00, 0x00,  // ........
+        /* 0080 */  0x00, 0x02, 0x00, 0x00, 0x00, 0xE0, 0x7C, 0x97,  // ......|.
+        /* 0088 */  0x01, 0xC4, 0xD5, 0xC4, 0x32, 0x00, 0x00, 0x00,  // ....2...
+        /* 0090 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x26, 0x00, 0x00,  // .....&..
+        /* 0098 */  0x00, 0x32, 0x00, 0x34, 0x00, 0x30, 0x00, 0x2A,  // .2.4.0.*
+        /* 00A0 */  0x00, 0x31, 0x00, 0x30, 0x00, 0x30, 0x00, 0x30,  // .1.0.0.0
+        /* 00A8 */  0x00, 0x30, 0x00, 0x3B, 0x00, 0x36, 0x00, 0x30,  // .0.;.6.0
+        /* 00B0 */  0x00, 0x2A, 0x00, 0x34, 0x00, 0x30, 0x00, 0x30,  // .*.4.0.0
+        /* 00B8 */  0x00, 0x30, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00,  // .0.0....
+        /* 00C0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 00C8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 00D0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00         // .......
+    })
+    Name (DR15, Buffer (0xDB)
+    {
+        /* 0000 */  0x7E, 0x78, 0x9F, 0x8B, 0x09, 0x99, 0x0D, 0x16,  // ~x......
+        /* 0008 */  0x52, 0x44, 0xD7, 0x00, 0x00, 0x00, 0x00, 0x01,  // RD......
+        /* 0010 */  0x00, 0x00, 0x00, 0x00, 0xDE, 0x10, 0x00, 0x00,  // ........
+        /* 0018 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 0020 */  0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x34, 0x00,  // ......4.
+        /* 0028 */  0x00, 0x00, 0x01, 0x00, 0x47, 0x00, 0x00, 0x00,  // ....G...
+        /* 0030 */  0x02, 0x00, 0x45, 0x00, 0x00, 0x00, 0x03, 0x00,  // ..E.....
+        /* 0038 */  0x87, 0x00, 0x00, 0x00, 0x04, 0x00, 0x85, 0x00,  // ........
+        /* 0040 */  0x00, 0x00, 0x05, 0x00, 0x83, 0x00, 0x00, 0x00,  // ........
+        /* 0048 */  0x06, 0x00, 0x81, 0x00, 0x00, 0x00, 0x07, 0x00,  // ........
+        /* 0050 */  0x7F, 0x00, 0x00, 0x00, 0x08, 0x00, 0x7D, 0x00,  // ......}.
+        /* 0058 */  0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0xD9, 0x1C,  // ........
+        /* 0060 */  0x04, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00,  // ........
+        /* 0068 */  0x41, 0x5D, 0xC9, 0x00, 0x01, 0x24, 0x2E, 0x00,  // A]...$..
+        /* 0070 */  0x02, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x01,  // ........
+        /* 0078 */  0x00, 0x00, 0x00, 0xD9, 0x1C, 0x04, 0x00, 0x00,  // ........
+        /* 0080 */  0x00, 0x02, 0x00, 0x00, 0x00, 0xE0, 0x7C, 0x97,  // ......|.
+        /* 0088 */  0x01, 0xC4, 0xD5, 0xC4, 0x32, 0x00, 0x00, 0x00,  // ....2...
+        /* 0090 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x26, 0x00, 0x00,  // .....&..
+        /* 0098 */  0x00, 0x32, 0x00, 0x34, 0x00, 0x30, 0x00, 0x2A,  // .2.4.0.*
+        /* 00A0 */  0x00, 0x31, 0x00, 0x30, 0x00, 0x30, 0x00, 0x30,  // .1.0.0.0
+        /* 00A8 */  0x00, 0x30, 0x00, 0x3B, 0x00, 0x36, 0x00, 0x30,  // .0.;.6.0
+        /* 00B0 */  0x00, 0x2A, 0x00, 0x34, 0x00, 0x30, 0x00, 0x30,  // .*.4.0.0
+        /* 00B8 */  0x00, 0x30, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00,  // .0.0....
+        /* 00C0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 00C8 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // ........
+        /* 00D0 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00         // .......
+    })
     Name (VK01, Buffer (0xC5)
     {
         /* 0000 */  0x70, 0x62, 0x0B, 0x40, 0x6B, 0x73, 0x42, 0x2A,  // pb.@ksB*
@@ -124520,34 +124662,33 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         /* 00B8 */  0x32, 0x36, 0x38, 0x32, 0x33, 0x34, 0x39, 0x31,  // 26823491
         /* 00C0 */  0x38, 0x31, 0x28, 0x52, 0x29                     // 81(R)
     })
-    Name (VK02, Buffer (0xC9)
+    Name (VK02, Buffer (0xC5)
     {
-        /* 0000 */  0x6A, 0x00, 0x75, 0x74, 0x16, 0xCA, 0xB1, 0x15,  // j.ut....
-        /* 0008 */  0x4B, 0x56, 0xC9, 0x00, 0x00, 0x00, 0x01, 0x00,  // KV......
-        /* 0010 */  0x39, 0x31, 0x34, 0x35, 0x37, 0x32, 0x32, 0x32,  // 91457222
-        /* 0018 */  0x37, 0x37, 0x31, 0x36, 0x47, 0x65, 0x6E, 0x75,  // 7716Genu
+        /* 0000 */  0x82, 0x04, 0xC8, 0x07, 0x5A, 0xC8, 0x12, 0x63,  // ....Z..c
+        /* 0008 */  0x4B, 0x56, 0xC5, 0x00, 0x00, 0x00, 0x01, 0x00,  // KV......
+        /* 0010 */  0x39, 0x35, 0x32, 0x30, 0x30, 0x30, 0x38, 0x31,  // 95200081
+        /* 0018 */  0x31, 0x38, 0x36, 0x39, 0x47, 0x65, 0x6E, 0x75,  // 1869Genu
         /* 0020 */  0x69, 0x6E, 0x65, 0x20, 0x4E, 0x56, 0x49, 0x44,  // ine NVID
         /* 0028 */  0x49, 0x41, 0x20, 0x43, 0x65, 0x72, 0x74, 0x69,  // IA Certi
         /* 0030 */  0x66, 0x69, 0x65, 0x64, 0x20, 0x47, 0x53, 0x79,  // fied GSy
         /* 0038 */  0x6E, 0x63, 0x20, 0x52, 0x65, 0x61, 0x64, 0x79,  // nc Ready
         /* 0040 */  0x20, 0x50, 0x6C, 0x61, 0x74, 0x66, 0x6F, 0x72,  //  Platfor
-        /* 0048 */  0x6D, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x52, 0x52,  // m for RR
-        /* 0050 */  0x48, 0x4E, 0x54, 0x4B, 0x47, 0x4A, 0x59, 0x55,  // HNTKGJYU
-        /* 0058 */  0x56, 0x59, 0x54, 0x57, 0x51, 0x53, 0x47, 0x57,  // VYTWQSGW
-        /* 0060 */  0x52, 0x45, 0x20, 0x2D, 0x20, 0x3D, 0x3F, 0x2C,  // RE - =?,
-        /* 0068 */  0x5C, 0x2C, 0x44, 0x30, 0x36, 0x43, 0x4C, 0x55,  // \,D06CLU
-        /* 0070 */  0x56, 0x39, 0x38, 0x48, 0x4C, 0x5C, 0x2D, 0x2C,  // V98HL\-,
-        /* 0078 */  0x42, 0x47, 0x25, 0x2C, 0x22, 0x4D, 0x5E, 0x2E,  // BG%,"M^.
-        /* 0080 */  0x33, 0x20, 0x2D, 0x20, 0x43, 0x6F, 0x70, 0x79,  // 3 - Copy
-        /* 0088 */  0x72, 0x69, 0x67, 0x68, 0x74, 0x20, 0x32, 0x30,  // right 20
-        /* 0090 */  0x32, 0x33, 0x20, 0x4E, 0x56, 0x49, 0x44, 0x49,  // 23 NVIDI
-        /* 0098 */  0x41, 0x20, 0x43, 0x6F, 0x72, 0x70, 0x6F, 0x72,  // A Corpor
-        /* 00A0 */  0x61, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x41, 0x6C,  // ation Al
-        /* 00A8 */  0x6C, 0x20, 0x52, 0x69, 0x67, 0x68, 0x74, 0x73,  // l Rights
-        /* 00B0 */  0x20, 0x52, 0x65, 0x73, 0x65, 0x72, 0x76, 0x65,  //  Reserve
-        /* 00B8 */  0x64, 0x2D, 0x37, 0x32, 0x35, 0x31, 0x31, 0x35,  // d-725115
-        /* 00C0 */  0x36, 0x36, 0x31, 0x33, 0x33, 0x31, 0x28, 0x52,  // 661331(R
-        /* 00C8 */  0x29                                             // )
+        /* 0048 */  0x6D, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x42, 0x54,  // m for BT
+        /* 0050 */  0x4C, 0x55, 0x52, 0x45, 0x54, 0x4B, 0x51, 0x41,  // LURETKQA
+        /* 0058 */  0x49, 0x4B, 0x46, 0x51, 0x43, 0x41, 0x4C, 0x43,  // IKFQCALC
+        /* 0060 */  0x45, 0x57, 0x20, 0x2D, 0x20, 0x2D, 0x56, 0x43,  // EW - -VC
+        /* 0068 */  0x3B, 0x39, 0x48, 0x35, 0x38, 0x4A, 0x3D, 0x4C,  // ;9H58J=L
+        /* 0070 */  0x37, 0x5C, 0x4C, 0x5C, 0x57, 0x5E, 0x32, 0x5C,  // 7\L\W^2\
+        /* 0078 */  0x3A, 0x22, 0x44, 0x57, 0x52, 0x20, 0x2D, 0x20,  // :"DWR - 
+        /* 0080 */  0x43, 0x6F, 0x70, 0x79, 0x72, 0x69, 0x67, 0x68,  // Copyrigh
+        /* 0088 */  0x74, 0x20, 0x32, 0x30, 0x32, 0x33, 0x20, 0x4E,  // t 2023 N
+        /* 0090 */  0x56, 0x49, 0x44, 0x49, 0x41, 0x20, 0x43, 0x6F,  // VIDIA Co
+        /* 0098 */  0x72, 0x70, 0x6F, 0x72, 0x61, 0x74, 0x69, 0x6F,  // rporatio
+        /* 00A0 */  0x6E, 0x20, 0x41, 0x6C, 0x6C, 0x20, 0x52, 0x69,  // n All Ri
+        /* 00A8 */  0x67, 0x68, 0x74, 0x73, 0x20, 0x52, 0x65, 0x73,  // ghts Res
+        /* 00B0 */  0x65, 0x72, 0x76, 0x65, 0x64, 0x2D, 0x39, 0x37,  // erved-97
+        /* 00B8 */  0x32, 0x36, 0x38, 0x32, 0x33, 0x34, 0x39, 0x31,  // 26823491
+        /* 00C0 */  0x38, 0x31, 0x28, 0x52, 0x29                     // 81(R)
     })
     Name (VK03, Buffer (0xC9)
     {
@@ -124710,6 +124851,118 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
         /* 0068 */  0x57, 0x25, 0x4D, 0x2B, 0x4E, 0x5A, 0x45, 0x2E,  // W%M+NZE.
         /* 0070 */  0x2D, 0x30, 0x31, 0x51, 0x55, 0x21, 0x53, 0x25,  // -01QU!S%
         /* 0078 */  0x28, 0x5F, 0x23, 0x55, 0x5E, 0x20, 0x2D, 0x20,  // (_#U^ - 
+        /* 0080 */  0x43, 0x6F, 0x70, 0x79, 0x72, 0x69, 0x67, 0x68,  // Copyrigh
+        /* 0088 */  0x74, 0x20, 0x32, 0x30, 0x32, 0x33, 0x20, 0x4E,  // t 2023 N
+        /* 0090 */  0x56, 0x49, 0x44, 0x49, 0x41, 0x20, 0x43, 0x6F,  // VIDIA Co
+        /* 0098 */  0x72, 0x70, 0x6F, 0x72, 0x61, 0x74, 0x69, 0x6F,  // rporatio
+        /* 00A0 */  0x6E, 0x20, 0x41, 0x6C, 0x6C, 0x20, 0x52, 0x69,  // n All Ri
+        /* 00A8 */  0x67, 0x68, 0x74, 0x73, 0x20, 0x52, 0x65, 0x73,  // ghts Res
+        /* 00B0 */  0x65, 0x72, 0x76, 0x65, 0x64, 0x2D, 0x39, 0x37,  // erved-97
+        /* 00B8 */  0x32, 0x36, 0x38, 0x32, 0x33, 0x34, 0x39, 0x31,  // 26823491
+        /* 00C0 */  0x38, 0x31, 0x28, 0x52, 0x29                     // 81(R)
+    })
+    Name (VK13, Buffer (0xC5)
+    {
+        /* 0000 */  0x32, 0xE2, 0x49, 0x21, 0x7F, 0xAB, 0xC4, 0x94,  // 2.I!....
+        /* 0008 */  0x4B, 0x56, 0xC5, 0x00, 0x00, 0x00, 0x01, 0x00,  // KV......
+        /* 0010 */  0x39, 0x35, 0x32, 0x30, 0x30, 0x30, 0x38, 0x31,  // 95200081
+        /* 0018 */  0x31, 0x38, 0x36, 0x39, 0x47, 0x65, 0x6E, 0x75,  // 1869Genu
+        /* 0020 */  0x69, 0x6E, 0x65, 0x20, 0x4E, 0x56, 0x49, 0x44,  // ine NVID
+        /* 0028 */  0x49, 0x41, 0x20, 0x43, 0x65, 0x72, 0x74, 0x69,  // IA Certi
+        /* 0030 */  0x66, 0x69, 0x65, 0x64, 0x20, 0x47, 0x53, 0x79,  // fied GSy
+        /* 0038 */  0x6E, 0x63, 0x20, 0x52, 0x65, 0x61, 0x64, 0x79,  // nc Ready
+        /* 0040 */  0x20, 0x50, 0x6C, 0x61, 0x74, 0x66, 0x6F, 0x72,  //  Platfor
+        /* 0048 */  0x6D, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x4A, 0x41,  // m for JA
+        /* 0050 */  0x58, 0x5A, 0x58, 0x45, 0x4F, 0x46, 0x52, 0x5A,  // XZXEOFRZ
+        /* 0058 */  0x55, 0x4E, 0x50, 0x50, 0x43, 0x55, 0x4F, 0x51,  // UNPPCUOQ
+        /* 0060 */  0x58, 0x59, 0x20, 0x2D, 0x20, 0x39, 0x3B, 0x20,  // XY - 9; 
+        /* 0068 */  0x50, 0x28, 0x40, 0x34, 0x32, 0x5F, 0x48, 0x29,  // P(@42_H)
+        /* 0070 */  0x52, 0x35, 0x3C, 0x54, 0x48, 0x5B, 0x5F, 0x2D,  // R5<TH[_-
+        /* 0078 */  0x41, 0x40, 0x2E, 0x59, 0x51, 0x20, 0x2D, 0x20,  // A@.YQ - 
+        /* 0080 */  0x43, 0x6F, 0x70, 0x79, 0x72, 0x69, 0x67, 0x68,  // Copyrigh
+        /* 0088 */  0x74, 0x20, 0x32, 0x30, 0x32, 0x33, 0x20, 0x4E,  // t 2023 N
+        /* 0090 */  0x56, 0x49, 0x44, 0x49, 0x41, 0x20, 0x43, 0x6F,  // VIDIA Co
+        /* 0098 */  0x72, 0x70, 0x6F, 0x72, 0x61, 0x74, 0x69, 0x6F,  // rporatio
+        /* 00A0 */  0x6E, 0x20, 0x41, 0x6C, 0x6C, 0x20, 0x52, 0x69,  // n All Ri
+        /* 00A8 */  0x67, 0x68, 0x74, 0x73, 0x20, 0x52, 0x65, 0x73,  // ghts Res
+        /* 00B0 */  0x65, 0x72, 0x76, 0x65, 0x64, 0x2D, 0x39, 0x37,  // erved-97
+        /* 00B8 */  0x32, 0x36, 0x38, 0x32, 0x33, 0x34, 0x39, 0x31,  // 26823491
+        /* 00C0 */  0x38, 0x31, 0x28, 0x52, 0x29                     // 81(R)
+    })
+    Name (VK14, Buffer (0xC5)
+    {
+        /* 0000 */  0x42, 0x31, 0x7F, 0x4F, 0xE6, 0xFE, 0x33, 0x0B,  // B1.O..3.
+        /* 0008 */  0x4B, 0x56, 0xC5, 0x00, 0x00, 0x00, 0x01, 0x00,  // KV......
+        /* 0010 */  0x39, 0x35, 0x32, 0x30, 0x30, 0x30, 0x38, 0x31,  // 95200081
+        /* 0018 */  0x31, 0x38, 0x36, 0x39, 0x47, 0x65, 0x6E, 0x75,  // 1869Genu
+        /* 0020 */  0x69, 0x6E, 0x65, 0x20, 0x4E, 0x56, 0x49, 0x44,  // ine NVID
+        /* 0028 */  0x49, 0x41, 0x20, 0x43, 0x65, 0x72, 0x74, 0x69,  // IA Certi
+        /* 0030 */  0x66, 0x69, 0x65, 0x64, 0x20, 0x47, 0x53, 0x79,  // fied GSy
+        /* 0038 */  0x6E, 0x63, 0x20, 0x52, 0x65, 0x61, 0x64, 0x79,  // nc Ready
+        /* 0040 */  0x20, 0x50, 0x6C, 0x61, 0x74, 0x66, 0x6F, 0x72,  //  Platfor
+        /* 0048 */  0x6D, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x54, 0x4D,  // m for TM
+        /* 0050 */  0x45, 0x51, 0x50, 0x4F, 0x54, 0x57, 0x4E, 0x56,  // EQPOTWNV
+        /* 0058 */  0x59, 0x42, 0x4E, 0x43, 0x45, 0x55, 0x50, 0x58,  // YBNCEUPX
+        /* 0060 */  0x48, 0x4D, 0x20, 0x2D, 0x20, 0x59, 0x5A, 0x47,  // HM - YZG
+        /* 0068 */  0x37, 0x44, 0x2C, 0x49, 0x2B, 0x36, 0x20, 0x47,  // 7D,I+6 G
+        /* 0070 */  0x45, 0x29, 0x2F, 0x46, 0x3A, 0x2C, 0x43, 0x56,  // E)/F:,CV
+        /* 0078 */  0x44, 0x4D, 0x21, 0x40, 0x2A, 0x20, 0x2D, 0x20,  // DM!@* - 
+        /* 0080 */  0x43, 0x6F, 0x70, 0x79, 0x72, 0x69, 0x67, 0x68,  // Copyrigh
+        /* 0088 */  0x74, 0x20, 0x32, 0x30, 0x32, 0x33, 0x20, 0x4E,  // t 2023 N
+        /* 0090 */  0x56, 0x49, 0x44, 0x49, 0x41, 0x20, 0x43, 0x6F,  // VIDIA Co
+        /* 0098 */  0x72, 0x70, 0x6F, 0x72, 0x61, 0x74, 0x69, 0x6F,  // rporatio
+        /* 00A0 */  0x6E, 0x20, 0x41, 0x6C, 0x6C, 0x20, 0x52, 0x69,  // n All Ri
+        /* 00A8 */  0x67, 0x68, 0x74, 0x73, 0x20, 0x52, 0x65, 0x73,  // ghts Res
+        /* 00B0 */  0x65, 0x72, 0x76, 0x65, 0x64, 0x2D, 0x39, 0x37,  // erved-97
+        /* 00B8 */  0x32, 0x36, 0x38, 0x32, 0x33, 0x34, 0x39, 0x31,  // 26823491
+        /* 00C0 */  0x38, 0x31, 0x28, 0x52, 0x29                     // 81(R)
+    })
+    Name (VK15, Buffer (0xC5)
+    {
+        /* 0000 */  0x14, 0xD3, 0x6E, 0xE7, 0xE3, 0xF6, 0x23, 0x62,  // ..n...#b
+        /* 0008 */  0x4B, 0x56, 0xC5, 0x00, 0x00, 0x00, 0x01, 0x00,  // KV......
+        /* 0010 */  0x39, 0x35, 0x32, 0x30, 0x30, 0x30, 0x38, 0x31,  // 95200081
+        /* 0018 */  0x31, 0x38, 0x36, 0x39, 0x47, 0x65, 0x6E, 0x75,  // 1869Genu
+        /* 0020 */  0x69, 0x6E, 0x65, 0x20, 0x4E, 0x56, 0x49, 0x44,  // ine NVID
+        /* 0028 */  0x49, 0x41, 0x20, 0x43, 0x65, 0x72, 0x74, 0x69,  // IA Certi
+        /* 0030 */  0x66, 0x69, 0x65, 0x64, 0x20, 0x47, 0x53, 0x79,  // fied GSy
+        /* 0038 */  0x6E, 0x63, 0x20, 0x52, 0x65, 0x61, 0x64, 0x79,  // nc Ready
+        /* 0040 */  0x20, 0x50, 0x6C, 0x61, 0x74, 0x66, 0x6F, 0x72,  //  Platfor
+        /* 0048 */  0x6D, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x55, 0x44,  // m for UD
+        /* 0050 */  0x51, 0x45, 0x4C, 0x56, 0x44, 0x56, 0x46, 0x4A,  // QELVDVFJ
+        /* 0058 */  0x53, 0x54, 0x54, 0x4A, 0x51, 0x55, 0x46, 0x50,  // STTJQUFP
+        /* 0060 */  0x58, 0x54, 0x20, 0x2D, 0x20, 0x59, 0x5A, 0x47,  // XT - YZG
+        /* 0068 */  0x37, 0x44, 0x2C, 0x49, 0x2B, 0x36, 0x20, 0x47,  // 7D,I+6 G
+        /* 0070 */  0x45, 0x29, 0x2F, 0x46, 0x3A, 0x28, 0x30, 0x56,  // E)/F:(0V
+        /* 0078 */  0x4B, 0x4C, 0x20, 0x32, 0x5E, 0x20, 0x2D, 0x20,  // KL 2^ - 
+        /* 0080 */  0x43, 0x6F, 0x70, 0x79, 0x72, 0x69, 0x67, 0x68,  // Copyrigh
+        /* 0088 */  0x74, 0x20, 0x32, 0x30, 0x32, 0x33, 0x20, 0x4E,  // t 2023 N
+        /* 0090 */  0x56, 0x49, 0x44, 0x49, 0x41, 0x20, 0x43, 0x6F,  // VIDIA Co
+        /* 0098 */  0x72, 0x70, 0x6F, 0x72, 0x61, 0x74, 0x69, 0x6F,  // rporatio
+        /* 00A0 */  0x6E, 0x20, 0x41, 0x6C, 0x6C, 0x20, 0x52, 0x69,  // n All Ri
+        /* 00A8 */  0x67, 0x68, 0x74, 0x73, 0x20, 0x52, 0x65, 0x73,  // ghts Res
+        /* 00B0 */  0x65, 0x72, 0x76, 0x65, 0x64, 0x2D, 0x39, 0x37,  // erved-97
+        /* 00B8 */  0x32, 0x36, 0x38, 0x32, 0x33, 0x34, 0x39, 0x31,  // 26823491
+        /* 00C0 */  0x38, 0x31, 0x28, 0x52, 0x29                     // 81(R)
+    })
+    Name (VK16, Buffer (0xC5)
+    {
+        /* 0000 */  0x83, 0xE5, 0x70, 0x6C, 0x02, 0xB9, 0xA3, 0x93,  // ..pl....
+        /* 0008 */  0x4B, 0x56, 0xC5, 0x00, 0x00, 0x00, 0x01, 0x00,  // KV......
+        /* 0010 */  0x39, 0x35, 0x32, 0x30, 0x30, 0x30, 0x38, 0x31,  // 95200081
+        /* 0018 */  0x31, 0x38, 0x36, 0x39, 0x47, 0x65, 0x6E, 0x75,  // 1869Genu
+        /* 0020 */  0x69, 0x6E, 0x65, 0x20, 0x4E, 0x56, 0x49, 0x44,  // ine NVID
+        /* 0028 */  0x49, 0x41, 0x20, 0x43, 0x65, 0x72, 0x74, 0x69,  // IA Certi
+        /* 0030 */  0x66, 0x69, 0x65, 0x64, 0x20, 0x47, 0x53, 0x79,  // fied GSy
+        /* 0038 */  0x6E, 0x63, 0x20, 0x52, 0x65, 0x61, 0x64, 0x79,  // nc Ready
+        /* 0040 */  0x20, 0x50, 0x6C, 0x61, 0x74, 0x66, 0x6F, 0x72,  //  Platfor
+        /* 0048 */  0x6D, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x44, 0x59,  // m for DY
+        /* 0050 */  0x57, 0x45, 0x5A, 0x52, 0x55, 0x47, 0x45, 0x56,  // WEZRUGEV
+        /* 0058 */  0x4F, 0x58, 0x4F, 0x52, 0x58, 0x5A, 0x41, 0x4A,  // OXORXZAJ
+        /* 0060 */  0x4B, 0x46, 0x20, 0x2D, 0x20, 0x43, 0x44, 0x49,  // KF - CDI
+        /* 0068 */  0x39, 0x33, 0x26, 0x53, 0x55, 0x20, 0x2A, 0x49,  // 93&SU *I
+        /* 0070 */  0x32, 0x57, 0x51, 0x31, 0x34, 0x44, 0x36, 0x40,  // 2WQ14D6@
+        /* 0078 */  0x4D, 0x39, 0x5B, 0x4E, 0x34, 0x20, 0x2D, 0x20,  // M9[N4 - 
         /* 0080 */  0x43, 0x6F, 0x70, 0x79, 0x72, 0x69, 0x67, 0x68,  // Copyrigh
         /* 0088 */  0x74, 0x20, 0x32, 0x30, 0x32, 0x33, 0x20, 0x4E,  // t 2023 N
         /* 0090 */  0x56, 0x49, 0x44, 0x49, 0x41, 0x20, 0x43, 0x6F,  // VIDIA Co

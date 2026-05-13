@@ -5,13 +5,13 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /tmp/tmp.lTVUntZ9Fd/ASUS_Zenbook_14_UM3406KA_UM3406KA_3ceaf95f5c99/ASUS_Zenbook_14_UM3406KA_UM3406KA, Mon May 11 23:54:49 2026
+ * Disassembly of /tmp/tmp.7CoOseiA9n/ASUS_Zenbook_14_UM3406KA_UM3406KA_15df00a360b0/ASUS_Zenbook_14_UM3406KA_UM3406KA, Wed May 13 14:16:56 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
- *     Length           0x00012668 (75368)
+ *     Length           0x0001225B (74331)
  *     Revision         0x02
- *     Checksum         0x42
+ *     Checksum         0x99
  *     OEM ID           "_ASUS_"
  *     OEM Table ID     "Notebook"
  *     OEM Revision     0x01072009 (17244169)
@@ -4858,21 +4858,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 {
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (DOSA, Zero)
-                    Method (SINI, 0, Serialized)
-                    {
-                        M460 ("PLA-ASL-\\_SB.PCI0.GPPA.VGA0._INI\n", Zero, Zero, Zero, Zero, Zero, Zero)
-                    }
-
-                    Method (SREG, 2, NotSerialized)
-                    {
-                        M460 ("PLA-ASL-\\_SB.PCI0.GPPA.VGA0._REG Arg0:0x%x Arg1:0x%x\n", Arg0, Arg1, Zero, Zero, Zero, Zero)
-                        If ((Arg1 == One))
-                        {
-                            ALIB (0xBB, Zero)
-                            M460 ("PLA-ASL-\\_SB.PCI0.GPPA.VGA0._REG Set/clear the IGPU C2P register DEADBEEF\n", Zero, Zero, Zero, Zero, Zero, Zero)
-                        }
-                    }
-
                     Method (_DOS, 1, NotSerialized)  // _DOS: Disable Output Switching
                     {
                         DOSA = Arg0
@@ -8512,7 +8497,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
 
     Scope (_SB)
     {
-        OperationRegion (ACPO, SystemMemory, ACPB, 0x26)
+        OperationRegion (ACPO, SystemMemory, ACPB, 0x22)
         Field (ACPO, AnyAcc, NoLock, Preserve)
         {
             Offset (0x00), 
@@ -8556,15 +8541,7 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             Offset (0x1D), 
             SUBS,   32, 
             Offset (0x21), 
-            AUFI,   8, 
-            Offset (0x22), 
-            CPCC,   8, 
-            Offset (0x23), 
-            CECC,   8, 
-            Offset (0x24), 
-            MPCC,   8, 
-            Offset (0x25), 
-            MECC,   8
+            AUFI,   8
         }
     }
 
@@ -9091,24 +9068,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                 Return (ECFL) /* \_SB_.PCI0.SBRG.EC0_.ECFL */
             }
 
-            OperationRegion (EC4C, SystemIO, 0x0258, One)
-            Field (EC4C, ByteAcc, Lock, Preserve)
-            {
-                E4CP,   8
-            }
-
-            OperationRegion (EC4D, SystemIO, 0x0257, One)
-            Field (EC4D, ByteAcc, Lock, Preserve)
-            {
-                E4DP,   8
-            }
-
-            OperationRegion (IODL, SystemIO, 0xED, One)
-            Field (IODL, ByteAcc, Lock, Preserve)
-            {
-                IODP,   8
-            }
-
             OperationRegion (BRIH, SystemIO, 0x08A1, One)
             Field (BRIH, ByteAcc, Lock, Preserve)
             {
@@ -9428,148 +9387,6 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             }
         }
 
-        Method (WOBF, 2, Serialized)
-        {
-            OperationRegion (ECCP, SystemIO, Arg0, One)
-            Field (ECCP, ByteAcc, Lock, Preserve)
-            {
-                CMDP,   8
-            }
-
-            OperationRegion (ECDP, SystemIO, Arg1, One)
-            Field (ECDP, ByteAcc, Lock, Preserve)
-            {
-                DATP,   8
-            }
-
-            Local0 = 0x1388
-            While ((Local0 > Zero))
-            {
-                Local1 = CMDP /* \_SB_.PCI0.SBRG.EC0_.WOBF.CMDP */
-                If ((Local1 & One))
-                {
-                    Local0 -= One
-                    Local1 = DATP /* \_SB_.PCI0.SBRG.EC0_.WOBF.DATP */
-                    Stall (0x64)
-                }
-                Else
-                {
-                    Break
-                }
-            }
-        }
-
-        Method (WIBF, 1, Serialized)
-        {
-            OperationRegion (ECCP, SystemIO, Arg0, One)
-            Field (ECCP, ByteAcc, Lock, Preserve)
-            {
-                CMDP,   8
-            }
-
-            Local0 = 0x1388
-            While ((Local0 > Zero))
-            {
-                Local1 = CMDP /* \_SB_.PCI0.SBRG.EC0_.WIBF.CMDP */
-                If ((Local1 & 0x02))
-                {
-                    Local0 -= One
-                    Stall (0x64)
-                }
-                Else
-                {
-                    Break
-                }
-            }
-        }
-
-        Method (OBFU, 1, Serialized)
-        {
-            OperationRegion (ECCP, SystemIO, Arg0, One)
-            Field (ECCP, ByteAcc, Lock, Preserve)
-            {
-                CMDP,   8
-            }
-
-            Local0 = 0x1388
-            While ((Local0 > Zero))
-            {
-                Local1 = CMDP /* \_SB_.PCI0.SBRG.EC0_.OBFU.CMDP */
-                If ((Local1 & One))
-                {
-                    Break
-                }
-                Else
-                {
-                    Local0 -= One
-                    Stall (0x64)
-                }
-            }
-        }
-
-        Method (WKBC, 2, Serialized)
-        {
-            OperationRegion (ECCP, SystemIO, Arg1, One)
-            Field (ECCP, ByteAcc, Lock, Preserve)
-            {
-                CMDP,   8
-            }
-
-            WIBF (Arg1)
-            CMDP = Arg0
-        }
-
-        Method (WKBD, 3, Serialized)
-        {
-            OperationRegion (ECDP, SystemIO, Arg2, One)
-            Field (ECDP, ByteAcc, Lock, Preserve)
-            {
-                DATP,   8
-            }
-
-            WIBF (Arg1)
-            DATP = Arg0
-        }
-
-        Method (RKBD, 2, Serialized)
-        {
-            OperationRegion (ECDP, SystemIO, Arg1, One)
-            Field (ECDP, ByteAcc, Lock, Preserve)
-            {
-                DATP,   8
-            }
-
-            OBFU (Arg0)
-            Local0 = DATP /* \_SB_.PCI0.SBRG.EC0_.RKBD.DATP */
-            Return (Local0)
-        }
-
-        Method (KBCS, 4, Serialized)
-        {
-            Local0 = Zero
-            Local1 = Zero
-            If ((Arg3 < 0x02))
-            {
-                WOBF (0x0258, 0x0257)
-                WKBC (0xFF, 0x0258)
-                WKBC (Arg1, 0x0258)
-                While ((Local0 < Arg0))
-                {
-                    WKBD (DerefOf (Arg2 [Local0]), 0x0258, 0x0257)
-                    Local0++
-                }
-
-                WIBF (0x0258)
-            }
-
-            If ((Arg3 > Zero))
-            {
-                Local1 = RKBD (0x0258, 0x0257)
-            }
-
-            Return (Local1)
-        }
-
         Method (ST83, 1, Serialized)
         {
             If (ECAV ())
@@ -9632,25 +9449,12 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
             If (ECAV ())
             {
                 Acquire (MU4T, 0xFFFF)
-                Name (TEMP, Package (0x05)
-                {
-                    Zero, 
-                    Zero, 
-                    Zero, 
-                    Zero, 
-                    Zero
-                })
-                TEMP [Zero] = Arg0
-                If ((Arg1 > Zero))
-                {
-                    TEMP [One] = 0xFF
-                }
-                Else
-                {
-                    TEMP [One] = Zero
-                }
-
-                Local0 = KBCS (0x02, 0x8E, TEMP, One)
+                CMD = 0xFF
+                EDA1 = 0x8E
+                EDA2 = Arg0
+                EDA3 = Arg1
+                ECAC ()
+                Local0 = EDA1 /* \_SB_.PCI0.SBRG.EC0_.EDA1 */
                 Release (MU4T)
                 Return (Local0)
             }
@@ -13566,130 +13370,64 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                         Name (UMAS, Zero)
                         If ((AUFI == One))
                         {
-                            Name (UMA1, Package (0x07)
+                            Name (UMA1, Package (0x06)
                             {
                                 Zero, 
                                 One, 
                                 0x02, 
                                 0x04, 
                                 0x08, 
-                                0x0C, 
                                 0x10
                             })
                             UMAS = SizeOf (UMA1)
                         }
                         ElseIf ((AUFI == 0x02))
                         {
-                            Name (UMA2, Package (0x09)
+                            Name (UMA2, Package (0x08)
                             {
                                 Zero, 
                                 One, 
                                 0x02, 
                                 0x04, 
                                 0x08, 
-                                0x0C, 
                                 0x10, 
-                                0x18, 
-                                0x20
+                                0x20, 
+                                0x30
                             })
                             UMAS = SizeOf (UMA2)
                         }
                         ElseIf ((AUFI == 0x03))
                         {
-                            Name (UMA3, Package (0x0A)
+                            Name (UMA3, Package (0x09)
                             {
                                 Zero, 
                                 One, 
                                 0x02, 
                                 0x04, 
                                 0x08, 
-                                0x0C, 
                                 0x10, 
-                                0x18, 
                                 0x20, 
-                                0x30
-                            })
-                            UMAS = SizeOf (UMA3)
-                        }
-                        ElseIf ((AUFI == 0x04))
-                        {
-                            Name (UMA4, Package (0x0B)
-                            {
-                                Zero, 
-                                One, 
-                                0x02, 
-                                0x04, 
-                                0x08, 
-                                0x0C, 
-                                0x10, 
-                                0x18, 
-                                0x20, 
-                                0x30, 
-                                0x40
-                            })
-                            UMAS = SizeOf (UMA4)
-                        }
-                        ElseIf ((AUFI == 0x05))
-                        {
-                            Name (UMA5, Package (0x0C)
-                            {
-                                Zero, 
-                                One, 
-                                0x02, 
-                                0x04, 
-                                0x08, 
-                                0x0C, 
-                                0x10, 
-                                0x18, 
-                                0x20, 
-                                0x30, 
                                 0x40, 
                                 0x60
                             })
-                            UMAS = SizeOf (UMA5)
-                        }
-                        ElseIf ((AUFI == 0x06))
-                        {
-                            Name (UMA6, Package (0x0E)
-                            {
-                                Zero, 
-                                One, 
-                                0x02, 
-                                0x04, 
-                                0x08, 
-                                0x0C, 
-                                0x10, 
-                                0x18, 
-                                0x20, 
-                                0x30, 
-                                0x40, 
-                                0x60, 
-                                0x80, 
-                                0x90
-                            })
-                            UMAS = SizeOf (UMA6)
+                            UMAS = SizeOf (UMA3)
                         }
                         Else
                         {
-                            Name (UMA7, Package (0x0F)
+                            Name (UMA4, Package (0x0A)
                             {
                                 Zero, 
                                 One, 
                                 0x02, 
                                 0x04, 
                                 0x08, 
-                                0x0C, 
                                 0x10, 
-                                0x18, 
                                 0x20, 
-                                0x30, 
                                 0x40, 
-                                0x60, 
                                 0x80, 
-                                0xA0, 
                                 0xC0
                             })
-                            UMAS = SizeOf (UMA7)
+                            UMAS = SizeOf (UMA4)
                         }
 
                         Local0 = ((UMAS + 0x03) * 0x02)
@@ -13729,21 +13467,9 @@ DefinitionBlock ("", "DSDT", 2, "_ASUS_", "Notebook", 0x01072009)
                             {
                                 Local3 = DerefOf (UMA3 [Local2])
                             }
-                            ElseIf ((AUFI == 0x04))
-                            {
-                                Local3 = DerefOf (UMA4 [Local2])
-                            }
-                            ElseIf ((AUFI == 0x05))
-                            {
-                                Local3 = DerefOf (UMA5 [Local2])
-                            }
-                            ElseIf ((AUFI == 0x06))
-                            {
-                                Local3 = DerefOf (UMA6 [Local2])
-                            }
                             Else
                             {
-                                Local3 = DerefOf (UMA7 [Local2])
+                                Local3 = DerefOf (UMA4 [Local2])
                             }
 
                             WBUF [Local1] = (Local3 >> Zero)
