@@ -213,8 +213,6 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
     fi
 
     # update table in Readme.MD
-
-
     BODY=$(gh release view "$TAG" -R "$REPO" --json body -q '.body')
     IFS='|' read -r DIALPAD NUMBERPAD DIAL STYLUS MODEL <<< "$(parse_body "$BODY")"
     update_readme "$FINAL_BASENAME" "$TAG" "$DIALPAD" "$NUMBERPAD" "$DIAL" "$STYLUS" "$MODEL"
