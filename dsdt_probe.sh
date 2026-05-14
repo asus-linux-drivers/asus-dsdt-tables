@@ -34,6 +34,7 @@ QUESTIONS_LIST=(
   "Dial"
   "Stylus (Touchscreen)"
   "Flip (Tablet mode)"
+  "Keystone"
 )
 
 collect_questions() {

@@ -5,7 +5,7 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /tmp/tmp.Br1ru0HAI6/ASUS_Zenbook_14_UX3405CA_UX3405CA_d1a36a345fc7_2/ASUS_Zenbook_14_UX3405CA_UX3405CA, Thu May 14 10:41:08 2026
+ * Disassembly of /tmp/tmp.bpFbPRRyYy/ASUS_Zenbook_14_UX3405CA_UX3405CA_d1a36a345fc7_2/ASUS_Zenbook_14_UX3405CA_UX3405CA, Thu May 14 10:53:07 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"

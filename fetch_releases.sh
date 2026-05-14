@@ -14,13 +14,14 @@ insert_row() {
 
 parse_body() {
     local BODY="$1"
-    local DIALPAD NUMBERPAD DIAL STYLUS FLIP MODEL
+    local DIALPAD NUMBERPAD DIAL STYLUS FLIP KEYSTONE MODEL
 
     DIALPAD=$(grep -iE '^DialPad:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
     NUMBERPAD=$(grep -iE '^NumberPad:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
     DIAL=$(grep -iE '^Dial:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
     STYLUS=$(grep -iE '^Stylus \(Touchscreen\):' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
     FLIP=$(grep -iE '^Flip \(Tablet mode\):' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
+    KEYSTONE=$(grep -iE '^KeyStone:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
     MODEL=$(grep -iE '^Model:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
 
     [[ "$DIALPAD" == "Y" ]] && DIALPAD="Yes" || DIALPAD=""
@@ -28,8 +29,9 @@ parse_body() {
     [[ "$DIAL" == "Y" ]] && DIAL="Yes" || DIAL=""
     [[ "$STYLUS" == "Y" ]] && STYLUS="Yes" || STYLUS=""
     [[ "$FLIP" == "Y" ]] && FLIP="Yes" || FLIP=""
+    [[ "$KEYSTONE" == "Y" ]] && KEYSTONE="Yes" || KEYSTONE=""
 
-    echo "$DIALPAD|$NUMBERPAD|$DIAL|$STYLUS|$FLIP|$MODEL"
+    echo "$DIALPAD|$NUMBERPAD|$DIAL|$STYLUS|$FLIP|$KEYSTONE|$MODEL"
 }
 
 normalize_tag() {
@@ -44,7 +46,8 @@ update_readme() {
     local DIAL="$5"
     local STYLUS="$6"
     local FLIP="$7"
-    local MODEL="$8"
+    local KEYSTONE="$8"
+    local MODEL="$9"
 
     local BASE_TAG
     BASE_TAG=$(normalize_tag "$TAG")
@@ -91,7 +94,7 @@ update_readme() {
 
     local SRC_URL="https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/${TAG}"
 
-    local ROW="| | [${DSL_NAME}](${DSL_PATH}) | ${DEV_COL} | [asus-dsdt-tables/releases/tag/${TAG}](${SRC_URL}) | ${DIALPAD} | ${NUMBERPAD} | ${DIAL} | ${STYLUS} | ${FLIP} | ${MODEL_COL} |"
+    local ROW="| | [${DSL_NAME}](${DSL_PATH}) | ${DEV_COL} | [asus-dsdt-tables/releases/tag/${TAG}](${SRC_URL}) | ${DIALPAD} | ${NUMBERPAD} | ${DIAL} | ${STYLUS} | ${FLIP} | ${KEYSTONE} | ${MODEL_COL} |"
 
     if [[ -s Readme.MD ]]; then
         tail -c1 Readme.MD | read -r _ || echo >> Readme.MD
@@ -217,8 +220,8 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
 
     # update table in Readme.MD
     BODY=$(gh release view "$TAG" -R "$REPO" --json body -q '.body')
-    IFS='|' read -r DIALPAD NUMBERPAD DIAL STYLUS FLIP MODEL <<< "$(parse_body "$BODY")"
-    update_readme "$FINAL_BASENAME" "$TAG" "$DIALPAD" "$NUMBERPAD" "$DIAL" "$STYLUS" "$FLIP" "$MODEL"
+    IFS='|' read -r DIALPAD NUMBERPAD DIAL STYLUS FLIP KEYSTONE MODEL <<< "$(parse_body "$BODY")"
+    update_readme "$FINAL_BASENAME" "$TAG" "$DIALPAD" "$NUMBERPAD" "$DIAL" "$STYLUS" "$FLIP" "$KEYSTONE" "$MODEL"
 done
 
 echo ""
