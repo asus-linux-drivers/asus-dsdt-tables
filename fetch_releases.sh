@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-dsl_normalize() {
-    grep -v '^ \* Disassembly of ' "$1"
-}
-
 insert_row() {
     local SERIE="$1"
     local ROW="$2"
@@ -160,24 +156,6 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
     TAG=$(basename "$EXTRACT_DIR")
     # DSDT = dir without the _<hash>
     DIR_NAME_WITH_NO_HASH=$(echo "$TAG" | sed -E 's/_[0-9a-f]{12}(_[0-9]+)?$//')
-    DSDT_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH"
-    DSL_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH.dsl"
-    DEVICES_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH.devices"
-
-    # try to create .dsl from DSDT if missing
-    if [[ ! -s "$DSL_FILE" && -f "$DSDT_FILE" ]]; then
-
-        if command -v iasl >/dev/null 2>&1; then
-
-            echo "  Generating missing .dsl ($DSL_FILE) from DSDT ($DSDT_FILE)"
-            sudo iasl -d "$DSDT_FILE" >/dev/null 2>&1;
-
-            # was generated .dsl file but is empty
-            if [ ! -s "$DSL_FILE" ]; then
-                echo "  Warning: .dsl was not generated (sharing only a raw DSDT)"
-            fi
-        fi
-    fi
 
     # add prefix ASUS (to the saved data files data/ASUS_*.dsl|.devices and to the table in Readme.MD)
     shopt -s nocasematch
@@ -193,23 +171,38 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
     FINAL_BASENAME="${FIRST4^^}${REST}"
     shopt -u nocasematch
 
-    # copy files
-    if [[ -s "$DSL_FILE" ]]; then
-        
-        DSL_OUTDIR_FILE="$OUTDIR/$FINAL_BASENAME.dsl"
+    DSDT_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH"
+    DSL_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH.dsl"
+    DEVICES_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH.devices"
+    if [[ -s "$DSDT_FILE" ]]; then
+        DSDT_FILE_HASH=$(sha256sum "$DSDT_FILE" | awk '{print $1}')
+    else
+        DSDT_FILE_HASH=""
+    fi
+    if [[ -s "$OUTDIR/$FINAL_BASENAME" ]]; then
+        DSDT_FILE_EXISTING_HASH=$(sha256sum "$OUTDIR/$FINAL_BASENAME" | awk '{print $1}')
+    else
+        DSDT_FILE_EXISTING_HASH=""
+    fi
 
-        if [[ -f "$DSL_OUTDIR_FILE" ]]; then
-            DSL_FILE_HASH=$(dsl_normalize "$DSL_FILE" | sha256sum | awk '{print $1}')
-            DSL_OUTDIR_FILE_HASH=$(dsl_normalize "$DSL_OUTDIR_FILE" | sha256sum | awk '{print $1}')
+    # try to create .dsl from DSDT if missing
+    if [[ ! -s "$DSL_FILE" && -s "$DSDT_FILE" ]]; then
 
-            if [[ "$DSL_FILE_HASH" == "$DSL_OUTDIR_FILE_HASH" ]]; then
-                echo "  Skipping .dsl (identical content except the line with the timestamp)"
-            else
-                cp -f "$DSL_FILE" "$DSL_OUTDIR_FILE"
+        if command -v iasl >/dev/null 2>&1; then
+
+            echo "  Generating missing .dsl ($DSL_FILE) from DSDT ($DSDT_FILE)"
+            sudo iasl -d "$DSDT_FILE" >/dev/null 2>&1;
+
+            # generated .dsl file is empty
+            if [ ! -s "$DSL_FILE" ]; then
+                echo "  Warning: .dsl file was not generated"
             fi
-        else
-            cp -f "$DSL_FILE" "$OUTDIR/$FINAL_BASENAME.dsl"
         fi
+    fi
+
+    # copy files
+    if [[ -s "$DSL_FILE" && (! -s "$OUTDIR/$FINAL_BASENAME.dsl" || "$DSDT_FILE_HASH" != "$DSDT_FILE_EXISTING_HASH" ) ]]; then
+        cp -f "$DSL_FILE" "$OUTDIR/$FINAL_BASENAME.dsl"
     fi
     if [[ -s "$DSDT_FILE" ]]; then
         cp -f "$DSDT_FILE" "$OUTDIR/$FINAL_BASENAME"

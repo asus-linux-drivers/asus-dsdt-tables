@@ -5,7 +5,7 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of /tmp/tmp.bpFbPRRyYy/ZenBook_UX325EA_UX325EA_bc5f8202ce13/ZenBook_UX325EA_UX325EA, Thu May 14 10:53:42 2026
+ * Disassembly of /tmp/tmp.M6nCqreC45/ZenBook_UX325EA_UX325EA_bc5f8202ce13/ZenBook_UX325EA_UX325EA, Thu May 14 12:04:07 2026
  *
  * Original Table Header:
  *     Signature        "DSDT"
