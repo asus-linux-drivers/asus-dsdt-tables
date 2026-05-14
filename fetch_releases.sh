@@ -45,13 +45,16 @@ update_readme() {
     local KEYSTONE="$8"
     local MODEL="$9"
 
-    local BASE_TAG
-    BASE_TAG=$(normalize_tag "$TAG")
-
     local MODEL_COL=""
-    if [[ -n "$MODEL" && "$BASE_TAG" != *"$MODEL"* ]]; then
+    local BASE_TAG PRODUCT_NAME
 
-        read -r -p "Use this model from user input: '${MODEL}' for '${FINAL_BASENAME}'? [y/N] " CONFIRM
+    local BASE_TAG=$(normalize_tag "$TAG")
+    local PRODUCT_NAME=$(echo "$BASE_TAG" | sed -E 's/_[0-9a-f]{12}$//')
+
+    shopt -s nocasematch
+    if [[ -n "$MODEL" && "$FINAL_BASENAME" != *"$MODEL"* ]]; then
+
+        read -r -p "Use this model from user input: '${MODEL}' for '${PRODUCT_NAME}'? [y/N] " CONFIRM
 
         if [[ "$CONFIRM" == "y" || "$CONFIRM" == "Y" ]]; then
             MODEL_COL="$MODEL"
@@ -61,11 +64,6 @@ update_readme() {
         fi
     fi
 
-    # always delete old version of tag
-    sed -i "\|${BASE_TAG}|d" Readme.MD
-
-    shopt -s nocasematch
-
     local SERIE=""
     if [[ "$FINAL_BASENAME" =~ ProArt ]]; then SERIE="ProArt"
     elif [[ "$FINAL_BASENAME" =~ ROG ]]; then SERIE="ROG"
@@ -74,14 +72,15 @@ update_readme() {
     elif [[ "$FINAL_BASENAME" =~ Expertbook ]]; then SERIE="Expertbook"
     else SERIE="Other"
     fi
-
     shopt -u nocasematch
 
-    local DSL_NAME="${FINAL_BASENAME}.dsl"
-    local DEV_NAME="${FINAL_BASENAME}.devices"
+    local FINAL_BASENAME_WITH_NO_HASH=$(echo "$FINAL_BASENAME" | sed -E 's/_[0-9a-f]{12}$//')
 
-    local DSL_PATH="data/$DSL_NAME"
-    local DEV_PATH="data/$DEV_NAME"
+    local DSL_NAME="${FINAL_BASENAME_WITH_NO_HASH}.dsl"
+    local DEV_NAME="${FINAL_BASENAME_WITH_NO_HASH}.devices"
+
+    local DSL_PATH="data/${FINAL_BASENAME}.dsl"
+    local DEV_PATH="data/${FINAL_BASENAME}.devices"
 
     local DEV_COL=""
     if [[ -f "$DEV_PATH" ]]; then
@@ -96,6 +95,10 @@ update_readme() {
         tail -c1 Readme.MD | read -r _ || echo >> Readme.MD
     fi
 
+    # always delete old version of tag
+    sed -i "\|${BASE_TAG}|d" Readme.MD
+
+    # add new version of tag
     insert_row "$SERIE" "$ROW"
 }
 
@@ -108,9 +111,9 @@ TAGS=$(gh release list -R "$REPO" --limit 1000 --json tagName -q '.[].tagName')
 for TAG in $TAGS; do
     echo "Processing release: $TAG"
 
-    BASE="${TAG%_*}"
+    BASE_TAG=$(normalize_tag "$TAG")
 
-    if compgen -G "$WORKDIR/${BASE}*" > /dev/null; then
+    if compgen -G "$WORKDIR/${BASE_TAG}*" > /dev/null; then
         echo "  Skipping: $TAG because already exists newer version"
         continue
     fi
@@ -154,15 +157,15 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
     echo "Processing release: $EXTRACT_DIR"
 
     TAG=$(basename "$EXTRACT_DIR")
-    # DSDT = dir without the _<hash>
-    DIR_NAME_WITH_NO_HASH=$(echo "$TAG" | sed -E 's/_[0-9a-f]{12}(_[0-9]+)?$//')
+    BASE_TAG=$(normalize_tag "$TAG")
+    PRODUCT_NAME=$(echo "$BASE_TAG" | sed -E 's/_[0-9a-f]{12}$//')
 
     # add prefix ASUS (to the saved data files data/ASUS_*.dsl|.devices and to the table in Readme.MD)
     shopt -s nocasematch
-    if [[ ! "$DIR_NAME_WITH_NO_HASH" =~ asus ]]; then
-        FINAL_BASENAME="asus_$DIR_NAME_WITH_NO_HASH"
+    if [[ ! "$BASE_TAG" =~ asus ]]; then
+        FINAL_BASENAME="asus_$BASE_TAG"
     else
-        FINAL_BASENAME="$DIR_NAME_WITH_NO_HASH"
+        FINAL_BASENAME="$BASE_TAG"
     fi
 
     FIRST4="${FINAL_BASENAME:0:4}"
@@ -171,9 +174,9 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
     FINAL_BASENAME="${FIRST4^^}${REST}"
     shopt -u nocasematch
 
-    DSDT_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH"
-    DSL_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH.dsl"
-    DEVICES_FILE="$EXTRACT_DIR/$DIR_NAME_WITH_NO_HASH.devices"
+    DSDT_FILE="$EXTRACT_DIR/$PRODUCT_NAME"
+    DSL_FILE="$EXTRACT_DIR/$PRODUCT_NAME.dsl"
+    DEVICES_FILE="$EXTRACT_DIR/$PRODUCT_NAME.devices"
     if [[ -s "$DSDT_FILE" ]]; then
         DSDT_FILE_HASH=$(sha256sum "$DSDT_FILE" | awk '{print $1}')
     else
@@ -209,6 +212,11 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
     fi
     if [[ -s "$DEVICES_FILE" ]]; then
         cp -f "$DEVICES_FILE" "$OUTDIR/$FINAL_BASENAME.devices"
+    fi
+
+    if [[ ! -s "$OUTDIR/$FINAL_BASENAME" && ! -s "$OUTDIR/$FINAL_BASENAME.dsl" && ! -s "$OUTDIR/$FINAL_BASENAME.devices" ]]; then
+        echo "  Warning: No DSDT, .dsl and devices file found for $TAG"
+        continue
     fi
 
     # update table in Readme.MD
