@@ -120,15 +120,18 @@ ProArt | [ASUS_ProArt_P16_H7606WP_H7606WP.dsl](data/ASUS_ProArt_P16_H7606WP.dsl)
 ## Utils
 
 ```
-$ bash utils/print_device_hids.sh data Touchpad | column -t
-ASUS_Zenbook_UP5401EA_UP5401EA.devices            ASUE140D  Touchpad
+$ bash utils/print_device_hids.sh data Touchpad | column -t | sort -k2
+ASUS_ProArt_P16_H7606WI_H7606WI_aa4d26a9dbaf.devices           ASCF1A01  Touchpad
+ASUS_ProArt_P16_H7606WV_H7606WV_78fb6bf71681.devices           ASCF1A01  Touchpad
 ...
 $ bash utils/print_device_hids.sh data Touchpad -o | bash utils/print_i2c_scope_by_device_hid.sh data -o | column -t | sort -k2
-ASUS_Zenbook_UP5401EA_UP5401EA.dsl            ASUE140D  Touchpad
+ASUS_ProArt_P16_H7606WI_H7606WI_aa4d26a9dbaf.dsl           ASCF1A01  Touchpad
+ASUS_ProArt_P16_H7606WV_H7606WV_78fb6bf71681.dsl           ASCF1A01  Touchpad
 ...
 $ grep -l '0x38' data/*_Touchpad.dsl | xargs cat
 ...
 $ bash utils/print_i2c_scope_device_packages.sh | column -t | sort -k2
-ASUS_ProArt_PX13_HN7306EAC_Touchpad.dsl                ASCF1A00,ASCF1A03
+ASUS_ProArt_PX13_HN7306EAC_1036620b5675_Touchpad.dsl                ASCF1A00,ASCF1A03
+ASUS_ProArt_PX13_HN7306EAC_52fe6482c3f2_Touchpad.dsl                ASCF1A00,ASCF1A03
 ...
 ```
