@@ -61,7 +61,7 @@ PAGE=1
 while true; do
   RESPONSE=$(curl -s \
     -H "Authorization: Bearer $TOKEN" \
-    "https://api.github.com/repos/$REPO/tags?per_page=2&page=$PAGE")
+    "https://api.github.com/repos/$REPO/tags?per_page=100&page=$PAGE")
 
   TAGS=$(echo "$RESPONSE" | jq -r '.[].name')
 
