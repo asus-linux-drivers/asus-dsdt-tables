@@ -50,7 +50,7 @@ collect_questions() {
 }
 
 prompt_model() {
-  read -p "Provide a more precise laptop model (or press Enter to keep detected: $LAPTOP): " MODEL
+  read -p "Detected laptop model: $LAPTOP. Enter a more precise model name or press Enter to continue: " MODEL
   MODEL=${MODEL:-$LAPTOP}
 }
 
