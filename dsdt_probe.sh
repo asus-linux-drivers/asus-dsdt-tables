@@ -39,15 +39,40 @@ QUESTIONS_LIST=(
 
 collect_questions() {
   QUESTIONS=""
+  local i=0
 
   for Q in "${QUESTIONS_LIST[@]}"; do
     while true; do
-      read -p "$Q (Y/N): " A
-      if [[ "$A" =~ ^[YyNn]$ ]]; then
-        break
+
+      if [ $i -eq 0 ]; then
+        # First question accept only full words Yes/No (case-insensitive)
+        read -p "$Q (Yes/No): " A
+
+        if [[ "$A" =~ ^[Yy][Ee][Ss]$ ]]; then
+          A="Yes"
+          break
+        elif [[ "$A" =~ ^[Nn][Oo]$ ]]; then
+          A="No"
+          break
+        fi
+
+      else
+        # Other questions use Y/N input
+        read -p "$Q (Y/N): " A
+
+        if [[ "$A" =~ ^[Yy]$ ]]; then
+          A="Y"
+          break
+        elif [[ "$A" =~ ^[Nn]$ ]]; then
+          A="N"
+          break
+        fi
       fi
+
     done
-    QUESTIONS+="$Q: ${A^^}"$'\n'
+
+    QUESTIONS+="$Q: ${A^}"$'\n'
+    i=$((i+1))
   done
 }
 
