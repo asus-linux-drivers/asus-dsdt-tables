@@ -49,10 +49,10 @@ collect_questions() {
         read -p "$Q (Yes/No): " A
 
         if [[ "$A" =~ ^[Yy][Ee][Ss]$ ]]; then
-          A="Yes"
+          A="Y"
           break
         elif [[ "$A" =~ ^[Nn][Oo]$ ]]; then
-          A="No"
+          A="N"
           break
         fi
 
