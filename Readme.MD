@@ -47,8 +47,8 @@ or
 
 ## Data
 
-\*a star means a user input  
-\*\*a double star means .devices file contains touchpad block only  
+\*an asterisk indicates columns with unvalidated user input
+\*\*a double asterisk indicates that the .devices file contains only a touchpad block
 
 | Serie | DSL file | DEVICES file | Source | DialPad* | NumberPad* | Dial* | Stylus (Touchscreen)* | Model*
 |----------------------|-------------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|
