@@ -14,20 +14,22 @@ insert_row() {
 
 parse_body() {
     local BODY="$1"
-    local DIALPAD NUMBERPAD DIAL STYLUS MODEL
+    local DIALPAD NUMBERPAD DIAL STYLUS FLIP MODEL
 
     DIALPAD=$(grep -iE '^DialPad:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
     NUMBERPAD=$(grep -iE '^NumberPad:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
     DIAL=$(grep -iE '^Dial:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
     STYLUS=$(grep -iE '^Stylus \(Touchscreen\):' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
+    FLIP=$(grep -iE '^Flip \(Tablet mode\):' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
     MODEL=$(grep -iE '^Model:' <<< "$BODY" | head -n1 | cut -d: -f2- | xargs)
 
     [[ "$DIALPAD" == "Y" ]] && DIALPAD="Yes" || DIALPAD=""
     [[ "$NUMBERPAD" == "Y" ]] && NUMBERPAD="Yes" || NUMBERPAD=""
     [[ "$DIAL" == "Y" ]] && DIAL="Yes" || DIAL=""
     [[ "$STYLUS" == "Y" ]] && STYLUS="Yes" || STYLUS=""
+    [[ "$FLIP" == "Y" ]] && FLIP="Yes" || FLIP=""
 
-    echo "$DIALPAD|$NUMBERPAD|$DIAL|$STYLUS|$MODEL"
+    echo "$DIALPAD|$NUMBERPAD|$DIAL|$STYLUS|$FLIP|$MODEL"
 }
 
 normalize_tag() {
@@ -41,7 +43,8 @@ update_readme() {
     local NUMBERPAD="$4"
     local DIAL="$5"
     local STYLUS="$6"
-    local MODEL="$7"
+    local FLIP="$7"
+    local MODEL="$8"
 
     local BASE_TAG
     BASE_TAG=$(normalize_tag "$TAG")
@@ -88,7 +91,7 @@ update_readme() {
 
     local SRC_URL="https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/${TAG}"
 
-    local ROW="| | [${DSL_NAME}](${DSL_PATH}) | ${DEV_COL} | [asus-dsdt-tables/releases/tag/${TAG}](${SRC_URL}) | ${DIALPAD} | ${NUMBERPAD} | ${DIAL} | ${STYLUS} | ${MODEL_COL} |"
+    local ROW="| | [${DSL_NAME}](${DSL_PATH}) | ${DEV_COL} | [asus-dsdt-tables/releases/tag/${TAG}](${SRC_URL}) | ${DIALPAD} | ${NUMBERPAD} | ${DIAL} | ${STYLUS} | ${FLIP} | ${MODEL_COL} |"
 
     if [[ -s Readme.MD ]]; then
         tail -c1 Readme.MD | read -r _ || echo >> Readme.MD
@@ -214,8 +217,8 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
 
     # update table in Readme.MD
     BODY=$(gh release view "$TAG" -R "$REPO" --json body -q '.body')
-    IFS='|' read -r DIALPAD NUMBERPAD DIAL STYLUS MODEL <<< "$(parse_body "$BODY")"
-    update_readme "$FINAL_BASENAME" "$TAG" "$DIALPAD" "$NUMBERPAD" "$DIAL" "$STYLUS" "$MODEL"
+    IFS='|' read -r DIALPAD NUMBERPAD DIAL STYLUS FLIP MODEL <<< "$(parse_body "$BODY")"
+    update_readme "$FINAL_BASENAME" "$TAG" "$DIALPAD" "$NUMBERPAD" "$DIAL" "$STYLUS" "$FLIP" "$MODEL"
 done
 
 echo ""

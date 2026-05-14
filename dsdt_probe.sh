@@ -33,6 +33,7 @@ QUESTIONS_LIST=(
   "NumberPad"
   "Dial"
   "Stylus (Touchscreen)"
+  "Flip (Tablet mode)"
 )
 
 collect_questions() {
@@ -104,16 +105,33 @@ if [ -n "$LAST_EXISTING" ]; then
   echo "$EXISTING_BODY"
   echo "----------------------------------------"
 
-  read -p "Are the details correct? (Y/N): " ANSWER
+  MISSING_QUESTION=0
+  for Q in "${QUESTIONS_LIST[@]}"; do
+    if ! echo "$EXISTING_BODY" | grep -Fq "$Q:"; then
+      echo "Found missing question in existing report: $Q"
+      MISSING_QUESTION=1
+    fi
+  done
 
-  if [[ "$ANSWER" =~ ^[Yy]$ ]]; then
-    exit 0
-  else
+  if [ "$MISSING_QUESTION" -eq 1 ]; then
+    echo ""
+    echo "Please answer all questions from the current questionnaire."
     echo ""
     prompt_model
     collect_questions
     echo ""
     TAG="$NEXT_AVAILABLE"
+  else
+    read -p "Are the details correct? (Y/N): " ANSWER
+    if [[ "$ANSWER" =~ ^[Yy]$ ]]; then
+      exit 0
+    else
+      echo ""
+      prompt_model
+      collect_questions
+      echo ""
+      TAG="$NEXT_AVAILABLE"
+    fi
   fi
 fi
 

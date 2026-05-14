@@ -246,3 +246,24 @@ B: PROP=0
 B: EV=21
 B: SW=140
 
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="ASUE140D:00 04F3:31B9 DialPad"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input37
+U: Uniq=
+H: Handlers=kbd mouse5 event23 
+B: PROP=0
+B: EV=7
+B: KEY=300000000 0 e000000000000 100020200000
+B: REL=900
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="ASUE140D:00 04F3:31B9 NumberPad"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input39
+U: Uniq=
+H: Handlers=kbd event25 
+B: PROP=0
+B: EV=3
+B: KEY=70000 0 1000 20 229440374447ffc
+
