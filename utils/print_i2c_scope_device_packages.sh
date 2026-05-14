@@ -8,7 +8,6 @@ for file in ${1:-data/*_Touchpad.dsl}; do
         RS=""
 
         name = file
-
         sub(/^.*\//, "", name)
         sub(/\.dsl$/, "", name)
     }
@@ -31,6 +30,10 @@ for file in ${1:-data/*_Touchpad.dsl}; do
 
             for (i = 1; i <= n; i++) {
                 if (arr[i] == "") continue
+
+                # REMOVE hex values
+                if (arr[i] ~ /^0x[0-9A-Fa-f]+$/) continue
+
                 if (!(arr[i] in seen)) {
                     seen[arr[i]] = 1
                     out = out sep arr[i]
@@ -38,7 +41,10 @@ for file in ${1:-data/*_Touchpad.dsl}; do
                 }
             }
 
-            printf "%s.dsl\t%s\n", name, out
+            # print only if not empty
+            if (out != "") {
+                printf "%s.dsl\t%s\n", name, out
+            }
 
             $0 = substr($0, RSTART + RLENGTH)
         }
