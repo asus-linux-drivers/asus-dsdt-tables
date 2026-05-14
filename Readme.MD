@@ -47,8 +47,8 @@ or
 
 ## Data
 
-\*an asterisk indicates columns with unvalidated user input
-\*\*a double asterisk indicates that the .devices file contains only a touchpad block
+\*an asterisk indicates columns with unvalidated user input  
+\*\*a double asterisk indicates that the .devices file contains only a touchpad block  
 
 | Serie | DSL file | DEVICES file | Source | DialPad* | NumberPad* | Dial* | Stylus (Touchscreen)* | Model*
 |----------------------|-------------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|
