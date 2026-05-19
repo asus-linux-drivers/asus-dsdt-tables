@@ -30,22 +30,100 @@ B: KEY=402000007 ff803078f800d001 feffffdeffcfffff fffffffffffffffe
 B: MSC=10
 B: LED=7
 
+I: Bus=0003 Vendor=054c Product=0d5e Version=0111
+N: Name="Sony Interactive Entertainment Wireless Headset Consumer Control"
+P: Phys=usb-0000:03:00.4-2/input3
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.4/usb3/3-2/3-2:1.3/0003:054C:0D5E.0001/input/input3
+U: Uniq=
+H: Handlers=kbd event3 
+B: PROP=0
+B: EV=13
+B: KEY=3800000000 c000000000000 0
+B: MSC=10
+
+I: Bus=0003 Vendor=054c Product=0d5e Version=0111
+N: Name="Sony Interactive Entertainment Wireless Headset"
+P: Phys=usb-0000:03:00.4-2/input3
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.4/usb3/3-2/3-2:1.3/0003:054C:0D5E.0001/input/input4
+U: Uniq=
+H: Handlers=event4 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
+
+I: Bus=0003 Vendor=054c Product=0d5e Version=0111
+N: Name="Sony Interactive Entertainment Wireless Headset"
+P: Phys=usb-0000:03:00.4-2/input3
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.4/usb3/3-2/3-2:1.3/0003:054C:0D5E.0001/input/input5
+U: Uniq=
+H: Handlers=event5 
+B: PROP=0
+B: EV=100001
+
 I: Bus=0019 Vendor=0000 Product=0006 Version=0000
 N: Name="Video Bus"
 P: Phys=LNXVIDEO/video/input0
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input3
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input6
 U: Uniq=
-H: Handlers=kbd event3 
+H: Handlers=kbd event6 
 B: PROP=0
 B: EV=3
 B: KEY=3e000b00000000 0 0 0
 
+I: Bus=0003 Vendor=046d Product=c08b Version=0111
+N: Name="Logitech G502 HERO Gaming Mouse"
+P: Phys=usb-0000:03:00.4-4/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.4/usb3/3-4/3-4:1.0/0003:046D:C08B.0002/input/input7
+U: Uniq=086132503637
+H: Handlers=event7 mouse0 
+B: PROP=0
+B: EV=17
+B: KEY=ffff0000 0 0 0 0
+B: REL=1943
+B: MSC=10
+
+I: Bus=0003 Vendor=046d Product=c08b Version=0111
+N: Name="Logitech G502 HERO Gaming Mouse Keyboard"
+P: Phys=usb-0000:03:00.4-4/input1
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.4/usb3/3-4/3-4:1.1/0003:046D:C08B.0003/input/input8
+U: Uniq=086132503637
+H: Handlers=sysrq kbd event8 
+B: PROP=0
+B: EV=10001f
+B: KEY=733eff 0 0 483ffff17aff32d bfd4444600000000 1 130ff38b17c007 ffe77bfad941dfff febeffdfffefffff fffffffffffffffe
+B: REL=1040
+B: ABS=100000000
+B: MSC=10
+
+I: Bus=0003 Vendor=046d Product=c339 Version=0111
+N: Name="Logitech PRO Gaming Keyboard"
+P: Phys=usb-0000:03:00.3-4.1/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.3/usb1/1-4/1-4.1/1-4.1:1.0/0003:046D:C339.0004/input/input11
+U: Uniq=0E7C345F3435
+H: Handlers=sysrq kbd leds event9 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff9f207ac14057ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=7
+
+I: Bus=0003 Vendor=046d Product=c339 Version=0111
+N: Name="Logitech PRO Gaming Keyboard"
+P: Phys=usb-0000:03:00.3-4.1/input1
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.3/usb1/1-4/1-4.1/1-4.1:1.1/0003:046D:C339.0005/input/input12
+U: Uniq=0E7C345F3435
+H: Handlers=sysrq kbd event10 
+B: PROP=0
+B: EV=100013
+B: KEY=1000000000007 ff980078000007ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+
 I: Bus=0010 Vendor=001f Product=0001 Version=0100
 N: Name="PC Speaker"
 P: Phys=isa0061/input0
-S: Sysfs=/devices/platform/pcspkr/input/input4
+S: Sysfs=/devices/platform/pcspkr/input/input15
 U: Uniq=
-H: Handlers=kbd event4 
+H: Handlers=kbd event11 
 B: PROP=0
 B: EV=40001
 B: SND=6
@@ -53,9 +131,9 @@ B: SND=6
 I: Bus=0018 Vendor=04f3 Product=3294 Version=0100
 N: Name="ASUE1213:00 04F3:3294 Mouse"
 P: Phys=i2c-ASUE1213:00
-S: Sysfs=/devices/platform/AMDI0010:03/i2c-1/i2c-ASUE1213:00/0018:04F3:3294.0001/input/input16
+S: Sysfs=/devices/platform/AMDI0010:03/i2c-1/i2c-ASUE1213:00/0018:04F3:3294.0006/input/input27
 U: Uniq=
-H: Handlers=event5 mouse0 
+H: Handlers=event12 mouse1 
 B: PROP=0
 B: EV=17
 B: KEY=30000 0 0 0 0
@@ -65,92 +143,19 @@ B: MSC=10
 I: Bus=0018 Vendor=04f3 Product=3294 Version=0100
 N: Name="ASUE1213:00 04F3:3294 Touchpad"
 P: Phys=i2c-ASUE1213:00
-S: Sysfs=/devices/platform/AMDI0010:03/i2c-1/i2c-ASUE1213:00/0018:04F3:3294.0001/input/input17
+S: Sysfs=/devices/platform/AMDI0010:03/i2c-1/i2c-ASUE1213:00/0018:04F3:3294.0006/input/input28
 U: Uniq=
-H: Handlers=event6 mouse1 
+H: Handlers=event13 mouse2 
 B: PROP=5
 B: EV=1b
 B: KEY=e520 10000 0 0 0 0
 B: ABS=2e0800000000003
 B: MSC=20
 
-I: Bus=0018 Vendor=04f3 Product=410a Version=0100
-N: Name="ELAN9008:00 04F3:410A"
-P: Phys=i2c-ELAN9008:00
-S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0002/input/input18
-U: Uniq=
-H: Handlers=event7 mouse2 
-B: PROP=2
-B: EV=1b
-B: KEY=400 0 0 0 0 0
-B: ABS=3273800000000003
-B: MSC=20
-
-I: Bus=0018 Vendor=04f3 Product=410a Version=0100
-N: Name="ELAN9008:00 04F3:410A UNKNOWN"
-P: Phys=i2c-ELAN9008:00
-S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0002/input/input19
-U: Uniq=
-H: Handlers=event8 
-B: PROP=0
-B: EV=9
-B: ABS=10000000000
-
-I: Bus=0018 Vendor=04f3 Product=410a Version=0100
-N: Name="ELAN9008:00 04F3:410A UNKNOWN"
-P: Phys=i2c-ELAN9008:00
-S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0002/input/input20
-U: Uniq=
-H: Handlers=event9 
-B: PROP=0
-B: EV=100001
-
-I: Bus=0018 Vendor=04f3 Product=410a Version=0100
-N: Name="ELAN9008:00 04F3:410A Stylus"
-P: Phys=i2c-ELAN9008:00
-S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0002/input/input21
-U: Uniq=
-H: Handlers=event10 mouse3 
-B: PROP=2
-B: EV=1b
-B: KEY=c03 0 0 0 0 0
-B: ABS=1000d000003
-B: MSC=10
-
-I: Bus=0018 Vendor=04f3 Product=410a Version=0100
-N: Name="ELAN9008:00 04F3:410A UNKNOWN"
-P: Phys=i2c-ELAN9008:00
-S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0002/input/input23
-U: Uniq=
-H: Handlers=event11 
-B: PROP=0
-B: EV=9
-B: ABS=10000000000
-
-I: Bus=0018 Vendor=04f3 Product=410a Version=0100
-N: Name="ELAN9008:00 04F3:410A UNKNOWN"
-P: Phys=i2c-ELAN9008:00
-S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0002/input/input24
-U: Uniq=
-H: Handlers=event12 
-B: PROP=0
-B: EV=9
-B: ABS=10000000000
-
-I: Bus=0018 Vendor=04f3 Product=410a Version=0100
-N: Name="ELAN9008:00 04F3:410A UNKNOWN"
-P: Phys=i2c-ELAN9008:00
-S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0002/input/input25
-U: Uniq=
-H: Handlers=event13 
-B: PROP=0
-B: EV=9
-B: ABS=10000000000
-
 I: Bus=0019 Vendor=0000 Product=0000 Version=0000
 N: Name="Asus WMI hotkeys"
 P: Phys=asus-nb-wmi/input0
-S: Sysfs=/devices/platform/asus-nb-wmi/input/input27
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input29
 U: Uniq=
 H: Handlers=kbd event14 rfkill 
 B: PROP=0
@@ -161,7 +166,7 @@ B: MSC=10
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=3"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.1/sound/card0/input28
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.1/sound/card1/input30
 U: Uniq=
 H: Handlers=event15 
 B: PROP=0
@@ -171,7 +176,7 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=7"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.1/sound/card0/input29
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.1/sound/card1/input31
 U: Uniq=
 H: Handlers=event16 
 B: PROP=0
@@ -181,19 +186,92 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=8"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.1/sound/card0/input30
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.1/sound/card1/input32
 U: Uniq=
 H: Handlers=event17 
 B: PROP=0
 B: EV=21
 B: SW=140
 
+I: Bus=0018 Vendor=04f3 Product=410a Version=0100
+N: Name="ELAN9008:00 04F3:410A"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0007/input/input33
+U: Uniq=
+H: Handlers=event18 mouse3 
+B: PROP=2
+B: EV=1b
+B: KEY=400 0 0 0 0 0
+B: ABS=3273800000000003
+B: MSC=20
+
+I: Bus=0018 Vendor=04f3 Product=410a Version=0100
+N: Name="ELAN9008:00 04F3:410A UNKNOWN"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0007/input/input34
+U: Uniq=
+H: Handlers=event19 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
+
+I: Bus=0018 Vendor=04f3 Product=410a Version=0100
+N: Name="ELAN9008:00 04F3:410A UNKNOWN"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0007/input/input35
+U: Uniq=
+H: Handlers=event20 
+B: PROP=0
+B: EV=100001
+
+I: Bus=0018 Vendor=04f3 Product=410a Version=0100
+N: Name="ELAN9008:00 04F3:410A Stylus"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0007/input/input36
+U: Uniq=
+H: Handlers=event21 mouse4 
+B: PROP=2
+B: EV=1b
+B: KEY=c03 0 0 0 0 0
+B: ABS=1000d000003
+B: MSC=10
+
+I: Bus=0018 Vendor=04f3 Product=410a Version=0100
+N: Name="ELAN9008:00 04F3:410A UNKNOWN"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0007/input/input38
+U: Uniq=
+H: Handlers=event22 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
+
+I: Bus=0018 Vendor=04f3 Product=410a Version=0100
+N: Name="ELAN9008:00 04F3:410A UNKNOWN"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0007/input/input39
+U: Uniq=
+H: Handlers=event23 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
+
+I: Bus=0018 Vendor=04f3 Product=410a Version=0100
+N: Name="ELAN9008:00 04F3:410A UNKNOWN"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:01/i2c-0/i2c-ELAN9008:00/0018:04F3:410A.0007/input/input40
+U: Uniq=
+H: Handlers=event24 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
+
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic Headset Mic"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.6/sound/card1/input31
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.6/sound/card2/input42
 U: Uniq=
-H: Handlers=event18 
+H: Handlers=event25 
 B: PROP=0
 B: EV=21
 B: SW=10
@@ -201,9 +279,9 @@ B: SW=10
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic Headphone"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.6/sound/card1/input32
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.6/sound/card2/input43
 U: Uniq=
-H: Handlers=event19 
+H: Handlers=event26 
 B: PROP=0
 B: EV=21
 B: SW=4
@@ -211,9 +289,9 @@ B: SW=4
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="Asus WMI hotkeys"
 P: Phys=
-S: Sysfs=/devices/virtual/input/input74
+S: Sysfs=/devices/virtual/input/input75
 U: Uniq=
-H: Handlers=kbd event20 
+H: Handlers=kbd event27 
 B: PROP=0
 B: EV=3
 B: KEY=40000 0 0 0 0 0 0 2000000000000000 40000100000
