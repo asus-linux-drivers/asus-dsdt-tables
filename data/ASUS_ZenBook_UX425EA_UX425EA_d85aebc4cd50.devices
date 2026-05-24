@@ -1,7 +1,7 @@
 I: Bus=0019 Vendor=0000 Product=0005 Version=0000
 N: Name="Lid Switch"
 P: Phys=PNP0C0D/button/input0
-S: Sysfs=/devices/pci0000:00/0000:00:1f.0/PNP0C09:00/PNP0C0D:00/input/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:08/PNP0C09:00/PNP0C0D:00/input/input0
 U: Uniq=
 H: Handlers=event0 
 B: PROP=0
@@ -11,7 +11,7 @@ B: SW=1
 I: Bus=0019 Vendor=0000 Product=0001 Version=0000
 N: Name="Power Button"
 P: Phys=PNP0C0C/button/input0
-S: Sysfs=/devices/platform/PNP0C0C:00/input/input1
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input1
 U: Uniq=
 H: Handlers=kbd event1 
 B: PROP=0
@@ -21,7 +21,7 @@ B: KEY=8000 10000000000000 0
 I: Bus=0019 Vendor=0000 Product=0001 Version=0000
 N: Name="Power Button"
 P: Phys=LNXPWRBN/button/input0
-S: Sysfs=/devices/platform/LNXPWRBN:00/input/input2
+S: Sysfs=/devices/LNXSYSTM:00/LNXPWRBN:00/input/input2
 U: Uniq=
 H: Handlers=kbd event2 
 B: PROP=0
@@ -84,13 +84,13 @@ U: Uniq=
 H: Handlers=rfkill kbd event7 
 B: PROP=0
 B: EV=100013
-B: KEY=400000000000000 10000000c0000 400400000 800000000000 0 0 181606f00900c00 380027801701000 e000000000000 0
+B: KEY=400000000000000 1000000080000 400400000 0 0 0 81606f00900c00 c380027801701000 e000000000000 0
 B: MSC=10
 
 I: Bus=0019 Vendor=0000 Product=0006 Version=0000
 N: Name="Video Bus"
 P: Phys=LNXVIDEO/video/input0
-S: Sysfs=/devices/pci0000:00/acpi.video_bus.0/input/input11
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input11
 U: Uniq=
 H: Handlers=kbd event8 
 B: PROP=0
@@ -126,4 +126,26 @@ H: Handlers=event11
 B: PROP=0
 B: EV=21
 B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="ASUE140A:00 04F3:3134 NumberPad"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input15
+U: Uniq=
+H: Handlers=kbd event12 
+B: PROP=0
+B: EV=3
+B: KEY=70000 0 1000 80020 2194d0330456ffc
+
+I: Bus=0005 Vendor=0a5c Product=4503 Version=0129
+N: Name="JETech 0884"
+P: Phys=8c:8d:28:e7:b2:f5
+S: Sysfs=/devices/pci0000:00/0000:00:14.0/usb3/3-10/3-10:1.0/bluetooth/hci0/hci0:256/0005:0A5C:4503.0002/input/input16
+U: Uniq=dc:2c:26:a9:3b:01
+H: Handlers=mouse2 event13 
+B: PROP=0
+B: EV=17
+B: KEY=1f0000 0 0 0 0
+B: REL=903
+B: MSC=10
 
