@@ -1,6 +1,6 @@
 input="${1:-/dev/stdin}"
 
-bash utils/print_sortable_datatable.sh "$input" | sort -t "|" -k3 -k2 | awk -v col=2 -f utils/dedup_col.awk > /tmp/table.txt
+bash utils/print_sortable_datatable.sh "$input" | sort -t "|" -k2,2 -k3,3 | awk -v col=2 -f utils/dedup_col.awk > /tmp/table.txt
 
 awk '
 BEGIN {
