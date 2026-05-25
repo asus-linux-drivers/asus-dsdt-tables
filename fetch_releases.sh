@@ -89,7 +89,7 @@ update_readme() {
 
     local SRC_URL="https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/${TAG}"
 
-    local ROW="| | [${DSL_NAME}](${DSL_PATH}) | ${DEV_COL} | [asus-dsdt-tables/releases/tag/${TAG}](${SRC_URL}) | ${DIALPAD} | ${NUMBERPAD} | ${DIAL} | ${STYLUS} | ${FLIP} | ${KEYSTONE} | ${MODEL_COL} |"
+    local ROW="| $SERIE | [${DSL_NAME}](${DSL_PATH}) | ${DEV_COL} | [asus-dsdt-tables/releases/tag/${TAG}](${SRC_URL}) | ${DIALPAD} | ${NUMBERPAD} | ${DIAL} | ${STYLUS} | ${FLIP} | ${KEYSTONE} | ${MODEL_COL} |"
 
     if [[ -s Readme.MD ]]; then
         tail -c1 Readme.MD | read -r _ || echo >> Readme.MD
