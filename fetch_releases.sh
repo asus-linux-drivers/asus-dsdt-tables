@@ -225,5 +225,8 @@ for EXTRACT_DIR in "$WORKDIR"/*; do
     update_readme "$FINAL_BASENAME" "$TAG" "$DIALPAD" "$NUMBERPAD" "$DIAL" "$STYLUS" "$FLIP" "$KEYSTONE" "$MODEL"
 done
 
+# sort data table because existence of manual entries
+bash utils/sort_datatable_inplace.sh Readme.MD
+
 echo ""
 echo "Done. Files stored in $OUTDIR/"
