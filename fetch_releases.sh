@@ -1,11 +1,27 @@
 #!/usr/bin/env bash
 
-insert_row() {
-    local SERIE="$1"
+update_or_insert_row() {
+    local BASE_TAG="$1"
     local ROW="$2"
-    local FILE="Readme.MD"
 
-    sed -i "/^[| ]*${SERIE}[ |]/a ${ROW}" "$FILE"
+    if grep -q "$BASE_TAG" Readme.MD; then
+        sed -i "\|${BASE_TAG}|c\\
+${ROW}
+" Readme.MD
+    else
+        sed -E -i "0,/^(\|[- ]+){5,}\|$/{
+/^(\|[- ]+){5,}\|$/a\\
+${ROW}
+}" Readme.MD
+    fi
+}
+
+insert_row() {
+    local ROW="$1"
+
+    sed -E -i "/^(\|[- ]+){5,}\|$/a\\
+$ROW
+" Readme.MD
 }
 
 parse_body() {
@@ -96,10 +112,11 @@ update_readme() {
     fi
 
     # always delete old version of tag
-    sed -i "\|${BASE_TAG}|d" Readme.MD
+    #sed -i "\|${BASE_TAG}|d" Readme.MD
 
     # add new version of tag
-    insert_row "$SERIE" "$ROW"
+    #insert_row "$ROW"
+    update_or_insert_row "$BASE_TAG" "$ROW"
 }
 
 REPO="asus-linux-drivers/asus-dsdt-tables"
