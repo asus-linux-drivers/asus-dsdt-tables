@@ -16,14 +16,6 @@ ${ROW}
     fi
 }
 
-insert_row() {
-    local ROW="$1"
-
-    sed -E -i "/^(\|[- ]+){5,}\|$/a\\
-$ROW
-" Readme.MD
-}
-
 parse_body() {
     local BODY="$1"
     local DIALPAD NUMBERPAD DIAL STYLUS FLIP KEYSTONE MODEL
@@ -111,11 +103,6 @@ update_readme() {
         tail -c1 Readme.MD | read -r _ || echo >> Readme.MD
     fi
 
-    # always delete old version of tag
-    #sed -i "\|${BASE_TAG}|d" Readme.MD
-
-    # add new version of tag
-    #insert_row "$ROW"
     update_or_insert_row "$BASE_TAG" "$ROW"
 }
 
