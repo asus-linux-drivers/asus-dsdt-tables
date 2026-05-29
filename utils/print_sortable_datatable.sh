@@ -8,12 +8,16 @@ function trim(s) {
     return s
 }
 
-function split_row(line, arr,   tmp, n, i, c) {
+function split_row(line, arr,   tmp, n, i, c, v) {
     n = split(line, tmp, /\|/)
     c = 0
+
     for (i = 2; i <= n - 1; i++) {
-        arr[++c] = trim(tmp[i])
+        v = trim(tmp[i])
+        gsub(/ \([0-9]+\)$/, "", v)
+        arr[++c] = v
     }
+
     return c
 }
 
