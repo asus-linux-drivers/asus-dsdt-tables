@@ -26,62 +26,72 @@ U: Uniq=
 H: Handlers=sysrq kbd leds event2 
 B: PROP=0
 B: EV=120013
-B: KEY=402000007 ff803078f800d001 feffffdfffcfffff fffffffffffffffe
+B: KEY=2000007 ff803078f800d001 feffffdfffcfffff fffffffffffffffe
 B: MSC=10
 B: LED=7
 
-I: Bus=0019 Vendor=0000 Product=0006 Version=0000
-N: Name="Video Bus"
-P: Phys=LNXVIDEO/video/input0
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input3
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="gpio-keys"
+P: Phys=gpio-keys/input0
+S: Sysfs=/devices/platform/ACPI0011:00/gpio-keys.1.auto/input/input3
 U: Uniq=
 H: Handlers=kbd event3 
 B: PROP=0
 B: EV=3
+B: KEY=10000000000000 0
+
+I: Bus=0019 Vendor=0000 Product=0006 Version=0000
+N: Name="Video Bus"
+P: Phys=LNXVIDEO/video/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input7
+U: Uniq=
+H: Handlers=kbd event4 
+B: PROP=0
+B: EV=3
 B: KEY=3e000b00000000 0 0 0
 
-I: Bus=0018 Vendor=2808 Product=0224 Version=0100
-N: Name="ASUF1415:00 2808:0224 Mouse"
-P: Phys=i2c-ASUF1415:00
-S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-ASUF1415:00/0018:2808:0224.0004/input/input16
+I: Bus=0018 Vendor=093a Product=300c Version=0100
+N: Name="ASUP1415:00 093A:300C Mouse"
+P: Phys=i2c-ASUP1415:00
+S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-ASUP1415:00/0018:093A:300C.0001/input/input8
 U: Uniq=
-H: Handlers=mouse1 event6 
+H: Handlers=mouse0 event5 
 B: PROP=0
 B: EV=17
 B: KEY=30000 0 0 0 0
 B: REL=903
 B: MSC=10
 
-I: Bus=0018 Vendor=2808 Product=0224 Version=0100
-N: Name="ASUF1415:00 2808:0224 Touchpad"
-P: Phys=i2c-ASUF1415:00
-S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-ASUF1415:00/0018:2808:0224.0004/input/input17
+I: Bus=0018 Vendor=093a Product=300c Version=0100
+N: Name="ASUP1415:00 093A:300C Touchpad"
+P: Phys=i2c-ASUP1415:00
+S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-ASUP1415:00/0018:093A:300C.0001/input/input9
 U: Uniq=
-H: Handlers=mouse2 event7 
+H: Handlers=mouse1 event6 
 B: PROP=5
-B: EV=1b
+B: EV=10001b
 B: KEY=e520 10000 0 0 0 0
 B: ABS=2e0800000000003
 B: MSC=20
 
-I: Bus=0018 Vendor=2808 Product=0224 Version=0100
-N: Name="ASUF1415:00 2808:0224 Keyboard"
-P: Phys=i2c-ASUF1415:00
-S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-ASUF1415:00/0018:2808:0224.0004/input/input19
+I: Bus=0018 Vendor=093a Product=300c Version=0100
+N: Name="ASUP1415:00 093A:300C Keyboard"
+P: Phys=i2c-ASUP1415:00
+S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-ASUP1415:00/0018:093A:300C.0001/input/input10
 U: Uniq=
-H: Handlers=sysrq kbd leds event8 
+H: Handlers=sysrq kbd leds event7 
 B: PROP=0
 B: EV=120013
-B: KEY=1000000000007 ff800000000007ff febeffdfffefffff fffffffffffffffe
+B: KEY=1000000000007 ff9f207ac14057ff febeffdfffefffff fffffffffffffffe
 B: MSC=10
 B: LED=1f
 
 I: Bus=0010 Vendor=001f Product=0001 Version=0100
 N: Name="PC Speaker"
 P: Phys=isa0061/input0
-S: Sysfs=/devices/platform/pcspkr/input/input22
+S: Sysfs=/devices/platform/pcspkr/input/input11
 U: Uniq=
-H: Handlers=kbd event5 
+H: Handlers=kbd event8 
 B: PROP=0
 B: EV=40001
 B: SND=6
@@ -89,7 +99,7 @@ B: SND=6
 I: Bus=0019 Vendor=0000 Product=0000 Version=0000
 N: Name="Asus WMI hotkeys"
 P: Phys=asus-nb-wmi/input0
-S: Sysfs=/devices/platform/asus-nb-wmi/input/input23
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input16
 U: Uniq=
 H: Handlers=kbd event9 rfkill 
 B: PROP=0
@@ -100,7 +110,7 @@ B: MSC=10
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=3"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input24
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input12
 U: Uniq=
 H: Handlers=event10 
 B: PROP=0
@@ -110,7 +120,7 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=7"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input25
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input13
 U: Uniq=
 H: Handlers=event11 
 B: PROP=0
@@ -120,7 +130,7 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=8"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input26
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input14
 U: Uniq=
 H: Handlers=event12 
 B: PROP=0
@@ -130,7 +140,7 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=9"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input27
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input15
 U: Uniq=
 H: Handlers=event13 
 B: PROP=0
@@ -140,20 +150,10 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic Headphone"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.6/sound/card1/input28
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.6/sound/card1/input17
 U: Uniq=
 H: Handlers=event14 
 B: PROP=0
 B: EV=21
 B: SW=4
-
-I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-N: Name="ASUF1415:00 2808:0224 NumberPad"
-P: Phys=
-S: Sysfs=/devices/virtual/input/input29
-U: Uniq=
-H: Handlers=kbd event15 
-B: PROP=0
-B: EV=3
-B: KEY=70000 0 1000 20 2314c0370447ffc
 
