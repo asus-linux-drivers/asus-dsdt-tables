@@ -2,3 +2,4 @@ data/*_Touchpad.dsl
 data/*_Touchpad.devices
 data/*_Stylus.devices
 graph.gexf
+.rejected_models_during_fetch_releases

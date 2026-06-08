@@ -1,5 +1,22 @@
 #!/usr/bin/env bash
 
+REJECTED_MODELS_FILE="$(dirname "$0")/.rejected_models_during_fetch_releases"
+touch "$REJECTED_MODELS_FILE"
+
+was_model_previously_rejected() {
+    local PRODUCT="$1"
+    local MODEL="$2"
+
+    grep -Fqx "${PRODUCT}|${MODEL}" "$REJECTED_MODELS_FILE"
+}
+
+save_rejected_model() {
+    local PRODUCT="$1"
+    local MODEL="$2"
+
+    echo "${PRODUCT}|${MODEL}" >> "$REJECTED_MODELS_FILE"
+}
+
 update_or_insert_row() {
     local BASE_TAG="$1"
     local ROW="$2"
@@ -62,13 +79,26 @@ update_readme() {
     shopt -s nocasematch
     if [[ -n "$MODEL" && "$FINAL_BASENAME" != *"$MODEL"* ]]; then
 
-        read -r -p "Use this model from user input: '${MODEL}' for '${PRODUCT_NAME}'? [y/N] " CONFIRM
+        if was_model_previously_rejected "$PRODUCT_NAME" "$MODEL"; then
 
-        if [[ "$CONFIRM" == "y" || "$CONFIRM" == "Y" ]]; then
-            MODEL_COL="$MODEL"
-        else
             MODEL_COL=""
             MODEL=""
+
+        else
+
+            read -r -p "Use this model from user input: '${MODEL}' for '${PRODUCT_NAME}'? [y/N] " CONFIRM
+
+            if [[ "$CONFIRM" =~ ^[Yy]$ ]]; then
+
+                MODEL_COL="$MODEL"
+
+            else
+
+                save_rejected_model "$PRODUCT_NAME" "$MODEL"
+
+                MODEL_COL=""
+                MODEL=""
+            fi
         fi
     fi
 
