@@ -105,6 +105,7 @@ update_readme() {
     local SERIE=""
     if [[ "$FINAL_BASENAME" =~ ProArt ]]; then SERIE="ProArt"
     elif [[ "$FINAL_BASENAME" =~ ROG ]]; then SERIE="ROG"
+    elif [[ "$FINAL_BASENAME" =~ Zephyrus ]]; then SERIE="ROG"
     elif [[ "$FINAL_BASENAME" =~ Zenbook ]]; then SERIE="Zenbook"
     elif [[ "$FINAL_BASENAME" =~ Vivobook ]]; then SERIE="Vivobook"
     elif [[ "$FINAL_BASENAME" =~ Expertbook ]]; then SERIE="Expertbook"

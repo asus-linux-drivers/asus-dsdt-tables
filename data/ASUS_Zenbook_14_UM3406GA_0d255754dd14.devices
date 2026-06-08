@@ -109,7 +109,7 @@ B: SND=6
 I: Bus=0019 Vendor=0000 Product=0000 Version=0000
 N: Name="Asus WMI hotkeys"
 P: Phys=asus-nb-wmi/input0
-S: Sysfs=/devices/platform/asus-nb-wmi/input/input21
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input17
 U: Uniq=
 H: Handlers=kbd event10 rfkill 
 B: PROP=0
@@ -120,7 +120,7 @@ B: MSC=10
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=3"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input17
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input18
 U: Uniq=
 H: Handlers=event11 
 B: PROP=0
@@ -130,7 +130,7 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=7"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input18
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input19
 U: Uniq=
 H: Handlers=event12 
 B: PROP=0
@@ -140,7 +140,7 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=8"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input19
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input20
 U: Uniq=
 H: Handlers=event13 
 B: PROP=0
@@ -150,7 +150,7 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=9"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input20
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:63:00.1/sound/card0/input21
 U: Uniq=
 H: Handlers=event14 
 B: PROP=0
@@ -166,14 +166,4 @@ H: Handlers=event15
 B: PROP=0
 B: EV=21
 B: SW=4
-
-I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-N: Name="ASUF1415:00 2808:0224 NumberPad"
-P: Phys=
-S: Sysfs=/devices/virtual/input/input23
-U: Uniq=
-H: Handlers=kbd event16 
-B: PROP=0
-B: EV=3
-B: KEY=70000 0 1000 400020 2314c0370447ffc
 
