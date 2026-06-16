@@ -26,16 +26,26 @@ U: Uniq=
 H: Handlers=sysrq kbd leds event2 
 B: PROP=0
 B: EV=120013
-B: KEY=402000007 ff803078f800d001 feffffdeffcfffff fffffffffffffffe
+B: KEY=402000007 ff803078f800d001 feffffdfffcfffff fffffffffffffffe
 B: MSC=10
 B: LED=7
+
+I: Bus=0019 Vendor=0000 Product=0006 Version=0000
+N: Name="Video Bus"
+P: Phys=LNXVIDEO/video/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input3
+U: Uniq=
+H: Handlers=kbd event3 
+B: PROP=0
+B: EV=3
+B: KEY=3e000b00000000 0 0 0
 
 I: Bus=0003 Vendor=054c Product=0d5e Version=0111
 N: Name="Sony Interactive Entertainment Wireless Headset Consumer Control"
 P: Phys=usb-0000:03:00.4-2/input3
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.4/usb3/3-2/3-2:1.3/0003:054C:0D5E.0001/input/input3
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.4/usb3/3-2/3-2:1.3/0003:054C:0D5E.0001/input/input4
 U: Uniq=
-H: Handlers=kbd event3 
+H: Handlers=kbd event4 
 B: PROP=0
 B: EV=13
 B: KEY=3800000000 c000000000000 0
@@ -44,9 +54,9 @@ B: MSC=10
 I: Bus=0003 Vendor=054c Product=0d5e Version=0111
 N: Name="Sony Interactive Entertainment Wireless Headset"
 P: Phys=usb-0000:03:00.4-2/input3
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.4/usb3/3-2/3-2:1.3/0003:054C:0D5E.0001/input/input4
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.4/usb3/3-2/3-2:1.3/0003:054C:0D5E.0001/input/input5
 U: Uniq=
-H: Handlers=event4 
+H: Handlers=event5 
 B: PROP=0
 B: EV=9
 B: ABS=10000000000
@@ -54,21 +64,11 @@ B: ABS=10000000000
 I: Bus=0003 Vendor=054c Product=0d5e Version=0111
 N: Name="Sony Interactive Entertainment Wireless Headset"
 P: Phys=usb-0000:03:00.4-2/input3
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.4/usb3/3-2/3-2:1.3/0003:054C:0D5E.0001/input/input5
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.4/usb3/3-2/3-2:1.3/0003:054C:0D5E.0001/input/input6
 U: Uniq=
-H: Handlers=event5 
+H: Handlers=event6 
 B: PROP=0
 B: EV=100001
-
-I: Bus=0019 Vendor=0000 Product=0006 Version=0000
-N: Name="Video Bus"
-P: Phys=LNXVIDEO/video/input0
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input6
-U: Uniq=
-H: Handlers=kbd event6 
-B: PROP=0
-B: EV=3
-B: KEY=3e000b00000000 0 0 0
 
 I: Bus=0003 Vendor=046d Product=c08b Version=0111
 N: Name="Logitech G502 HERO Gaming Mouse"
@@ -152,19 +152,18 @@ B: KEY=e520 10000 0 0 0 0
 B: ABS=2e0800000000003
 B: MSC=20
 
-I: Bus=0019 Vendor=0000 Product=0000 Version=0000
-N: Name="Asus WMI hotkeys"
-P: Phys=asus-nb-wmi/input0
-S: Sysfs=/devices/platform/asus-nb-wmi/input/input29
-U: Uniq=
-H: Handlers=kbd event14 rfkill 
-B: PROP=0
-B: EV=100013
-B: KEY=400000000000000 10000000c0000 400400000 800000000000 0 0 181606f00900c00 380027801701000 e000000000000 0
-B: MSC=10
-
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=3"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.1/sound/card1/input29
+U: Uniq=
+H: Handlers=event14 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HD-Audio Generic HDMI/DP,pcm=7"
 P: Phys=ALSA
 S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.1/sound/card1/input30
 U: Uniq=
@@ -173,20 +172,21 @@ B: PROP=0
 B: EV=21
 B: SW=140
 
-I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-N: Name="HD-Audio Generic HDMI/DP,pcm=7"
-P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.1/sound/card1/input31
+I: Bus=0019 Vendor=0000 Product=0000 Version=0000
+N: Name="Asus WMI hotkeys"
+P: Phys=asus-nb-wmi/input0
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input32
 U: Uniq=
-H: Handlers=event16 
+H: Handlers=kbd event16 rfkill 
 B: PROP=0
-B: EV=21
-B: SW=140
+B: EV=100013
+B: KEY=400000000000000 10000000c0000 400400000 800000000000 0 0 181606f00900c00 380027801701000 e000000000000 0
+B: MSC=10
 
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=8"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.1/sound/card1/input32
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:03:00.1/sound/card1/input31
 U: Uniq=
 H: Handlers=event17 
 B: PROP=0
@@ -286,13 +286,13 @@ B: PROP=0
 B: EV=21
 B: SW=4
 
-I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-N: Name="Asus WMI hotkeys"
-P: Phys=
-S: Sysfs=/devices/virtual/input/input75
+I: Bus=0006 Vendor=0000 Product=0000 Version=0000
+N: Name="Speakup"
+P: Phys=speakup/input0
+S: Sysfs=/devices/virtual/input/input44
 U: Uniq=
 H: Handlers=kbd event27 
 B: PROP=0
 B: EV=3
-B: KEY=40000 0 0 0 0 0 0 2000000000000000 40000100000
+B: KEY=100000000000 0
 

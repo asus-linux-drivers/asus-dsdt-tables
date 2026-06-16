@@ -159,3 +159,13 @@ B: PROP=0
 B: EV=21
 B: SW=140
 
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="ASUP1415:00 093A:300C NumberPad"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input18
+U: Uniq=
+H: Handlers=kbd event15 
+B: PROP=0
+B: EV=3
+B: KEY=70000 0 1000 80020 2194d0330456ffc
+
