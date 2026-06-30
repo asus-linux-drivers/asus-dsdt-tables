@@ -1,0 +1,228 @@
+I: Bus=0011 Vendor=0001 Product=0001 Version=ab83
+N: Name="AT Translated Set 2 keyboard"
+P: Phys=isa0060/serio0/input0
+S: Sysfs=/devices/platform/i8042/serio0/input/input0
+U: Uniq=
+H: Handlers=sysrq kbd leds event0 
+B: PROP=0
+B: EV=120013
+B: KEY=402000007 ff803078f800d001 feffffdfffcfffff fffffffffffffffe
+B: MSC=10
+B: LED=7
+
+I: Bus=0019 Vendor=0000 Product=0006 Version=0000
+N: Name="Video Bus"
+P: Phys=LNXVIDEO/video/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/acpi.video_bus.0/input/input1
+U: Uniq=
+H: Handlers=kbd event1 
+B: PROP=0
+B: EV=3
+B: KEY=3e000b00000000 0 0 0
+
+I: Bus=0018 Vendor=04f3 Product=31b9 Version=0100
+N: Name="ASUE140D:00 04F3:31B9 Mouse"
+P: Phys=i2c-ASUE140D:00
+S: Sysfs=/devices/platform/AMDI0010:03/i2c-1/i2c-ASUE140D:00/0018:04F3:31B9.0001/input/input10
+U: Uniq=
+H: Handlers=mouse0 event2 
+B: PROP=0
+B: EV=17
+B: KEY=30000 0 0 0 0
+B: REL=1943
+B: MSC=10
+
+I: Bus=0018 Vendor=04f3 Product=31b9 Version=0100
+N: Name="ASUE140D:00 04F3:31B9 Touchpad"
+P: Phys=i2c-ASUE140D:00
+S: Sysfs=/devices/platform/AMDI0010:03/i2c-1/i2c-ASUE140D:00/0018:04F3:31B9.0001/input/input11
+U: Uniq=
+H: Handlers=mouse1 event3 
+B: PROP=5
+B: EV=1b
+B: KEY=e520 10000 0 0 0 0
+B: ABS=2e0800000000003
+B: MSC=20
+
+I: Bus=0018 Vendor=04f3 Product=31b9 Version=0100
+N: Name="ASUE140D:00 04F3:31B9 Keyboard"
+P: Phys=i2c-ASUE140D:00
+S: Sysfs=/devices/platform/AMDI0010:03/i2c-1/i2c-ASUE140D:00/0018:04F3:31B9.0001/input/input12
+U: Uniq=
+H: Handlers=sysrq kbd leds event4 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff800000000007ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0018 Vendor=04f3 Product=2e38 Version=0100
+N: Name="ELAN9008:00 04F3:2E38"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:2E38.0002/input/input13
+U: Uniq=
+H: Handlers=mouse2 event5 
+B: PROP=2
+B: EV=1b
+B: KEY=400 0 0 0 0 0
+B: ABS=3273800000000003
+B: MSC=20
+
+I: Bus=0018 Vendor=04f3 Product=2e38 Version=0100
+N: Name="ELAN9008:00 04F3:2E38 UNKNOWN"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:2E38.0002/input/input14
+U: Uniq=
+H: Handlers=event6 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
+
+I: Bus=0018 Vendor=04f3 Product=2e38 Version=0100
+N: Name="ELAN9008:00 04F3:2E38 UNKNOWN"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:2E38.0002/input/input15
+U: Uniq=
+H: Handlers=event7 
+B: PROP=0
+B: EV=100001
+
+I: Bus=0018 Vendor=04f3 Product=2e38 Version=0100
+N: Name="ELAN9008:00 04F3:2E38 Stylus"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:2E38.0002/input/input16
+U: Uniq=
+H: Handlers=mouse3 event8 
+B: PROP=2
+B: EV=1b
+B: KEY=c03 0 0 0 0 0
+B: ABS=1000003
+B: MSC=10
+
+I: Bus=0003 Vendor=046d Product=4054 Version=0111
+N: Name="Logitech Wireless Mouse"
+P: Phys=usb-0000:04:00.3-2/input1:2
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:04:00.3/usb1/1-2/1-2:1.1/0003:046D:C534.0004/0003:046D:4054.0007/input/input32
+U: Uniq=00-00-00-00
+H: Handlers=kbd mouse4 event10 
+B: PROP=0
+B: EV=1f
+B: KEY=3f00733fff 0 0 483ffff17aff32d bfd4444600000000 ffff0001 130ff38b17d000 677bfad9415fed 19ed68000004400 10000002
+B: REL=1943
+B: ABS=100000000
+B: MSC=10
+
+I: Bus=0019 Vendor=0000 Product=0005 Version=0000
+N: Name="Lid Switch"
+P: Phys=PNP0C0D/button/input0
+S: Sysfs=/devices/pci0000:00/0000:00:14.3/PNP0C09:00/PNP0C0D:00/input/input33
+U: Uniq=
+H: Handlers=event11 
+B: PROP=0
+B: EV=21
+B: SW=1
+
+I: Bus=0019 Vendor=0000 Product=0001 Version=0000
+N: Name="Power Button"
+P: Phys=PNP0C0C/button/input0
+S: Sysfs=/devices/platform/PNP0C0C:00/input/input34
+U: Uniq=
+H: Handlers=kbd event12 
+B: PROP=0
+B: EV=3
+B: KEY=8000 10000000000000 0
+
+I: Bus=0010 Vendor=001f Product=0001 Version=0100
+N: Name="PC Speaker"
+P: Phys=isa0061/input0
+S: Sysfs=/devices/platform/pcspkr/input/input35
+U: Uniq=
+H: Handlers=kbd event14 
+B: PROP=0
+B: EV=40001
+B: SND=6
+
+I: Bus=0019 Vendor=0000 Product=0000 Version=0000
+N: Name="Asus WMI hotkeys"
+P: Phys=asus-nb-wmi/input0
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input36
+U: Uniq=
+H: Handlers=kbd event15 rfkill 
+B: PROP=0
+B: EV=100013
+B: KEY=400000000000000 10000000c0000 400400000 800000000000 0 0 181606f00900c00 380027801701000 e000000000000 0
+B: MSC=10
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HD-Audio Generic HDMI/DP,pcm=3"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:04:00.1/sound/card1/input37
+U: Uniq=
+H: Handlers=event16 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HD-Audio Generic HDMI/DP,pcm=7"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:04:00.1/sound/card1/input38
+U: Uniq=
+H: Handlers=event17 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HD-Audio Generic HDMI/DP,pcm=8"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:04:00.1/sound/card1/input39
+U: Uniq=
+H: Handlers=event18 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HD-Audio Generic Headphone"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:04:00.6/sound/card2/input40
+U: Uniq=
+H: Handlers=event19 
+B: PROP=0
+B: EV=21
+B: SW=4
+
+I: Bus=0005 Vendor=054c Product=0f1e Version=0207
+N: Name="ULT WEAR (AVRCP)"
+P: Phys=70:9c:d1:54:a4:15
+S: Sysfs=/devices/virtual/input/input44
+U: Uniq=
+H: Handlers=kbd event20 
+B: PROP=0
+B: EV=100007
+B: KEY=2fc800 145200000000 0 10300 49e800000c00 e16800000000f f810000010000ffc
+B: REL=0
+
+I: Bus=0003 Vendor=03f0 Product=0a6b Version=0111
+N: Name="HP HP USB-C/A Universal Dock G2 System Control"
+P: Phys=usb-0000:04:00.3-1.5/input2
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:04:00.3/usb1/1-1/1-1.5/1-1.5:1.2/0003:03F0:0A6B.000A/input/input46
+U: Uniq=11AD1D0AE21E3C0D28100B00
+H: Handlers=kbd event9 
+B: PROP=0
+B: EV=13
+B: KEY=c000 0 0
+B: MSC=10
+
+I: Bus=0003 Vendor=047f Product=0162 Version=0111
+N: Name="Plantronics Poly Voyager Focus 2 Series"
+P: Phys=usb-0000:04:00.3-1.3.3.1/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:04:00.3/usb1/1-1/1-1.3/1-1.3.3/1-1.3.3.1/1-1.3.3.1:1.0/0003:047F:0162.000B/input/input47
+U: Uniq=7940332acaf3431785814c2aee792470
+H: Handlers=kbd event13 
+B: PROP=0
+B: EV=13
+B: KEY=8000 3800000000 8c000000000000 0
+B: MSC=10
+
