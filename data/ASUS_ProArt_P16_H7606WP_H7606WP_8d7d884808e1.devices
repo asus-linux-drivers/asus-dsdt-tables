@@ -31,7 +31,7 @@ B: KEY=3e000b00000000 0 0 0
 I: Bus=0018 Vendor=2575 Product=0e00 Version=0100
 N: Name="WDHT1F01:00 2575:0E00"
 P: Phys=i2c-WDHT1F01:00
-S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-WDHT1F01:00/0018:2575:0E00.0003/input/input7
+S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-WDHT1F01:00/0018:2575:0E00.0002/input/input7
 U: Uniq=
 H: Handlers=mouse0 event3 
 B: PROP=2
@@ -43,7 +43,7 @@ B: MSC=20
 I: Bus=0018 Vendor=2575 Product=0e00 Version=0100
 N: Name="WDHT1F01:00 2575:0E00 Stylus"
 P: Phys=i2c-WDHT1F01:00
-S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-WDHT1F01:00/0018:2575:0E00.0003/input/input8
+S: Sysfs=/devices/platform/AMDI0010:02/i2c-2/i2c-WDHT1F01:00/0018:2575:0E00.0002/input/input8
 U: Uniq=
 H: Handlers=mouse1 event4 
 B: PROP=2
@@ -55,9 +55,9 @@ B: MSC=10
 I: Bus=0018 Vendor=093a Product=3014 Version=0100
 N: Name="ASCP1A01:00 093A:3014 Mouse"
 P: Phys=i2c-ASCP1A01:00
-S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ASCP1A01:00/0018:093A:3014.0004/input/input16
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ASCP1A01:00/0018:093A:3014.0003/input/input9
 U: Uniq=
-H: Handlers=mouse2 event9 
+H: Handlers=mouse2 event5 
 B: PROP=0
 B: EV=17
 B: KEY=30000 0 0 0 0
@@ -67,9 +67,9 @@ B: MSC=10
 I: Bus=0018 Vendor=093a Product=3014 Version=0100
 N: Name="ASCP1A01:00 093A:3014 Touchpad"
 P: Phys=i2c-ASCP1A01:00
-S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ASCP1A01:00/0018:093A:3014.0004/input/input17
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ASCP1A01:00/0018:093A:3014.0003/input/input10
 U: Uniq=
-H: Handlers=mouse3 event12 
+H: Handlers=mouse3 event6 
 B: PROP=5
 B: EV=10001b
 B: KEY=e520 10000 0 0 0 0
@@ -78,10 +78,10 @@ B: MSC=20
 
 I: Bus=0003 Vendor=0b05 Product=19b6 Version=0110
 N: Name="ITE Tech. Inc. ITE Device(8910)"
-P: Phys=usb-0000:68:00.0-4/input0
-S: Sysfs=/devices/pci0000:00/0000:00:08.3/0000:68:00.0/usb3/3-4/3-4:1.0/0003:0B05:19B6.0005/input/input18
+P: Phys=usb-0000:67:00.0-4/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.3/0000:67:00.0/usb3/3-4/3-4:1.0/0003:0B05:19B6.0005/input/input18
 U: Uniq=
-H: Handlers=sysrq kbd leds mouse4 event5 rfkill 
+H: Handlers=sysrq rfkill kbd mouse4 event7 leds 
 B: PROP=0
 B: EV=12001f
 B: KEY=733eff 0 20000 483ffff17aff32d bfd4444600000000 1f0001 1b30c730b17cc07 ffbe7bfad9715fff febeffdfffefffff fffffffffffffffe
@@ -90,22 +90,12 @@ B: ABS=10100000000
 B: MSC=10
 B: LED=1f
 
-I: Bus=0010 Vendor=001f Product=0001 Version=0100
-N: Name="PC Speaker"
-P: Phys=isa0061/input0
-S: Sysfs=/devices/platform/pcspkr/input/input19
-U: Uniq=
-H: Handlers=kbd event6 
-B: PROP=0
-B: EV=40001
-B: SND=6
-
 I: Bus=0019 Vendor=0000 Product=0000 Version=0000
 N: Name="Asus WMI hotkeys"
 P: Phys=asus-nb-wmi/input0
-S: Sysfs=/devices/platform/asus-nb-wmi/input/input20
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input19
 U: Uniq=
-H: Handlers=kbd event7 rfkill 
+H: Handlers=rfkill kbd event8 
 B: PROP=0
 B: EV=100013
 B: KEY=400000000000000 10000000c0000 400400000 800000000000 0 0 181606f00900c00 380027801701000 e000000000000 0
@@ -114,9 +104,9 @@ B: MSC=10
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic HDMI/DP,pcm=3"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:66:00.1/sound/card1/input21
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:65:00.1/sound/card1/input20
 U: Uniq=
-H: Handlers=event8 
+H: Handlers=event9 
 B: PROP=0
 B: EV=21
 B: SW=140
@@ -124,7 +114,7 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HDA NVidia HDMI/DP,pcm=3"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:65:00.1/sound/card0/input22
+S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:64:00.1/sound/card0/input21
 U: Uniq=
 H: Handlers=event10 
 B: PROP=0
@@ -134,7 +124,7 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HDA NVidia HDMI/DP,pcm=7"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:65:00.1/sound/card0/input23
+S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:64:00.1/sound/card0/input22
 U: Uniq=
 H: Handlers=event11 
 B: PROP=0
@@ -144,9 +134,9 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HDA NVidia HDMI/DP,pcm=8"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:65:00.1/sound/card0/input24
+S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:64:00.1/sound/card0/input23
 U: Uniq=
-H: Handlers=event13 
+H: Handlers=event12 
 B: PROP=0
 B: EV=21
 B: SW=140
@@ -154,9 +144,9 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HDA NVidia HDMI/DP,pcm=9"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:65:00.1/sound/card0/input25
+S: Sysfs=/devices/pci0000:00/0000:00:03.1/0000:64:00.1/sound/card0/input24
 U: Uniq=
-H: Handlers=event14 
+H: Handlers=event13 
 B: PROP=0
 B: EV=21
 B: SW=140
@@ -164,9 +154,9 @@ B: SW=140
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic Mic"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:66:00.6/sound/card2/input26
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:65:00.6/sound/card2/input25
 U: Uniq=
-H: Handlers=event15 
+H: Handlers=event14 
 B: PROP=0
 B: EV=21
 B: SW=10
@@ -174,9 +164,9 @@ B: SW=10
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic Mic"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:66:00.6/sound/card2/input27
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:65:00.6/sound/card2/input26
 U: Uniq=
-H: Handlers=event16 
+H: Handlers=event15 
 B: PROP=0
 B: EV=21
 B: SW=10
@@ -184,116 +174,21 @@ B: SW=10
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HD-Audio Generic Headphone"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:66:00.6/sound/card2/input28
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:65:00.6/sound/card2/input27
 U: Uniq=
-H: Handlers=event17 
+H: Handlers=event16 
 B: PROP=0
 B: EV=21
 B: SW=4
 
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-N: Name="ASCP1A01:00 093A:3014 DialPad"
+N: Name="LogiOps Virtual Input"
 P: Phys=
-S: Sysfs=/devices/virtual/input/input29
+S: Sysfs=/devices/virtual/input/input28
 U: Uniq=
-H: Handlers=kbd mouse5 event18 
+H: Handlers=sysrq kbd event17 
 B: PROP=0
 B: EV=7
-B: KEY=300000000 0 e000000000000 0
-B: REL=900
-
-I: Bus=0005 Vendor=0b05 Product=1975 Version=0001
-N: Name="ASUS MD300 Mouse"
-P: Phys=84:9e:56:e4:6c:4a
-S: Sysfs=/devices/virtual/misc/uhid/0005:0B05:1975.0007/input/input30
-U: Uniq=f6:a1:3c:01:0e:01
-H: Handlers=mouse6 event19 
-B: PROP=0
-B: EV=17
-B: KEY=1f0000 0 0 0 0
-B: REL=1943
-B: MSC=10
-
-I: Bus=0005 Vendor=0b05 Product=1975 Version=0001
-N: Name="ASUS MD300 Keyboard"
-P: Phys=84:9e:56:e4:6c:4a
-S: Sysfs=/devices/virtual/misc/uhid/0005:0B05:1975.0007/input/input31
-U: Uniq=f6:a1:3c:01:0e:01
-H: Handlers=sysrq kbd leds event20 
-B: PROP=0
-B: EV=120013
-B: KEY=1000000000007 ff9f207ac14057ff febeffdfffefffff fffffffffffffffe
-B: MSC=10
-B: LED=1f
-
-I: Bus=0005 Vendor=0b05 Product=1975 Version=0001
-N: Name="ASUS MD300 System Multi Axis"
-P: Phys=84:9e:56:e4:6c:4a
-S: Sysfs=/devices/virtual/misc/uhid/0005:0B05:1975.0007/input/input32
-U: Uniq=f6:a1:3c:01:0e:01
-H: Handlers=event21 
-B: PROP=0
-B: EV=17
-B: KEY=1 0 0 0 0
-B: REL=80
-B: MSC=10
-
-I: Bus=0005 Vendor=0b05 Product=1975 Version=0001
-N: Name="ASUS MD300"
-P: Phys=84:9e:56:e4:6c:4a
-S: Sysfs=/devices/virtual/misc/uhid/0005:0B05:1975.0007/input/input33
-U: Uniq=f6:a1:3c:01:0e:01
-H: Handlers=event22 
-B: PROP=0
-B: EV=9
-B: ABS=10000000000
-
-I: Bus=0003 Vendor=0001 Product=0001 Version=0001
-N: Name="input-remapper keyboard + mouse"
-P: Phys=input-remapper
-S: Sysfs=/devices/virtual/input/input34
-U: Uniq=
-H: Handlers=sysrq kbd mouse7 event23 rfkill 
-B: PROP=0
-B: EV=200007
-B: KEY=3f3f3fffffff03ff ffffffff000fffff 700007fffffff 7fe003fffff000f f7ffffffffffffff ffffffff00000000 ff0000 1ffffffffffff07 ffffffffffffffff ffffffffffefffff fffffffffffffffe
-B: REL=1fff
-B: FF=0
-
-I: Bus=0003 Vendor=0001 Product=0001 Version=0001
-N: Name="input-remapper keyboard"
-P: Phys=input-remapper
-S: Sysfs=/devices/virtual/input/input35
-U: Uniq=
-H: Handlers=sysrq kbd event24 rfkill 
-B: PROP=0
-B: EV=200003
-B: KEY=3f3f3fffffff03ff ffffffff000fffff 700007fffffff 7fe003fffff000f f7ffffffffffffff ffffffff00000000 0 1ffffffffffff07 ffffffffffffffff ffffffffffefffff fffffffffffffffe
-B: FF=0
-
-I: Bus=0005 Vendor=0b05 Product=1975 Version=0001
-N: Name="input-remapper ASUS MD300 Mouse forwarded"
-P: Phys=py-evdev-uinput
-S: Sysfs=/devices/virtual/input/input36
-U: Uniq=
-H: Handlers=mouse8 event25 
-B: PROP=0
-B: EV=200017
-B: KEY=1f0000 0 0 0 0
-B: REL=1943
-B: MSC=10
-B: FF=0
-
-I: Bus=0005 Vendor=0b05 Product=1975 Version=0001
-N: Name="input-remapper ASUS MD300 System Multi Axis forwarded"
-P: Phys=py-evdev-uinput
-S: Sysfs=/devices/virtual/input/input37
-U: Uniq=
-H: Handlers=event26 
-B: PROP=0
-B: EV=200017
-B: KEY=1 0 0 0 0
-B: REL=80
-B: MSC=10
-B: FF=0
+B: KEY=ffffffffffffffff fffffffffffffffe
+B: REL=0
 

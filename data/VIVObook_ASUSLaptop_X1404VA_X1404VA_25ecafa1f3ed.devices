@@ -40,12 +40,43 @@ B: KEY=402000007 ff803078f800d001 feffffdfffcfffff fffffffffffffffe
 B: MSC=10
 B: LED=7
 
+I: Bus=0019 Vendor=0000 Product=0006 Version=0000
+N: Name="Video Bus"
+P: Phys=LNXVIDEO/video/input0
+S: Sysfs=/devices/pci0000:00/acpi.video_bus.0/input/input4
+U: Uniq=
+H: Handlers=kbd event4 
+B: PROP=0
+B: EV=3
+B: KEY=3e000b00000000 0 0 0
+
+I: Bus=0010 Vendor=001f Product=0001 Version=0100
+N: Name="PC Speaker"
+P: Phys=isa0061/input0
+S: Sysfs=/devices/platform/pcspkr/input/input5
+U: Uniq=
+H: Handlers=kbd event5 
+B: PROP=0
+B: EV=40001
+B: SND=6
+
+I: Bus=0019 Vendor=0000 Product=0000 Version=0000
+N: Name="Asus WMI hotkeys"
+P: Phys=asus-nb-wmi/input0
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input9
+U: Uniq=
+H: Handlers=kbd event6 rfkill 
+B: PROP=0
+B: EV=100013
+B: KEY=400000000000000 10000000c0000 400400000 800000000000 0 0 181606f00900c00 380027801701000 e000000000000 0
+B: MSC=10
+
 I: Bus=0018 Vendor=093a Product=200b Version=0100
 N: Name="ASUP1411:00 093A:200B Mouse"
 P: Phys=i2c-ASUP1411:00
-S: Sysfs=/devices/pci0000:00/0000:00:15.1/i2c_designware.1/i2c-1/i2c-ASUP1411:00/0018:093A:200B.0001/input/input7
+S: Sysfs=/devices/pci0000:00/0000:00:15.1/i2c_designware.1/i2c-1/i2c-ASUP1411:00/0018:093A:200B.0001/input/input10
 U: Uniq=
-H: Handlers=mouse0 event4 
+H: Handlers=event7 mouse0 
 B: PROP=0
 B: EV=17
 B: KEY=30000 0 0 0 0
@@ -55,9 +86,9 @@ B: MSC=10
 I: Bus=0018 Vendor=093a Product=200b Version=0100
 N: Name="ASUP1411:00 093A:200B Touchpad"
 P: Phys=i2c-ASUP1411:00
-S: Sysfs=/devices/pci0000:00/0000:00:15.1/i2c_designware.1/i2c-1/i2c-ASUP1411:00/0018:093A:200B.0001/input/input8
+S: Sysfs=/devices/pci0000:00/0000:00:15.1/i2c_designware.1/i2c-1/i2c-ASUP1411:00/0018:093A:200B.0001/input/input11
 U: Uniq=
-H: Handlers=mouse1 event5 
+H: Handlers=event8 mouse1 
 B: PROP=5
 B: EV=1b
 B: KEY=e520 10000 0 0 0 0
@@ -67,45 +98,14 @@ B: MSC=20
 I: Bus=0018 Vendor=093a Product=200b Version=0100
 N: Name="ASUP1411:00 093A:200B Keyboard"
 P: Phys=i2c-ASUP1411:00
-S: Sysfs=/devices/pci0000:00/0000:00:15.1/i2c_designware.1/i2c-1/i2c-ASUP1411:00/0018:093A:200B.0001/input/input9
+S: Sysfs=/devices/pci0000:00/0000:00:15.1/i2c_designware.1/i2c-1/i2c-ASUP1411:00/0018:093A:200B.0001/input/input12
 U: Uniq=
-H: Handlers=sysrq kbd leds event6 
+H: Handlers=sysrq kbd leds event9 
 B: PROP=0
 B: EV=120013
 B: KEY=1000000000007 ff9f207ac14057ff febeffdfffefffff fffffffffffffffe
 B: MSC=10
 B: LED=1f
-
-I: Bus=0019 Vendor=0000 Product=0006 Version=0000
-N: Name="Video Bus"
-P: Phys=LNXVIDEO/video/input0
-S: Sysfs=/devices/pci0000:00/acpi.video_bus.0/input/input10
-U: Uniq=
-H: Handlers=kbd event7 
-B: PROP=0
-B: EV=3
-B: KEY=3e000b00000000 0 0 0
-
-I: Bus=0010 Vendor=001f Product=0001 Version=0100
-N: Name="PC Speaker"
-P: Phys=isa0061/input0
-S: Sysfs=/devices/platform/pcspkr/input/input11
-U: Uniq=
-H: Handlers=kbd event8 
-B: PROP=0
-B: EV=40001
-B: SND=6
-
-I: Bus=0019 Vendor=0000 Product=0000 Version=0000
-N: Name="Asus WMI hotkeys"
-P: Phys=asus-nb-wmi/input0
-S: Sysfs=/devices/platform/asus-nb-wmi/input/input12
-U: Uniq=
-H: Handlers=kbd event9 rfkill 
-B: PROP=0
-B: EV=100013
-B: KEY=400000000000000 10000000c0000 400400000 800000000000 0 0 181606f00900c00 380027801701000 e000000000000 0
-B: MSC=10
 
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HDA Intel PCH Headphone"
@@ -156,14 +156,4 @@ H: Handlers=event14
 B: PROP=0
 B: EV=21
 B: SW=140
-
-I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-N: Name="ASUP1411:00 093A:200B NumberPad"
-P: Phys=
-S: Sysfs=/devices/virtual/input/input18
-U: Uniq=
-H: Handlers=kbd event15 
-B: PROP=0
-B: EV=3
-B: KEY=70000 0 1000 20 229440370447ffc
 
