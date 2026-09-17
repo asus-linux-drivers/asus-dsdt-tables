@@ -50,7 +50,7 @@ or
 \*an asterisk indicates columns with unvalidated user input  
 \*\*a double asterisk indicates that the .devices file contains only a touchpad block  
 
-| Serie | DSL file | DEVICES file | Source | DialPad* | NumberPad* | Dial* | Stylus (Touchscreen)* | Flip (Tablet mode)* | Keystone* | Model* |
+| Serie (unique count) | DSL file | DEVICES file | Source | DialPad* | NumberPad* | Dial* | Stylus (Touchscreen)* | Flip (Tablet mode)* | Keystone* | Model* |
 |----------------------|-------------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|----------------------|
 |Expertbook (25)| [ASUS_EXPERTBOOK_B1400CBA_B1400CBA.dsl](data/ASUS_EXPERTBOOK_B1400CBA_B1400CBA_2b1efabeb262.dsl) | [ASUS_EXPERTBOOK_B1400CBA_B1400CBA.devices](data/ASUS_EXPERTBOOK_B1400CBA_B1400CBA_2b1efabeb262.devices) | [asus-dsdt-tables/releases/tag/ASUS_EXPERTBOOK_B1400CBA_B1400CBA_2b1efabeb262](https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/ASUS_EXPERTBOOK_B1400CBA_B1400CBA_2b1efabeb262) | Yes |  | Yes |  |  |  |  |
 | | [ASUS_EXPERTBOOK_B1400CEAEY_B1400CEAE.dsl](data/ASUS_EXPERTBOOK_B1400CEAEY_B1400CEAE_2fa38c7dc6ba.dsl) | [ASUS_EXPERTBOOK_B1400CEAEY_B1400CEAE.devices](data/ASUS_EXPERTBOOK_B1400CEAEY_B1400CEAE_2fa38c7dc6ba.devices) | [asus-dsdt-tables/releases/tag/ASUS_EXPERTBOOK_B1400CEAEY_B1400CEAE_2fa38c7dc6ba](https://github.com/asus-linux-drivers/asus-dsdt-tables/releases/tag/ASUS_EXPERTBOOK_B1400CEAEY_B1400CEAE_2fa38c7dc6ba) | Yes | Yes | Yes |  |  | Yes |  |
