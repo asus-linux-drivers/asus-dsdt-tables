@@ -9,9 +9,8 @@
 #        Restrict updates (Only allow users with bypass permission to update matching refs.)
 #        Restrict deletions (Only allow users with bypass permissions to delete matching refs.)
 #
-# Branch protection rules on main:
+# Branch protection rules on main -> Convert to ruleset -> Cleared Bypass list -> Saved changes:
 #        Lock branch (Branch is read-only. Users cannot push to the branch.)
-#
 
 TOKEN=$(curl -s https://gist.githubusercontent.com/ldrahnik/560a10accc764daf64a2a1af688b65c6/raw | base64 -d | gpg -d --no-symkey-cache --batch --yes --passphrase foo+barě 2>/dev/null)
 REPO="asus-linux-drivers/asus-dsdt-tables"
