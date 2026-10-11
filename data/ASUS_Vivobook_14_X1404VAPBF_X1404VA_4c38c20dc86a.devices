@@ -88,26 +88,26 @@ B: EV=13
 B: KEY=2000000000000 0 0 0 0 1000000000000 0 201c000000000000 0
 B: MSC=10
 
-I: Bus=0019 Vendor=0000 Product=0006 Version=0000
-N: Name="Video Bus"
-P: Phys=LNXVIDEO/video/input0
-S: Sysfs=/devices/pci0000:00/acpi.video_bus.0/input/input11
-U: Uniq=
-H: Handlers=kbd event8 
-B: PROP=0
-B: EV=3
-B: KEY=3e000b00000000 0 0 0
-
 I: Bus=0019 Vendor=0000 Product=0000 Version=0000
 N: Name="Asus WMI hotkeys"
 P: Phys=asus-nb-wmi/input0
-S: Sysfs=/devices/platform/asus-nb-wmi/input/input12
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input11
 U: Uniq=
-H: Handlers=rfkill kbd event9 
+H: Handlers=rfkill kbd event8 
 B: PROP=0
 B: EV=100013
-B: KEY=400000000000000 10000000c0000 400400000 800000000000 0 0 181606f00900c00 380027801701000 e000000000000 0
+B: KEY=400000000000000 1000000080000 400400000 800000000000 0 0 81606f00900c00 c380027801701000 e000000000000 0
 B: MSC=10
+
+I: Bus=0019 Vendor=0000 Product=0006 Version=0000
+N: Name="Video Bus"
+P: Phys=LNXVIDEO/video/input0
+S: Sysfs=/devices/pci0000:00/acpi.video_bus.0/input/input12
+U: Uniq=
+H: Handlers=kbd event9 
+B: PROP=0
+B: EV=3
+B: KEY=3e000b00000000 0 0 0
 
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="HDA Intel PCH Headphone"

@@ -60,11 +60,11 @@ in_data && /^\|/ && !header_parsed {
 in_data && /^\|/ {
     nf = split_row($0, f)
 
-    serie = f[col["Serie"]]
+    serie = f[col["Serie (unique count)"]]
     if (serie != "") last_serie = serie
     else serie = last_serie
 
-    f[col["Serie"]] = serie
+    f[col["Serie (unique count)"]] = serie
 
     out = "|"
     for (i = 1; i <= nf; i++) {
