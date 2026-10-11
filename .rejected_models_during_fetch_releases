@@ -17,3 +17,6 @@ ASUS_EXPERTBOOK_B5402FEA_B5402FEA|y
 ROG_Zephyrus_Duo_16_GX650RX_GX650RX|gx650rx rog zephyrus duo
 Vivobook_ASUSLaptop_M7600QE_M7600QE|INSTALL_DIR_PATH=/home/$USER/.local/share/asus-dialpad-driver INSTALL_UDEV_DIR_PATH=/etc/udev bash install.sh
 Zenbook_14_UM3406GA|cdd
+ASUS_Zenbook_14_UM3406HA_UM3406HA|Y
+VivoBook_ASUS_Laptop_E410MA_E410MA|systemctl reboot
+VivoBook_ASUSLaptop_M1403QA_M1403QA|ASUS VivoBook M1403QA
