@@ -20,3 +20,5 @@ Zenbook_14_UM3406GA|cdd
 ASUS_Zenbook_14_UM3406HA_UM3406HA|Y
 VivoBook_ASUS_Laptop_E410MA_E410MA|systemctl reboot
 VivoBook_ASUSLaptop_M1403QA_M1403QA|ASUS VivoBook M1403QA
+ProArt_P16_H7606WV_H7606WV|systemctl --user list-units --all
+ROG_Strix_G512LW_G512LW|y

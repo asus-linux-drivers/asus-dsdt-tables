@@ -135,7 +135,7 @@ U: Uniq=
 H: Handlers=kbd event12 
 B: PROP=0
 B: EV=3
-B: KEY=70000 0 1000 80020 2194d0330456ffc
+B: KEY=70000 0 1000 20 2194d0330456ffc
 
 I: Bus=0005 Vendor=0a5c Product=4503 Version=0129
 N: Name="JETech 0884"
