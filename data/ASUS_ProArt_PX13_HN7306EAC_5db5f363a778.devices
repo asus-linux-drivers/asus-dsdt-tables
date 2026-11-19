@@ -60,23 +60,12 @@ B: PROP=0
 B: EV=3
 B: KEY=10000000000000 0
 
-I: Bus=0019 Vendor=0000 Product=0000 Version=0000
-N: Name="Asus WMI hotkeys"
-P: Phys=asus-nb-wmi/input0
-S: Sysfs=/devices/platform/asus-nb-wmi/input/input19
-U: Uniq=
-H: Handlers=kbd event6 rfkill 
-B: PROP=0
-B: EV=100013
-B: KEY=400000000000000 10000000c0000 400400000 800000000000 0 0 181606f00900c00 380027801701000 e000000000000 0
-B: MSC=10
-
 I: Bus=0018 Vendor=04f3 Product=4631 Version=0100
 N: Name="ELAN9008:00 04F3:4631"
 P: Phys=i2c-ELAN9008:00
-S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:4631.0002/input/input20
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:4631.0002/input/input19
 U: Uniq=
-H: Handlers=event7 mouse0 
+H: Handlers=event6 mouse0 
 B: PROP=2
 B: EV=1b
 B: KEY=400 0 0 0 0 0
@@ -86,9 +75,9 @@ B: MSC=20
 I: Bus=0018 Vendor=04f3 Product=4631 Version=0100
 N: Name="ELAN9008:00 04F3:4631 UNKNOWN"
 P: Phys=i2c-ELAN9008:00
-S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:4631.0002/input/input21
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:4631.0002/input/input20
 U: Uniq=
-H: Handlers=event8 
+H: Handlers=event7 
 B: PROP=0
 B: EV=9
 B: ABS=10000000000
@@ -96,14 +85,24 @@ B: ABS=10000000000
 I: Bus=0018 Vendor=04f3 Product=4631 Version=0100
 N: Name="ELAN9008:00 04F3:4631 Stylus"
 P: Phys=i2c-ELAN9008:00
-S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:4631.0002/input/input22
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:4631.0002/input/input21
 U: Uniq=
-H: Handlers=event9 mouse1 
+H: Handlers=event8 mouse1 
 B: PROP=2
 B: EV=1b
 B: KEY=1c03 0 0 0 0 0
 B: ABS=1000d000003
 B: MSC=11
+
+I: Bus=0018 Vendor=04f3 Product=4631 Version=0100
+N: Name="ELAN9008:00 04F3:4631 UNKNOWN"
+P: Phys=i2c-ELAN9008:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:4631.0002/input/input23
+U: Uniq=
+H: Handlers=event9 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
 
 I: Bus=0018 Vendor=04f3 Product=4631 Version=0100
 N: Name="ELAN9008:00 04F3:4631 UNKNOWN"
@@ -132,19 +131,20 @@ S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:4631.0002
 U: Uniq=
 H: Handlers=event12 
 B: PROP=0
-B: EV=9
-B: ABS=10000000000
-
-I: Bus=0018 Vendor=04f3 Product=4631 Version=0100
-N: Name="ELAN9008:00 04F3:4631 UNKNOWN"
-P: Phys=i2c-ELAN9008:00
-S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9008:00/0018:04F3:4631.0002/input/input27
-U: Uniq=
-H: Handlers=event15 
-B: PROP=0
 B: EV=1b
 B: KEY=1 0 0 0 0
 B: ABS=10000000000
+B: MSC=10
+
+I: Bus=0019 Vendor=0000 Product=0000 Version=0000
+N: Name="Asus WMI hotkeys"
+P: Phys=asus-nb-wmi/input0
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input28
+U: Uniq=
+H: Handlers=kbd event15 rfkill 
+B: PROP=0
+B: EV=100013
+B: KEY=400000000000000 10000000c0000 400400000 800000000000 0 0 181606f00900c00 380027801701000 e000000000000 0
 B: MSC=10
 
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
@@ -152,7 +152,7 @@ N: Name="HD-Audio Generic HDMI/DP,pcm=3"
 P: Phys=ALSA
 S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input29
 U: Uniq=
-H: Handlers=event13 
+H: Handlers=event16 
 B: PROP=0
 B: EV=21
 B: SW=140
@@ -162,7 +162,7 @@ N: Name="HD-Audio Generic HDMI/DP,pcm=7"
 P: Phys=ALSA
 S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input30
 U: Uniq=
-H: Handlers=event14 
+H: Handlers=event17 
 B: PROP=0
 B: EV=21
 B: SW=140
@@ -172,7 +172,7 @@ N: Name="HD-Audio Generic HDMI/DP,pcm=8"
 P: Phys=ALSA
 S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input31
 U: Uniq=
-H: Handlers=event16 
+H: Handlers=event18 
 B: PROP=0
 B: EV=21
 B: SW=140
@@ -182,7 +182,7 @@ N: Name="HD-Audio Generic HDMI/DP,pcm=9"
 P: Phys=ALSA
 S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:c4:00.1/sound/card0/input32
 U: Uniq=
-H: Handlers=event17 
+H: Handlers=event19 
 B: PROP=0
 B: EV=21
 B: SW=140
@@ -192,7 +192,7 @@ N: Name="ASCF1A03:00 2808:0357 Mouse"
 P: Phys=i2c-ASCF1A03:00
 S: Sysfs=/devices/platform/AMDI0010:01/i2c-1/i2c-ASCF1A03:00/0018:2808:0357.0004/input/input33
 U: Uniq=
-H: Handlers=event18 mouse2 
+H: Handlers=event13 mouse2 
 B: PROP=0
 B: EV=17
 B: KEY=30000 0 0 0 0
@@ -204,65 +204,31 @@ N: Name="ASCF1A03:00 2808:0357 Touchpad"
 P: Phys=i2c-ASCF1A03:00
 S: Sysfs=/devices/platform/AMDI0010:01/i2c-1/i2c-ASCF1A03:00/0018:2808:0357.0004/input/input34
 U: Uniq=
-H: Handlers=event19 mouse3 
+H: Handlers=event14 mouse3 
 B: PROP=5
 B: EV=10001b
 B: KEY=e520 10000 0 0 0 0
 B: ABS=2e0800000000003
 B: MSC=20
 
-I: Bus=0003 Vendor=0fac Product=0ade Version=0000
-N: Name="keyd virtual keyboard"
-P: Phys=
-S: Sysfs=/devices/virtual/input/input37
-U: Uniq=
-H: Handlers=sysrq kbd leds event20 rfkill 
-B: PROP=0
-B: EV=120003
-B: KEY=10000000000000 0 ffffffffffffff0f ffffffffffffffff ffffffffffffffff fffffffffffffffe
-B: LED=1ff
-
 I: Bus=0000 Vendor=0000 Product=0000 Version=0000
 N: Name="amd-soundwire Headset Jack"
 P: Phys=ALSA
-S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:c4:00.5/amd_sdw/sound/card1/input38
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:c4:00.5/amd_sdw/sound/card1/input37
 U: Uniq=
-H: Handlers=kbd event21 
+H: Handlers=kbd event20 
 B: PROP=0
 B: EV=23
 B: KEY=40 0 0 0 0 0 0 1000000000 c000000000000 0
 B: SW=14
 
-I: Bus=0003 Vendor=0fac Product=1ade Version=0000
-N: Name="keyd virtual pointer"
-P: Phys=
-S: Sysfs=/devices/virtual/input/input39
+I: Bus=0019 Vendor=1022 Product=0000 Version=0000
+N: Name="AMD SFH tablet mode switch"
+P: Phys=amd-sfh/tabletmode
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:c4:00.7/amd_sfh.tabletmode.0/input/input38
 U: Uniq=
-H: Handlers=event22 js0 mouse4 
+H: Handlers=event21 
 B: PROP=0
-B: EV=f
-B: KEY=ff0000 0 0 0 0
-B: REL=147
-B: ABS=3
-
-I: Bus=0000 Vendor=0000 Product=0000 Version=0000
-N: Name="ASCF1A03:00 2808:0357 DialPad"
-P: Phys=
-S: Sysfs=/devices/virtual/input/input40
-U: Uniq=
-H: Handlers=kbd event23 mouse5 
-B: PROP=0
-B: EV=7
-B: KEY=300000000 0 0 100020200000
-B: REL=900
-
-I: Bus=0005 Vendor=0000 Product=0000 Version=0000
-N: Name="Soundcore Space A40 (AVRCP)"
-P: Phys=dc:56:7b:34:6b:84
-S: Sysfs=/devices/virtual/input/input41
-U: Uniq=
-H: Handlers=kbd event24 
-B: PROP=0
-B: EV=3
-B: KEY=2fc800 145200000000 0 10300 49e800000c00 e16800000000f f810000010000ffc
+B: EV=21
+B: SW=2
 

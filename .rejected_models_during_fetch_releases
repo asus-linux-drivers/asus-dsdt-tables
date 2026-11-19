@@ -22,3 +22,8 @@ VivoBook_ASUS_Laptop_E410MA_E410MA|systemctl reboot
 VivoBook_ASUSLaptop_M1403QA_M1403QA|ASUS VivoBook M1403QA
 ProArt_P16_H7606WV_H7606WV|systemctl --user list-units --all
 ROG_Strix_G512LW_G512LW|y
+ASUS_Zenbook_14_UX3405MA_UX3405MA|y
+ProArt_P16_H7606WP_H7606WP|µ
+ROG_Strix_G531GW_G531GW|y
+Vivobook_Go_E1404FA_E1404FA|https://github.com/asus-linux-drivers/asus-numberpad-driver
+Zenbook_14_UM3406GA|um3406GA-OPEN14

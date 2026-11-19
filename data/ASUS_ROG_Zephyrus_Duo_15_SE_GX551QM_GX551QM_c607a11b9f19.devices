@@ -1,0 +1,448 @@
+I: Bus=0019 Vendor=0000 Product=0005 Version=0000
+N: Name="Lid Switch"
+P: Phys=PNP0C0D/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:2d/PNP0C09:00/PNP0C0D:00/input/input0
+U: Uniq=
+H: Handlers=event0 
+B: PROP=0
+B: EV=21
+B: SW=1
+
+I: Bus=0019 Vendor=0000 Product=0001 Version=0000
+N: Name="Power Button"
+P: Phys=PNP0C0C/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0C:00/input/input1
+U: Uniq=
+H: Handlers=kbd event1 
+B: PROP=0
+B: EV=3
+B: KEY=8000 10000000000000 0
+
+I: Bus=0019 Vendor=0000 Product=0003 Version=0000
+N: Name="Sleep Button"
+P: Phys=PNP0C0E/button/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00/input/input2
+U: Uniq=
+H: Handlers=kbd event2 
+B: PROP=0
+B: EV=3
+B: KEY=4000 0 0
+
+I: Bus=0019 Vendor=0000 Product=0006 Version=0000
+N: Name="Video Bus"
+P: Phys=LNXVIDEO/video/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:0e/LNXVIDEO:00/input/input3
+U: Uniq=
+H: Handlers=kbd event3 
+B: PROP=0
+B: EV=3
+B: KEY=3e000b00000000 0 0 0
+
+I: Bus=0018 Vendor=04f3 Product=2a5a Version=0100
+N: Name="ELAN9009:00 04F3:2A5A"
+P: Phys=i2c-ELAN9009:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9009:00/0018:04F3:2A5A.0001/input/input16
+U: Uniq=
+H: Handlers=mouse0 event4 
+B: PROP=2
+B: EV=1b
+B: KEY=400 0 0 0 0 0
+B: ABS=3273800000000003
+B: MSC=20
+
+I: Bus=0018 Vendor=04f3 Product=2a5a Version=0100
+N: Name="ELAN9009:00 04F3:2A5A UNKNOWN"
+P: Phys=i2c-ELAN9009:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9009:00/0018:04F3:2A5A.0001/input/input17
+U: Uniq=
+H: Handlers=event5 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
+
+I: Bus=0018 Vendor=04f3 Product=2a5a Version=0100
+N: Name="ELAN9009:00 04F3:2A5A UNKNOWN"
+P: Phys=i2c-ELAN9009:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9009:00/0018:04F3:2A5A.0001/input/input18
+U: Uniq=
+H: Handlers=event6 
+B: PROP=0
+B: EV=100001
+
+I: Bus=0018 Vendor=04f3 Product=2a5a Version=0100
+N: Name="ELAN9009:00 04F3:2A5A Stylus"
+P: Phys=i2c-ELAN9009:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9009:00/0018:04F3:2A5A.0001/input/input19
+U: Uniq=
+H: Handlers=mouse1 event7 
+B: PROP=2
+B: EV=1b
+B: KEY=c03 0 0 0 0 0
+B: ABS=1000d000003
+B: MSC=10
+
+I: Bus=0018 Vendor=04f3 Product=2a5a Version=0100
+N: Name="ELAN9009:00 04F3:2A5A UNKNOWN"
+P: Phys=i2c-ELAN9009:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9009:00/0018:04F3:2A5A.0001/input/input21
+U: Uniq=
+H: Handlers=event8 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
+
+I: Bus=0018 Vendor=04f3 Product=2a5a Version=0100
+N: Name="ELAN9009:00 04F3:2A5A UNKNOWN"
+P: Phys=i2c-ELAN9009:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9009:00/0018:04F3:2A5A.0001/input/input22
+U: Uniq=
+H: Handlers=event9 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
+
+I: Bus=0018 Vendor=04f3 Product=2a5a Version=0100
+N: Name="ELAN9009:00 04F3:2A5A UNKNOWN"
+P: Phys=i2c-ELAN9009:00
+S: Sysfs=/devices/platform/AMDI0010:00/i2c-0/i2c-ELAN9009:00/0018:04F3:2A5A.0001/input/input23
+U: Uniq=
+H: Handlers=event10 
+B: PROP=0
+B: EV=9
+B: ABS=10000000000
+
+I: Bus=0018 Vendor=04f3 Product=3137 Version=0100
+N: Name="ASUE1408:00 04F3:3137 Mouse"
+P: Phys=i2c-ASUE1408:00
+S: Sysfs=/devices/platform/AMDI0010:03/i2c-2/i2c-ASUE1408:00/0018:04F3:3137.0002/input/input25
+U: Uniq=
+H: Handlers=mouse2 event11 
+B: PROP=0
+B: EV=17
+B: KEY=30000 0 0 0 0
+B: REL=1943
+B: MSC=10
+
+I: Bus=0018 Vendor=04f3 Product=3137 Version=0100
+N: Name="ASUE1408:00 04F3:3137 Touchpad"
+P: Phys=i2c-ASUE1408:00
+S: Sysfs=/devices/platform/AMDI0010:03/i2c-2/i2c-ASUE1408:00/0018:04F3:3137.0002/input/input26
+U: Uniq=
+H: Handlers=mouse3 event12 
+B: PROP=1
+B: EV=1b
+B: KEY=e420 30000 0 0 0 0
+B: ABS=2e0800000000003
+B: MSC=20
+
+I: Bus=0018 Vendor=04f3 Product=3137 Version=0100
+N: Name="ASUE1408:00 04F3:3137 Keyboard"
+P: Phys=i2c-ASUE1408:00
+S: Sysfs=/devices/platform/AMDI0010:03/i2c-2/i2c-ASUE1408:00/0018:04F3:3137.0002/input/input27
+U: Uniq=
+H: Handlers=sysrq kbd leds event13 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff800000000007ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=0b05 Product=1847 Version=0111
+N: Name="ASUS ROG STRIX IMPACT"
+P: Phys=usb-0000:06:00.3-2/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-2/1-2:1.0/0003:0B05:1847.0003/input/input28
+U: Uniq=
+H: Handlers=mouse4 event14 
+B: PROP=0
+B: EV=17
+B: KEY=1f0000 0 0 0 0
+B: REL=903
+B: MSC=10
+
+I: Bus=0003 Vendor=0b05 Product=1847 Version=0111
+N: Name="ASUS ROG STRIX IMPACT Keyboard"
+P: Phys=usb-0000:06:00.3-2/input1
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-2/1-2:1.1/0003:0B05:1847.0004/input/input29
+U: Uniq=
+H: Handlers=sysrq kbd event15 
+B: PROP=0
+B: EV=100013
+B: KEY=1000300000007 ff800078000007ff febeffdff3cfffff fffffffffffffffe
+B: MSC=10
+
+I: Bus=0003 Vendor=248a Product=60ab Version=0111
+N: Name="MicLink AiMouse"
+P: Phys=usb-0000:06:00.3-1.2/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.2/1-1.2:1.0/0003:248A:60AB.0006/input/input30
+U: Uniq=
+H: Handlers=mouse5 event16 
+B: PROP=0
+B: EV=17
+B: KEY=70000 0 0 0 0
+B: REL=903
+B: MSC=10
+
+I: Bus=0003 Vendor=248a Product=60ab Version=0111
+N: Name="MicLink AiMouse Consumer Control"
+P: Phys=usb-0000:06:00.3-1.2/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.2/1-1.2:1.0/0003:248A:60AB.0006/input/input31
+U: Uniq=
+H: Handlers=kbd event17 
+B: PROP=0
+B: EV=1f
+B: KEY=33eff 0 0 483ffff17aff32d bfd4444600000000 1 130ff38b17c000 677bfad9415fed 9ed68000004400 10000002
+B: REL=1040
+B: ABS=100000000
+B: MSC=10
+
+I: Bus=0003 Vendor=248a Product=60ab Version=0111
+N: Name="MicLink AiMouse System Control"
+P: Phys=usb-0000:06:00.3-1.2/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.2/1-1.2:1.0/0003:248A:60AB.0006/input/input32
+U: Uniq=
+H: Handlers=kbd event18 
+B: PROP=0
+B: EV=13
+B: KEY=c000 10000000000000 0
+B: MSC=10
+
+I: Bus=0003 Vendor=248a Product=60ab Version=0111
+N: Name="MicLink AiMouse"
+P: Phys=usb-0000:06:00.3-1.2/input1
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.2/1-1.2:1.1/0003:248A:60AB.0007/input/input33
+U: Uniq=
+H: Handlers=sysrq kbd leds event19 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff98007a404007ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=36b0 Product=3002 Version=0111
+N: Name="RDMCTMZT Wireless 2.4G Dongle"
+P: Phys=usb-0000:06:00.3-1.3/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.3/1-1.3:1.0/0003:36B0:3002.000C/input/input39
+U: Uniq=19971217
+H: Handlers=sysrq kbd leds event20 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff9f207ac14057ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=36b0 Product=3002 Version=0111
+N: Name="RDMCTMZT Wireless 2.4G Dongle Mouse"
+P: Phys=usb-0000:06:00.3-1.3/input2
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.3/1-1.3:1.2/0003:36B0:3002.000E/input/input40
+U: Uniq=19971217
+H: Handlers=mouse6 event21 
+B: PROP=0
+B: EV=17
+B: KEY=ff0000 0 0 0 0
+B: REL=1943
+B: MSC=10
+
+I: Bus=0003 Vendor=36b0 Product=3002 Version=0111
+N: Name="RDMCTMZT Wireless 2.4G Dongle System Control"
+P: Phys=usb-0000:06:00.3-1.3/input2
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.3/1-1.3:1.2/0003:36B0:3002.000E/input/input41
+U: Uniq=19971217
+H: Handlers=kbd event22 
+B: PROP=0
+B: EV=1b
+B: KEY=c000 0 0 40000001000000 1200000000 0 100000800000000 40000010cc00 10168000000000 0
+B: ABS=10000030000
+B: MSC=10
+
+I: Bus=0003 Vendor=36b0 Product=3002 Version=0111
+N: Name="RDMCTMZT Wireless 2.4G Dongle Consumer Control"
+P: Phys=usb-0000:06:00.3-1.3/input2
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.3/1-1.3:1.2/0003:36B0:3002.000E/input/input42
+U: Uniq=19971217
+H: Handlers=kbd event23 
+B: PROP=0
+B: EV=1f
+B: KEY=33fff 0 0 483ffff17aff32d bfd4444600000000 1 130ff38b17c000 677bfad9415fed 19ed68000004400 10000002
+B: REL=1040
+B: ABS=100000000
+B: MSC=10
+
+I: Bus=0003 Vendor=36b0 Product=3002 Version=0111
+N: Name="RDMCTMZT Wireless 2.4G Dongle Keyboard"
+P: Phys=usb-0000:06:00.3-1.3/input2
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.3/1-1.3:1.2/0003:36B0:3002.000E/input/input43
+U: Uniq=19971217
+H: Handlers=sysrq kbd leds event24 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff98007a000007ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=0b05 Product=19b6 Version=0110
+N: Name="Asus Keyboard"
+P: Phys=usb-0000:06:00.3-3/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-3/1-3:1.0/0003:0B05:19B6.0009/input/input45
+U: Uniq=
+H: Handlers=kbd rfkill event25 
+B: PROP=0
+B: EV=10001f
+B: KEY=33eff 0 20000 483ffff17aff32d bfd4444600000000 1 1b30c730b17cc00 9fa67bfad9715fed 9e168000004400 10000002
+B: REL=1040
+B: ABS=100000000
+B: MSC=10
+
+I: Bus=0003 Vendor=0b05 Product=19b6 Version=0110
+N: Name="Asus Keyboard"
+P: Phys=usb-0000:06:00.3-3/input2
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-3/1-3:1.2/0003:0B05:19B6.000B/input/input46
+U: Uniq=
+H: Handlers=sysrq kbd leds event26 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff9f207ac14057ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=36b0 Product=302d Version=0111
+N: Name="RDMCTMZT Antryx TK950"
+P: Phys=usb-0000:06:00.3-1.4.3.3/input0
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4/1-1.4.3/1-1.4.3.3/1-1.4.3.3:1.0/0003:36B0:302D.000F/input/input47
+U: Uniq=20250712
+H: Handlers=sysrq kbd leds event27 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff9f207ac14057ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0003 Vendor=36b0 Product=302d Version=0111
+N: Name="RDMCTMZT Antryx TK950 Mouse"
+P: Phys=usb-0000:06:00.3-1.4.3.3/input2
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4/1-1.4.3/1-1.4.3.3/1-1.4.3.3:1.2/0003:36B0:302D.0011/input/input48
+U: Uniq=20250712
+H: Handlers=mouse7 event28 
+B: PROP=0
+B: EV=17
+B: KEY=ff0000 0 0 0 0
+B: REL=1943
+B: MSC=10
+
+I: Bus=0003 Vendor=36b0 Product=302d Version=0111
+N: Name="RDMCTMZT Antryx TK950 System Control"
+P: Phys=usb-0000:06:00.3-1.4.3.3/input2
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4/1-1.4.3/1-1.4.3.3/1-1.4.3.3:1.2/0003:36B0:302D.0011/input/input49
+U: Uniq=20250712
+H: Handlers=kbd event29 
+B: PROP=0
+B: EV=1b
+B: KEY=c000 0 0 40000001000000 1200000000 0 100000800000000 40000010cc00 10168000000000 0
+B: ABS=10000030000
+B: MSC=10
+
+I: Bus=0003 Vendor=36b0 Product=302d Version=0111
+N: Name="RDMCTMZT Antryx TK950 Consumer Control"
+P: Phys=usb-0000:06:00.3-1.4.3.3/input2
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4/1-1.4.3/1-1.4.3.3/1-1.4.3.3:1.2/0003:36B0:302D.0011/input/input50
+U: Uniq=20250712
+H: Handlers=kbd event30 
+B: PROP=0
+B: EV=1f
+B: KEY=33fff 0 0 483ffff17aff32d bfd4444600000000 1 130ff38b17c000 677bfad9415fed 19ed68000004400 10000002
+B: REL=1040
+B: ABS=100000000
+B: MSC=10
+
+I: Bus=0003 Vendor=36b0 Product=302d Version=0111
+N: Name="RDMCTMZT Antryx TK950 Keyboard"
+P: Phys=usb-0000:06:00.3-1.4.3.3/input2
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.3/usb1/1-1/1-1.4/1-1.4.3/1-1.4.3.3/1-1.4.3.3:1.2/0003:36B0:302D.0011/input/input51
+U: Uniq=20250712
+H: Handlers=sysrq kbd leds event31 
+B: PROP=0
+B: EV=120013
+B: KEY=1000000000007 ff98007a000007ff febeffdfffefffff fffffffffffffffe
+B: MSC=10
+B: LED=1f
+
+I: Bus=0019 Vendor=1043 Product=0000 Version=0000
+N: Name="Asus Wireless Radio Control"
+P: Phys=asus-wireless/input0
+S: Sysfs=/devices/LNXSYSTM:00/LNXSYBUS:00/ATK4002:00/input/input53
+U: Uniq=
+H: Handlers=kbd rfkill event256 
+B: PROP=0
+B: EV=3
+B: KEY=80000000000000 0 0 0
+
+I: Bus=0010 Vendor=001f Product=0001 Version=0100
+N: Name="PC Speaker"
+P: Phys=isa0061/input0
+S: Sysfs=/devices/platform/pcspkr/input/input54
+U: Uniq=
+H: Handlers=kbd event257 
+B: PROP=0
+B: EV=40001
+B: SND=6
+
+I: Bus=0019 Vendor=0000 Product=0000 Version=0000
+N: Name="Asus WMI hotkeys"
+P: Phys=asus-nb-wmi/input0
+S: Sysfs=/devices/platform/asus-nb-wmi/input/input55
+U: Uniq=
+H: Handlers=kbd rfkill event258 
+B: PROP=0
+B: EV=100013
+B: KEY=400000000000000 10000000c0000 400000 0 0 0 181606f00900c00 280027801701000 e000000000000 0
+B: MSC=10
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=3"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.1/0000:01:00.1/sound/card0/input56
+U: Uniq=
+H: Handlers=event259 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=7"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.1/0000:01:00.1/sound/card0/input57
+U: Uniq=
+H: Handlers=event260 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=8"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.1/0000:01:00.1/sound/card0/input58
+U: Uniq=
+H: Handlers=event261 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HDA NVidia HDMI/DP,pcm=9"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:01.1/0000:01:00.1/sound/card0/input59
+U: Uniq=
+H: Handlers=event262 
+B: PROP=0
+B: EV=21
+B: SW=140
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="HD-Audio Generic Headphone"
+P: Phys=ALSA
+S: Sysfs=/devices/pci0000:00/0000:00:08.1/0000:06:00.6/sound/card1/input60
+U: Uniq=
+H: Handlers=event263 
+B: PROP=0
+B: EV=21
+B: SW=4
+
