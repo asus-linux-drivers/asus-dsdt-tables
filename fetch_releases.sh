@@ -1,20 +1,59 @@
 #!/usr/bin/env bash
 
+ACCEPTED_MODELS_FILE="$(dirname "$0")/.accepted_models_during_fetch_releases"
 REJECTED_MODELS_FILE="$(dirname "$0")/.rejected_models_during_fetch_releases"
-touch "$REJECTED_MODELS_FILE"
+
+touch "$ACCEPTED_MODELS_FILE" "$REJECTED_MODELS_FILE"
+
+was_model_previously_accepted() {
+    local PRODUCT="$1"
+    local MODEL="$2"
+
+    grep -Fqx -- "${PRODUCT}|${MODEL}" "$ACCEPTED_MODELS_FILE"
+}
 
 was_model_previously_rejected() {
     local PRODUCT="$1"
     local MODEL="$2"
 
-    grep -Fqx "${PRODUCT}|${MODEL}" "$REJECTED_MODELS_FILE"
+    grep -Fqx -- "${PRODUCT}|${MODEL}" "$REJECTED_MODELS_FILE"
+}
+
+remove_model_record() {
+    local FILE="$1"
+    local RECORD="$2"
+    local TEMP_FILE
+
+    TEMP_FILE=$(mktemp)
+
+    grep -Fvx -- "$RECORD" "$FILE" > "$TEMP_FILE" || true
+    cat "$TEMP_FILE" > "$FILE"
+
+    rm -f "$TEMP_FILE"
+}
+
+save_accepted_model() {
+    local PRODUCT="$1"
+    local MODEL="$2"
+    local RECORD="${PRODUCT}|${MODEL}"
+
+    remove_model_record "$REJECTED_MODELS_FILE" "$RECORD"
+
+    if ! grep -Fqx -- "$RECORD" "$ACCEPTED_MODELS_FILE"; then
+        echo "$RECORD" >> "$ACCEPTED_MODELS_FILE"
+    fi
 }
 
 save_rejected_model() {
     local PRODUCT="$1"
     local MODEL="$2"
+    local RECORD="${PRODUCT}|${MODEL}"
 
-    echo "${PRODUCT}|${MODEL}" >> "$REJECTED_MODELS_FILE"
+    remove_model_record "$ACCEPTED_MODELS_FILE" "$RECORD"
+
+    if ! grep -Fqx -- "$RECORD" "$REJECTED_MODELS_FILE"; then
+        echo "$RECORD" >> "$REJECTED_MODELS_FILE"
+    fi
 }
 
 update_or_insert_row() {
@@ -77,9 +116,14 @@ update_readme() {
     local PRODUCT_NAME=$(echo "$BASE_TAG" | sed -E 's/_[0-9a-f]{12}$//')
 
     shopt -s nocasematch
+
     if [[ -n "$MODEL" && "$FINAL_BASENAME" != *"$MODEL"* ]]; then
 
-        if was_model_previously_rejected "$PRODUCT_NAME" "$MODEL"; then
+        if was_model_previously_accepted "$PRODUCT_NAME" "$MODEL"; then
+
+            MODEL_COL="$MODEL"
+
+        elif was_model_previously_rejected "$PRODUCT_NAME" "$MODEL"; then
 
             MODEL_COL=""
             MODEL=""
@@ -90,6 +134,7 @@ update_readme() {
 
             if [[ "$CONFIRM" =~ ^[Yy]$ ]]; then
 
+                save_accepted_model "$PRODUCT_NAME" "$MODEL"
                 MODEL_COL="$MODEL"
 
             else
@@ -144,6 +189,7 @@ WORKDIR=$(mktemp -d)
 TAGS=$(gh release list -R "$REPO" --limit 1000 --json tagName -q '.[].tagName')
 
 for TAG in $TAGS; do
+
     echo "Processing release: $TAG"
 
     BASE_TAG=$(normalize_tag "$TAG")
